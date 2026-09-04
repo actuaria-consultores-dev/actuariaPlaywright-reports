@@ -1,0 +1,12 @@
+🎭️ [Crear Usuario Tests] Empezando pre condición
+🔍 [Crear Usuario Tests] Navegando a formulario de creación de cuenta
+🔍 [LoginPage] Navegando a formulario de creación de cuenta
+✅ [LoginPage] Formulario de creación de cuenta abierto
+✅ [Crear Usuario Tests] Formulario de creación de cuenta abierto
+🎭️ [Crear Usuario Tests] TC14
+🔄 [Crear Usuario Tests] Generando error de campo requerido
+🔄 [Crear Usuario Tests] Corrigiendo campo con error
+📊 [Crear Usuario Tests] Verificando desaparición del mensaje de error
+✅ [Crear Usuario Tests] Mensaje de error correctamente desaparecido
+
+📋 2 console message(s) logged to stderr

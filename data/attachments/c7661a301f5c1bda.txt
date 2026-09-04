@@ -1,0 +1,14 @@
+🎭️ [NaviA Tests] Empezando pre condición
+🔐 [NaviA Tests] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [NaviA Tests] Login exitoso
+🔍 [NaviA Tests] Verificando navegación a página principal
+✅ [NaviA Tests] Navegación exitosa a dashboard
+🎭️ [NaviA Tests] TC01: Verificar datos de CALCULLIS S.A.
+📊 [NaviaWorkflows] Verificando empresa actual: CALCULIS S.A.
+📊 [NaviaPage] Verificando empresa actual: CALCULIS S.A. o CALCULLIS S.A.
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 3 console message(s) logged to stderr

@@ -1,0 +1,30 @@
+🎭️ [Inicio Tests] Empezando pre condición
+🔐 [Inicio Tests] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Inicio Tests] Login exitoso
+🔍 [Inicio Tests] Verificando navegación a página principal
+✅ [Inicio Tests] Navegación exitosa a dashboard
+🎭️ [Inicio Tests] TC10: Verificar cambios en cantidad de botones
+📊 [Inicio Tests] Contando botones en estado inicial...
+📊 [Inicio Tests] Botones antes: 0
+✅ [Inicio Tests] Conteo inicial completado
+📊 [Inicio Tests] Abriendo menú...
+✅ [Inicio Tests] Menú abierto
+📊 [Inicio Tests] Contando botones con menú abierto...
+📊 [Inicio Tests] Botones después: 30
+✅ [Inicio Tests] Conteo después de abrir completado
+📊 [Inicio Tests] Analizando cambios...
+📊 [Inicio Tests] Diferencia: 30 botones
+📊 [Inicio Tests] Botones antes: 0
+📊 [Inicio Tests] Botones después: 30
+✅ [Inicio Tests] ✅ Se añadieron 30 botones al abrir el menú
+📊 [Inicio Tests] Cerrando menú...
+📊 [Inicio Tests] Verificando que el conteo regresa al estado inicial...
+📊 [Inicio Tests] Botones finales: 30
+📊 [Inicio Tests] Botones iniciales: 0
+✅ [Inicio Tests] Menú cerrado y consistencia verificada
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 3 console message(s) logged to stderr

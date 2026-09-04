@@ -1,0 +1,533 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: specs/MiCuenta/equipo.test.ts >> Verificar Invitación de Usuario en Equipo >> Invitar Usuario al Equipo | [SP] | TC01-03: Invitar usuario con permisos de solo lectura y verificar acceso restringido
+- Location: tests/specs/MiCuenta/equipo.test.ts:156:2
+
+# Error details
+
+```
+TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+Call log:
+  - waiting for getByRole('heading', { name: 'ACTAS FINALIZADAS' }) to be visible
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f2e2]:
+  - generic [ref=f2e3]:
+    - banner [ref=f2e4]:
+      - generic [ref=f2e6]:
+        - button "Notificaciones" [ref=f2e7] [cursor=pointer]:
+          - generic [ref=f2e8]: "22"
+        - button [ref=f2e12] [cursor=pointer]:
+          - img "image" [ref=f2e13]
+          - paragraph [ref=f2e14]: Chris
+    - complementary [ref=f2e17]:
+      - generic [ref=f2e18]:
+        - link [ref=f2e19] [cursor=pointer]:
+          - /url: /dashboard
+          - img "Actuaria" [ref=f2e20]
+        - button "abrir/cerrar menú" [ref=f2e21] [cursor=pointer]
+      - generic [ref=f2e26]:
+        - textbox "Buscar..." [ref=f2e30]
+        - group
+      - list [ref=f2e32]:
+        - button "Inicio" [ref=f2e33] [cursor=pointer]
+        - list [ref=f2e39]:
+          - listitem [ref=f2e40]: Panel General
+          - button "Mi cuenta" [ref=f2e42] [cursor=pointer]
+          - button "Servicios" [ref=f2e52] [cursor=pointer]
+          - button "Recursos" [ref=f2e61] [cursor=pointer]
+        - list [ref=f2e69]:
+          - listitem [ref=f2e70]: Pruebas
+          - link "Checkout demo" [ref=f2e72] [cursor=pointer]:
+            - /url: /dashboard/checkout-demo
+      - generic [ref=f2e80]:
+        - paragraph [ref=f2e81]: Actuaria+ Stage
+        - paragraph [ref=f2e82]: soporteplus@actuaria.com
+        - generic [ref=f2e83]: v 1.11.2
+    - generic [ref=f2e88]:
+      - generic [ref=f2e89]:
+        - heading "Hola, Chris" [level=1] [ref=f2e90]
+        - paragraph [ref=f2e91]: Última conexión fue a las 9:13pm
+      - generic [ref=f2e92]:
+        - button "Inicio" [ref=f2e93] [cursor=pointer]
+        - button "Estudio actuarial" [ref=f2e95] [cursor=pointer]
+        - button "Actas de jubilación" [ref=f2e97] [cursor=pointer]
+        - button "Control tributario" [ref=f2e99] [cursor=pointer]
+        - button "NavIA ᴮᵉᵗᵃ" [ref=f2e101] [cursor=pointer]
+      - separator [ref=f2e103]
+      - tablist [ref=f2e106]:
+        - tab "Datos del usuario" [ref=f2e107] [cursor=pointer]
+        - tab "Entidades registradas" [ref=f2e108] [cursor=pointer]
+        - tab "Contactos vinculados" [ref=f2e109] [cursor=pointer]
+        - tab "Equipo" [selected] [ref=f2e110] [cursor=pointer]
+      - generic [ref=f2e113]:
+        - generic [ref=f2e114]:
+          - heading "Equipo de Chris" [level=5] [ref=f2e115]
+          - button [active] [ref=f2e116] [cursor=pointer]
+        - generic [ref=f2e120]:
+          - generic [ref=f2e122]:
+            - textbox "Buscar por nombre o email" [ref=f2e126]
+            - group
+          - generic [ref=f2e127]:
+            - generic: Rol
+            - generic [ref=f2e128]:
+              - combobox "Rol" [ref=f2e129] [cursor=pointer]
+              - textbox
+              - group:
+                - generic: Rol
+          - generic [ref=f2e130]:
+            - generic: Estado
+            - generic [ref=f2e131]:
+              - combobox "Estado" [ref=f2e132] [cursor=pointer]
+              - textbox
+              - group:
+                - generic: Estado
+        - generic [ref=f2e133]:
+          - grid [ref=f2e134]:
+            - row [ref=f2e135]:
+              - columnheader "Nombre" [ref=f2e136] [cursor=pointer]
+              - columnheader "Email" [ref=f2e139] [cursor=pointer]
+              - columnheader "Rol" [ref=f2e142] [cursor=pointer]
+              - columnheader "Estado" [ref=f2e145] [cursor=pointer]
+              - columnheader "Acciones" [ref=f2e148]
+            - rowgroup [ref=f2e151]:
+              - row [ref=f2e152]:
+                - gridcell "Usuario Invitado" [ref=f2e153]
+                - gridcell "5ucjabwvmtlyf5ch@uberip.com" [ref=f2e154]
+                - gridcell "Solo vista" [ref=f2e155]
+                - gridcell "Activo" [ref=f2e159]
+                - gridcell [ref=f2e163]:
+                  - generic [ref=f2e164]:
+                    - menuitem "Editar" [ref=f2e165] [cursor=pointer]
+                    - menuitem "Desactivar" [ref=f2e168] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e171] [cursor=pointer]
+              - row [ref=f2e174]:
+                - gridcell [ref=f2e175]
+                - gridcell "7nbyfyn7mtkhr0sh@emalupe.com" [ref=f2e176]
+                - gridcell "Sin acceso asignado" [ref=f2e177]
+                - gridcell "Activo" [ref=f2e181]
+                - gridcell [ref=f2e185]:
+                  - generic [ref=f2e186]:
+                    - menuitem "Editar" [ref=f2e187] [cursor=pointer]
+                    - menuitem "Desactivar" [ref=f2e190] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e193] [cursor=pointer]
+              - row [ref=f2e196]:
+                - gridcell "Usuario Invitado" [ref=f2e197]
+                - gridcell "8435baifmtlyggqg@uberip.com" [ref=f2e198]
+                - gridcell "Solo vista" [ref=f2e199]
+                - gridcell "Activo" [ref=f2e203]
+                - gridcell [ref=f2e207]:
+                  - generic [ref=f2e208]:
+                    - menuitem "Editar" [ref=f2e209] [cursor=pointer]
+                    - menuitem "Desactivar" [ref=f2e212] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e215] [cursor=pointer]
+              - row [ref=f2e218]:
+                - gridcell "Usuario Invitado" [ref=f2e219]
+                - gridcell "a1w67lu1mtnf5w5c@uberip.com" [ref=f2e220]
+                - gridcell "Sin acceso asignado" [ref=f2e221]
+                - gridcell "Activo" [ref=f2e225]
+                - gridcell [ref=f2e229]:
+                  - generic [ref=f2e230]:
+                    - menuitem "Editar" [ref=f2e231] [cursor=pointer]
+                    - menuitem "Desactivar" [ref=f2e234] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e237] [cursor=pointer]
+              - row [ref=f2e240]:
+                - gridcell [ref=f2e241]
+                - gridcell "actuariamicuentatest@yopmail.com" [ref=f2e242]
+                - gridcell "Solo vista" [ref=f2e243]
+                - gridcell "En espera" [ref=f2e247]
+                - gridcell [ref=f2e251]:
+                  - generic [ref=f2e252]:
+                    - menuitem "Editar" [ref=f2e253] [cursor=pointer]
+                    - menuitem "Activar" [ref=f2e256] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e259] [cursor=pointer]
+              - row [ref=f2e262]:
+                - gridcell "Chris Test" [ref=f2e263]
+                - gridcell "actuariatest6@yopmail.com" [ref=f2e264]
+                - gridcell "Administrador" [ref=f2e265]
+                - gridcell "Activo" [ref=f2e269]
+                - gridcell [ref=f2e273]:
+                  - generic "No puedes administrar tu propia cuenta" [ref=f2e274]:
+                    - menuitem "Editar" [disabled]
+                    - menuitem "Desactivar" [disabled]
+                    - menuitem "Quitar de empresa" [disabled]
+              - row [ref=f2e275]:
+                - gridcell [ref=f2e276]
+                - gridcell "equipo116486m31@yopmail.com" [ref=f2e277]
+                - gridcell "Solo vista" [ref=f2e278]
+                - gridcell "En espera" [ref=f2e282]
+                - gridcell [ref=f2e286]:
+                  - generic [ref=f2e287]:
+                    - menuitem "Editar" [ref=f2e288] [cursor=pointer]
+                    - menuitem "Activar" [ref=f2e291] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e294] [cursor=pointer]
+              - row [ref=f2e297]:
+                - gridcell "Usuario Invitado" [ref=f2e298]
+                - gridcell "g3emsagqmtki1jlk@emalupe.com" [ref=f2e299]
+                - gridcell "Sin acceso asignado" [ref=f2e300]
+                - gridcell "Activo" [ref=f2e304]
+                - gridcell [ref=f2e308]:
+                  - generic [ref=f2e309]:
+                    - menuitem "Editar" [ref=f2e310] [cursor=pointer]
+                    - menuitem "Desactivar" [ref=f2e313] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e316] [cursor=pointer]
+              - row [ref=f2e319]:
+                - gridcell "Usuario Invitado" [ref=f2e320]
+                - gridcell "iezprat6mtki3itn@emalupe.com" [ref=f2e321]
+                - gridcell "Editor en 1 módulo Ver roles por módulo" [ref=f2e322]:
+                  - generic [ref=f2e324]:
+                    - generic [ref=f2e325]: Editor en 1 módulo
+                    - button "Ver roles por módulo" [ref=f2e327] [cursor=pointer]
+                - gridcell "Activo" [ref=f2e330]
+                - gridcell [ref=f2e334]:
+                  - generic [ref=f2e335]:
+                    - menuitem "Editar" [ref=f2e336] [cursor=pointer]
+                    - menuitem "Desactivar" [ref=f2e339] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e342] [cursor=pointer]
+              - row [ref=f2e345]:
+                - gridcell "Usuario Invitado" [ref=f2e346]
+                - gridcell "kg0k9tbzmtki2uvx@emalupe.com" [ref=f2e347]
+                - gridcell "Administrador" [ref=f2e348]
+                - gridcell "Activo" [ref=f2e352]
+                - gridcell [ref=f2e356]:
+                  - generic [ref=f2e357]:
+                    - menuitem "Editar" [ref=f2e358] [cursor=pointer]
+                    - menuitem "Desactivar" [ref=f2e361] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e364] [cursor=pointer]
+              - row [ref=f2e367]:
+                - gridcell "Usuario Invitado" [ref=f2e368]
+                - gridcell "ky4v2unimtnf7z34@uberip.com" [ref=f2e369]
+                - gridcell "Solo vista" [ref=f2e370]
+                - gridcell "Activo" [ref=f2e374]
+                - gridcell [ref=f2e378]:
+                  - generic [ref=f2e379]:
+                    - menuitem "Editar" [ref=f2e380] [cursor=pointer]
+                    - menuitem "Desactivar" [ref=f2e383] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e386] [cursor=pointer]
+              - row [ref=f2e389]:
+                - gridcell "TestUser Automation" [ref=f2e390]
+                - gridcell "l9lx8jtumt37kpaf@emalupe.com" [ref=f2e391]
+                - gridcell "Sin acceso asignado" [ref=f2e392]
+                - gridcell "Activo" [ref=f2e396]
+                - gridcell [ref=f2e400]:
+                  - generic [ref=f2e401]:
+                    - menuitem "Editar" [ref=f2e402] [cursor=pointer]
+                    - menuitem "Desactivar" [ref=f2e405] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e408] [cursor=pointer]
+              - row [ref=f2e411]:
+                - gridcell "TestUser Automation" [ref=f2e412]
+                - gridcell "m0ciewpdmtly83hb@uberip.com" [ref=f2e413]
+                - gridcell "Sin acceso asignado" [ref=f2e414]
+                - gridcell "Activo" [ref=f2e418]
+                - gridcell [ref=f2e422]:
+                  - generic [ref=f2e423]:
+                    - menuitem "Editar" [ref=f2e424] [cursor=pointer]
+                    - menuitem "Desactivar" [ref=f2e427] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e430] [cursor=pointer]
+              - row [ref=f2e433]:
+                - gridcell "Usuario Invitado" [ref=f2e434]
+                - gridcell "nhvk9173mtnf6pn9@uberip.com" [ref=f2e435]
+                - gridcell "Solo vista" [ref=f2e436]
+                - gridcell "Activo" [ref=f2e440]
+                - gridcell [ref=f2e444]:
+                  - generic [ref=f2e445]:
+                    - menuitem "Editar" [ref=f2e446] [cursor=pointer]
+                    - menuitem "Desactivar" [ref=f2e449] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e452] [cursor=pointer]
+              - row [ref=f2e455]:
+                - gridcell "Usuario Invitado" [ref=f2e456]
+                - gridcell "oqa1in9jmtlyfuch@uberip.com" [ref=f2e457]
+                - gridcell "Sin acceso asignado" [ref=f2e458]
+                - gridcell "Activo" [ref=f2e462]
+                - gridcell [ref=f2e466]:
+                  - generic [ref=f2e467]:
+                    - menuitem "Editar" [ref=f2e468] [cursor=pointer]
+                    - menuitem "Desactivar" [ref=f2e471] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e474] [cursor=pointer]
+              - row [ref=f2e477]:
+                - gridcell "Usuario Invitado" [ref=f2e478]
+                - gridcell "q8b7x0gxmtlyi5ew@uberip.com" [ref=f2e479]
+                - gridcell "Editor en 1 módulo Ver roles por módulo" [ref=f2e480]:
+                  - generic [ref=f2e482]:
+                    - generic [ref=f2e483]: Editor en 1 módulo
+                    - button "Ver roles por módulo" [ref=f2e485] [cursor=pointer]
+                - gridcell "Activo" [ref=f2e488]
+                - gridcell [ref=f2e492]:
+                  - generic [ref=f2e493]:
+                    - menuitem "Editar" [ref=f2e494] [cursor=pointer]
+                    - menuitem "Desactivar" [ref=f2e497] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e500] [cursor=pointer]
+              - row [ref=f2e503]:
+                - gridcell [ref=f2e504]
+                - gridcell "r8vu9daomtnexlf3@uberip.com" [ref=f2e505]
+                - gridcell "Sin acceso asignado" [ref=f2e506]
+                - gridcell "Activo" [ref=f2e510]
+                - gridcell [ref=f2e514]:
+                  - generic [ref=f2e515]:
+                    - menuitem "Editar" [ref=f2e516] [cursor=pointer]
+                    - menuitem "Desactivar" [ref=f2e519] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e522] [cursor=pointer]
+              - row [ref=f2e525]:
+                - gridcell "Usuario Invitado" [ref=f2e526]
+                - gridcell "rdh1qu4tmtki0ypm@emalupe.com" [ref=f2e527]
+                - gridcell "Solo vista" [ref=f2e528]
+                - gridcell "Activo" [ref=f2e532]
+                - gridcell [ref=f2e536]:
+                  - generic [ref=f2e537]:
+                    - menuitem "Editar" [ref=f2e538] [cursor=pointer]
+                    - menuitem "Desactivar" [ref=f2e541] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e544] [cursor=pointer]
+              - row [ref=f2e547]:
+                - gridcell [ref=f2e548]
+                - gridcell "testest@yopmail.com" [ref=f2e549]
+                - gridcell "Solo vista" [ref=f2e550]
+                - gridcell "En espera" [ref=f2e554]
+                - gridcell [ref=f2e558]:
+                  - generic [ref=f2e559]:
+                    - menuitem "Editar" [ref=f2e560] [cursor=pointer]
+                    - menuitem "Activar" [ref=f2e563] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e566] [cursor=pointer]
+              - row [ref=f2e569]:
+                - gridcell "Usuario Invitado" [ref=f2e570]
+                - gridcell "vh04hhw8mtlyhcbv@uberip.com" [ref=f2e571]
+                - gridcell "Administrador" [ref=f2e572]
+                - gridcell "Activo" [ref=f2e576]
+                - gridcell [ref=f2e580]:
+                  - generic [ref=f2e581]:
+                    - menuitem "Editar" [ref=f2e582] [cursor=pointer]
+                    - menuitem "Desactivar" [ref=f2e585] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e588] [cursor=pointer]
+              - row [ref=f2e591]:
+                - gridcell "Usuario Invitado" [ref=f2e592]
+                - gridcell "ydtw9snmmtki25tz@emalupe.com" [ref=f2e593]
+                - gridcell "Solo vista" [ref=f2e594]
+                - gridcell "Activo" [ref=f2e598]
+                - gridcell [ref=f2e602]:
+                  - generic [ref=f2e603]:
+                    - menuitem "Editar" [ref=f2e604] [cursor=pointer]
+                    - menuitem "Desactivar" [ref=f2e607] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e610] [cursor=pointer]
+              - row [ref=f2e613]:
+                - gridcell "Usuario Invitado" [ref=f2e614]
+                - gridcell "yvk2kpx8mtnf592q@uberip.com" [ref=f2e615]
+                - gridcell "Solo vista" [ref=f2e616]
+                - gridcell "Activo" [ref=f2e620]
+                - gridcell [ref=f2e624]:
+                  - generic [ref=f2e625]:
+                    - menuitem "Editar" [ref=f2e626] [cursor=pointer]
+                    - menuitem "Desactivar" [ref=f2e629] [cursor=pointer]
+                    - menuitem "Quitar de empresa" [ref=f2e632] [cursor=pointer]
+          - generic [ref=f2e637]:
+            - paragraph [ref=f2e638]: 1–22 de 22
+            - generic [ref=f2e639]:
+              - button "Ir a la página anterior" [disabled]
+              - button "Ir a la página siguiente" [disabled]
+  - link "Escríbenos a WhatsApp" [ref=f2e640] [cursor=pointer]:
+    - /url: https://wa.me/593979133351/?text=Hola+Actuaria,+tengo+novedades+sobre+el+Portal+de+Clientes
+```
+
+# Test source
+
+```ts
+  72  | 
+  73  |         // Actas de Jubilación section
+  74  |         this.actasFinalizadasHeading = page.getByRole('heading', { name: 'ACTAS FINALIZADAS' });
+  75  |     }
+  76  | 
+  77  |     // ============= WELCOME SCREEN METHODS =============
+  78  | 
+  79  |     /**
+  80  |      * Verify the admin message is visible after login
+  81  |      * Expected: "El administrador de tu..." text
+  82  |      */
+  83  |     async verifyAdminMessage(timeout: number = 15000): Promise<void> {
+  84  |         this.logger.verificacion('Verificando mensaje del administrador');
+  85  |         await this.adminMessage.waitFor({ state: 'visible', timeout });
+  86  |         this.logger.exito('Mensaje del administrador visible');
+  87  |     }
+  88  | 
+  89  |     /**
+  90  |      * Verify the permitted module (default: Estudios actuariales) is visible
+  91  |      * Only this module should be shown when admin created user with default permissions
+  92  |      */
+  93  |     async verifyPermittedModuleVisible(timeout: number = 10000): Promise<void> {
+  94  |         this.logger.verificacion('Verificando módulo permitido visible: Estudios actuariales');
+  95  |         await this.permittedModuleLabel.waitFor({ state: 'visible', timeout });
+  96  |         this.logger.exito('Módulo "Estudios actuariales" visible');
+  97  |     }
+  98  | 
+  99  |     /**
+  100 |      * Click the "Empezar" button to proceed
+  101 |      */
+  102 |     async clickEmpezar(): Promise<void> {
+  103 |         this.logger.cambio('Haciendo clic en Empezar');
+  104 |         await expect(this.empezarButton).toBeEnabled({ timeout: 5000 });
+  105 |         await this.empezarButton.click();
+  106 |         this.logger.exito('Click en Empezar completado');
+  107 |     }
+  108 | 
+  109 |     // ============= NO ACCESS SCREEN METHODS =============
+  110 | 
+  111 |     /**
+  112 |      * Verify the "Estás esperando acceso" heading is visible
+  113 |      * This appears when the user has all permissions set to "Sin acceso"
+  114 |      */
+  115 |     async verifyEstasEsperandoAccesoHeading(timeout: number = 15000): Promise<void> {
+  116 |         this.logger.verificacion('Verificando heading: Estás esperando acceso');
+  117 |         await this.estasEsperandoAccesoHeading.waitFor({ state: 'visible', timeout });
+  118 |         this.logger.exito('Heading "Estás esperando acceso" visible');
+  119 |     }
+  120 | 
+  121 |     /**
+  122 |      * Verify the admin info link is visible showing who can grant access
+  123 |      */
+  124 |     async verifyAdminInfoVisible(timeout: number = 10000): Promise<void> {
+  125 |         this.logger.verificacion('Verificando información del administrador');
+  126 |         await this.adminInfoLink.waitFor({ state: 'visible', timeout });
+  127 |         this.logger.exito('Enlace del administrador visible');
+  128 |     }
+  129 | 
+  130 |     // ============= READ-ONLY WELCOME SCREEN METHODS =============
+  131 | 
+  132 |     /**
+  133 |      * Verify a specific module is visible on the welcome screen
+  134 |      * Supports different locator strategies: exact match, scoped within label
+  135 |      * @param moduleText - The text of the module to verify
+  136 |      * @param timeout - Timeout in ms
+  137 |      * @param options - Optional locator configuration { exact?: boolean; withinLabel?: boolean }
+  138 |      */
+  139 |     async verifyWelcomeModuleVisible(moduleText: string, timeout: number = 10000, options?: { exact?: boolean; withinLabel?: boolean }): Promise<void> {
+  140 |         this.logger.verificacion(`Verificando módulo visible en bienvenida: "${moduleText}"`);
+  141 | 
+  142 |         let moduleLocator: Locator;
+  143 |         if (options?.withinLabel) {
+  144 |             moduleLocator = this.page.getByLabel('Te invitaron a Actuaria+').getByText(moduleText);
+  145 |         } else if (options?.exact) {
+  146 |             moduleLocator = this.page.getByText(moduleText, { exact: true });
+  147 |         } else {
+  148 |             moduleLocator = this.page.getByText(moduleText);
+  149 |         }
+  150 | 
+  151 |         await moduleLocator.waitFor({ state: 'visible', timeout });
+  152 |         this.logger.exito(`Módulo "${moduleText}" visible en pantalla de bienvenida`);
+  153 |     }
+  154 | 
+  155 |     // ============= DASHBOARD NAVIGATION METHODS =============
+  156 | 
+  157 |     /**
+  158 |      * Click on "Actas de jubilación" tab in the dashboard content area
+  159 |      */
+  160 |     async clickActasJubilacionTab(): Promise<void> {
+  161 |         this.logger.cambio('Navegando a Actas de jubilación');
+  162 |         await this.actasJubilacionTab.waitFor({ state: 'visible', timeout: 10000 });
+  163 |         await this.actasJubilacionTab.click();
+  164 |         this.logger.exito('Click en Actas de jubilación completado');
+  165 |     }
+  166 | 
+  167 |     /**
+  168 |      * Verify "ACTAS FINALIZADAS" heading is visible
+  169 |      */
+  170 |     async verifyActasFinalizadasHeading(timeout: number = 10000): Promise<void> {
+  171 |         this.logger.verificacion('Verificando heading: ACTAS FINALIZADAS');
+> 172 |         await this.actasFinalizadasHeading.waitFor({ state: 'visible', timeout });
+      |                                            ^ TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+  173 |         this.logger.exito('Heading "ACTAS FINALIZADAS" visible');
+  174 |     }
+  175 | 
+  176 |     /**
+  177 | 
+  178 |      * Verify the read-only state: a creation action button is present but disabled.
+  179 |      * This confirms the user has solo vista (read-only) permissions.
+  180 |      * Defaults to "Crear nuevo estudio" but can accept other button names for different tabs.
+  181 |      *
+  182 |      * @param timeout - Timeout in ms
+  183 |      * @param buttonName - The name of the button to check (default: 'Crear nuevo estudio')
+  184 |      */
+  185 | 
+  186 | 
+  187 |     async verifySoloVistaMessage(timeout: number = 5000, buttonName: string = 'Crear nuevo estudio'): Promise<void> {
+  188 |         this.logger.verificacion(`Verificando que el botón "${buttonName}" está presente pero deshabilitado`);
+  189 | 
+  190 | 
+  191 | 
+  192 |         // Get the button locator with the given name
+  193 |         const button = this.page.getByRole('button', { name: buttonName });
+  194 | 
+  195 |         // Wait for the button to be visible
+  196 |         await button.waitFor({ state: 'visible', timeout });
+  197 | 
+  198 |         // Verify the button is disabled (read-only access)
+  199 | 
+  200 |         await expect(button).toBeDisabled({ timeout });
+  201 | 
+  202 | 
+  203 |         this.logger.exito(`Botón "${buttonName}" visible y deshabilitado - permisos de solo lectura`);
+  204 |     }
+  205 | 
+  206 |     /**
+  207 |      * Click on "Estudio actuarial" tab in the dashboard content area
+  208 |      */
+  209 |     async clickEstudioActuarialTab(): Promise<void> {
+  210 |         this.logger.cambio('Navegando a Estudio actuarial');
+  211 |         await this.estudioActuarialTab.waitFor({ state: 'visible', timeout: 10000 });
+  212 |         await this.estudioActuarialTab.click();
+  213 |         this.logger.exito('Click en Estudio actuarial completado');
+  214 |     }
+  215 | 
+  216 |     /**
+  217 |      * Verify "Últimos estudios creados" heading is visible
+  218 |      */
+  219 |     async verifyUltimosEstudiosHeading(timeout: number = 10000): Promise<void> {
+  220 |         this.logger.verificacion('Verificando heading: Últimos estudios creados');
+  221 |         await this.ultimosEstudiosHeading.waitFor({ state: 'visible', timeout });
+  222 |         this.logger.exito('Heading "Últimos estudios creados" visible');
+  223 |     }
+  224 | 
+  225 |     /**
+  226 |      * Verify a specific module tab is blocked (not clickable / aria-disabled)
+  227 |      * @param moduleName - Name of the blocked module button
+  228 |      */
+  229 |     async verifyModuleBlocked(moduleName: string): Promise<void> {
+  230 |         this.logger.verificacion(`Verificando módulo bloqueado: "${moduleName}"`);
+  231 | 
+  232 |         // Map module names to their locators (only tabs that exist in the dashboard)
+  233 |         const moduleMap: Record<string, Locator> = {
+  234 |             'Actas de jubilación': this.actasJubilacionTab,
+  235 |             'Control tributario': this.controlTributarioTab,
+  236 |             'NavIA': this.naviaTab,
+  237 |         };
+  238 | 
+  239 |         const locator = moduleMap[moduleName];
+  240 |         if (!locator) {
+  241 |             throw new Error(`Unknown module name: "${moduleName}". Available: ${Object.keys(moduleMap).join(', ')}`);
+  242 |         }
+  243 | 
+  244 |         // Verify the locator is present and has the correct styling for disabled/blocked
+  245 |         await expect(locator).toBeVisible({ timeout: 5000 });
+  246 | 
+  247 |         // Check if it's aria-disabled or has specific styling
+  248 |         const isDisabled = await locator.getAttribute('aria-disabled').catch(() => null);
+  249 |         const pointerEvents = await locator.evaluate(el => window.getComputedStyle(el).pointerEvents).catch(() => '');
+  250 | 
+  251 |         if (isDisabled === 'true' || pointerEvents === 'none') {
+  252 |             this.logger.exito(`Módulo "${moduleName}" está correctamente bloqueado`);
+  253 |         } else {
+  254 |             // Log warning but don't fail - let the test decide based on expected behavior
+  255 |             this.logger.advertencia(`Módulo "${moduleName}" podría no estar bloqueado (aria-disabled=${isDisabled}, pointer-events=${pointerEvents})`);
+  256 |         }
+  257 | 
+  258 |         this.logger.exito(`Módulo "${moduleName}" verificado`);
+  259 |     }
+  260 | }
+  261 | 
+```

@@ -1,0 +1,26 @@
+🎭️ [Inicio Tests] Empezando pre condición
+🔐 [Inicio Tests] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Inicio Tests] Login exitoso
+🔍 [Inicio Tests] Verificando navegación a página principal
+✅ [Inicio Tests] Navegación exitosa a dashboard
+🎭️ [Inicio Tests] TC06: Verificar toggle rápido del burger
+📊 [Inicio Tests] Realizando clicks rápidos en el burger...
+📊 [Inicio Tests] Click #1 realizado
+📊 [Inicio Tests] Click #2 realizado
+📊 [Inicio Tests] Click #3 realizado
+📊 [Inicio Tests] Click #4 realizado
+📊 [Inicio Tests] Click #5 realizado
+✅ [Inicio Tests] 5 clicks rápidos completados
+📊 [Inicio Tests] Verificando estado final del menú...
+📊 [Inicio Tests] Botón burger visible: true
+📊 [Inicio Tests] Menú parece estar: CERRADO
+✅ [Inicio Tests] Menú está en estado válido después de toggles
+📊 [Inicio Tests] Asegurando que el menú esté cerrado...
+📊 [Inicio Tests] Menú ya estaba cerrado
+✅ [Inicio Tests] Estado final verificado
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 3 console message(s) logged to stderr

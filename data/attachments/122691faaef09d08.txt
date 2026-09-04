@@ -1,0 +1,19 @@
+🎭️ [Mi Cuenta - Tabs Tests] TC06: Verificar que solo un tab puede estar activo a la vez
+📊 [MiCuentaTabsWorkflows] 🔍 Verificando que solo un tab está activo a la vez
+ℹ️  [MiCuentaTabsPage] Verificando que tab "Datos del usuario" NO esté activo (aria-selected=false)
+ℹ️  [MiCuentaTabsPage] Verificando que tab "Entidades registradas" NO esté activo (aria-selected=false)
+📊 [MiCuentaTabsPage] Verificando que tab "Contactos vinculados" esté activo (aria-selected=true)
+ℹ️  [MiCuentaTabsPage] Verificando que tab "Equipo" NO esté activo (aria-selected=false)
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Solo "Contactos vinculados" está activo
+ℹ️  [MiCuentaTabsPage] Verificando que tab "Datos del usuario" NO esté activo (aria-selected=false)
+📊 [MiCuentaTabsPage] Verificando que tab "Entidades registradas" esté activo (aria-selected=true)
+ℹ️  [MiCuentaTabsPage] Verificando que tab "Contactos vinculados" NO esté activo (aria-selected=false)
+ℹ️  [MiCuentaTabsPage] Verificando que tab "Equipo" NO esté activo (aria-selected=false)
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Solo "Entidades registradas" está activo
+📊 [MiCuentaTabsPage] Verificando que tab "Datos del usuario" esté activo (aria-selected=true)
+ℹ️  [MiCuentaTabsPage] Verificando que tab "Entidades registradas" NO esté activo (aria-selected=false)
+ℹ️  [MiCuentaTabsPage] Verificando que tab "Contactos vinculados" NO esté activo (aria-selected=false)
+ℹ️  [MiCuentaTabsPage] Verificando que tab "Equipo" NO esté activo (aria-selected=false)
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Solo "Datos del usuario" está activo
+✅ [MiCuentaTabsWorkflows] ✅ Exclusividad de tabs verificada
+✅ [Mi Cuenta - Tabs Tests] ✓ Solo un tab está activo a la vez

@@ -1,0 +1,30 @@
+🎭️ [Mi Cuenta - Tabs Tests] TC05: Verificar navegación secuencial completa entre tabs
+🔄 [Mi Cuenta - Tabs Tests] Navegando en orden secuencial
+🔍 [MiCuentaTabsWorkflows] 🔄 Navegando a tab: Datos del usuario
+📊 [MiCuentaTabsPage] Verificando que tab "Datos del usuario" esté activo (aria-selected=true)
+✅ [MiCuentaTabsWorkflows] ✅ Tab "Datos del usuario" está activo y en la URL correcta
+🔍 [MiCuentaTabsWorkflows] 🔄 Navegando a tab: Contactos vinculados
+📊 [MiCuentaTabsPage] Verificando que tab "Contactos vinculados" esté activo (aria-selected=true)
+ℹ️  [MiCuentaTabsPage] Verificando que tab "Datos del usuario" NO esté activo (aria-selected=false)
+✅ [MiCuentaTabsWorkflows] ✅ Tab "Contactos vinculados" está activo y en la URL correcta
+🔍 [MiCuentaTabsWorkflows] 🔄 Navegando a tab: Entidades registradas
+📊 [MiCuentaTabsPage] Verificando que tab "Entidades registradas" esté activo (aria-selected=true)
+ℹ️  [MiCuentaTabsPage] Verificando que tab "Contactos vinculados" NO esté activo (aria-selected=false)
+✅ [MiCuentaTabsWorkflows] ✅ Tab "Entidades registradas" está activo y en la URL correcta
+🔍 [MiCuentaTabsWorkflows] 🔄 Navegando a tab: Datos del usuario
+📊 [MiCuentaTabsPage] Verificando que tab "Datos del usuario" esté activo (aria-selected=true)
+ℹ️  [MiCuentaTabsPage] Verificando que tab "Entidades registradas" NO esté activo (aria-selected=false)
+✅ [MiCuentaTabsWorkflows] ✅ Tab "Datos del usuario" está activo y en la URL correcta
+🔄 [Mi Cuenta - Tabs Tests] Navegando en orden inverso
+🔍 [MiCuentaTabsWorkflows] 🔄 Navegando a tab: Entidades registradas
+📊 [MiCuentaTabsPage] Verificando que tab "Entidades registradas" esté activo (aria-selected=true)
+✅ [MiCuentaTabsWorkflows] ✅ Tab "Entidades registradas" está activo y en la URL correcta
+🔍 [MiCuentaTabsWorkflows] 🔄 Navegando a tab: Contactos vinculados
+📊 [MiCuentaTabsPage] Verificando que tab "Contactos vinculados" esté activo (aria-selected=true)
+ℹ️  [MiCuentaTabsPage] Verificando que tab "Entidades registradas" NO esté activo (aria-selected=false)
+✅ [MiCuentaTabsWorkflows] ✅ Tab "Contactos vinculados" está activo y en la URL correcta
+🔍 [MiCuentaTabsWorkflows] 🔄 Navegando a tab: Datos del usuario
+📊 [MiCuentaTabsPage] Verificando que tab "Datos del usuario" esté activo (aria-selected=true)
+ℹ️  [MiCuentaTabsPage] Verificando que tab "Contactos vinculados" NO esté activo (aria-selected=false)
+✅ [MiCuentaTabsWorkflows] ✅ Tab "Datos del usuario" está activo y en la URL correcta
+✅ [Mi Cuenta - Tabs Tests] ✓ Navegación secuencial funciona correctamente en ambas direcciones

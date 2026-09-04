@@ -1,0 +1,419 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: specs/Navia/naviaModule.test.ts >> Verificar modulo NaviA muestra datos esperados >> NaviA | [HP] | TC01: Verificar empresa CALCULLIS S.A. muestra datos correctos
+- Location: tests/specs/Navia/naviaModule.test.ts:49:5
+
+# Error details
+
+```
+Error: None of the expected company names [CALCULIS S.A., CALCULLIS S.A.] were found in the company selector.
+Company-related buttons found: DEMOGRAFIX S.A.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f1e2]:
+  - generic [ref=f1e3]:
+    - banner [ref=f1e4]:
+      - generic [ref=f1e6]:
+        - button "Notificaciones" [ref=f1e7] [cursor=pointer]:
+          - generic [ref=f1e8]: "2"
+        - button [ref=f1e12] [cursor=pointer]:
+          - img "image" [ref=f1e13]
+          - paragraph [ref=f1e14]: DEMOGRAFIX S.A.
+    - complementary [ref=f1e17]:
+      - generic [ref=f1e18]:
+        - link [ref=f1e19] [cursor=pointer]:
+          - /url: /dashboard
+          - img "Actuaria" [ref=f1e20]
+        - button "abrir/cerrar menú" [ref=f1e21] [cursor=pointer]
+      - generic [ref=f1e26]:
+        - textbox "Buscar..." [ref=f1e30]
+        - group
+      - list [ref=f1e32]:
+        - button "Inicio" [ref=f1e33] [cursor=pointer]
+        - list [ref=f1e39]:
+          - listitem [ref=f1e40]: Panel General
+          - button "Mi cuenta" [ref=f1e42] [cursor=pointer]
+          - button "Servicios" [ref=f1e52] [cursor=pointer]
+          - button "Recursos" [ref=f1e61] [cursor=pointer]
+        - list [ref=f1e69]:
+          - listitem [ref=f1e70]: Administración
+          - link "Usuarios" [ref=f1e72] [cursor=pointer]:
+            - /url: /dashboard/admin/usuarios
+          - link "Empresas" [ref=f1e79] [cursor=pointer]:
+            - /url: /dashboard/admin/empresas
+          - link "Pedidos" [ref=f1e86] [cursor=pointer]:
+            - /url: /dashboard/admin/pedidos
+          - link "Parámetros" [ref=f1e94] [cursor=pointer]:
+            - /url: /dashboard/admin/parametros
+          - link "Historial" [ref=f1e101] [cursor=pointer]:
+            - /url: /dashboard/admin/historial
+        - list [ref=f1e108]:
+          - listitem [ref=f1e109]: Pruebas
+          - link "Checkout demo" [ref=f1e111] [cursor=pointer]:
+            - /url: /dashboard/checkout-demo
+      - generic [ref=f1e119]:
+        - paragraph [ref=f1e120]: Actuaria+ Stage
+        - paragraph [ref=f1e121]: soporteplus@actuaria.com
+        - generic [ref=f1e122]: v 1.11.2
+    - generic [ref=f1e127]:
+      - generic [ref=f1e128]:
+        - heading "Hola, Rodrigo" [level=1] [ref=f1e129]
+        - paragraph [ref=f1e130]: Última conexión fue a las 4:07pm
+      - generic [ref=f1e131]:
+        - button "Inicio" [ref=f1e132] [cursor=pointer]
+        - button "Estudio actuarial" [ref=f1e134] [cursor=pointer]
+        - button "Impuestos diferidos" [ref=f1e136] [cursor=pointer]
+        - button "Actas de jubilación" [ref=f1e138] [cursor=pointer]
+        - button "Control tributario" [ref=f1e140] [cursor=pointer]
+        - button "Simulador de beneficios" [ref=f1e142] [cursor=pointer]
+        - button "NavIA ᴮᵉᵗᵃ" [ref=f1e144] [cursor=pointer]
+      - separator [ref=f1e146]
+      - generic [ref=f1e147]:
+        - paragraph [ref=f1e148]: Datos correspondientes al 31 de diciembre del 2025
+        - generic [ref=f1e149]:
+          - generic [ref=f1e151]:
+            - paragraph [ref=f1e153]: Provisión acumulada
+            - paragraph [ref=f1e160]: $6.08M
+            - paragraph [ref=f1e161]: USD · Total acumulado
+            - paragraph [ref=f1e163]: ↑ +11% vs 2024
+            - generic [ref=f1e164]:
+              - generic [ref=f1e165]:
+                - paragraph [ref=f1e166]: Jubilación Patronal
+                - paragraph [ref=f1e167]: $4.69M
+              - generic [ref=f1e168]:
+                - paragraph [ref=f1e169]: Desahucio
+                - paragraph [ref=f1e170]: $1.39M
+          - generic [ref=f1e172]:
+            - paragraph [ref=f1e174]: Remuneración promedio
+            - paragraph [ref=f1e181]: $1.12K
+            - paragraph [ref=f1e182]: USD · Remuneración promedio
+            - paragraph [ref=f1e184]: ↓ -1% vs 2024
+            - generic [ref=f1e185]:
+              - generic [ref=f1e186]:
+                - paragraph [ref=f1e187]: Hombres
+                - paragraph [ref=f1e188]: $1.10K
+              - generic [ref=f1e189]:
+                - paragraph [ref=f1e190]: Mujeres
+                - paragraph [ref=f1e191]: $1.22K
+          - generic [ref=f1e193]:
+            - paragraph [ref=f1e195]: Distribución demográfica
+            - paragraph [ref=f1e200]: "558"
+            - paragraph [ref=f1e201]: Partícipes activos
+            - paragraph [ref=f1e203]: ↓ -56 vs 2024
+            - generic [ref=f1e204]:
+              - generic [ref=f1e205]:
+                - paragraph [ref=f1e206]: Hombres
+                - paragraph [ref=f1e207]: 483 · 87%
+              - generic [ref=f1e208]:
+                - paragraph [ref=f1e209]: Mujeres
+                - paragraph [ref=f1e210]: 75 · 13%
+          - generic [ref=f1e212]:
+            - paragraph [ref=f1e214]: Partícipes jubilados
+            - paragraph [ref=f1e219]: "22"
+            - paragraph [ref=f1e220]: Total jubilados
+            - paragraph [ref=f1e222]: ↑ +0 vs 2024
+            - generic [ref=f1e223]:
+              - generic [ref=f1e224]:
+                - paragraph [ref=f1e225]: Hombres
+                - paragraph [ref=f1e226]: 21 · 95%
+              - generic [ref=f1e227]:
+                - paragraph [ref=f1e228]: Mujeres
+                - paragraph [ref=f1e229]: 1 · 5%
+      - generic [ref=f1e230]:
+        - generic [ref=f1e231]:
+          - generic [ref=f1e232]:
+            - paragraph [ref=f1e233]: Quinquenio por tiempo de servicio
+            - generic [ref=f1e234]:
+              - paragraph [ref=f1e237] [cursor=pointer]: Jubilados
+              - paragraph [ref=f1e240] [cursor=pointer]: TS ≥ 25
+              - paragraph [ref=f1e243] [cursor=pointer]: 20 ≤ TS < 25
+              - paragraph [ref=f1e246] [cursor=pointer]: 15 ≤ TS < 20
+              - paragraph [ref=f1e249] [cursor=pointer]: 10 ≤ TS < 15
+              - paragraph [ref=f1e252] [cursor=pointer]: TS < 10
+          - generic [ref=f1e253]:
+            - paragraph [ref=f1e254]: Distribución provisión jubilación patronal por tiempo de servicio (en USD)
+            - generic [ref=f1e256] [cursor=pointer]
+          - paragraph [ref=f1e258]: Distribución número de partícipes por tiempo de servicio
+          - generic [ref=f1e261]:
+            - paragraph [ref=f1e262]: Distribución provisión bonificación por desahucio por tiempo de servicio (en USD)
+            - generic [ref=f1e264] [cursor=pointer]
+        - generic:
+          - paragraph
+          - paragraph
+      - separator [ref=f1e265]
+      - generic [ref=f1e266]:
+        - heading "Mis Servicios" [level=1] [ref=f1e267]
+        - generic [ref=f1e268]:
+          - generic [ref=f1e270]:
+            - generic [ref=f1e271]:
+              - button [ref=f1e274] [cursor=pointer]:
+                - paragraph [ref=f1e275]: Conocer más
+              - heading "Estudios actuariales" [level=6] [ref=f1e278]
+              - paragraph [ref=f1e279]: Genera tu cálculo actuarial de provisiones de beneficios post-empleo
+              - generic [ref=f1e280]: Disponible
+              - button "Ingresar" [ref=f1e282] [cursor=pointer]
+            - generic [ref=f1e283]:
+              - button [ref=f1e284] [cursor=pointer]
+              - paragraph [ref=f1e288]: Cumple con la normativa contable y toma decisiones con respaldo actuarial. Calculamos provisiones por jubilación y desahucio con resultados sólidos, normativos y listos para auditar.
+          - generic [ref=f1e290]:
+            - generic [ref=f1e291]:
+              - button [ref=f1e295] [cursor=pointer]:
+                - paragraph [ref=f1e296]: Conocer más
+              - heading "Informe de impuestos diferidos" [level=6] [ref=f1e299]
+              - paragraph [ref=f1e300]: Calcula el activo por impuesto diferido para obtener beneficios tributarios
+              - generic [ref=f1e301]: Disponible
+              - button "Ingresar" [ref=f1e303] [cursor=pointer]
+            - generic [ref=f1e304]:
+              - button [ref=f1e305] [cursor=pointer]
+              - paragraph [ref=f1e309]: Calculamos el impuesto diferido por provisiones de jubilación y desahucio bajo normativa contable, para reflejar correctamente la situación fiscal de tu empresa y facilitar la obtención de beneficio tributario.
+          - generic [ref=f1e311]:
+            - generic [ref=f1e312]:
+              - button [ref=f1e317] [cursor=pointer]:
+                - paragraph [ref=f1e318]: Conocer más
+              - heading "Actas de jubilación patronal" [level=6] [ref=f1e321]
+              - paragraph [ref=f1e322]: Documento técnico para la obtención de la pensión mensual y fondo global
+              - generic [ref=f1e323]: Disponible
+              - button "Ingresar" [ref=f1e325] [cursor=pointer]
+            - generic [ref=f1e326]:
+              - button [ref=f1e327] [cursor=pointer]
+              - paragraph [ref=f1e331]: Calculamos la jubilación patronal según normativa laboral, generando la pensión mensual y el fondo global acumulado, con criterios técnicos y proyecciones confiables para cumplir obligaciones patronales.
+          - generic [ref=f1e333]:
+            - generic [ref=f1e334]:
+              - button [ref=f1e339] [cursor=pointer]:
+                - paragraph [ref=f1e340]: Conocer más
+              - heading "Control tributario de provisiones" [level=6] [ref=f1e343]
+              - paragraph [ref=f1e344]: Composición histórica de provisiones, para el cumplimiento normativo
+              - generic [ref=f1e345]: Disponible
+              - button "Ingresar" [ref=f1e347] [cursor=pointer]
+            - generic [ref=f1e348]:
+              - button [ref=f1e349] [cursor=pointer]
+              - paragraph [ref=f1e353]: Controla provisiones de forma precisa, identifica salidas de personal, organiza tus reportes y asegura el cumplimiento fiscal, todo sin fricciones y en menos tiempo.
+          - generic [ref=f1e355]:
+            - generic [ref=f1e356]:
+              - button [ref=f1e362] [cursor=pointer]:
+                - paragraph [ref=f1e363]: Conocer más
+              - heading "Simulador de beneficios post empleo" [level=6] [ref=f1e366]
+              - paragraph [ref=f1e367]: Analiza tus provisiones, anticipando escenarios para la toma de decisiones
+              - generic [ref=f1e368]: Disponible
+              - button "Ingresar" [ref=f1e370] [cursor=pointer]
+            - generic [ref=f1e371]:
+              - button [ref=f1e372] [cursor=pointer]
+              - paragraph [ref=f1e376]: Anticipa el impacto futuro de tus provisiones con proyecciones claras y visuales. Mejora la planificación financiera, la toma de decisiones y la transparencia con un análisis demográfico ágil y estratégico.
+          - generic [ref=f1e378]:
+            - generic [ref=f1e379]:
+              - button [ref=f1e383] [cursor=pointer]:
+                - paragraph [ref=f1e384]: Conocer más
+              - heading "Consulta con NavIA ᴮᵉᵗᵃ" [level=6] [ref=f1e387]
+              - paragraph [ref=f1e388]: Responde todas tus dudas con nuestra inteligencia artificial actuarial
+              - generic [ref=f1e389]: Disponible
+              - button "Ingresar" [ref=f1e391] [cursor=pointer]
+            - generic [ref=f1e392]:
+              - button [ref=f1e393] [cursor=pointer]
+              - paragraph [ref=f1e397]: Agente de inteligencia artificial entrenado con toda la normativa laboral y modelos actuariales para responder cualquier duda sobre tu informe de jubilación patronal.
+  - link "Escríbenos a WhatsApp" [ref=f1e398] [cursor=pointer]:
+    - /url: https://wa.me/593979133351/?text=Hola+Actuaria,+tengo+novedades+sobre+el+Portal+de+Clientes
+```
+
+# Test source
+
+```ts
+  220 |             : [expectedData.companyName];
+  221 |         
+  222 |         const nameMatches = expectedNames.some(name => actualData.companyName === name);
+  223 |         expect(nameMatches).toBe(true);
+  224 |         logger.exito(`Nombre de empresa correcto: ${actualData.companyName}`);
+  225 |         
+  226 |         // Exact match for cutoff date
+  227 |         expect(actualData.cutoffDate).toBe(expectedData.cutoffDate);
+  228 |         logger.exito(`Fecha de corte correcta: ${actualData.cutoffDate}`);
+  229 |         
+  230 |         // Approximate match for retirement provision (allow ±5000 tolerance)
+  231 |         const actualRetirement = this.parseNumber(actualData.retirementProvision);
+  232 |         const expectedRetirement = this.parseNumber(expectedData.retirementProvision);
+  233 |         expect(actualRetirement).toBeGreaterThanOrEqual(expectedRetirement - 5000);
+  234 |         expect(actualRetirement).toBeLessThanOrEqual(expectedRetirement + 5000);
+  235 |         logger.exito('Provisión de jubilación correcta');
+  236 |         
+  237 |         // Approximate match for severance provision (allow ±2000 tolerance)
+  238 |         const actualSeverance = this.parseNumber(actualData.severanceProvision);
+  239 |         const expectedSeverance = this.parseNumber(expectedData.severanceProvision);
+  240 |         expect(actualSeverance).toBeGreaterThanOrEqual(expectedSeverance - 2000);
+  241 |         expect(actualSeverance).toBeLessThanOrEqual(expectedSeverance + 2000);
+  242 |         logger.exito('Provisión de desahucio correcta');
+  243 |         
+  244 |         // Flexible match for employee count (AI may return "243" or "243.00")
+  245 |         const actualEmployees = this.parseNumber(actualData.totalEmployees);
+  246 |         const expectedEmployees = this.parseNumber(expectedData.totalEmployees);
+  247 |         expect(actualEmployees).toBe(expectedEmployees);
+  248 |         logger.exito(`Total de empleados correcto: ${actualData.totalEmployees}`);
+  249 |     }
+  250 | 
+  251 |     /**
+  252 |      * Parse a formatted number string to actual number
+  253 |      * Example: "1,935,636.41" -> 1935636.41
+  254 |      */
+  255 |     private parseNumber(value: string): number {
+  256 |         // Remove commas and convert to number
+  257 |         const cleaned = value.replace(/,/g, '');
+  258 |         return parseFloat(cleaned) || 0;
+  259 |     }
+  260 | 
+  261 |     /**
+  262 |      * Verify the current company name in the top right corner
+  263 |      */
+  264 |     async verifyCurrentCompany(expectedCompanyName: string | string[]): Promise<void> {
+  265 |         // Support both single name and array of acceptable names
+  266 |         const expectedNames = Array.isArray(expectedCompanyName) 
+  267 |             ? expectedCompanyName 
+  268 |             : [expectedCompanyName];
+  269 |         
+  270 |         logger.verificacion(`Verificando empresa actual: ${expectedNames.join(' o ')}`);
+  271 |         
+  272 |         // Wait for the company selector to be visible first (it's in the top banner)
+  273 |         await this.companySelector.waitFor({ state: 'visible', timeout: 10000 });
+  274 |         
+  275 |         // Try to find any of the expected company names
+  276 |         // Note: The button accessible name includes "image" prefix
+  277 |         let foundButton = null;
+  278 |         let foundName = '';
+  279 |         
+  280 |         for (const name of expectedNames) {
+  281 |             // Try with "image" prefix first (matches the actual button accessible name)
+  282 |             // Escape special regex characters in company name
+  283 |             const escapedName = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  284 |             const companyButtonWithImage = this.page.getByRole('button', { name: new RegExp(`image.*${escapedName}`, 'i') });
+  285 |             let isVisible = await companyButtonWithImage.isVisible({ timeout: 2000 }).catch(() => false);
+  286 |             
+  287 |             if (isVisible) {
+  288 |                 foundButton = companyButtonWithImage;
+  289 |                 foundName = name;
+  290 |                 break;
+  291 |             }
+  292 |             
+  293 |             // Fallback: Try without "image" prefix
+  294 |             const companyButton = this.page.getByRole('button', { name: new RegExp(escapedName, 'i') });
+  295 |             isVisible = await companyButton.isVisible({ timeout: 2000 }).catch(() => false);
+  296 |             
+  297 |             if (isVisible) {
+  298 |                 foundButton = companyButton;
+  299 |                 foundName = name;
+  300 |                 break;
+  301 |             }
+  302 |         }
+  303 |         
+  304 |         if (!foundButton) {
+  305 |             // Enhanced error message with debugging info
+  306 |             const allButtons = await this.page.getByRole('button').all();
+  307 |             const buttonNames = await Promise.all(
+  308 |                 allButtons.map(async (btn) => {
+  309 |                     const text = await btn.textContent().catch(() => '');
+  310 |                     const accessibleName = await btn.getAttribute('aria-label').catch(() => '');
+  311 |                     const name = text || accessibleName || '[no text]';
+  312 |                     // Filter to show company-related buttons
+  313 |                     if (name.toLowerCase().includes('s.a.') || name.toLowerCase().includes('calcullis') || name.toLowerCase().includes('demografix')) {
+  314 |                         return name;
+  315 |                     }
+  316 |                     return null;
+  317 |                 })
+  318 |             );
+  319 |             const relevantButtons = buttonNames.filter(n => n !== null);
+> 320 |             throw new Error(
+      |                   ^ Error: None of the expected company names [CALCULIS S.A., CALCULLIS S.A.] were found in the company selector.
+  321 |                 `None of the expected company names [${expectedNames.join(', ')}] were found in the company selector.\n` +
+  322 |                 `Company-related buttons found: ${relevantButtons.length > 0 ? relevantButtons.join(', ') : 'none'}`
+  323 |             );
+  324 |         }
+  325 |         
+  326 |         const actualCompanyName = await foundButton.textContent();
+  327 |         logger.exito(`Empresa verificada: ${actualCompanyName}`);
+  328 |     }
+  329 | 
+  330 |     /**
+  331 |      * Change company by clicking on company selector and choosing another company
+  332 |      * Then starts a new chat to ensure fresh data for the new company
+  333 |      */
+  334 |     /**
+  335 |      * Change company from dashboard (before entering NaviA)
+  336 |      */
+  337 |     async changeCompanyFromDashboard(companyName: string): Promise<void> {
+  338 |         logger.cambio(`Cambiando a empresa desde dashboard: ${companyName}`);
+  339 |         
+  340 |         // Click on company selector button (top right corner)
+  341 |         await this.companySelector.click();
+  342 |         logger.exito('Selector de empresa abierto');
+  343 |         
+  344 |         // Wait for dropdown/menu to appear
+  345 |         await this.page.waitForTimeout(1000);
+  346 |         
+  347 |         // Click on the desired company in the dropdown list
+  348 |         const companyOption = this.page.getByRole('button', { name: new RegExp(`image.*${companyName}`, 'i') });
+  349 |         await companyOption.click();
+  350 |         logger.exito(`Seleccionada empresa: ${companyName}`);
+  351 |         
+  352 |         // Wait for company change to complete
+  353 |         await this.page.waitForTimeout(1500);
+  354 |     }
+  355 | 
+  356 |     /**
+  357 |      * Change company while in NaviA (includes clicking "Nuevo chat")
+  358 |      */
+  359 |     async changeCompany(companyName: string): Promise<void> {
+  360 |         logger.cambio(`Cambiando a empresa en NaviA: ${companyName}`);
+  361 |         
+  362 |         // Click on company selector button (top right corner)
+  363 |         await this.companySelector.click();
+  364 |         logger.exito('Selector de empresa abierto');
+  365 |         
+  366 |         // Wait for dropdown/menu to appear
+  367 |         await this.page.waitForTimeout(1000);
+  368 |         
+  369 |         // Click on the desired company in the dropdown list
+  370 |         const companyOption = this.page.getByRole('button', { name: new RegExp(`image.*${companyName}`, 'i') });
+  371 |         await companyOption.click();
+  372 |         logger.exito(`Seleccionada empresa: ${companyName}`);
+  373 |         
+  374 |         // Wait for company change to complete
+  375 |         await this.page.waitForTimeout(2500);
+  376 |         
+  377 |         // Click "Nuevo chat" to start fresh conversation with new company data
+  378 |         /* Note: Thi window seems to be removed */
+  379 |         // const newChatButton = this.page.getByRole('link', { name: /Nuevo chat/i });
+  380 |         // await newChatButton.click();
+  381 |         // console.log('✅ Iniciando nuevo chat para empresa seleccionada');
+  382 |         
+  383 |         // Wait for new chat to load
+  384 |         await this.page.waitForTimeout(1000);
+  385 |     }
+  386 | 
+  387 |     /**
+  388 |      * Alternative method: Extract company data using individual locators
+  389 |      */
+  390 |     async extractCompanyDataByLocators(): Promise<NaviaCompanyData> {
+  391 |         logger.verificacion('Extrayendo datos de la empresa (método alternativo)');
+  392 |         
+  393 |         const companyName = await this.page.locator('text=/Nombre de la empresa:/i').locator('..').textContent();
+  394 |         const cutoffDate = await this.page.locator('text=/Fecha de corte:/i').locator('..').textContent();
+  395 |         const retirementProvision = await this.page.locator('text=/Provisión de jubilación:/i').locator('..').textContent();
+  396 |         const severanceProvision = await this.page.locator('text=/Provisión de desahucio:/i').locator('..').textContent();
+  397 |         const totalEmployees = await this.page.locator('text=/Total de empleados:/i').locator('..').textContent();
+  398 |         
+  399 |         return {
+  400 |             companyName: companyName?.split(':')[1]?.trim() || '',
+  401 |             cutoffDate: cutoffDate?.split(':')[1]?.trim() || '',
+  402 |             retirementProvision: retirementProvision?.split(':')[1]?.trim() || '',
+  403 |             severanceProvision: severanceProvision?.split(':')[1]?.trim() || '',
+  404 |             totalEmployees: totalEmployees?.split(':')[1]?.trim() || ''
+  405 |         };
+  406 |     }
+  407 | }
+  408 | 
+```

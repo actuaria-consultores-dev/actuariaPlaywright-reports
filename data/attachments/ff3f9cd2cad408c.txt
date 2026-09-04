@@ -1,0 +1,630 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: specs/MiCuenta/equipo.test.ts >> Verificar Invitación de Usuario en Equipo >> Invitar Usuario al Equipo | [AP] | TC01-04: Invitar usuario como administrador y verificar acceso completo
+- Location: tests/specs/MiCuenta/equipo.test.ts:220:2
+
+# Error details
+
+```
+Error: Admin invitation workflow incomplete: emailInTable=false, estadoVerified=false
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - banner [ref=f2e4]:
+        - generic [ref=f2e6]:
+          - button [ref=f2e7] [cursor=pointer]:
+            - generic [ref=f2e8]: "22"
+          - button [ref=f2e12] [cursor=pointer]:
+            - paragraph [ref=f2e14]: Chris
+      - complementary [ref=f2e17]:
+        - generic [ref=f2e18]:
+          - link [ref=f2e19] [cursor=pointer]:
+            - /url: /dashboard
+          - button [ref=f2e21] [cursor=pointer]
+        - generic [ref=f2e26]:
+          - textbox [ref=f2e30]:
+            - /placeholder: Buscar...
+          - group
+        - list [ref=f2e32]:
+          - button [ref=f2e33] [cursor=pointer]:
+            - generic [ref=f2e37]: Inicio
+          - list [ref=f2e39]:
+            - listitem [ref=f2e40]: Panel General
+            - button [ref=f2e42] [cursor=pointer]:
+              - generic [ref=f2e47]: Mi cuenta
+            - button [ref=f2e52] [cursor=pointer]:
+              - generic [ref=f2e56]: Servicios
+            - button [ref=f2e61] [cursor=pointer]:
+              - generic [ref=f2e65]: Recursos
+          - list [ref=f2e69]:
+            - listitem [ref=f2e70]: Pruebas
+            - link [ref=f2e72] [cursor=pointer]:
+              - /url: /dashboard/checkout-demo
+              - generic [ref=f2e77]: Checkout demo
+        - generic [ref=f2e80]:
+          - paragraph [ref=f2e81]: Actuaria+ Stage
+          - paragraph [ref=f2e82]: soporteplus@actuaria.com
+          - generic [ref=f2e83]: v 1.11.2
+      - generic [ref=f2e88]:
+        - generic [ref=f2e89]:
+          - heading [level=1] [ref=f2e90]: Hola, Chris
+          - paragraph [ref=f2e91]: Última conexión fue a las 9:13pm
+        - generic [ref=f2e92]:
+          - button [ref=f2e93] [cursor=pointer]:
+            - generic [ref=f2e94]: Inicio
+          - button [ref=f2e95] [cursor=pointer]:
+            - generic [ref=f2e96]: Estudio actuarial
+          - button [ref=f2e97] [cursor=pointer]:
+            - generic [ref=f2e98]: Actas de jubilación
+          - button [ref=f2e99] [cursor=pointer]:
+            - generic [ref=f2e100]: Control tributario
+          - button [ref=f2e101] [cursor=pointer]:
+            - generic [ref=f2e102]: NavIA ᴮᵉᵗᵃ
+        - separator [ref=f2e103]
+        - tablist [ref=f2e106]:
+          - tab [ref=f2e107] [cursor=pointer]: Datos del usuario
+          - tab [ref=f2e108] [cursor=pointer]: Entidades registradas
+          - tab [ref=f2e109] [cursor=pointer]: Contactos vinculados
+          - tab [selected] [ref=f2e110] [cursor=pointer]: Equipo
+        - generic [ref=f2e113]:
+          - generic [ref=f2e114]:
+            - heading [level=5] [ref=f2e115]: Equipo de Chris
+            - button [ref=f2e116] [cursor=pointer]: Invitar usuario
+          - generic [ref=f2e120]:
+            - generic [ref=f2e122]:
+              - textbox [ref=f2e126]:
+                - /placeholder: Buscar por nombre o email
+              - group
+            - generic [ref=f2e127]:
+              - generic: Rol
+              - generic [ref=f2e128]:
+                - combobox [ref=f2e129] [cursor=pointer]
+                - textbox
+                - group:
+                  - generic: Rol
+            - generic [ref=f2e130]:
+              - generic: Estado
+              - generic [ref=f2e131]:
+                - combobox [ref=f2e132] [cursor=pointer]
+                - textbox
+                - group:
+                  - generic: Estado
+          - generic [ref=f2e133]:
+            - grid [ref=f2e134]:
+              - row [ref=f2e135]:
+                - columnheader [ref=f2e136] [cursor=pointer]:
+                  - generic [ref=f2e137]: Nombre
+                - columnheader [ref=f2e139] [cursor=pointer]:
+                  - generic [ref=f2e140]: Email
+                - columnheader [ref=f2e142] [cursor=pointer]:
+                  - generic [ref=f2e143]: Rol
+                - columnheader [ref=f2e145] [cursor=pointer]:
+                  - generic [ref=f2e146]: Estado
+                - columnheader [ref=f2e148]:
+                  - generic [ref=f2e149]: Acciones
+              - rowgroup [ref=f2e151]:
+                - row [ref=f2e152]:
+                  - gridcell [ref=f2e153]: Usuario Invitado
+                  - gridcell [ref=f2e154]: 5ucjabwvmtlyf5ch@uberip.com
+                  - gridcell [ref=f2e155]:
+                    - generic [ref=f2e156]: Solo vista
+                  - gridcell [ref=f2e159]:
+                    - generic [ref=f2e160]: Activo
+                  - gridcell [ref=f2e163]:
+                    - generic [ref=f2e164]:
+                      - menuitem [ref=f2e165] [cursor=pointer]
+                      - menuitem [ref=f2e168] [cursor=pointer]
+                      - menuitem [ref=f2e171] [cursor=pointer]
+                - row [ref=f2e174]:
+                  - gridcell [ref=f2e175]
+                  - gridcell [ref=f2e176]: 7nbyfyn7mtkhr0sh@emalupe.com
+                  - gridcell [ref=f2e177]:
+                    - generic [ref=f2e178]: Sin acceso asignado
+                  - gridcell [ref=f2e181]:
+                    - generic [ref=f2e182]: Activo
+                  - gridcell [ref=f2e185]:
+                    - generic [ref=f2e186]:
+                      - menuitem [ref=f2e187] [cursor=pointer]
+                      - menuitem [ref=f2e190] [cursor=pointer]
+                      - menuitem [ref=f2e193] [cursor=pointer]
+                - row [ref=f2e196]:
+                  - gridcell [ref=f2e197]: Usuario Invitado
+                  - gridcell [ref=f2e198]: 8435baifmtlyggqg@uberip.com
+                  - gridcell [ref=f2e199]:
+                    - generic [ref=f2e200]: Solo vista
+                  - gridcell [ref=f2e203]:
+                    - generic [ref=f2e204]: Activo
+                  - gridcell [ref=f2e207]:
+                    - generic [ref=f2e208]:
+                      - menuitem [ref=f2e209] [cursor=pointer]
+                      - menuitem [ref=f2e212] [cursor=pointer]
+                      - menuitem [ref=f2e215] [cursor=pointer]
+                - row [ref=f2e218]:
+                  - gridcell [ref=f2e219]: Usuario Invitado
+                  - gridcell [ref=f2e220]: a1w67lu1mtnf5w5c@uberip.com
+                  - gridcell [ref=f2e221]:
+                    - generic [ref=f2e222]: Sin acceso asignado
+                  - gridcell [ref=f2e225]:
+                    - generic [ref=f2e226]: Activo
+                  - gridcell [ref=f2e229]:
+                    - generic [ref=f2e230]:
+                      - menuitem [ref=f2e231] [cursor=pointer]
+                      - menuitem [ref=f2e234] [cursor=pointer]
+                      - menuitem [ref=f2e237] [cursor=pointer]
+                - row [ref=f2e240]:
+                  - gridcell [ref=f2e241]
+                  - gridcell [ref=f2e242]: actuariamicuentatest@yopmail.com
+                  - gridcell [ref=f2e243]:
+                    - generic [ref=f2e244]: Solo vista
+                  - gridcell [ref=f2e247]:
+                    - generic [ref=f2e248]: En espera
+                  - gridcell [ref=f2e251]:
+                    - generic [ref=f2e252]:
+                      - menuitem [ref=f2e253] [cursor=pointer]
+                      - menuitem [ref=f2e256] [cursor=pointer]
+                      - menuitem [ref=f2e259] [cursor=pointer]
+                - row [ref=f2e262]:
+                  - gridcell [ref=f2e263]: Chris Test
+                  - gridcell [ref=f2e264]: actuariatest6@yopmail.com
+                  - gridcell [ref=f2e265]:
+                    - generic [ref=f2e266]: Administrador
+                  - gridcell [ref=f2e269]:
+                    - generic [ref=f2e270]: Activo
+                  - gridcell [ref=f2e273]:
+                    - generic [ref=f2e274]:
+                      - menuitem [disabled]
+                      - menuitem [disabled]
+                      - menuitem [disabled]
+                - row [ref=f2e275]:
+                  - gridcell [ref=f2e276]
+                  - gridcell [ref=f2e277]: equipo116486m31@yopmail.com
+                  - gridcell [ref=f2e278]:
+                    - generic [ref=f2e279]: Solo vista
+                  - gridcell [ref=f2e282]:
+                    - generic [ref=f2e283]: En espera
+                  - gridcell [ref=f2e286]:
+                    - generic [ref=f2e287]:
+                      - menuitem [ref=f2e288] [cursor=pointer]
+                      - menuitem [ref=f2e291] [cursor=pointer]
+                      - menuitem [ref=f2e294] [cursor=pointer]
+                - row [ref=f2e297]:
+                  - gridcell [ref=f2e298]: Usuario Invitado
+                  - gridcell [ref=f2e299]: g3emsagqmtki1jlk@emalupe.com
+                  - gridcell [ref=f2e300]:
+                    - generic [ref=f2e301]: Sin acceso asignado
+                  - gridcell [ref=f2e304]:
+                    - generic [ref=f2e305]: Activo
+                  - gridcell [ref=f2e308]:
+                    - generic [ref=f2e309]:
+                      - menuitem [ref=f2e310] [cursor=pointer]
+                      - menuitem [ref=f2e313] [cursor=pointer]
+                      - menuitem [ref=f2e316] [cursor=pointer]
+                - row [ref=f2e319]:
+                  - gridcell [ref=f2e320]: Usuario Invitado
+                  - gridcell [ref=f2e321]: iezprat6mtki3itn@emalupe.com
+                  - gridcell [ref=f2e322]:
+                    - generic [ref=f2e324]:
+                      - generic [ref=f2e325]: Editor en 1 módulo
+                      - button [ref=f2e327] [cursor=pointer]
+                  - gridcell [ref=f2e330]:
+                    - generic [ref=f2e331]: Activo
+                  - gridcell [ref=f2e334]:
+                    - generic [ref=f2e335]:
+                      - menuitem [ref=f2e336] [cursor=pointer]
+                      - menuitem [ref=f2e339] [cursor=pointer]
+                      - menuitem [ref=f2e342] [cursor=pointer]
+                - row [ref=f2e345]:
+                  - gridcell [ref=f2e346]: Usuario Invitado
+                  - gridcell [ref=f2e347]: kg0k9tbzmtki2uvx@emalupe.com
+                  - gridcell [ref=f2e348]:
+                    - generic [ref=f2e349]: Administrador
+                  - gridcell [ref=f2e352]:
+                    - generic [ref=f2e353]: Activo
+                  - gridcell [ref=f2e356]:
+                    - generic [ref=f2e357]:
+                      - menuitem [ref=f2e358] [cursor=pointer]
+                      - menuitem [ref=f2e361] [cursor=pointer]
+                      - menuitem [ref=f2e364] [cursor=pointer]
+                - row [ref=f2e367]:
+                  - gridcell [ref=f2e368]: Usuario Invitado
+                  - gridcell [ref=f2e369]: ky4v2unimtnf7z34@uberip.com
+                  - gridcell [ref=f2e370]:
+                    - generic [ref=f2e371]: Solo vista
+                  - gridcell [ref=f2e374]:
+                    - generic [ref=f2e375]: Activo
+                  - gridcell [ref=f2e378]:
+                    - generic [ref=f2e379]:
+                      - menuitem [ref=f2e380] [cursor=pointer]
+                      - menuitem [ref=f2e383] [cursor=pointer]
+                      - menuitem [ref=f2e386] [cursor=pointer]
+                - row [ref=f2e389]:
+                  - gridcell [ref=f2e390]: TestUser Automation
+                  - gridcell [ref=f2e391]: l9lx8jtumt37kpaf@emalupe.com
+                  - gridcell [ref=f2e392]:
+                    - generic [ref=f2e393]: Sin acceso asignado
+                  - gridcell [ref=f2e396]:
+                    - generic [ref=f2e397]: Activo
+                  - gridcell [ref=f2e400]:
+                    - generic [ref=f2e401]:
+                      - menuitem [ref=f2e402] [cursor=pointer]
+                      - menuitem [ref=f2e405] [cursor=pointer]
+                      - menuitem [ref=f2e408] [cursor=pointer]
+                - row [ref=f2e411]:
+                  - gridcell [ref=f2e412]: TestUser Automation
+                  - gridcell [ref=f2e413]: m0ciewpdmtly83hb@uberip.com
+                  - gridcell [ref=f2e414]:
+                    - generic [ref=f2e415]: Sin acceso asignado
+                  - gridcell [ref=f2e418]:
+                    - generic [ref=f2e419]: Activo
+                  - gridcell [ref=f2e422]:
+                    - generic [ref=f2e423]:
+                      - menuitem [ref=f2e424] [cursor=pointer]
+                      - menuitem [ref=f2e427] [cursor=pointer]
+                      - menuitem [ref=f2e430] [cursor=pointer]
+                - row [ref=f2e433]:
+                  - gridcell [ref=f2e434]: Usuario Invitado
+                  - gridcell [ref=f2e435]: nhvk9173mtnf6pn9@uberip.com
+                  - gridcell [ref=f2e436]:
+                    - generic [ref=f2e437]: Solo vista
+                  - gridcell [ref=f2e440]:
+                    - generic [ref=f2e441]: Activo
+                  - gridcell [ref=f2e444]:
+                    - generic [ref=f2e445]:
+                      - menuitem [ref=f2e446] [cursor=pointer]
+                      - menuitem [ref=f2e449] [cursor=pointer]
+                      - menuitem [ref=f2e452] [cursor=pointer]
+                - row [ref=f2e455]:
+                  - gridcell [ref=f2e456]: Usuario Invitado
+                  - gridcell [ref=f2e457]: oqa1in9jmtlyfuch@uberip.com
+                  - gridcell [ref=f2e458]:
+                    - generic [ref=f2e459]: Sin acceso asignado
+                  - gridcell [ref=f2e462]:
+                    - generic [ref=f2e463]: Activo
+                  - gridcell [ref=f2e466]:
+                    - generic [ref=f2e467]:
+                      - menuitem [ref=f2e468] [cursor=pointer]
+                      - menuitem [ref=f2e471] [cursor=pointer]
+                      - menuitem [ref=f2e474] [cursor=pointer]
+                - row [ref=f2e477]:
+                  - gridcell [ref=f2e478]: Usuario Invitado
+                  - gridcell [ref=f2e479]: q8b7x0gxmtlyi5ew@uberip.com
+                  - gridcell [ref=f2e480]:
+                    - generic [ref=f2e482]:
+                      - generic [ref=f2e483]: Editor en 1 módulo
+                      - button [ref=f2e485] [cursor=pointer]
+                  - gridcell [ref=f2e488]:
+                    - generic [ref=f2e489]: Activo
+                  - gridcell [ref=f2e492]:
+                    - generic [ref=f2e493]:
+                      - menuitem [ref=f2e494] [cursor=pointer]
+                      - menuitem [ref=f2e497] [cursor=pointer]
+                      - menuitem [ref=f2e500] [cursor=pointer]
+                - row [ref=f2e503]:
+                  - gridcell [ref=f2e504]
+                  - gridcell [ref=f2e505]: r8vu9daomtnexlf3@uberip.com
+                  - gridcell [ref=f2e506]:
+                    - generic [ref=f2e507]: Sin acceso asignado
+                  - gridcell [ref=f2e510]:
+                    - generic [ref=f2e511]: Activo
+                  - gridcell [ref=f2e514]:
+                    - generic [ref=f2e515]:
+                      - menuitem [ref=f2e516] [cursor=pointer]
+                      - menuitem [ref=f2e519] [cursor=pointer]
+                      - menuitem [ref=f2e522] [cursor=pointer]
+                - row [ref=f2e525]:
+                  - gridcell [ref=f2e526]: Usuario Invitado
+                  - gridcell [ref=f2e527]: rdh1qu4tmtki0ypm@emalupe.com
+                  - gridcell [ref=f2e528]:
+                    - generic [ref=f2e529]: Solo vista
+                  - gridcell [ref=f2e532]:
+                    - generic [ref=f2e533]: Activo
+                  - gridcell [ref=f2e536]:
+                    - generic [ref=f2e537]:
+                      - menuitem [ref=f2e538] [cursor=pointer]
+                      - menuitem [ref=f2e541] [cursor=pointer]
+                      - menuitem [ref=f2e544] [cursor=pointer]
+                - row [ref=f2e547]:
+                  - gridcell [ref=f2e548]
+                  - gridcell [ref=f2e549]: testest@yopmail.com
+                  - gridcell [ref=f2e550]:
+                    - generic [ref=f2e551]: Solo vista
+                  - gridcell [ref=f2e554]:
+                    - generic [ref=f2e555]: En espera
+                  - gridcell [ref=f2e558]:
+                    - generic [ref=f2e559]:
+                      - menuitem [ref=f2e560] [cursor=pointer]
+                      - menuitem [ref=f2e563] [cursor=pointer]
+                      - menuitem [ref=f2e566] [cursor=pointer]
+                - row [ref=f2e569]:
+                  - gridcell [ref=f2e570]: Usuario Invitado
+                  - gridcell [ref=f2e571]: vh04hhw8mtlyhcbv@uberip.com
+                  - gridcell [ref=f2e572]:
+                    - generic [ref=f2e573]: Administrador
+                  - gridcell [ref=f2e576]:
+                    - generic [ref=f2e577]: Activo
+                  - gridcell [ref=f2e580]:
+                    - generic [ref=f2e581]:
+                      - menuitem [ref=f2e582] [cursor=pointer]
+                      - menuitem [ref=f2e585] [cursor=pointer]
+                      - menuitem [ref=f2e588] [cursor=pointer]
+                - row [ref=f2e591]:
+                  - gridcell [ref=f2e592]: Usuario Invitado
+                  - gridcell [ref=f2e593]: ydtw9snmmtki25tz@emalupe.com
+                  - gridcell [ref=f2e594]:
+                    - generic [ref=f2e595]: Solo vista
+                  - gridcell [ref=f2e598]:
+                    - generic [ref=f2e599]: Activo
+                  - gridcell [ref=f2e602]:
+                    - generic [ref=f2e603]:
+                      - menuitem [ref=f2e604] [cursor=pointer]
+                      - menuitem [ref=f2e607] [cursor=pointer]
+                      - menuitem [ref=f2e610] [cursor=pointer]
+                - row [ref=f2e613]:
+                  - gridcell [ref=f2e614]: Usuario Invitado
+                  - gridcell [ref=f2e615]: yvk2kpx8mtnf592q@uberip.com
+                  - gridcell [ref=f2e616]:
+                    - generic [ref=f2e617]: Solo vista
+                  - gridcell [ref=f2e620]:
+                    - generic [ref=f2e621]: Activo
+                  - gridcell [ref=f2e624]:
+                    - generic [ref=f2e625]:
+                      - menuitem [ref=f2e626] [cursor=pointer]
+                      - menuitem [ref=f2e629] [cursor=pointer]
+                      - menuitem [ref=f2e632] [cursor=pointer]
+            - generic [ref=f2e637]:
+              - paragraph [ref=f2e638]: 1–22 de 22
+              - generic [ref=f2e639]:
+                - button [disabled]
+                - button [disabled]
+    - link [ref=f2e640] [cursor=pointer]:
+      - /url: https://wa.me/593979133351/?text=Hola+Actuaria,+tengo+novedades+sobre+el+Portal+de+Clientes
+  - dialog [ref=f2e645]:
+    - heading "Invitar usuario" [level=2] [ref=f2e646]
+    - generic [ref=f2e647]:
+      - generic [ref=f2e649]:
+        - generic [ref=f2e650]:
+          - generic [ref=f2e651]: Correo electrónico
+          - generic [ref=f2e652]:
+            - textbox "Correo electrónico" [invalid] [ref=f2e653]: kbu7nlr5mtnf99a3@uberip.com
+            - group:
+              - generic: Correo electrónico
+          - paragraph [ref=f2e654]: La empresa ya tiene el máximo de 2 administradores.
+        - generic [ref=f2e655]:
+          - paragraph [ref=f2e656]: Rol
+          - radiogroup [ref=f2e657]:
+            - generic [ref=f2e658] [cursor=pointer]:
+              - radio "Usuario" [ref=f2e660]
+              - generic [ref=f2e664]: Usuario
+            - generic [ref=f2e665] [cursor=pointer]:
+              - radio "Administrador" [checked] [ref=f2e667]
+              - generic [ref=f2e673]: Administrador
+        - alert [ref=f2e674]:
+          - generic [ref=f2e678]: Los administradores tienen acceso completo a todos los módulos. Máximo 2 por empresa.
+        - generic [ref=f2e679]:
+          - generic: Mensaje (opcional)
+          - generic [ref=f2e680]:
+            - textbox "Mensaje (opcional)" [ref=f2e681]
+            - group:
+              - generic: Mensaje (opcional)
+      - generic [ref=f2e682]:
+        - button "Cancelar" [ref=f2e683] [cursor=pointer]
+        - button "Enviar invitación" [ref=f2e684] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  172 | 			logger.navegacion('Navegando a /dashboard/portal/mi-cuenta/equipo');
+  173 | 			await equipoPage.navigateToEquipo();
+  174 | 			logger.exito('Página de Equipo cargada');
+  175 | 		});
+  176 | 
+  177 | 		// Step 3: Complete team invitation with read-only permissions
+  178 | 		const inviteResult = await test.step('Completar flujo de invitación con permisos de solo lectura', async () => {
+  179 | 			const result = await completeTeamInviteWithPermissionsWorkflow(
+  180 | 				equipoPage,
+  181 | 				{ invitedEmail: readOnlyEmail, message: 'Testing read-only' },
+  182 | 				'Usuario',
+  183 | 				PERMISSIONS_READ_ONLY.fullModules,
+  184 | 				PERMISSIONS_READ_ONLY.limitedModules
+  185 | 			);
+  186 | 
+  187 | 			const allSuccess = result.inviteModalOpened &&
+  188 | 				result.emailFilled &&
+  189 | 				result.messageFilled &&
+  190 | 				result.invitationSent &&
+  191 | 				result.emailVisibleInTable;
+  192 | 
+  193 | 			if (!allSuccess) {
+  194 | 				throw new Error(`Team invitation with read-only permissions failed: ${JSON.stringify(result)}`);
+  195 | 			}
+  196 | 
+  197 | 			logger.exito('Invitación con permisos de solo lectura enviada exitosamente');
+  198 | 			return result;
+  199 | 		});
+  200 | 
+  201 | 		// Step 4: Verify team invitation email via Mail.tm and get invite link
+  202 | 		const inviteLink = await test.step('Verificar email de invitación en Mail.tm y extraer enlace', async () => {
+  203 | 			const link = await verifyTeamInvitationEmailWorkflowMailTm(mailTmReadOnly);
+  204 | 			logger.exito('Email de invitación verificado y enlace extraído');
+  205 | 			return link;
+  206 | 		});
+  207 | 
+  208 | 		// Step 5: Complete password setup and verify read-only access
+  209 | 		await test.step('Configurar contraseña y verificar acceso de solo lectura', async () => {
+  210 | 			await completeInvitedUserPasswordSetupAndReadOnlyAccessWorkflow(
+  211 | 				context,
+  212 | 				inviteLink
+  213 | 			);
+  214 | 			logger.exito('Flujo de solo lectura completado: contraseña configurada, bienvenida verificada, permisos de vista confirmados');
+  215 | 		});
+  216 | 
+  217 | 		logger.completado('TC01-03 completado - Usuario con permisos de solo lectura, acceso restringido verificado');
+  218 | 	});
+  219 | 
+  220 | 	test('Invitar Usuario al Equipo | [AP] | TC01-04: Invitar usuario como administrador y verificar acceso completo', async ({ context, equipoPage }) => {
+  221 | 		test.setTimeout(180000); // 3 minutes for full flow
+  222 | 
+  223 | 		logger.inicio('========================================');
+  224 | 		logger.inicio('INICIANDO TC01-04 - Invitar usuario como administrador');
+  225 | 		logger.inicio('========================================');
+  226 | 		logger.info('Timeout configurado: 180s (3 minutos)');
+  227 | 		logger.info('Rol a seleccionar: Administrador');
+  228 | 
+  229 | 		// Step 1: Create Mail.tm inbox for the invitee
+  230 | 		const mailTmAdmin = new MailTmService();
+  231 | 		const adminEmail = await mailTmAdmin.createInbox();
+  232 | 		logger.configuracion('Email del invitado ADMINISTRADOR generado (Mail.tm)', { email: adminEmail });
+  233 | 
+  234 | 		// Step 2: Navigate to Equipo page
+  235 | 		await test.step('Navegar a Mi Cuenta / Equipo', async () => {
+  236 | 			logger.navegacion('Navegando a /dashboard/portal/mi-cuenta/equipo');
+  237 | 			await equipoPage.navigateToEquipo();
+  238 | 			logger.exito('Página de Equipo cargada');
+  239 | 		});
+  240 | 
+  241 | 		// Step 3: Open invite modal, fill email, select Administrador role, send
+  242 | 		const inviteResult = await test.step('Completar flujo de invitación con rol Administrador', async () => {
+  243 | 			logger.paso(1, 'Abriendo modal de Invitar usuario');
+  244 | 			await equipoPage.clickInvitarUsuario();
+  245 | 			await equipoPage.waitForInviteModal(8000);
+  246 | 
+  247 | 			logger.paso(2, 'Ingresando email del invitado');
+  248 | 			await equipoPage.fillEmail(adminEmail);
+  249 | 
+  250 | 			logger.paso(3, 'Seleccionando rol Administrador');
+  251 | 			await equipoPage.selectRole('Administrador');
+  252 | 
+  253 | 			logger.paso(4, 'Verificando mensaje "Los administradores tienen"');
+  254 | 			const adminMessage = equipoPage.page.getByText('Los administradores tienen');
+  255 | 			await adminMessage.waitFor({ state: 'visible', timeout: 5000 });
+  256 | 			logger.exito('Mensaje "Los administradores tienen" visible - información de permisos de administrador confirmada');
+  257 | 
+  258 | 			logger.paso(5, 'Enviando invitación');
+  259 | 			await equipoPage.clickEnviarInvitacion();
+  260 | 			await equipoPage.page.waitForTimeout(5000);
+  261 | 			logger.exito('Invitación con rol Administrador enviada');
+  262 | 
+  263 | 			logger.paso(6, 'Verificando que el email aparece en la tabla de equipo');
+  264 | 			const emailInTable = await equipoPage.verifyEmailInTable(adminEmail, 10000);
+  265 | 
+  266 | 			logger.paso(7, 'Verificando estado del usuario en la tabla');
+  267 | 			const estadoVerified = await equipoPage.verifyUserEstadoInTable(adminEmail, 'En espera', 10000);
+  268 | 
+  269 | 			const allSuccess = emailInTable && estadoVerified;
+  270 | 
+  271 | 			if (!allSuccess) {
+> 272 | 				throw new Error(`Admin invitation workflow incomplete: emailInTable=${emailInTable}, estadoVerified=${estadoVerified}`);
+      |           ^ Error: Admin invitation workflow incomplete: emailInTable=false, estadoVerified=false
+  273 | 			}
+  274 | 
+  275 | 			logger.exito('Flujo de invitación como administrador completado exitosamente');
+  276 | 			return { emailInTable, estadoVerified };
+  277 | 		});
+  278 | 
+  279 | 		// Step 4: Verify team invitation email via Mail.tm API and get invite link
+  280 | 		const inviteLink = await test.step('Verificar email de invitación en Mail.tm y extraer enlace', async () => {
+  281 | 			const link = await verifyTeamInvitationEmailWorkflowMailTm(mailTmAdmin);
+  282 | 			logger.exito('Email de invitación verificado y enlace extraído');
+  283 | 			return link;
+  284 | 		});
+  285 | 
+  286 | 		// Step 5: Complete password setup and verify admin full access
+  287 | 		await test.step('Configurar contraseña y verificar acceso completo como administrador', async () => {
+  288 | 			await completeInvitedUserPasswordSetupAndAdminAccessWorkflow(
+  289 | 				context,
+  290 | 				inviteLink
+  291 | 			);
+  292 | 			logger.exito('Flujo de administrador completado: contraseña configurada, acceso completo verificado en todos los módulos');
+  293 | 		});
+  294 | 
+  295 | 		logger.completado('TC01-04 completado - Usuario invitado como administrador, acceso completo verificado');
+  296 | 	});
+  297 | 
+  298 | 	test('Invitar Usuario al Equipo | [SP] | TC01-05: Invitar usuario con permisos mixtos (Editor en Estudios, Sin acceso en Jubilación) y verificar que solo Estudios está disponible', async ({ context, equipoPage }) => {
+  299 | 		test.setTimeout(180000); // 3 minutes for full flow
+  300 | 
+  301 | 		logger.inicio('========================================');
+  302 | 		logger.inicio('INICIANDO TC01-05 - Invitar usuario con permisos mixtos (Editor / Sin acceso)');
+  303 | 		logger.inicio('========================================');
+  304 | 		logger.info('Timeout configurado: 180s (3 minutos)');
+  305 | 		logger.info('Configuración: Estudios actuariales=Editor, Jubilación patronal=Sin acceso, Impuestos diferidos=Sin acceso');
+  306 | 		logger.info('Limited modules: controlTributario=Solo vista, simulador=Solo vista, navia=Solo vista, dashboardHome=Solo vista');
+  307 | 
+  308 | 		// Step 1: Create Mail.tm inbox for the invitee
+  309 | 		const mailTmMixed = new MailTmService();
+  310 | 		const mixedEmail = await mailTmMixed.createInbox();
+  311 | 		logger.configuracion('Email del invitado MIXTO generado (Mail.tm)', { email: mixedEmail });
+  312 | 
+  313 | 		// Step 2: Navigate to Equipo page
+  314 | 		await test.step('Navegar a Mi Cuenta / Equipo', async () => {
+  315 | 			logger.navegacion('Navegando a /dashboard/portal/mi-cuenta/equipo');
+  316 | 			await equipoPage.navigateToEquipo();
+  317 | 			logger.exito('Página de Equipo cargada');
+  318 | 		});
+  319 | 
+  320 | 		// Step 3: Complete team invitation with mixed permissions
+  321 | 		const inviteResult = await test.step('Completar flujo de invitación con permisos mixtos (Editor / Sin acceso)', async () => {
+  322 | 			const result = await completeTeamInviteWithPermissionsWorkflow(
+  323 | 				equipoPage,
+  324 | 				{ invitedEmail: mixedEmail, message: 'Testing permisos mixtos' },
+  325 | 				'Usuario',
+  326 | 				PERMISSIONS_ESTUDIOS_ONLY_EDITOR.fullModules,
+  327 | 				PERMISSIONS_ESTUDIOS_ONLY_EDITOR.limitedModules
+  328 | 			);
+  329 | 
+  330 | 			const allSuccess = result.inviteModalOpened &&
+  331 | 				result.emailFilled &&
+  332 | 				result.messageFilled &&
+  333 | 				result.invitationSent &&
+  334 | 				result.emailVisibleInTable;
+  335 | 
+  336 | 			if (!allSuccess) {
+  337 | 				throw new Error(`Mixed permissions invitation workflow failed: ${JSON.stringify(result)}`);
+  338 | 			}
+  339 | 
+  340 | 			logger.exito('Invitación con permisos mixtos enviada exitosamente');
+  341 | 			return result;
+  342 | 		});
+  343 | 
+  344 | 		// Step 4: Verify team invitation email via Mail.tm and get invite link
+  345 | 		const inviteLink = await test.step('Verificar email de invitación en Mail.tm y extraer enlace', async () => {
+  346 | 			const link = await verifyTeamInvitationEmailWorkflowMailTm(mailTmMixed);
+  347 | 			logger.exito('Email de invitación verificado y enlace extraído');
+  348 | 			return link;
+  349 | 		});
+  350 | 
+  351 | 		// Step 5: Complete password setup and verify mixed access (Editor for Estudios, blocked for Jubilación)
+  352 | 		await test.step('Configurar contraseña y verificar acceso mixto (solo Estudios actuariales disponible como Editor)', async () => {
+  353 | 			await completeInvitedUserPasswordSetupAndEstudiosOnlyEditorWorkflow(
+  354 | 				context,
+  355 | 				inviteLink
+  356 | 			);
+  357 | 			logger.exito('Flujo mixto completado: Estudios actuariales con Editor habilitado, Actas de jubilación bloqueadas');
+  358 | 		});
+  359 | 
+  360 | 		logger.completado('TC01-05 completado - Usuario con permisos mixtos: solo Estudios actuariales disponible como Editor, Jubilación patronal sin acceso');
+  361 | 	});
+  362 | 
+  363 | 	test('Limpiar usuarios de prueba del equipo | [UT] | TC00-CLEANUP: Remover todos los usuarios cuyo email termina en "@web-library.net"', async ({ equipoPage }) => {
+  364 | 		test.setTimeout(120000); // 2 minutes for cleanup
+  365 | 
+  366 | 		logger.inicio('========================================');
+  367 | 		logger.inicio('INICIANDO TC00-CLEANUP - Limpieza de usuarios Mail.tm');
+  368 | 		logger.inicio('========================================');
+  369 | 		logger.info('Timeout configurado: 120s (2 minutos)');
+  370 | 		logger.info('Buscando emails que terminen en "@web-library.net" para remover');
+  371 | 
+  372 | 		// Step 1: Navigate to Equipo page
+```

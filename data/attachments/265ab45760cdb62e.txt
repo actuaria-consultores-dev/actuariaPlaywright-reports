@@ -1,0 +1,57 @@
+🎭️ [Recuperar Passwords] Empezando configuración inicial
+✅ [Recuperar Passwords] Archivo de contraseña temporal limpiado
+🎭️ [Recuperar Passwords] Empezando pre condición individual
+✅ [Recuperar Passwords] Navegación a página inicial completada
+🎭️ [Recuperar Passwords] ========================================
+🎭️ [Recuperar Passwords] TC01: RECUPERAR CONTRASEÑA CON EMAIL
+🎭️ [Recuperar Passwords] ========================================
+📊 [Recuperar Passwords] Timeout del test configurado: 180 segundos
+🎭️ [PasswordRecoveryWorkflows] ========================================
+🎭️ [PasswordRecoveryWorkflows] WORKFLOW: RECUPERACIÓN DE CONTRASEÑA COMPLETA
+🎭️ [PasswordRecoveryWorkflows] ========================================
+🎭️ [GmailService] Inicializando Gmail Service
+✅ [GmailService] Gmail Service inicializado correctamente
+🔍 [PasswordRecoveryWorkflows] 🗑️ Eliminando emails antiguos para evitar datos obsoletos...
+🔍 [GmailService] 🗑️ Eliminando emails antiguos de: no-reply-qa@portal.actuaria.com
+🔍 [GmailService] ⚠️ No se pudieron eliminar emails antiguos: Insufficient Permission
+📊 [PasswordRecoveryWorkflows] ⏰ Timestamp de solicitud: 8:36:21 PM (1788554181399)
+🔍 [PasswordRecoveryWorkflows] Haciendo clic en "¿Olvidaste tu contraseña?"...
+🔍 [PasswordRecoveryWorkflows] Ingresando email...
+🔍 [PasswordRecoveryWorkflows] Haciendo clic en "Enviar"...
+✅ [PasswordRecoveryWorkflows] ✅ Solicitud de recuperación enviada exitosamente
+🎭️ [GmailService] === INICIANDO BÚSQUEDA DE EMAIL DE RECUPERACIÓN ===
+📊 [GmailService] Buscando emails de: no-reply-qa@portal.actuaria.com
+📊 [GmailService] Timestamp de referencia: 8:36:21 PM (1788554181399)
+📊 [GmailService] Timeout de polling: 90s | Espera inicial: 20s
+⏳ [GmailService] ⏳ Esperando 20s para que llegue el email...
+⏳ [GmailService] 🔄 Iniciando polling de Gmail...
+🔍 [GmailService] 📧 Emails encontrados en búsqueda: 5
+🔍 [GmailService] 📨 Procesando email ID: 1a06e23256f48bb7
+📊 [GmailService] 📅 Email recibido: 8:36:31 PM (1788554191000)
+📊 [GmailService] 📅 Solicitud hecha: 8:36:21 PM (1788554181399)
+📊 [GmailService] ⏱️ Diferencia: 9.601s
+✅ [GmailService] ✅ Email VÁLIDO: Recibido 9.601s DESPUÉS de la solicitud
+📊 [GmailService] 📄 Cuerpo del email extraído, longitud: 6996 caracteres
+✅ [GmailService] 🔗 ¡LINK ENCONTRADO!
+✅ [GmailService] 📧 Email recibido a las: 8:36:31 PM
+✅ [GmailService] 🔗 Link de restablecimiento extraído correctamente
+📊 [PasswordRecoveryWorkflows] 🔗 Link de recuperación extraído correctamente
+🔍 [PasswordRecoveryWorkflows] Navegando a la página de reset...
+✅ [PasswordRecoveryWorkflows] Página de reset cargada correctamente
+📊 [PasswordHelper] 🔐 Nueva contraseña generada
+📊 [PasswordHelper]    - Longitud total: 18 caracteres
+✅ [PasswordHelper] 💾 Contraseña guardada en archivo temporal
+🔍 [PasswordRecoveryWorkflows] Ingresando nueva contraseña...
+🔍 [PasswordRecoveryWorkflows] Haciendo clic en "Guardar"...
+⏳ [PasswordRecoveryWorkflows] Esperando confirmación de cambio de contraseña...
+✅ [PasswordRecoveryWorkflows] ✅ Redirección a dashboard exitosa
+✅ [PasswordRecoveryWorkflows] ========================================
+✅ [PasswordRecoveryWorkflows] ✅ WORKFLOW DE RECUPERACIÓN COMPLETADO
+✅ [PasswordRecoveryWorkflows] ========================================
+✅ [Recuperar Passwords] ========================================
+✅ [Recuperar Passwords] ✅ TC01 COMPLETADO EXITOSAMENTE
+✅ [Recuperar Passwords]    - Contraseña cambiada
+✅ [Recuperar Passwords]    - Contraseña guardada para TC02
+✅ [Recuperar Passwords] ========================================
+
+📋 4 console message(s) logged to stderr

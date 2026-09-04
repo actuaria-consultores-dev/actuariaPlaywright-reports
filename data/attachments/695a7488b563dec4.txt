@@ -1,0 +1,15 @@
+🎭️ [MiCuenta User Info] Empezando pre condición
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+🎭️ [MiCuenta User Info] TC02: Verificar usuario puede editar el nombre, tel, cargo (restablecer)
+🔄 [LoginPage] Seleccionando cargo 'Socio / Accionista' desde el dropdown
+✅ [LoginPage] Cargo 'Socio / Accionista' seleccionado correctamente
+🔄 [MiCuenta User Info] Cerrando sesión para verificar restauración de datos originales...
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+📊 [MiCuenta User Info] Verificando que los datos originales se hayan restaurado...
+✅ [MiCuenta User Info] Todos los campos restaurados fueron verificados después del login
+
+ℹ️  6 non-blocking error(s) ignored by filter.
+
+📋 8 console message(s) logged to stderr

@@ -1,0 +1,71 @@
+🎭️ [Mi Cuenta Equipo Tests] Iniciando sesión con usuario de prueba
+🔐 [Mi Cuenta Equipo Tests] Ingresando credenciales
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Mi Cuenta Equipo Tests] Login exitoso
+🎭️ [Mi Cuenta Equipo Tests] ========================================
+🎭️ [Mi Cuenta Equipo Tests] INICIANDO TC01-04 - Invitar usuario como administrador
+🎭️ [Mi Cuenta Equipo Tests] ========================================
+ℹ️  [Mi Cuenta Equipo Tests] Timeout configurado: 180s (3 minutos)
+ℹ️  [Mi Cuenta Equipo Tests] Rol a seleccionar: Administrador
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] CREANDO INBOX EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Config: maxRetries=3, baseUrl=https://api.mail.tm
+🔄 [MailTmService] [STAGGER] Esperando 1704ms para evitar rate limiting en API...
+🔄 [MailTmService] --- Intento 1/3 de creación ---
+📊 [MailTmService] Paso 1: Obteniendo dominios disponibles...
+ℹ️  [MailTmService] GET /domains → Status: 200 OK
+ℹ️  [MailTmService] Dominio obtenido: "uberip.com"
+📊 [MailTmService] Paso 2: Creando cuenta: kbu7nlr5mtnf99a3@uberip.com
+ℹ️  [MailTmService] POST /accounts → Status: 201 Created
+✅ [MailTmService] Cuenta CREADA exitosamente
+📊 [MailTmService] Paso 3: Obteniendo token de autenticación...
+ℹ️  [MailTmService] POST /token → Status: 200 OK
+✅ [MailTmService] Token obtenido: id="6a9b2d96997d..."
+✅ [MailTmService] 🎉 INBOX CREADO EXITOSAMENTE
+🔍 [MailTmService] ========================================
+
+⚙️  [Mi Cuenta Equipo Tests] Email del invitado ADMINISTRADOR generado (Mail.tm):
+   • email: [OCULTO]
+🔍 [Mi Cuenta Equipo Tests] Navegando a /dashboard/portal/mi-cuenta/equipo
+🔍 [EquipoPage] Navegando a Mi Cuenta / Equipo
+✅ [EquipoPage] Página de Equipo cargada
+✅ [Mi Cuenta Equipo Tests] Página de Equipo cargada
+
+📍 Paso 1: Abriendo modal de Invitar usuario
+🔄 [EquipoPage] Haciendo clic en Invitar usuario
+✅ [EquipoPage] Botón Invitar usuario clickeado
+📊 [EquipoPage] Esperando modal Invitar usuario
+✅ [EquipoPage] Modal Invitar usuario visible
+
+📍 Paso 2: Ingresando email del invitado
+🔐 [EquipoPage] Ingresando email del invitado (kb***@[OCULTO])
+✅ [EquipoPage] Email ingresado
+
+📍 Paso 3: Seleccionando rol Administrador
+🔄 [EquipoPage] Seleccionando rol: Administrador
+✅ [EquipoPage] Rol "Administrador" seleccionado
+
+📍 Paso 4: Verificando mensaje "Los administradores tienen"
+✅ [Mi Cuenta Equipo Tests] Mensaje "Los administradores tienen" visible - información de permisos de administrador confirmada
+
+📍 Paso 5: Enviando invitación
+🔄 [EquipoPage] Haciendo clic en Enviar invitación
+✅ [EquipoPage] Invitación enviada
+✅ [Mi Cuenta Equipo Tests] Invitación con rol Administrador enviada
+
+📍 Paso 6: Verificando que el email aparece en la tabla de equipo
+📊 [EquipoPage] Verificando que el email del invitado aparece en la tabla
+❌ [EquipoPage] Email kbu7nlr5mtnf99a3@uberip.com no encontrado en la tabla
+
+📍 Paso 7: Verificando estado del usuario en la tabla
+📊 [EquipoPage] Verificando estado del usuario invitado = "En espera"
+❌ [EquipoPage] No se pudo verificar el estado para el usuario "kbu7nlr5mtnf99a3@uberip.com": TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('.MuiDataGrid-cell[data-field="email"][title="kbu7nlr5mtnf99a3@uberip.com"]') to be visible
+
+
+ℹ️  8 non-blocking error(s) ignored by filter.
+
+📋 6 console message(s) logged to stderr

@@ -1,0 +1,36 @@
+🔐 [Mi Cuenta - Tabs Tests] Login ÚNICO para todo el archivo (de***@[OCULTO])
+✅ [Mi Cuenta - Tabs Tests] Sesión lista para los 8 tests (1 solo login).
+🎭️ [Mi Cuenta - Tabs Tests] TC01: Verificar navegación y estado de las 4 tabs
+ℹ️  [MiCuentaTabsPage] [TC01] URL actual: https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/datos
+ℹ️  [MiCuentaTabsPage] [TC01] role="tab" encontrados en el DOM: 4 | role="tablist": 1
+ℹ️  [Mi Cuenta - Tabs Tests] Tabs encontrados en la página (4): [{"role":"tab","name":"Datos del usuario","ariaSelected":"true"},{"role":"tab","name":"Entidades registradas","ariaSelected":"false"},{"role":"tab","name":"Contactos vinculados","ariaSelected":"false"},{"role":"tab","name":"Equipo","ariaSelected":"false"}]
+ℹ️  [MiCuentaTabsWorkflows] 🔍 Verificando que existen 4 tabs: Datos del usuario, Entidades registradas, Contactos vinculados, Equipo
+📊 [MiCuentaTabsPage] Verificando visibilidad de tabs esperados: Datos del usuario, Entidades registradas, Contactos vinculados, Equipo
+ℹ️  [MiCuentaTabsPage]   ✓ Tab "Datos del usuario" visible
+ℹ️  [MiCuentaTabsPage]   ✓ Tab "Entidades registradas" visible
+ℹ️  [MiCuentaTabsPage]   ✓ Tab "Contactos vinculados" visible
+ℹ️  [MiCuentaTabsPage]   ✓ Tab "Equipo" visible
+ℹ️  [MiCuentaTabsPage] [verifyAllTabsExistWorkflow] URL actual: https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/datos
+ℹ️  [MiCuentaTabsPage] [verifyAllTabsExistWorkflow] role="tab" encontrados en el DOM: 4 | role="tablist": 1
+ℹ️  [MiCuentaTabsPage] Cantidad de role="tab" en el DOM: 4
+ℹ️  [MiCuentaTabsWorkflows] Tabs reales encontrados (4): ["Datos del usuario","Entidades registradas","Contactos vinculados","Equipo"]
+ℹ️  [MiCuentaTabsWorkflows] ✅ Las 4 tabs existen y son visibles
+🔄 [Mi Cuenta - Tabs Tests] Verificando tab "Datos del usuario"
+📊 [MiCuentaTabsPage] Verificando que tab "Datos del usuario" esté activo (aria-selected=true)
+✅ Tab por defecto verificado
+🔍 [MiCuentaTabsWorkflows] 🔄 Navegando a tab: Datos del usuario
+📊 [MiCuentaTabsPage] Verificando que tab "Datos del usuario" esté activo (aria-selected=true)
+✅ [MiCuentaTabsWorkflows] ✅ Tab "Datos del usuario" está activo y en la URL correcta
+🔍 [MiCuentaTabsWorkflows] 🔄 Navegando a tab: Contactos vinculados
+📊 [MiCuentaTabsPage] Verificando que tab "Contactos vinculados" esté activo (aria-selected=true)
+ℹ️  [MiCuentaTabsPage] Verificando que tab "Datos del usuario" NO esté activo (aria-selected=false)
+✅ [MiCuentaTabsWorkflows] ✅ Tab "Contactos vinculados" está activo y en la URL correcta
+🔍 [MiCuentaTabsWorkflows] 🔄 Navegando a tab: Entidades registradas
+📊 [MiCuentaTabsPage] Verificando que tab "Entidades registradas" esté activo (aria-selected=true)
+ℹ️  [MiCuentaTabsPage] Verificando que tab "Contactos vinculados" NO esté activo (aria-selected=false)
+✅ [MiCuentaTabsWorkflows] ✅ Tab "Entidades registradas" está activo y en la URL correcta
+🔍 [MiCuentaTabsWorkflows] 🔄 Navegando a tab: Datos del usuario
+📊 [MiCuentaTabsPage] Verificando que tab "Datos del usuario" esté activo (aria-selected=true)
+ℹ️  [MiCuentaTabsPage] Verificando que tab "Entidades registradas" NO esté activo (aria-selected=false)
+✅ [MiCuentaTabsWorkflows] ✅ Tab "Datos del usuario" está activo y en la URL correcta
+✅ [Mi Cuenta - Tabs Tests] ✓ Todas las tabs funcionan correctamente

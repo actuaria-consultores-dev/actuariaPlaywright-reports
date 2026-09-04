@@ -1,0 +1,34 @@
+🎭️ [Crear Usuario Tests] Empezando pre condición
+🔍 [Crear Usuario Tests] Navegando a formulario de creación de cuenta
+🔍 [LoginPage] Navegando a formulario de creación de cuenta
+✅ [LoginPage] Formulario de creación de cuenta abierto
+✅ [Crear Usuario Tests] Formulario de creación de cuenta abierto
+🎭️ [Crear Usuario Tests] TC07
+🔄 [Crear Usuario Tests] Probando email inválido: test@
+📊 [Crear Usuario Tests] Verificando error para email: test@
+🔄 [Crear Usuario Tests] Limpiando formulario para siguiente iteración
+🔄 [LoginPage] Limpiando formulario
+✅ [LoginPage] Formulario limpiado
+🔄 [Crear Usuario Tests] Probando email inválido: test.com
+📊 [Crear Usuario Tests] Verificando error para email: test.com
+🔄 [Crear Usuario Tests] Limpiando formulario para siguiente iteración
+🔄 [LoginPage] Limpiando formulario
+✅ [LoginPage] Formulario limpiado
+🔄 [Crear Usuario Tests] Probando email inválido: @example.com
+📊 [Crear Usuario Tests] Verificando error para email: @example.com
+🔄 [Crear Usuario Tests] Limpiando formulario para siguiente iteración
+🔄 [LoginPage] Limpiando formulario
+✅ [LoginPage] Formulario limpiado
+🔄 [Crear Usuario Tests] Probando email inválido: test@@example.com
+📊 [Crear Usuario Tests] Verificando error para email: test@@example.com
+🔄 [Crear Usuario Tests] Limpiando formulario para siguiente iteración
+🔄 [LoginPage] Limpiando formulario
+✅ [LoginPage] Formulario limpiado
+🔄 [Crear Usuario Tests] Probando email inválido: test@.com
+📊 [Crear Usuario Tests] Verificando error para email: test@.com
+🔄 [Crear Usuario Tests] Limpiando formulario para siguiente iteración
+🔄 [LoginPage] Limpiando formulario
+✅ [LoginPage] Formulario limpiado
+✅ [Crear Usuario Tests] Validación de emails inválidos completada
+
+📋 2 console message(s) logged to stderr

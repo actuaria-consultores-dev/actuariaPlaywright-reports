@@ -1,0 +1,13 @@
+🎭️ [MiCuenta User Info] Empezando pre condición
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+🎭️ [MiCuenta User Info] TC01: Verificar usuario puede editar el nombre, tel, cargo
+🔄 [LoginPage] Seleccionando cargo 'Gerente General' desde el dropdown
+✅ [LoginPage] Cargo 'Gerente General' seleccionado correctamente
+🔄 [MiCuenta User Info] Cerrando sesión para verificar cambios...
+📊 [MiCuenta User Info] Verificando que los cambios se hayan guardado...
+✅ [MiCuenta User Info] Todos los campos actualizados fueron verificados después del login
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 5 console message(s) logged to stderr

@@ -1,0 +1,117 @@
+🎭️ [Crear Usuario Onboarding Tests] Creando inbox Mail.tm y navegando a formulario de registro
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] CREANDO INBOX EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Config: maxRetries=3, baseUrl=https://api.mail.tm
+🔄 [MailTmService] [STAGGER] Esperando 1639ms para evitar rate limiting en API...
+🔄 [MailTmService] --- Intento 1/3 de creación ---
+📊 [MailTmService] Paso 1: Obteniendo dominios disponibles...
+ℹ️  [MailTmService] GET /domains → Status: 200 OK
+ℹ️  [MailTmService] Dominio obtenido: "uberip.com"
+📊 [MailTmService] Paso 2: Creando cuenta: qer2umowmtnewz4s@uberip.com
+ℹ️  [MailTmService] POST /accounts → Status: 429 Too Many Requests
+⚠️  [MailTmService] ⚠️ RATE LIMITED (429) intento 1. Esperando 2000ms (Retry-After: N/A)
+🔄 [MailTmService] --- Intento 2/3 de creación ---
+📊 [MailTmService] Paso 1: Obteniendo dominios disponibles...
+ℹ️  [MailTmService] GET /domains → Status: 200 OK
+ℹ️  [MailTmService] Dominio obtenido: "uberip.com"
+📊 [MailTmService] Paso 2: Creando cuenta: i22qbfi2mtnex169@uberip.com
+ℹ️  [MailTmService] POST /accounts → Status: 201 Created
+✅ [MailTmService] Cuenta CREADA exitosamente
+📊 [MailTmService] Paso 3: Obteniendo token de autenticación...
+ℹ️  [MailTmService] POST /token → Status: 200 OK
+✅ [MailTmService] Token obtenido: id="6a9b2b5bbe02..."
+✅ [MailTmService] 🎉 INBOX CREADO EXITOSAMENTE
+🔍 [MailTmService] ========================================
+✅ [Crear Usuario Onboarding Tests] Inbox Mail.tm creado: i22qbfi2mtnex169@uberip.com
+🔍 [LoginPage] Navegando a formulario de creación de cuenta
+✅ [LoginPage] Formulario de creación de cuenta abierto
+🎭️ [Crear Usuario Onboarding Tests] TC01-01 - Registro y onboarding administrador (Mail.tm)
+🎭️ [CrearUsuarioWorkflows] Iniciando workflow completo de registro y verificación con Mail.tm
+🔄 [CrearUsuarioWorkflows] Rellenando formulario de creación de usuario
+🔄 [LoginPage] Rellenando formulario de creación de usuario
+✅ [LoginPage] Formulario rellenado correctamente
+✅ [CrearUsuarioWorkflows] Formulario rellenado
+🔄 [CrearUsuarioWorkflows] Enviando formulario de registro
+✅ [CrearUsuarioWorkflows] Botón registrar clickeado
+📊 [CrearUsuarioWorkflows] Verificando que el registro se completó
+🔄 [CrearUsuarioWorkflows] URL actual después del registro verificada
+✅ [CrearUsuarioWorkflows] Usuario redirigido correctamente
+🔄 [CrearUsuarioWorkflows] Esperando 10000ms para que el email se envíe...
+✅ [CrearUsuarioWorkflows] Registro verificado exitosamente
+🔍 [CrearUsuarioWorkflows] Esperando email de bienvenida vía Mail.tm API
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] ESPERANDO MENSAJE EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Esperando mensaje en inbox temporal
+ℹ️  [MailTmService] Config: maxRetries=15, retryDelay=4000ms
+ℹ️  [MailTmService] Tiempo máximo de espera: 60s
+🔄 [MailTmService] --- Intento 1/15 (tiempo transcurrido: 0.0s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 1
+ℹ️  [MailTmService]   → Mensaje encontrado: "BIENVENIDO A Actuaria+"
+📊 [MailTmService] Filtrando por remitente → ✅ COINCIDE
+📊 [MailTmService] Obteniendo contenido completo del mensaje 6a9b2b66cd17...
+📊 [MailTmService] GET /messages/6a9b2b66cd17...
+ℹ️  [MailTmService] GET /messages/6a9b2b66cd17... → Status: 200 OK
+✅ [MailTmService] Contenido obtenido: subject="BIENVENIDO A Actuaria+", html.length=6333
+✅ [MailTmService] 🎉 MENSAJE ENCONTRADO después de 1.0s!
+ℹ️  [MailTmService]   Asunto: "BIENVENIDO A Actuaria+"
+ℹ️  [MailTmService]   Creado: 2026-09-04T20:34:44+00:00
+🔍 [MailTmService] ========================================
+✅ [MailTmService] Enlace extraído exitosamente (texto: "Ver mis empresas")
+✅ [CrearUsuarioWorkflows] Email de bienvenida recibido y contenido extraído
+
+✅ ✅ ✅ [CrearUsuarioWorkflows] Workflow de registro y verificación de email (Mail.tm) completado
+
+🎭️ [OnboardingWorkflows] Iniciando flujo completo de onboarding (Administrador)
+
+📍 Paso 1: Esperando página de onboarding /jerarquia
+🔍 [OnboardingPage] Esperando página de onboarding /jerarquia
+✅ [OnboardingPage] Página de onboarding cargada
+✅ [OnboardingWorkflows] Página de onboarding cargada
+
+📍 Paso 2: Ingresando RUC: 1791973666001
+🔄 [OnboardingPage] Ingresando RUC de la empresa
+📊 [OnboardingPage] Verificando disponibilidad de RUC
+✅ [OnboardingPage] RUC verificado correctamente
+✅ [OnboardingWorkflows] RUC verificado
+
+📍 Paso 3: Haciendo clic en Continuar →
+🔄 [OnboardingPage] Haciendo clic en Continuar →
+✅ [OnboardingPage] Continuar clickeado - avanzando a siguiente pantalla
+✅ [OnboardingWorkflows] RUC screen completado
+
+📍 Paso 4: Verificando opciones de rol disponibles
+📊 [OnboardingPage] Verificando opciones de rol
+✅ [OnboardingPage] Opciones de rol visibles
+✅ [OnboardingWorkflows] Pantalla de rol verificada
+
+📍 Paso 5: Seleccionando rol: administrador
+🔄 [OnboardingPage] Haciendo clic en Continuar como Administrador →
+✅ [OnboardingPage] Role seleccionado: Administrador
+✅ [OnboardingWorkflows] Rol de Administrador seleccionado
+
+📍 Paso 6: Verificando cajas de configuración de acceso
+📊 [OnboardingPage] Verificando pantallas de configuración de acceso
+✅ [OnboardingPage] Todas las cajas de configuración visibles
+✅ [OnboardingWorkflows] Pantalla de acceso verificada
+
+📍 Paso 7: Haciendo clic en Configurar mi acceso →
+🔄 [OnboardingPage] Haciendo clic en Configurar mi acceso →
+✅ [OnboardingPage] Iniciando configuración de acceso
+✅ [OnboardingWorkflows] Configuración de acceso iniciada
+
+📍 Paso 8: Verificando mensaje final: "Listo, eres el administrador"
+📊 [OnboardingPage] Verificando mensaje final
+✅ [OnboardingPage] Mensaje final de administrador verificado
+✅ [OnboardingWorkflows] Mensaje final verificado - Onboarding completado
+
+✅ ✅ ✅ [OnboardingWorkflows] Flujo completo de onboarding (Administrador) finalizado
+
+
+✅ ✅ ✅ [Crear Usuario Onboarding Tests] TC01-01 completado - Usuario registrado y onboarding completado
+
+
+📋 2 console message(s) logged to stderr

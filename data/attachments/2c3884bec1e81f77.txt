@@ -1,0 +1,46 @@
+[LOG] Using Firebase Production Services for environment: stage [8:38:12 PM]
+[LOG] trackEvent view_login {timestamp: 2026-09-04T20:38:13.059Z} [8:38:13 PM]
+❌ CONSOLE ERROR: FirebaseError: Firebase: Error (auth/email-already-in-use).
+    at createErrorInternal (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21473:41)
+    at _createError (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21441:12)
+    at _makeTaggedError (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22017:19)
+    at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21922:23)
+    at async _performSignInRequest (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21950:28)
+    at async createUserWithEmailAnd[OCULTO]
+    at async establecerCuenta (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:57363:30)
+    at async https://act-compass-stage-proj.firebaseapp.com/assets/useAccionConFeedback-pZomaGhH.js:33:27
+    at async onSubmit (https://act-compass-stage-proj.firebaseapp.com/assets/RegisterForm-DHxZbkMF.js:136:7)
+❌ CONSOLE ERROR: FirebaseError: Firebase: Error (auth/email-already-in-use).
+    at createErrorInternal (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21473:41)
+    at _createError (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21441:12)
+    at _makeTaggedError (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22017:19)
+    at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21922:23)
+    at async _performSignInRequest (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21950:28)
+    at async createUserWithEmailAndPassword (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:26301:22)
+    at async establecerCuenta (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:57363:30)
+    at async https://act-compass-stage-proj.firebaseapp.com/assets/useAccionConFeedback-pZomaGhH.js:33:27
+    at async onSubmit (https://act-compass-stage-proj.firebaseapp.com/assets/RegisterForm-DHxZbkMF.js:136:7)
+
+⚠️  1 error(s) detected during test execution:
+  1. FirebaseError: Firebase: Error (auth/email-already-in-use).
+    at createErrorInternal (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21473:41)
+    at _createError (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21441:12)
+    at _makeTaggedError (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22017:19)
+    at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21922:23)
+    at async _performSignInRequest (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21950:28)
+    at async createUserWithEmailAndPassword (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:26301:22)
+    at async establecerCuenta (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:57363:30)
+    at async https://act-compass-stage-proj.firebaseapp.com/assets/useAccionConFeedback-pZomaGhH.js:33:27
+    at async onSubmit (https://act-compass-stage-proj.firebaseapp.com/assets/RegisterForm-DHxZbkMF.js:136:7)
+
+⚠️  1 error(s) detected during test execution:
+  1. FirebaseError: Firebase: Error (auth/email-already-in-use).
+    at createErrorInternal (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21473:41)
+    at _createError (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21441:12)
+    at _makeTaggedError (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22017:19)
+    at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21922:23)
+    at async _performSignInRequest (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21950:28)
+    at async createUserWithEmailAndPassword (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:26301:22)
+    at async establecerCuenta (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:57363:30)
+    at async https://act-compass-stage-proj.firebaseapp.com/assets/useAccionConFeedback-pZomaGhH.js:33:27
+    at async onSubmit (https://act-compass-stage-proj.firebaseapp.com/assets/RegisterForm-DHxZbkMF.js:136:7)

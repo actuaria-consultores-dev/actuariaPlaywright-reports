@@ -1,0 +1,52 @@
+🎭️ [Entidades Registradas Tests] Empezando pre condición
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Entidades Registradas Tests] Login exitoso
+✅ [Entidades Registradas Tests] Página principal verificada
+✅ [Entidades Registradas Tests] Navegación a Entidades Registradas completada
+🎭️ [Entidades-TC04] Verificar búsqueda de entidades
+ℹ️  [Entidades-TC04] Buscando entidad por RUC
+
+======================================================================
+🎯 🔍 INICIANDO FLUJO: BUSCAR EMPRESA
+======================================================================
+   • Término de búsqueda: 1006487552001
+   • Debe ser visible: Sí
+======================================================================
+
+ℹ️  [EntidadesRegistradasWorkflows] 🔍 Buscando: 1006487552001...
+ℹ️  [EntidadesRegistradasPage] Buscando en el Search Box: 1006487552001
+✅ [EntidadesRegistradasPage] Búsqueda en Search Box ejecutada
+✅ [EntidadesRegistradasWorkflows] ✅ Búsqueda ejecutada
+ℹ️  [EntidadesRegistradasWorkflows] ✅ Verificando que el resultado sea visible...
+✅ [EntidadesRegistradasWorkflows] ✅ Resultado encontrado y visible
+
+✅ ✅ ✅ [EntidadesRegistradasWorkflows] ✅ FLUJO BUSCAR EMPRESA FINALIZADO
+
+✅ [Entidades-TC04] Resultado de búsqueda por RUC verificado
+ℹ️  [Entidades-TC04] Buscando entidad por nombre
+
+======================================================================
+🎯 🔍 INICIANDO FLUJO: BUSCAR EMPRESA
+======================================================================
+   • Término de búsqueda: DEMOGRAFIX S.A.
+   • Debe ser visible: Sí
+======================================================================
+
+ℹ️  [EntidadesRegistradasWorkflows] 🔍 Buscando: DEMOGRAFIX S.A....
+ℹ️  [EntidadesRegistradasPage] Buscando en el Search Box: DEMOGRAFIX S.A.
+✅ [EntidadesRegistradasPage] Búsqueda en Search Box ejecutada
+✅ [EntidadesRegistradasWorkflows] ✅ Búsqueda ejecutada
+ℹ️  [EntidadesRegistradasWorkflows] ✅ Verificando que el resultado sea visible...
+✅ [EntidadesRegistradasWorkflows] ✅ Resultado encontrado y visible
+
+✅ ✅ ✅ [EntidadesRegistradasWorkflows] ✅ FLUJO BUSCAR EMPRESA FINALIZADO
+
+✅ [Entidades-TC04] Resultado de búsqueda por nombre verificado
+
+✅ ✅ ✅ [Entidades-TC04] TC04 finalizado exitosamente
+
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 4 console message(s) logged to stderr

@@ -1,0 +1,31 @@
+🎭️ [Inicio Videos Tests] Empezando pre condición
+🔐 [Inicio Videos Tests] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Inicio Videos Tests] Login exitoso
+🔍 [Inicio Videos Tests] Verificando navegación a página principal
+✅ [Inicio Videos Tests] Navegación exitosa a dashboard
+🎭️ [Inicio Videos Tests] TC03 - Cambio entre videos
+📊 [Inicio Videos Tests] Haciendo clic en card de Estudios...
+✅ [Inicio Videos Tests] Página sigue activa
+📊 [Inicio Videos Tests] Verificando que video de Estudios esté reproduciéndose...
+✅ [Inicio Videos Tests] Video de Estudios reproduciéndose
+📊 [Inicio Videos Tests] Cambiando a card de Informe...
+📊 [Inicio Videos Tests] Verificando que video de Informe esté reproduciéndose...
+✅ [Inicio Videos Tests] Video de Informe ahora reproduciéndose
+📊 [Inicio Videos Tests] Verificando que video de Estudios ya no esté visible...
+✅ [Inicio Videos Tests] Video de Estudios ya no está visible (correcto)
+📊 [Inicio Videos Tests] Cambiando a card de Actas de jubilación...
+📊 [Inicio Videos Tests] Verificando que video de Actas esté reproduciéndose...
+✅ [Inicio Videos Tests] Video de Actas ahora reproduciéndose
+📊 [Inicio Videos Tests] Verificando que videos anteriores ya NO estén reproduciéndose...
+📊 [Inicio Videos Tests] Verificando que videos anteriores ya no estén visibles...
+✅ [Inicio Videos Tests] Video de Estudios ya no está visible (correcto)
+✅ [Inicio Videos Tests] Video de Informe ya no está visible (correcto)
+
+✅ ✅ ✅ [Inicio Videos Tests] TC03 completado exitosamente - Cambio entre videos funciona correctamente
+
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 3 console message(s) logged to stderr

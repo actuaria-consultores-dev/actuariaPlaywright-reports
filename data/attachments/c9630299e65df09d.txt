@@ -1,0 +1,6 @@
+[LOG] Using Firebase Production Services for environment: stage [8:40:52 PM]
+[LOG] trackEvent view_login {timestamp: 2026-09-04T20:40:52.847Z} [8:40:52 PM]
+[LOG] Using Firebase Production Services for environment: stage [8:40:55 PM]
+[LOG] {error: AxiosError: Request failed with status code 404
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo obtener el análisis de datos de la empresa, content: Object} [8:40:57 PM]
+[LOG] Using Firebase Production Services for environment: stage [8:41:00 PM]

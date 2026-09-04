@@ -1,0 +1,24 @@
+🎭️ [Inicio Tests] Empezando pre condición
+🔐 [Inicio Tests] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Inicio Tests] Login exitoso
+🔍 [Inicio Tests] Verificando navegación a página principal
+✅ [Inicio Tests] Navegación exitosa a dashboard
+🎭️ [Inicio Tests] TC07: Verificar estructura y accesibilidad del burger
+📊 [Inicio Tests] Verificando semántica del burger...
+📊 [Inicio Tests] Role: "null"
+📊 [Inicio Tests] Tiene aria-label: true
+✅ [Inicio Tests] Burger tiene estructura semántica correcta
+📊 [Inicio Tests] Abriendo menú para verificar estructura...
+📊 [Inicio Tests] Verificando elementos importantes...
+📊 [Inicio Tests] Botones encontrados: 31
+📊 [Inicio Tests] Links encontrados: 8
+📊 [Inicio Tests] Items de lista encontrados: 3
+✅ [Inicio Tests] Estructura del menú verificada
+📊 [Inicio Tests] Cerrando menú...
+✅ [Inicio Tests] Menú cerrado
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 3 console message(s) logged to stderr

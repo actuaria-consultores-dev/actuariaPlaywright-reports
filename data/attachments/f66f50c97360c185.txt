@@ -1,0 +1,14 @@
+🎭️ [Crear Usuario Tests] Empezando pre condición
+🔍 [Crear Usuario Tests] Navegando a formulario de creación de cuenta
+🔍 [LoginPage] Navegando a formulario de creación de cuenta
+✅ [LoginPage] Formulario de creación de cuenta abierto
+✅ [Crear Usuario Tests] Formulario de creación de cuenta abierto
+🎭️ [Crear Usuario Tests] TC04
+🔄 [Crear Usuario Tests] Rellenando formulario con contraseñas diferentes
+🔄 [LoginPage] Rellenando formulario con contraseñas diferentes
+✅ [LoginPage] Formulario rellenado
+🔄 [Crear Usuario Tests] Intentando registrar con contraseñas diferentes
+📊 [Crear Usuario Tests] Verificando error de contraseñas no coincidentes
+✅ [Crear Usuario Tests] Error de contraseñas no coincidentes verificado
+
+📋 2 console message(s) logged to stderr

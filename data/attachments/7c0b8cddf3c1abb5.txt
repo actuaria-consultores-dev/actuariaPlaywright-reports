@@ -1,0 +1,42 @@
+🎭️ [Inicio Tests] Empezando pre condición
+🔐 [Inicio Tests] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Inicio Tests] Login exitoso
+🔍 [Inicio Tests] Verificando navegación a página principal
+✅ [Inicio Tests] Navegación exitosa a dashboard
+🎭️ [Inicio Tests] TC02: Verificar datos en pagina principal
+📊 [Inicio Tests] Buscando sección de gráficos "Datos correspondientes al..."
+📊 [Inicio Tests] Título encontrado: "Datos correspondientes al 31 de diciembre del 2025"
+✅ [Inicio Tests] Sección de datos y gráficos localizada
+📊 [Inicio Tests] Verificando tarjetas KPI principales...
+📊 [Inicio Tests] ✅ KPI Provisión acumulada visible
+📊 [Inicio Tests] ✅ KPI Remuneración promedio visible
+📊 [Inicio Tests] ✅ KPI Distribución demográfica visible
+📊 [Inicio Tests] ✅ Valores monetarios verificados
+✅ [Inicio Tests] Todas las tarjetas KPI están visibles
+📊 [Inicio Tests] Verificando cambios año a año...
+📊 [Inicio Tests] Porcentajes de cambio encontrados: true
+📊 [Inicio Tests] Valores de tendencia encontrados: true
+✅ [Inicio Tests] Porcentajes de variación verificados
+📊 [Inicio Tests] Verificando presencia de elementos gráficos...
+📊 [Inicio Tests] Elementos canvas encontrados: 3
+📊 [Inicio Tests] Elementos SVG encontrados: 41
+📊 [Inicio Tests] Canvas element visible: true
+✅ [Inicio Tests] Elementos gráficos presentes en la página
+📊 [Inicio Tests] Buscando botones de control de gráficos...
+📊 [Inicio Tests] ✅ Etiqueta encontrada: "Jubilación"
+📊 [Inicio Tests] ✅ Etiqueta encontrada: "Desahucio"
+📊 [Inicio Tests] ⚠️ Etiqueta no encontrada: "Promedio"
+📊 [Inicio Tests] ✅ Etiqueta encontrada: "Total"
+📊 [Inicio Tests] ⚠️ Etiqueta no encontrada: "colaboradores"
+📊 [Inicio Tests] Etiquetas de gráficos encontradas: 3/5
+✅ [Inicio Tests] Controles de gráficos verificados
+📊 [Inicio Tests] Monitoreando errores de consola...
+📊 [Inicio Tests] Errores de consola detectados: 0
+✅ [Inicio Tests] Verificación de consola completada
+✅ [Inicio Tests] TC02 - Verificación de datos en página principal completada exitosamente
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 3 console message(s) logged to stderr

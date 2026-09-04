@@ -1,0 +1,20 @@
+🎭️ [Mi Cuenta - Tabs Tests] TC03: Verificar contenido específico en cada tab
+📊 [MiCuentaTabsWorkflows] 📋 Verificando contenido en tab: Datos del usuario
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Label encontrado: "Nombre completo"
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Label encontrado: "Correo"
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Label encontrado: "Teléfono"
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Label encontrado: "Cargo"
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Botón encontrado: "Actualizar Datos"
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Botón encontrado: "Cancelar"
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Descripción encontrada: "Completa los campos con tu información de usuario"
+✅ [MiCuentaTabsWorkflows] ✅ Todo el contenido verificado en "Datos del usuario"
+📊 [MiCuentaTabsWorkflows] 📋 Verificando contenido en tab: Entidades registradas
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Botón encontrado: "Agregar una entidad"
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Placeholder encontrado: "Busca por nombre o ruc..."
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Descripción encontrada: "Comienza añadiendo una empresa"
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Descripción encontrada: "A continuación podrás visualizar las entidades registradas"
+✅ [MiCuentaTabsWorkflows] ✅ Todo el contenido verificado en "Entidades registradas"
+📊 [MiCuentaTabsWorkflows] 📋 Verificando contenido en tab: Equipo
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Botón encontrado: "Invitar usuario"
+✅ [MiCuentaTabsWorkflows] ✅ Todo el contenido verificado en "Equipo"
+✅ [Mi Cuenta - Tabs Tests] ✓ Contenido específico verificado en todas las tabs

@@ -1,0 +1,275 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: specs/CrearUsuario/crear_usuario_onboarding_delegation.test.ts >> Verificar Onboarding - Delegación de Administración (Mail.tm) >> Crear Usuario y completar onboarding RUC → Delegar Administración | [AP] | TC01-02
+- Location: tests/specs/CrearUsuario/crear_usuario_onboarding_delegation.test.ts:26:2
+
+# Error details
+
+```
+TimeoutError: locator.waitFor: Timeout 8000ms exceeded.
+Call log:
+  - waiting for locator('div').filter({ hasText: 'Soy el' }).nth(5) to be visible
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - img "Logo Actuaria - Navbar auth" [ref=e6] [cursor=pointer]
+  - generic [ref=e7]:
+    - complementary [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]: Novedad · Actuaria+
+          - paragraph [ref=e12]: Empecemos por tu empresa.
+          - paragraph [ref=e13]: Si tu organización ya está en Actuaria+, te ayudamos a solicitar acceso al administrador. Si no, configurarla toma menos de un minuto.
+        - generic [ref=e14]:
+          - generic [ref=e15]:
+            - generic [ref=e16]: "1"
+            - generic [ref=e19]:
+              - paragraph [ref=e20]: Empresa
+              - paragraph [ref=e21]: Identifica tu organización
+          - generic [ref=e22]:
+            - generic [ref=e23]: "2"
+            - generic [ref=e26]:
+              - paragraph [ref=e27]: Define tu rol
+              - paragraph [ref=e28]: Asume o delega la administración
+          - generic [ref=e29]:
+            - generic [ref=e30]: "3"
+            - generic [ref=e33]:
+              - paragraph [ref=e34]: Conoce la jerarquía
+              - paragraph [ref=e35]: Roles y niveles por módulo
+          - generic [ref=e36]:
+            - generic [ref=e37]: "4"
+            - generic [ref=e39]:
+              - paragraph [ref=e40]: Configura accesos
+              - paragraph [ref=e41]: Por usuario, módulo y nivel
+    - main [ref=e42]:
+      - generic [ref=e43]:
+        - generic [ref=e44]: Empresa ya registrada
+        - heading "Esta empresa ya está en Actuaria+" [level=4] [ref=e48]
+        - paragraph [ref=e49]:
+          - text: Encontramos la empresa
+          - strong [ref=e50]: AGENCIA DE VIAJES MIDLAND TRAVEL CIA LTDA
+          - text: con RUC
+          - strong [ref=e51]: "1792390400001"
+          - text: . Para acceder, vamos a notificar a su administrador. Cuando apruebe tu solicitud, tendrás acceso al portal.
+        - generic [ref=e52]:
+          - button "No es mi empresa" [ref=e53] [cursor=pointer]
+          - button "Solicitar acceso →" [ref=e54] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  43  |     readonly equipoYRolesBox: Locator;
+  44  |     readonly permisosModuloBox: Locator;
+  45  |     readonly invitacionLinkBox: Locator;
+  46  |     readonly configurarAccessButton: Locator;
+  47  |     readonly accesoPorAdministradorHeading: Locator;
+  48  | 
+  49  |         // Delegation Screen
+  50  |     readonly adminEmailInput: Locator;
+  51  |     readonly enviarButton: Locator;
+  52  |     readonly solicitudEnRevisionHeading: Locator;
+  53  | 
+  54  |     // Final Screen
+  55  |     readonly finalAdministratorHeading: Locator;
+  56  | 
+  57  |     constructor(page: Page) {
+  58  |         super(page);
+  59  | 
+  60  |         // RUC Selection
+  61  |         this.rucInput = page.getByRole('textbox', { name: 'RUC de tu empresa' });
+  62  |         this.continueRucButton = page.getByRole('button', { name: 'Continuar →' });
+  63  |         this.rucSuccessMessage = page.getByText('Esta empresa todavía no tiene administrador. En el siguiente paso eliges tu rol.');
+  64  |         this.rucSuccessMessageTwo = page.getByText('En el siguiente paso');
+  65  | 
+  66  |         // Company Creation
+  67  |         this.firstTimeMessage = page.getByText('Es la primera vez que vemos');
+  68  |         this.razonSocialInput = page.getByRole('textbox', { name: 'Razon Social' });
+  69  |         this.nombreComercialInput = page.getByRole('textbox', { name: 'Nombre Comercial' });
+  70  |         this.provinciaCombobox = page.getByRole('combobox', { name: 'Provincia' });
+  71  |         this.ciudadCombobox = page.getByRole('combobox', { name: 'Ciudad' });
+  72  |         this.direccionInput = page.getByRole('textbox', { name: 'Direccion' });
+  73  |         this.telefonoInput = page.getByRole('textbox', { name: 'Telefono' });
+  74  |         this.crearEmpresaButton = page.getByRole('button', { name: 'Crear empresa y continuar →' });
+  75  |         this.empresaCreadaMessage = page.getByText('La empresa se creó');
+  76  | 
+  77  |         // Role Selection
+  78  |         this.roleSoyEl = page.locator('div').filter({ hasText: 'Soy el' }).nth(5);
+  79  |         this.roleDelegarLa = page.locator('div').filter({ hasText: 'Delegar la administración a' }).nth(5);
+  80  |         this.continueAsAdministratorButton = page.getByRole('button', { name: 'Continuar como Administrador →' });
+  81  |         this.delegarAdministracionButton = page.getByRole('button', { name: 'Delegar la administración →' });
+  82  | 
+  83  |         // Access Configuration
+  84  |         this.equipoYRolesBox = page.locator('div').filter({ hasText: 'Equipo y rolesDefines quién' }).nth(5);
+  85  |         this.permisosModuloBox = page.locator('div').filter({ hasText: 'Permisos por móduloHabilitas' }).nth(5);
+  86  |         this.invitacionLinkBox = page.locator('div').filter({ hasText: 'Invitación por linkCompartes' }).nth(5);
+  87  |         this.configurarAccessButton = page.getByRole('button', { name: 'Configurar mi acceso →' });
+  88  |         this.accesoPorAdministradorHeading = page.getByRole('heading', { name: 'Tu acceso lo define tu' });
+  89  | 
+  90  |                 // Delegation Screen
+  91  |         this.adminEmailInput = page.getByRole('textbox', { name: 'Correo del administrador' });
+  92  |         this.enviarButton = page.getByRole('button', { name: 'Enviar invitación →' });
+  93  |         this.solicitudEnRevisionHeading = page.getByRole('heading', { name: 'Tu solicitud está en revisión' });
+  94  | 
+  95  |         // Existing Company Screen (Ya está en Actuaria+)
+  96  |         this.yaEstaEnActuariaMessage = page.getByText('Ya está en Actuaria+', { exact: true });
+  97  |         this.encontramosEmpresaMessage = page.getByText('Encontramos la empresa');
+  98  |         this.solicitarAccesoButton = page.getByRole('button', { name: 'Solicitar acceso →' });
+  99  |         this.cerrarSesionButton = page.getByRole('button', { name: 'Cerrar sesión' });
+  100 | 
+  101 |         // Final Screen
+  102 |         this.finalAdministratorHeading = page.getByRole('heading', { name: 'Listo, eres el administrador' });
+  103 |     }
+  104 | 
+  105 |     /**
+  106 |      * Navigate to onboarding jerarquia page
+  107 |      */
+  108 |     async waitForOnboardingPage(timeout: number = 20000): Promise<void> {
+  109 |         this.logger.navegacion('Esperando página de onboarding /jerarquia');
+  110 |         await this.page.waitForURL('**/onboarding/jerarquia', { timeout });
+  111 |         this.logger.exito('Página de onboarding cargada');
+  112 |     }
+  113 | 
+  114 |         /**
+  115 |      * Enter RUC for a new company (first time seen - no existing admin)
+  116 |      * Verifies the "En el siguiente paso" message appears
+  117 |      */
+  118 |     async enterRUC(ruc: string, timeout: number = 20000): Promise<void> {
+  119 |         this.logger.cambio('Ingresando RUC de la empresa');
+  120 |         await this.rucInput.fill(ruc);
+  121 |         await this.page.waitForTimeout(2000);
+  122 | 
+  123 |         this.logger.verificacion('Verificando disponibilidad de RUC');
+  124 |         await this.rucSuccessMessageTwo.waitFor({ state: 'visible', timeout });
+  125 |         this.logger.exito('RUC verificado correctamente');
+  126 |     }
+  127 | 
+  128 |     /**
+  129 |      * Click continue button on RUC screen
+  130 |      */
+  131 |     async continueFromRUCScreen(): Promise<void> {
+  132 |         this.logger.cambio('Haciendo clic en Continuar →');
+  133 |         await expect(this.continueRucButton).toBeEnabled({ timeout: 5000 });
+  134 |         await this.continueRucButton.click();
+  135 |         this.logger.exito('Continuar clickeado - avanzando a siguiente pantalla');
+  136 |     }
+  137 | 
+  138 |     /**
+  139 |      * Verify role selection options are visible
+  140 |      */
+  141 |     async verifyRoleOptions(timeout: number = 8000): Promise<void> {
+  142 |         this.logger.verificacion('Verificando opciones de rol');
+> 143 |         await this.roleSoyEl.waitFor({ state: 'visible', timeout });
+      |                              ^ TimeoutError: locator.waitFor: Timeout 8000ms exceeded.
+  144 |         await this.roleDelegarLa.waitFor({ state: 'visible', timeout });
+  145 |         this.logger.exito('Opciones de rol visibles');
+  146 |     }
+  147 | 
+  148 |     /**
+  149 |      * Continue as administrator
+  150 |      */
+  151 |     async continueAsAdministrator(): Promise<void> {
+  152 |         this.logger.cambio('Haciendo clic en Continuar como Administrador →');
+  153 |         await this.continueAsAdministratorButton.click();
+  154 |         this.logger.exito('Role seleccionado: Administrador');
+  155 |     }
+  156 | 
+  157 |     /**
+  158 |      * Verify access configuration boxes are visible
+  159 |      */
+  160 |     async verifyAccessConfigBoxes(timeout: number = 8000): Promise<void> {
+  161 |         this.logger.verificacion('Verificando pantallas de configuración de acceso');
+  162 |         await this.equipoYRolesBox.waitFor({ state: 'visible', timeout });
+  163 |         await this.permisosModuloBox.waitFor({ state: 'visible', timeout });
+  164 |         await this.invitacionLinkBox.waitFor({ state: 'visible', timeout });
+  165 |         this.logger.exito('Todas las cajas de configuración visibles');
+  166 |     }
+  167 | 
+  168 |     /**
+  169 |      * Click configure access button
+  170 |      */
+  171 |     async configurarAcceso(): Promise<void> {
+  172 |         this.logger.cambio('Haciendo clic en Configurar mi acceso →');
+  173 |         await this.configurarAccessButton.click();
+  174 |         this.logger.exito('Iniciando configuración de acceso');
+  175 |     }
+  176 | 
+  177 |     /**
+  178 |      * Verify final administrator heading
+  179 |      */
+  180 |     async verifyFinalAdministratorHeading(timeout: number = 10000): Promise<void> {
+  181 |         this.logger.verificacion('Verificando mensaje final');
+  182 |         await this.finalAdministratorHeading.waitFor({ state: 'visible', timeout });
+  183 |         this.logger.exito('Mensaje final de administrador verificado');
+  184 |     }
+  185 | 
+  186 |     /**
+  187 |      * Select delegation role instead of administrator
+  188 |      */
+  189 |     async selectDelegarLaAdministracion(): Promise<void> {
+  190 |         this.logger.cambio('Seleccionando opción: Delegar la administración a');
+  191 |         await this.roleDelegarLa.click();
+  192 |         this.logger.exito('Opción de delegación seleccionada');
+  193 |     }
+  194 | 
+  195 |     /**
+  196 |      * Continue with delegation role
+  197 |      */
+  198 |     async continueDelegation(): Promise<void> {
+  199 |         this.logger.cambio('Haciendo clic en Delegar la administración →');
+  200 |         await expect(this.delegarAdministracionButton).toBeEnabled({ timeout: 5000 });
+  201 |         await this.delegarAdministracionButton.click();
+  202 |         this.logger.exito('Delegación iniciada');
+  203 |     }
+  204 | 
+  205 |     /**
+  206 |      * Verify access definition screen for delegated users
+  207 |      */
+  208 |     async verifyAccesoPorAdministrador(timeout: number = 8000): Promise<void> {
+  209 |         this.logger.verificacion('Verificando pantalla: Tu acceso lo define tu administrador');
+  210 |         await this.accesoPorAdministradorHeading.waitFor({ state: 'visible', timeout });
+  211 |         this.logger.exito('Pantalla de acceso por administrador verificada');
+  212 |     }
+  213 | 
+  214 |         /**
+  215 |      * Fill admin email for delegation
+  216 |      */
+  217 |     async fillAdminEmail(email: string): Promise<void> {
+  218 |         this.logger.autenticacion('Ingresando email del administrador', email);
+  219 |         await this.adminEmailInput.fill(email);
+  220 |         this.logger.exito('Email del administrador ingresado');
+  221 |     }
+  222 | 
+  223 |     /**
+  224 |      * Submit admin email (enviar)
+  225 |      */
+  226 |     async enviarDelegation(timeout: number = 25000): Promise<void> {
+  227 |         this.logger.cambio('Haciendo clic en Enviar →');
+  228 |         await this.enviarButton.click();
+  229 |         await this.page.waitForTimeout(timeout); // Wait for invitation email to be sent
+  230 |         this.logger.exito('Invitación enviada al administrador');
+  231 |     }
+  232 | 
+  233 |                 /**
+  234 |      * Verify delegation request in review
+  235 |      */
+  236 |     async verifySolicitudEnRevision(timeout: number = 10000): Promise<void> {
+  237 |         this.logger.verificacion('Verificando: Tu solicitud está en revisión');
+  238 |         await this.solicitudEnRevisionHeading.waitFor({ state: 'visible', timeout });
+  239 |         this.logger.exito('Solicitud en revisión verificada');
+  240 |     }
+  241 | 
+  242 |     // ========== EXISTING COMPANY (YA ESTÁ EN ACTUARIA+) METHODS ==========
+  243 | 
+```

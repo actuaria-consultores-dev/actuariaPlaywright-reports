@@ -1,0 +1,14 @@
+🎭️ [Crear Usuario Tests] Empezando pre condición
+🔍 [Crear Usuario Tests] Navegando a formulario de creación de cuenta
+🔍 [LoginPage] Navegando a formulario de creación de cuenta
+✅ [LoginPage] Formulario de creación de cuenta abierto
+✅ [Crear Usuario Tests] Formulario de creación de cuenta abierto
+🎭️ [Crear Usuario Tests] TC06
+🔄 [Crear Usuario Tests] Rellenando formulario con contraseña muy corta
+🔄 [LoginPage] Rellenando formulario con contraseña
+✅ [LoginPage] Formulario rellenado
+🔄 [Crear Usuario Tests] Intentando registrar
+📊 [Crear Usuario Tests] Verificando longitud mínima de contraseña
+✅ [Crear Usuario Tests] Validación de longitud mínima verificada
+
+📋 2 console message(s) logged to stderr

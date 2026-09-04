@@ -1,0 +1,37 @@
+🎭️ [Inicio Tests] Empezando pre condición
+🔐 [Inicio Tests] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Inicio Tests] Login exitoso
+🔍 [Inicio Tests] Verificando navegación a página principal
+✅ [Inicio Tests] Navegación exitosa a dashboard
+🎭️ [Inicio Tests] TC08: Verificar consistencia en múltiples ciclos
+📊 [Inicio Tests] Realizando 3 ciclos de abrir/cerrar con esperas mejoradas...
+📊 [Inicio Tests] 
+--- Ciclo 1 ---
+📊 [Inicio Tests] Abriendo...
+📊 [Inicio Tests] Cerrando...
+📊 [Inicio Tests] Botones con menú cerrado: 31
+✅ [Inicio Tests] Ciclo 1 completado
+📊 [Inicio Tests] 
+--- Ciclo 2 ---
+📊 [Inicio Tests] Abriendo...
+📊 [Inicio Tests] Botones con menú abierto: 32
+📊 [Inicio Tests] Cerrando...
+📊 [Inicio Tests] Botones con menú cerrado: 33
+✅ [Inicio Tests] Ciclo 2 completado
+📊 [Inicio Tests] 
+--- Ciclo 3 ---
+📊 [Inicio Tests] Abriendo...
+📊 [Inicio Tests] Botones con menú abierto: 32
+📊 [Inicio Tests] Cerrando...
+📊 [Inicio Tests] Botones con menú cerrado: 33
+✅ [Inicio Tests] Ciclo 3 completado
+✅ [Inicio Tests] 3 ciclos completados
+📊 [Inicio Tests] Verificando estado final...
+📊 [Inicio Tests] Botón burger visible: true
+✅ [Inicio Tests] Verificación final completada
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 3 console message(s) logged to stderr

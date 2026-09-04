@@ -1,0 +1,49 @@
+[LOG] Using Firebase Production Services for environment: stage [8:37:17 PM]
+[LOG] trackEvent view_login {timestamp: 2026-09-04T20:37:19.866Z} [8:37:19 PM]
+[LOG] Using Firebase Production Services for environment: stage [8:37:21 PM]
+[LOG] Using Firebase Production Services for environment: stage [8:37:23 PM]
+❌ CONSOLE ERROR: [OCULTO] FirebaseError: Firebase: Error (auth/user-[OCULTO]
+    at createErrorInternal (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21473:41)
+    at _fail (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21438:11)
+    at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21935:17)
+    at async requestSts[OCULTO]
+    at async Sts[OCULTO] (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22559:58)
+    at async Sts[OCULTO] (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22550:13)
+    at async _logoutIfInvalidated (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22230:16)
+    at async UserImpl.getId[OCULTO]
+    at async check[OCULTO] (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:59926:11)
+❌ CONSOLE ERROR: Token expirado: FirebaseError: Firebase: Error (auth/user-token-expired).
+    at createErrorInternal (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21473:41)
+    at _fail (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21438:11)
+    at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21935:17)
+    at async requestStsToken (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22467:22)
+    at async StsTokenManager.refresh (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22559:58)
+    at async StsTokenManager.getToken (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22550:13)
+    at async _logoutIfInvalidated (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22230:16)
+    at async UserImpl.getIdToken (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22651:29)
+    at async checkTokenValidity (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:59926:11)
+[LOG] trackEvent view_login {timestamp: 2026-09-04T20:38:23.944Z} [8:38:24 PM]
+
+⚠️  1 error(s) detected during test execution:
+  1. Token expirado: FirebaseError: Firebase: Error (auth/user-token-expired).
+    at createErrorInternal (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21473:41)
+    at _fail (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21438:11)
+    at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21935:17)
+    at async requestStsToken (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22467:22)
+    at async StsTokenManager.refresh (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22559:58)
+    at async StsTokenManager.getToken (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22550:13)
+    at async _logoutIfInvalidated (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22230:16)
+    at async UserImpl.getIdToken (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22651:29)
+    at async checkTokenValidity (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:59926:11)
+
+⚠️  1 error(s) detected during test execution:
+  1. Token expirado: FirebaseError: Firebase: Error (auth/user-token-expired).
+    at createErrorInternal (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21473:41)
+    at _fail (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21438:11)
+    at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:21935:17)
+    at async requestStsToken (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22467:22)
+    at async StsTokenManager.refresh (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22559:58)
+    at async StsTokenManager.getToken (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22550:13)
+    at async _logoutIfInvalidated (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22230:16)
+    at async UserImpl.getIdToken (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:22651:29)
+    at async checkTokenValidity (https://act-compass-stage-proj.firebaseapp.com/assets/index-BZbDw0bE.js:59926:11)

@@ -1,0 +1,13 @@
+🎭️ [Crear Usuario Tests] Empezando pre condición
+🔍 [Crear Usuario Tests] Navegando a formulario de creación de cuenta
+🔍 [LoginPage] Navegando a formulario de creación de cuenta
+✅ [LoginPage] Formulario de creación de cuenta abierto
+✅ [Crear Usuario Tests] Formulario de creación de cuenta abierto
+🎭️ [Crear Usuario Tests] TC15
+🔄 [Crear Usuario Tests] Rellenando formulario válido
+🔄 [Crear Usuario Tests] Intentando registrar
+📊 [Crear Usuario Tests] Verificando deshabilitación del botón
+🔄 [Crear Usuario Tests] Botón deshabilitado durante procesamiento: true
+✅ [Crear Usuario Tests] Verificación de deshabilitación completada
+
+📋 2 console message(s) logged to stderr

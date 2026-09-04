@@ -1,0 +1,18 @@
+🎭️ [MiCuenta Contraseña Tests] Empezando pre condición
+ℹ️  [MiCuenta Contraseña Tests] Usando contraseña ORIGINAL para esta prueba
+🔐 [MiCuenta Contraseña Tests] Iniciando sesión con credenciales de prueba (ch***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ch***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [MiCuenta Contraseña Tests] Sesión iniciada exitosamente
+✅ [MiCuenta Contraseña Tests] Página de contraseña cargada exitosamente
+🎭️ [MiCuenta Contraseña Tests] TC02: Verificar usuario puede cambiar contraseña exitosamente
+ℹ️  [PasswordPage] Abriendo diálogo "Cambiar contraseña"
+✅ [PasswordPage] Diálogo de cambio de contraseña abierto
+ℹ️  [PasswordPage] Llenando formulario de cambio de contraseña
+ℹ️  [PasswordPage] Confirmando con "Actualizar contraseña"
+✅ [PasswordPage] Formulario de contraseña enviado
+✅ [MiCuenta Contraseña Tests] Una de las condiciones esperadas se cumplió
+
+ℹ️  4 non-blocking error(s) ignored by filter.
+
+📋 6 console message(s) logged to stderr

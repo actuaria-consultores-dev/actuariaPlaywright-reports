@@ -1,0 +1,64 @@
+🎭️ [Crear Usuario Mail.tm Tests] Empezando pre condición - Crear inbox Mail.tm y navegar a formulario de registro
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] CREANDO INBOX EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Config: maxRetries=3, baseUrl=https://api.mail.tm
+🔄 [MailTmService] [STAGGER] Esperando 1078ms para evitar rate limiting en API...
+🔄 [MailTmService] --- Intento 1/3 de creación ---
+📊 [MailTmService] Paso 1: Obteniendo dominios disponibles...
+ℹ️  [MailTmService] GET /domains → Status: 200 OK
+ℹ️  [MailTmService] Dominio obtenido: "uberip.com"
+📊 [MailTmService] Paso 2: Creando cuenta: p88aw7t4mtneyrht@uberip.com
+ℹ️  [MailTmService] POST /accounts → Status: 429 Too Many Requests
+⚠️  [MailTmService] ⚠️ RATE LIMITED (429) intento 1. Esperando 2000ms (Retry-After: N/A)
+🔄 [MailTmService] --- Intento 2/3 de creación ---
+📊 [MailTmService] Paso 1: Obteniendo dominios disponibles...
+ℹ️  [MailTmService] GET /domains → Status: 200 OK
+ℹ️  [MailTmService] Dominio obtenido: "uberip.com"
+📊 [MailTmService] Paso 2: Creando cuenta: muiriuvmmtneytji@uberip.com
+ℹ️  [MailTmService] POST /accounts → Status: 201 Created
+✅ [MailTmService] Cuenta CREADA exitosamente
+📊 [MailTmService] Paso 3: Obteniendo token de autenticación...
+ℹ️  [MailTmService] POST /token → Status: 200 OK
+✅ [MailTmService] Token obtenido: id="6a9b2bafcd6a..."
+✅ [MailTmService] 🎉 INBOX CREADO EXITOSAMENTE
+🔍 [MailTmService] ========================================
+✅ [Crear Usuario Mail.tm Tests] Inbox Mail.tm creado: muiriuvmmtneytji@uberip.com
+🔍 [Crear Usuario Mail.tm Tests] Navegando a formulario de creación de cuenta
+🔍 [LoginPage] Navegando a formulario de creación de cuenta
+✅ [LoginPage] Formulario de creación de cuenta abierto
+✅ [Crear Usuario Mail.tm Tests] Formulario de creación de cuenta abierto
+🎭️ [Crear Usuario Mail.tm Tests] TC02-01 - Verificar validación de registro fallido
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] CREANDO INBOX EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Config: maxRetries=3, baseUrl=https://api.mail.tm
+🔄 [MailTmService] [STAGGER] Esperando 1769ms para evitar rate limiting en API...
+🔄 [MailTmService] --- Intento 1/3 de creación ---
+📊 [MailTmService] Paso 1: Obteniendo dominios disponibles...
+ℹ️  [MailTmService] GET /domains → Status: 200 OK
+ℹ️  [MailTmService] Dominio obtenido: "uberip.com"
+📊 [MailTmService] Paso 2: Creando cuenta: u7sbgsiamtneyypt@uberip.com
+ℹ️  [MailTmService] POST /accounts → Status: 201 Created
+✅ [MailTmService] Cuenta CREADA exitosamente
+📊 [MailTmService] Paso 3: Obteniendo token de autenticación...
+ℹ️  [MailTmService] POST /token → Status: 200 OK
+✅ [MailTmService] Token obtenido: id="6a9b2bb609dd..."
+✅ [MailTmService] 🎉 INBOX CREADO EXITOSAMENTE
+🔍 [MailTmService] ========================================
+🎭️ [CrearUsuarioWorkflows] Verificando registro con datos inválidos
+🔄 [CrearUsuarioWorkflows] Rellenando formulario con contraseña inválida
+🔄 [LoginPage] Rellenando formulario con contraseña
+✅ [LoginPage] Formulario rellenado
+🔄 [CrearUsuarioWorkflows] Enviando formulario
+📊 [CrearUsuarioWorkflows] Verificando error de validación de contraseña
+✅ [CrearUsuarioWorkflows] Error de validación verificado correctamente
+✅ [CrearUsuarioWorkflows] Usuario permanece en página de registro como se esperaba
+
+✅ ✅ ✅ [CrearUsuarioWorkflows] Verificación de registro inválido completada
+
+
+✅ ✅ ✅ [Crear Usuario Mail.tm Tests] TC02-01 finalizado exitosamente
+
+
+📋 2 console message(s) logged to stderr

@@ -1,0 +1,8 @@
+🎭️ [Mi Cuenta - Tabs Tests] TC07: Verificar persistencia de URL al recargar página
+🔍 [MiCuentaTabsWorkflows] 🔄 Navegando a "Contactos vinculados" y recargando página
+📊 [MiCuentaTabsPage] Verificando que tab "Contactos vinculados" esté activo (aria-selected=true)
+✅ [MiCuentaTabsWorkflows] ✅ URL persiste correctamente en "Contactos vinculados"
+🔍 [MiCuentaTabsWorkflows] 🔄 Navegando a "Entidades registradas" y recargando página
+📊 [MiCuentaTabsPage] Verificando que tab "Entidades registradas" esté activo (aria-selected=true)
+✅ [MiCuentaTabsWorkflows] ✅ URL persiste correctamente en "Entidades registradas"
+✅ [Mi Cuenta - Tabs Tests] ✓ URLs persisten correctamente al recargar

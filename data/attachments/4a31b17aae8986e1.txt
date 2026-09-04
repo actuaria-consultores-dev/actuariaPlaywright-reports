@@ -1,0 +1,41 @@
+🎭️ [Entidades Registradas Tests] Empezando pre condición
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Entidades Registradas Tests] Login exitoso
+✅ [Entidades Registradas Tests] Página principal verificada
+✅ [Entidades Registradas Tests] Navegación a Entidades Registradas completada
+🎭️ [Entidades-TC06] Verificar usuario puede acceder a empresas registradas
+📋 [Entidades-TC06] Configuración
+{
+  "targetCompanyName": "AGROMAPS",
+  "verifyDashboard": true
+}
+
+======================================================================
+🎯 👤 INICIANDO FLUJO: ACCEDER A PERFIL DE EMPRESA
+======================================================================
+   • Empresa objetivo: AGROMAPS
+   • Verificar dashboard: Sí
+======================================================================
+
+ℹ️  [EntidadesRegistradasWorkflows] 📍 Accediendo al menú de perfil de usuario...
+ℹ️  [EntidadesRegistradasPage] Accediendo al menú de perfil de usuario
+✅ [EntidadesRegistradasPage] Menú de perfil abierto
+✅ [EntidadesRegistradasWorkflows] ✅ Menú de perfil abierto
+ℹ️  [EntidadesRegistradasWorkflows] 🔄 Cambiando a empresa AGROMAPS...
+✅ [EntidadesRegistradasWorkflows] ✅ Mensaje de éxito: "Se cambio a la empresa"
+ℹ️  [EntidadesRegistradasWorkflows] 🏠 Verificando datos del dashboard...
+🔍 [EntidadesRegistradasPage] Navegando a Inicio
+✅ [EntidadesRegistradasPage] Página de Inicio cargada
+✅ [EntidadesRegistradasWorkflows] ✅ Dashboard verificado correctamente
+
+✅ ✅ ✅ [EntidadesRegistradasWorkflows] ✅ FLUJO ACCEDER A PERFIL DE EMPRESA FINALIZADO
+
+✅ [Entidades-TC06] Acceso a empresa verificado
+
+✅ ✅ ✅ [Entidades-TC06] TC06 finalizado exitosamente
+
+
+ℹ️  6 non-blocking error(s) ignored by filter.
+
+📋 4 console message(s) logged to stderr

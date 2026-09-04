@@ -1,0 +1,50 @@
+🎭️ [Inicio Tests] Empezando pre condición
+🔐 [Inicio Tests] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Inicio Tests] Login exitoso
+🔍 [Inicio Tests] Verificando navegación a página principal
+✅ [Inicio Tests] Navegación exitosa a dashboard
+🎭️ [Inicio Tests] TC04: Verificar elementos del menú en estado EXPANDIDO y CONTRAÍDO
+📊 [Inicio Tests] Esperando que se cargue la página...
+📊 [Inicio Tests] Buscando: getByRole("complementary").getByRole("button", { name: "Inicio" })
+📊 [Inicio Tests] ✓ "Inicio" encontrado: 1 elemento(s)
+📊 [Inicio Tests] ✓ "Inicio" visible: true
+✅ [Inicio Tests] ✅ Locator "Inicio" EXPANDIDO verificado correctamente
+📊 [Inicio Tests] Buscando: getByRole("button", { name: "Mi cuenta" })
+📊 [Inicio Tests] ✓ "Mi cuenta" encontrado: 1 elemento(s)
+📊 [Inicio Tests] ✓ "Mi cuenta" visible: true
+✅ [Inicio Tests] ✅ Locator "Mi cuenta" EXPANDIDO verificado correctamente
+📊 [Inicio Tests] Buscando: getByRole("button", { name: "Servicios" })
+📊 [Inicio Tests] ✓ "Servicios" encontrado: 1 elemento(s)
+📊 [Inicio Tests] ✓ "Servicios" visible: true
+✅ [Inicio Tests] ✅ Locator "Servicios" EXPANDIDO verificado correctamente
+📊 [Inicio Tests] Buscando: getByRole("textbox", { name: "Buscar..." })
+📊 [Inicio Tests] ✓ Campo de búsqueda encontrado: 1 elemento(s)
+📊 [Inicio Tests] ✓ Campo de búsqueda visible: true
+✅ [Inicio Tests] ✅ Campo de búsqueda EXPANDIDO verificado correctamente
+🔍 [Inicio Tests] Clickeando en botón burger para contraer menú...
+✅ [Inicio Tests] ✅ Menú contraído correctamente
+📊 [Inicio Tests] Buscando: getByRole("button").nth(3)
+📊 [Inicio Tests] ✓ Botón búsqueda (nth(3)) visible: true
+✅ [Inicio Tests] ✅ Botón búsqueda CONTRAÍDO (nth(3)) verificado
+📊 [Inicio Tests] Buscando: getByRole("button").nth(4)
+📊 [Inicio Tests] ✓ Botón Inicio (nth(4)) visible: true
+✅ [Inicio Tests] ✅ Botón Inicio CONTRAÍDO (nth(4)) verificado
+📊 [Inicio Tests] Buscando: getByRole("link").nth(1)
+📊 [Inicio Tests] ✓ Link Recursos (nth(1)) visible: true
+✅ [Inicio Tests] ✅ Link Recursos CONTRAÍDO (nth(1)) verificado
+🔍 [Inicio Tests] Clickeando burger para expandir menú de nuevo...
+✅ [Inicio Tests] ✅ Menú expandido nuevamente
+📊 [Inicio Tests] Re-verificando locators después de expandir menú...
+📊 [Inicio Tests] ✓ "Inicio" encontrado nuevamente: 1
+📊 [Inicio Tests] ✓ "Servicios" encontrado nuevamente: 1
+✅ [Inicio Tests] ✅ Todos los locators expandidos funcionan correctamente después de re-expandir
+📊 [Inicio Tests] Clickeando en el botón burger para colapsar menú...
+✅ [Inicio Tests] Menú colapsado a iconos
+📊 [Inicio Tests] Clickeando en el botón burger para expandir menú...
+✅ [Inicio Tests] Menú expandido nuevamente
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 3 console message(s) logged to stderr

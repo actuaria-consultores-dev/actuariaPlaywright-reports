@@ -1,0 +1,41 @@
+🎭️ [Entidades Registradas Tests] Empezando pre condición para segundo usuario
+🔐 [LoginPage] Iniciando sesión (ch***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Entidades Registradas Tests] Login exitoso (segundo usuario)
+✅ [Entidades Registradas Tests] Navegación a Entidades Registradas completada
+🎭️ [Entidades-TC08] Verificar que segundo usuario no pueda agregar empresa ya agregada a otro usuario
+📋 [Entidades-TC08] Configuración
+{
+  "ruc": "[OCULTO]",
+  "shouldAlreadyExist": true
+}
+
+======================================================================
+🎯 🏢 INICIANDO FLUJO: AGREGAR EMPRESA
+======================================================================
+   • ruc: [OCULTO]
+   • Debe existir: Sí
+======================================================================
+
+ℹ️  [EntidadesRegistradasWorkflows] 📝 Haciendo clic en agregar nueva empresa...
+ℹ️  [EntidadesRegistradasPage] Haciendo clic en "Agregar una entidad"
+✅ [EntidadesRegistradasPage] Botón "Agregar una entidad" clickeado
+✅ [EntidadesRegistradasWorkflows] ✅ Botón agregar empresa clickeado
+ℹ️  [EntidadesRegistradasWorkflows] 🔍 Buscando empresa con RUC [OCULTO]...
+ℹ️  [EntidadesRegistradasPage] Buscando empresa por RUC en el diálogo
+✅ [EntidadesRegistradasPage] Búsqueda por RUC ejecutada
+⚠️  [EntidadesRegistradasWorkflows] ⚠️ Verificando mensaje de empresa ya existente...
+📊 [EntidadesRegistradasPage] Verificando mensaje de empresa ya existente
+✅ [EntidadesRegistradasPage] Mensaje de empresa ya existente visible
+✅ [EntidadesRegistradasWorkflows] ✅ Mensaje de empresa existente verificado
+
+✅ ✅ ✅ [EntidadesRegistradasWorkflows] ✅ FLUJO AGREGAR EMPRESA FINALIZADO
+
+✅ [Entidades-TC08] Validación de empresa ya asignada completada
+
+✅ ✅ ✅ [Entidades-TC08] TC08 finalizado exitosamente
+
+
+ℹ️  10 non-blocking error(s) ignored by filter.
+
+📋 5 console message(s) logged to stderr

@@ -1,0 +1,41 @@
+🎭️ [Entidades Registradas Tests] Empezando pre condición
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Entidades Registradas Tests] Login exitoso
+✅ [Entidades Registradas Tests] Página principal verificada
+✅ [Entidades Registradas Tests] Navegación a Entidades Registradas completada
+🎭️ [Entidades-TC02] Verificar usuario puede eliminar una entidad
+📋 [Entidades-TC02] Configuración
+{
+  "ruc": "[OCULTO]",
+  "skipIfNotFound": true
+}
+
+======================================================================
+🎯 🗑️ INICIANDO FLUJO: ELIMINAR EMPRESA
+======================================================================
+   • ruc: [OCULTO]
+   • Saltar si no existe: Sí
+======================================================================
+
+ℹ️  [EntidadesRegistradasWorkflows] 🔍 Buscando empresa con RUC [OCULTO]...
+ℹ️  [EntidadesRegistradasWorkflows] Empresa encontrada: true
+ℹ️  [EntidadesRegistradasWorkflows] 📍 Empresa con RUC [OCULTO] encontrada, procediendo a eliminar...
+✅ [EntidadesRegistradasWorkflows] ✅ Botón eliminar clickeado
+⚠️  [EntidadesRegistradasWorkflows] ⚠️ Confirmando eliminación...
+📊 [EntidadesRegistradasPage] Confirmando eliminación de la empresa
+✅ [EntidadesRegistradasPage] Eliminación confirmada
+✅ [EntidadesRegistradasWorkflows] ✅ Eliminación confirmada
+ℹ️  [EntidadesRegistradasWorkflows] 🔍 Verificando que la empresa fue eliminada...
+✅ [EntidadesRegistradasWorkflows] ✅ Empresa eliminada exitosamente
+
+✅ ✅ ✅ [EntidadesRegistradasWorkflows] ✅ FLUJO ELIMINAR EMPRESA FINALIZADO
+
+✅ [Entidades-TC02] Flujo de eliminación completado
+
+✅ ✅ ✅ [Entidades-TC02] TC02 finalizado exitosamente
+
+
+ℹ️  6 non-blocking error(s) ignored by filter.
+
+📋 4 console message(s) logged to stderr

@@ -1,0 +1,13 @@
+🎭️ [MiCuenta Contraseña Tests] Empezando pre condición
+ℹ️  [MiCuenta Contraseña Tests] Usando contraseña ORIGINAL para esta prueba
+🔐 [MiCuenta Contraseña Tests] Iniciando sesión con credenciales de prueba (ch***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ch***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [MiCuenta Contraseña Tests] Sesión iniciada exitosamente
+✅ [MiCuenta Contraseña Tests] Página de contraseña cargada exitosamente
+🎭️ [MiCuenta Contraseña Tests] TC04: Verificar usuario puede ingresar con contraseña original
+✅ [MiCuenta Contraseña Tests] Sesión iniciada exitosamente con contraseña original
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 4 console message(s) logged to stderr

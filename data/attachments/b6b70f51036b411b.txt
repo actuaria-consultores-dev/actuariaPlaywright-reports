@@ -1,0 +1,23 @@
+🎭️ [Inicio Tests] Empezando pre condición
+🔐 [Inicio Tests] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Inicio Tests] Login exitoso
+🔍 [Inicio Tests] Verificando navegación a página principal
+✅ [Inicio Tests] Navegación exitosa a dashboard
+🎭️ [Inicio Tests] TC09: Verificar menú después de esperar
+📊 [Inicio Tests] Esperando 2 segundos...
+✅ [Inicio Tests] Espera completada
+📊 [Inicio Tests] Verificando funcionalidad del burger...
+📊 [Inicio Tests] Botón existe: true
+📊 [Inicio Tests] Botón visible: true
+✅ [Inicio Tests] Botón burger sigue funcional
+📊 [Inicio Tests] Abriendo menú...
+📊 [Inicio Tests] Botones después del click: 31
+✅ [Inicio Tests] Menú se abre correctamente después de espera
+📊 [Inicio Tests] Cerrando menú...
+✅ [Inicio Tests] Menú cerrado
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 3 console message(s) logged to stderr

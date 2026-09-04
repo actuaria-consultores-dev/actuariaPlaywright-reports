@@ -1,0 +1,18 @@
+[LOG] Using Firebase Production Services for environment: stage [8:44:00 PM]
+[LOG] trackEvent view_login {timestamp: 2026-09-04T20:44:01.304Z} [8:44:01 PM]
+[LOG] Using Firebase Production Services for environment: stage [8:44:03 PM]
+[LOG] {error: AxiosError: Request failed with status code 404
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo obtener el análisis de datos de la empresa, content: Object} [8:44:05 PM]
+[LOG] Using Firebase Production Services for environment: stage [8:44:07 PM]
+❌ CONSOLE ERROR: {error: AxiosError: Request failed with status code 400
+    at settle (https://act-compass-stage-proj.fireb…, message: La empresa ya tiene el máximo de 2 administradores., content: Object}
+❌ CONSOLE ERROR: {error: AxiosError: Request failed with status code 400
+    at settle (https://act-compass-stage-proj.fireb…, message: La empresa ya tiene el máximo de 2 administradores., content: Object}
+
+⚠️  1 error(s) detected during test execution:
+  1. {error: AxiosError: Request failed with status code 400
+    at settle (https://act-compass-stage-proj.fireb…, message: La empresa ya tiene el máximo de 2 administradores., content: Object}
+
+⚠️  1 error(s) detected during test execution:
+  1. {error: AxiosError: Request failed with status code 400
+    at settle (https://act-compass-stage-proj.fireb…, message: La empresa ya tiene el máximo de 2 administradores., content: Object}

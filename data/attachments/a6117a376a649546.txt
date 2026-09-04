@@ -1,0 +1,16 @@
+🎭️ [Crear Usuario Tests] Empezando pre condición
+🔍 [Crear Usuario Tests] Navegando a formulario de creación de cuenta
+🔍 [LoginPage] Navegando a formulario de creación de cuenta
+✅ [LoginPage] Formulario de creación de cuenta abierto
+✅ [Crear Usuario Tests] Formulario de creación de cuenta abierto
+🎭️ [Crear Usuario Tests] TC01
+🔄 [Crear Usuario Tests] Rellenando formulario de creación de usuario
+🔄 [LoginPage] Rellenando formulario de creación de usuario
+✅ [LoginPage] Formulario rellenado correctamente
+✅ [Crear Usuario Tests] Formulario rellenado
+📊 [Crear Usuario Tests] Verificando mensaje de correo electrónico duplicado
+✅ [Crear Usuario Tests] Mensaje de correo duplicado verificado
+
+ℹ️  1 non-blocking error(s) ignored by filter.
+
+📋 3 console message(s) logged to stderr

@@ -1,0 +1,140 @@
+🎭️ [Entidades Registradas Tests] Empezando pre condición
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Entidades Registradas Tests] Login exitoso
+✅ [Entidades Registradas Tests] Página principal verificada
+✅ [Entidades Registradas Tests] Navegación a Entidades Registradas completada
+🎭️ [Entidades-TC07] Verificar ordenar empresas
+ℹ️  [Entidades-TC07] Ordenando empresas por RUC
+
+======================================================================
+🎯 🔢 INICIANDO FLUJO: ORDENAR EMPRESAS
+======================================================================
+   • Ordenar por: RUC
+   • Ascendente: Sí
+   • Descendente: Sí
+======================================================================
+
+ℹ️  [EntidadesRegistradasPage] Found 2 RUC elements
+📋 [EntidadesRegistradasPage] Initial RUC values (sample)
+[
+  {
+    "ruc": "[OCULTO]"
+  },
+  {
+    "ruc": "[OCULTO]"
+  }
+]
+📋 [EntidadesRegistradasPage] Expected ascending order (sample)
+[
+  {
+    "ruc": "[OCULTO]"
+  },
+  {
+    "ruc": "[OCULTO]"
+  }
+]
+📋 [EntidadesRegistradasPage] RUC values after ascending sort (sample)
+[
+  {
+    "ruc": "[OCULTO]"
+  },
+  {
+    "ruc": "[OCULTO]"
+  }
+]
+✅ [EntidadesRegistradasPage] ✓ Primer click - Valores de RUC estan en orden ascendente
+📋 [EntidadesRegistradasPage] Expected descending order (sample)
+[
+  {
+    "ruc": "[OCULTO]"
+  },
+  {
+    "ruc": "[OCULTO]"
+  }
+]
+📋 [EntidadesRegistradasPage] RUC values after descending sort (sample)
+[
+  {
+    "ruc": "[OCULTO]"
+  },
+  {
+    "ruc": "[OCULTO]"
+  }
+]
+✅ [EntidadesRegistradasPage] ✓ Segundo click - Valores de RUC estan en orden descendente
+✅ [EntidadesRegistradasWorkflows] ✅ Ordenamiento por RUC verificado
+
+✅ ✅ ✅ [EntidadesRegistradasWorkflows] ✅ FLUJO ORDENAR EMPRESAS FINALIZADO
+
+✅ [Entidades-TC07] Orden por RUC verificado
+ℹ️  [Entidades-TC07] Ordenando empresas por teléfono
+
+======================================================================
+🎯 🔢 INICIANDO FLUJO: ORDENAR EMPRESAS
+======================================================================
+   • Ordenar por: PHONE
+   • Ascendente: Sí
+   • Descendente: Sí
+======================================================================
+
+ℹ️  [EntidadesRegistradasPage] Found 2 phone elements
+📋 [EntidadesRegistradasPage] Initial phone values (sample)
+[
+  {
+    "telefono": "[OCULTO]"
+  },
+  {
+    "telefono": "[OCULTO]"
+  }
+]
+📋 [EntidadesRegistradasPage] Expected ascending order (sample)
+[
+  {
+    "telefono": "[OCULTO]"
+  },
+  {
+    "telefono": "[OCULTO]"
+  }
+]
+📋 [EntidadesRegistradasPage] Phone values after ascending sort (sample)
+[
+  {
+    "telefono": "[OCULTO]"
+  },
+  {
+    "telefono": "[OCULTO]"
+  }
+]
+✅ [EntidadesRegistradasPage] ✓ Primer click - Valores de telefono estan en orden ascendente
+📋 [EntidadesRegistradasPage] Expected descending order (sample)
+[
+  {
+    "telefono": "[OCULTO]"
+  },
+  {
+    "telefono": "[OCULTO]"
+  }
+]
+📋 [EntidadesRegistradasPage] Phone values after descending sort (sample)
+[
+  {
+    "telefono": "[OCULTO]"
+  },
+  {
+    "telefono": "[OCULTO]"
+  }
+]
+✅ [EntidadesRegistradasPage] ✓ Segundo click - Valores de telefono estan en orden descendente
+✅ [EntidadesRegistradasWorkflows] ✅ Ordenamiento por PHONE verificado
+
+✅ ✅ ✅ [EntidadesRegistradasWorkflows] ✅ FLUJO ORDENAR EMPRESAS FINALIZADO
+
+✅ [Entidades-TC07] Orden por teléfono verificado
+
+✅ ✅ ✅ [Entidades-TC07] TC07 finalizado exitosamente
+
+
+ℹ️  6 non-blocking error(s) ignored by filter.
+
+📋 4 console message(s) logged to stderr

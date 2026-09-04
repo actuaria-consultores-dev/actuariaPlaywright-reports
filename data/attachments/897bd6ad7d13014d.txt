@@ -1,0 +1,41 @@
+🎭️ [Inicio Tests] Empezando pre condición
+🔐 [Inicio Tests] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Inicio Tests] Login exitoso
+🔍 [Inicio Tests] Verificando navegación a página principal
+✅ [Inicio Tests] Navegación exitosa a dashboard
+🎭️ [Inicio Tests] TC05: Verificar búsqueda en menú burger
+🔍 [Inicio Tests] Verificando estado del menú burger...
+📊 [Inicio Tests] Botón burger encontrado
+📊 [Inicio Tests] Estado inicial del menú: ABIERTO
+📊 [Inicio Tests] ✓ Menú ya estaba abierto
+✅ [Inicio Tests] Menú burger está abierto y campo de búsqueda es visible
+📊 [Inicio Tests] Verificando que el campo de búsqueda está disponible...
+📊 [Inicio Tests] Campo de búsqueda existe: true
+✅ [Inicio Tests] Campo de búsqueda está visible
+📊 [Inicio Tests] Verificando que el campo es interactivo...
+📊 [Inicio Tests] Campo visible: true
+📊 [Inicio Tests] Campo habilitado: true
+✅ [Inicio Tests] Campo de búsqueda es interactivo
+📊 [Inicio Tests] Haciendo focus en el campo...
+✅ [Inicio Tests] Focus establecido en el campo de búsqueda
+📊 [Inicio Tests] Escribiendo en el campo...
+📊 [Inicio Tests] Valor del campo: "test"
+✅ [Inicio Tests] Campo recibe input correctamente
+📊 [Inicio Tests] Limpiando el campo...
+📊 [Inicio Tests] Valor después de limpiar: ""
+✅ [Inicio Tests] Campo limpiado correctamente
+📊 [Inicio Tests] Escribiendo nuevamente en el campo...
+📊 [Inicio Tests] Nuevo valor del campo: "búsqueda"
+✅ [Inicio Tests] Campo sigue siendo funcional
+📊 [Inicio Tests] Clickeando en el botón burger...
+📊 [Inicio Tests] Búsqueda visible antes: true
+✅ [Inicio Tests] Menú colapsado
+📊 [Inicio Tests] Reabriendo menú...
+📊 [Inicio Tests] Búsqueda visible después de reabrir: true
+✅ [Inicio Tests] Menú reabierto y búsqueda accesible
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 3 console message(s) logged to stderr

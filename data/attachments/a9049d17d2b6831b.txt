@@ -1,0 +1,217 @@
+🎭️ [Mi Cuenta Equipo Tests] Iniciando sesión con usuario de prueba
+🔐 [Mi Cuenta Equipo Tests] Ingresando credenciales
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Mi Cuenta Equipo Tests] Login exitoso
+🎭️ [Mi Cuenta Equipo Tests] ========================================
+🎭️ [Mi Cuenta Equipo Tests] INICIANDO TC01-05 - Invitar usuario con permisos mixtos (Editor / Sin acceso)
+🎭️ [Mi Cuenta Equipo Tests] ========================================
+ℹ️  [Mi Cuenta Equipo Tests] Timeout configurado: 180s (3 minutos)
+ℹ️  [Mi Cuenta Equipo Tests] Configuración: Estudios actuariales=Editor, Jubilación patronal=Sin acceso, Impuestos diferidos=Sin acceso
+ℹ️  [Mi Cuenta Equipo Tests] Limited modules: controlTributario=Solo vista, simulador=Solo vista, navia=Solo vista, dashboardHome=Solo vista
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] CREANDO INBOX EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Config: maxRetries=3, baseUrl=https://api.mail.tm
+🔄 [MailTmService] [STAGGER] Esperando 1073ms para evitar rate limiting en API...
+🔄 [MailTmService] --- Intento 1/3 de creación ---
+📊 [MailTmService] Paso 1: Obteniendo dominios disponibles...
+ℹ️  [MailTmService] GET /domains → Status: 200 OK
+ℹ️  [MailTmService] Dominio obtenido: "uberip.com"
+📊 [MailTmService] Paso 2: Creando cuenta: oko0xo1qmtnfb5be@uberip.com
+ℹ️  [MailTmService] POST /accounts → Status: 201 Created
+✅ [MailTmService] Cuenta CREADA exitosamente
+📊 [MailTmService] Paso 3: Obteniendo token de autenticación...
+ℹ️  [MailTmService] POST /token → Status: 200 OK
+✅ [MailTmService] Token obtenido: id="6a9b2dee80c6..."
+✅ [MailTmService] 🎉 INBOX CREADO EXITOSAMENTE
+🔍 [MailTmService] ========================================
+
+⚙️  [Mi Cuenta Equipo Tests] Email del invitado MIXTO generado (Mail.tm):
+   • email: [OCULTO]
+🔍 [Mi Cuenta Equipo Tests] Navegando a /dashboard/portal/mi-cuenta/equipo
+🔍 [EquipoPage] Navegando a Mi Cuenta / Equipo
+✅ [EquipoPage] Página de Equipo cargada
+✅ [Mi Cuenta Equipo Tests] Página de Equipo cargada
+🎭️ [EquipoWorkflows] Iniciando flujo de invitación con permisos personalizados
+
+📍 Paso 1: Haciendo clic en Invitar usuario
+🔄 [EquipoPage] Haciendo clic en Invitar usuario
+✅ [EquipoPage] Botón Invitar usuario clickeado
+📊 [EquipoPage] Esperando modal Invitar usuario
+✅ [EquipoPage] Modal Invitar usuario visible
+✅ [EquipoWorkflows] Modal Invitar usuario abierto
+
+📍 Paso 2: Ingresando email del invitado
+🔐 [EquipoPage] Ingresando email del invitado (ok***@[OCULTO])
+✅ [EquipoPage] Email ingresado
+✅ [EquipoWorkflows] Email ingresado correctamente
+
+📍 Paso 3: Ingresando mensaje de invitación
+🔄 [EquipoPage] Ingresando mensaje de invitación
+✅ [EquipoPage] Mensaje ingresado
+✅ [EquipoWorkflows] Mensaje ingresado correctamente
+
+📍 Paso 4: Seleccionando rol: Usuario
+🔄 [EquipoPage] Seleccionando rol: Usuario
+✅ [EquipoPage] Rol "Usuario" seleccionado
+✅ [EquipoWorkflows] Rol "Usuario" seleccionado
+
+📍 Paso 5: Configurando 3 módulos completos
+🔄 [EquipoPage] Configurando permiso "estudiosActuariales" → "Editor"
+✅ [EquipoPage] Permiso "estudiosActuariales" establecido a "Editor"
+✅ [EquipoWorkflows] Módulo "estudiosActuariales" → "Editor"
+🔄 [EquipoPage] Configurando permiso "jubilacionPatronal" → "Sin acceso"
+✅ [EquipoPage] Permiso "jubilacionPatronal" establecido a "Sin acceso"
+✅ [EquipoWorkflows] Módulo "jubilacionPatronal" → "Sin acceso"
+🔄 [EquipoPage] Configurando permiso "impuestosDiferidos" → "Sin acceso"
+✅ [EquipoPage] Permiso "impuestosDiferidos" establecido a "Sin acceso"
+✅ [EquipoWorkflows] Módulo "impuestosDiferidos" → "Sin acceso"
+
+📍 Paso 6: Configurando 4 módulos limitados
+🔄 [EquipoPage] Configurando permiso "controlTributario" → "Solo vista"
+✅ [EquipoPage] Permiso "controlTributario" establecido a "Solo vista"
+✅ [EquipoWorkflows] Módulo "controlTributario" → "Solo vista"
+🔄 [EquipoPage] Configurando permiso "simulador" → "Solo vista"
+✅ [EquipoPage] Permiso "simulador" establecido a "Solo vista"
+✅ [EquipoWorkflows] Módulo "simulador" → "Solo vista"
+🔄 [EquipoPage] Configurando permiso "navia" → "Solo vista"
+✅ [EquipoPage] Permiso "navia" establecido a "Solo vista"
+✅ [EquipoWorkflows] Módulo "navia" → "Solo vista"
+🔄 [EquipoPage] Configurando permiso "dashboardHome" → "Solo vista"
+✅ [EquipoPage] Permiso "dashboardHome" establecido a "Solo vista"
+✅ [EquipoWorkflows] Módulo "dashboardHome" → "Solo vista"
+
+📍 Paso 7: Haciendo clic en Enviar invitación
+🔄 [EquipoPage] Haciendo clic en Enviar invitación
+✅ [EquipoPage] Invitación enviada
+✅ [EquipoWorkflows] Invitación enviada correctamente
+
+📍 Paso 8: Verificando que oko0xo1qmtnfb5be@uberip.com aparece en la tabla
+📊 [EquipoPage] Verificando que el email del invitado aparece en la tabla
+✅ [EquipoPage] Email oko0xo1qmtnfb5be@uberip.com encontrado en la tabla
+✅ [EquipoWorkflows] Email verificado en la tabla
+
+📍 Paso 9: Verificando que "oko0xo1qmtnfb5be@uberip.com" tiene estado "En espera"
+📊 [EquipoPage] Verificando estado del usuario invitado = "En espera"
+✅ [EquipoPage] Estado "En espera" verificado para el usuario "oko0xo1qmtnfb5be@uberip.com"
+✅ [EquipoWorkflows] Estado "En espera" verificado correctamente
+
+✅ ✅ ✅ [EquipoWorkflows] Flujo de invitación con permisos personalizados completado
+
+✅ [Mi Cuenta Equipo Tests] Invitación con permisos mixtos enviada exitosamente
+🎭️ [EquipoWorkflows] ========================================
+🎭️ [EquipoWorkflows] VERIFICANDO EMAIL DE INVITACIÓN (MAIL.TM)
+🎭️ [EquipoWorkflows] ========================================
+ℹ️  [EquipoWorkflows] Verificando email de invitación en Mail.tm
+ℹ️  [EquipoWorkflows] Config: maxRetries=20, retryDelay=5000ms
+ℹ️  [EquipoWorkflows] Tiempo máximo de espera: 100s
+📊 [EquipoWorkflows] Esperando email de invitación en Mail.tm
+🔄 [EquipoWorkflows] Invocando mailTm.waitForMessage()...
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] ESPERANDO MENSAJE EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Esperando mensaje en inbox temporal
+ℹ️  [MailTmService] Config: maxRetries=20, retryDelay=5000ms
+ℹ️  [MailTmService] Tiempo máximo de espera: 100s
+🔄 [MailTmService] --- Intento 1/20 (tiempo transcurrido: 0.0s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 1
+ℹ️  [MailTmService]   → Mensaje encontrado: "actuariatest6@yopmail.com te invitó a testing en Actuaria+"
+📊 [MailTmService] Filtrando por remitente → ✅ COINCIDE
+📊 [MailTmService] Obteniendo contenido completo del mensaje 6a9b2dfdf83d...
+📊 [MailTmService] GET /messages/6a9b2dfdf83d...
+ℹ️  [MailTmService] GET /messages/6a9b2dfdf83d... → Status: 200 OK
+✅ [MailTmService] Contenido obtenido: subject="actuariatest6@yopmail.com te invitó a testing en Actuaria+", html.length=6924
+✅ [MailTmService] 🎉 MENSAJE ENCONTRADO después de 1.1s!
+ℹ️  [MailTmService]   Asunto: "actuariatest6@yopmail.com te invitó a testing en Actuaria+"
+ℹ️  [MailTmService]   Creado: 2026-09-04T20:45:47+00:00
+🔍 [MailTmService] ========================================
+✅ [EquipoWorkflows] Email de invitación recibido en oko0xo1qmtnfb5be@uberip.com
+
+📍 Paso 1: Verificando saludo
+ℹ️  [MailTmService] Buscando texto "Hola," en HTML (6924 chars) → ✅ ENCONTRADO
+✅ [EquipoWorkflows] Saludo encontrado
+
+📍 Paso 2: Verificando datos de empresa
+ℹ️  [MailTmService] Buscando texto "Empresa:" en HTML (6924 chars) → ✅ ENCONTRADO
+✅ [EquipoWorkflows] Texto "Empresa:" encontrado
+
+📍 Paso 3: Verificando CTA de establecimiento de contraseña
+ℹ️  [MailTmService] Buscando texto "Establecer contraseña" en HTML (6924 chars) → ✅ ENCONTRADO
+✅ [EquipoWorkflows] Texto "Establecer contraseña" encontrado
+
+📍 Paso 4: Obteniendo enlace "Establecer contraseña"
+✅ [MailTmService] Enlace extraído exitosamente (texto: "Establecer contraseña")
+✅ [EquipoWorkflows] Enlace de invitación obtenido correctamente
+✅ [EquipoWorkflows] Email de invitación de equipo completamente verificado
+
+✅ ✅ ✅ [EquipoWorkflows] Verificación de email de invitación de equipo completada
+
+✅ [Mi Cuenta Equipo Tests] Email de invitación verificado y enlace extraído
+🎭️ [EquipoWorkflows] Iniciando flujo mixto: solo Editor en Estudios, Jubilación/Impuestos sin acceso
+🎭️ [EquipoWorkflows] Iniciando configuración de contraseña del usuario invitado
+
+📍 Paso 1: Abriendo enlace de invitación en nueva pestaña (contexto aislado)
+✅ [EquipoWorkflows] Enlace de invitación abierto, esperando formulario de registro...
+
+📍 Paso 2: Esperando formulario de registro (Nombre)
+✅ [EquipoWorkflows] Formulario de registro visible
+
+📍 Paso 3: Rellenando formulario de registro
+✅ [EquipoWorkflows] Formulario de registro completado
+
+📍 Paso 4: Haciendo clic en CREAR CUENTA
+✅ [EquipoWorkflows] Registro enviado
+
+📍 Paso 5: Esperando redirección posterior al registro
+✅ [EquipoWorkflows] Redirección posterior al registro completada
+
+✅ ✅ ✅ [EquipoWorkflows] Configuración de contraseña completada
+
+
+📍 Paso 5: Verificando mensaje: "El administrador de tu..."
+📊 [DelegatedAccessPage] Verificando mensaje del administrador
+✅ [DelegatedAccessPage] Mensaje del administrador visible
+✅ [EquipoWorkflows] Mensaje del administrador visible
+
+📍 Paso 6: Verificando que "Estudios actuariales" está visible
+📊 [DelegatedAccessPage] Verificando módulo permitido visible: Estudios actuariales
+✅ [DelegatedAccessPage] Módulo "Estudios actuariales" visible
+✅ [EquipoWorkflows] Módulo "Estudios actuariales" visible
+
+📍 Paso 7: Haciendo clic en botón Empezar
+🔄 [DelegatedAccessPage] Haciendo clic en Empezar
+✅ [DelegatedAccessPage] Click en Empezar completado
+✅ [EquipoWorkflows] Click en Empezar completado
+
+📍 Paso 8: Haciendo clic en tab Estudio actuarial
+🔄 [DelegatedAccessPage] Navegando a Estudio actuarial
+✅ [DelegatedAccessPage] Click en Estudio actuarial completado
+✅ [EquipoWorkflows] Navegación a Estudio actuarial completada
+
+📍 Paso 9: Verificando heading "Últimos estudios creados"
+📊 [DelegatedAccessPage] Verificando heading: Últimos estudios creados
+✅ [DelegatedAccessPage] Heading "Últimos estudios creados" visible
+✅ [EquipoWorkflows] Heading "Últimos estudios creados" visible
+
+📍 Paso 10: Verificando que botón "Crear nuevo estudio" está habilitado (acceso Editor)
+✅ [EquipoWorkflows] Botón "Crear nuevo estudio" habilitado - usuario puede crear estudios como Editor
+
+📍 Paso 11: Verificando que "Actas de jubilación" está bloqueado
+📊 [DelegatedAccessPage] Verificando módulo bloqueado: "Actas de jubilación"
+⚠️  [DelegatedAccessPage] Módulo "Actas de jubilación" podría no estar bloqueado (aria-disabled=null, pointer-events=auto)
+✅ [DelegatedAccessPage] Módulo "Actas de jubilación" verificado
+✅ [EquipoWorkflows] Tab "Actas de jubilación" correctamente bloqueado - Jubilación patronal sin acceso
+
+✅ ✅ ✅ [EquipoWorkflows] Flujo mixto Estudios-Editor / Jubilación-Sin-acceso completado exitosamente
+
+✅ [Mi Cuenta Equipo Tests] Flujo mixto completado: Estudios actuariales con Editor habilitado, Actas de jubilación bloqueadas
+
+✅ ✅ ✅ [Mi Cuenta Equipo Tests] TC01-05 completado - Usuario con permisos mixtos: solo Estudios actuariales disponible como Editor, Jubilación patronal sin acceso
+
+
+ℹ️  7 non-blocking error(s) ignored by filter.
+
+📋 5 console message(s) logged to stderr

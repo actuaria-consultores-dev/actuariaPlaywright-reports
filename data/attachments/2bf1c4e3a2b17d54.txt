@@ -1,0 +1,35 @@
+🎭️ [Recuperar Passwords] Empezando pre condición individual
+✅ [Recuperar Passwords] Navegación a página inicial completada
+🎭️ [Recuperar Passwords] ========================================
+🎭️ [Recuperar Passwords] TC02: LOGIN CON NUEVA CONTRASEÑA
+🎭️ [Recuperar Passwords] ========================================
+🎭️ [PasswordRecoveryWorkflows] ========================================
+🎭️ [PasswordRecoveryWorkflows] WORKFLOW: LOGIN CON NUEVA CONTRASEÑA
+🎭️ [PasswordRecoveryWorkflows] ========================================
+✅ [PasswordHelper] ✅ Password cargado correctamente
+📊 [PasswordRecoveryWorkflows]    - Longitud: 18 caracteres
+⏳ [PasswordRecoveryWorkflows] Esperando carga de página...
+✅ [PasswordRecoveryWorkflows] Página cargada
+🔍 [PasswordRecoveryWorkflows] Iniciando sesión con nueva contraseña...
+🔐 [PasswordRecoveryWorkflows] Iniciando sesión con nueva contraseña (ac***@[OCULTO])
+📊 [PasswordRecoveryWorkflows]    - Password: ******************
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+⏳ [PasswordRecoveryWorkflows] Verificando URL de dashboard...
+✅ [PasswordRecoveryWorkflows] ✅ URL correcta
+⏳ [PasswordRecoveryWorkflows] Verificando mensaje de bienvenida...
+✅ [PasswordRecoveryWorkflows] ✅ Mensaje de bienvenida visible
+✅ [PasswordRecoveryWorkflows] ========================================
+✅ [PasswordRecoveryWorkflows] ✅ WORKFLOW DE LOGIN COMPLETADO
+✅ [PasswordRecoveryWorkflows] ========================================
+✅ [Recuperar Passwords] ========================================
+✅ [Recuperar Passwords] ✅ TC02 COMPLETADO EXITOSAMENTE
+✅ [Recuperar Passwords]    - Login con nueva contraseña exitoso
+✅ [Recuperar Passwords] ========================================
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 3 console message(s) logged to stderr
+🔍 [Recuperar Passwords] Limpiando archivos temporales finales...
+✅ [PasswordHelper] 🗑️ Archivo de contraseña temporal eliminado
+✅ [Recuperar Passwords] Limpieza final completada

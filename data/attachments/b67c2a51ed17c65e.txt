@@ -1,0 +1,24 @@
+🎭️ [Crear Usuario Tests] Empezando pre condición
+🔍 [Crear Usuario Tests] Navegando a formulario de creación de cuenta
+🔍 [LoginPage] Navegando a formulario de creación de cuenta
+✅ [LoginPage] Formulario de creación de cuenta abierto
+✅ [Crear Usuario Tests] Formulario de creación de cuenta abierto
+🎭️ [Crear Usuario Tests] TC08
+🔄 [Crear Usuario Tests] Probando email malicioso: <script>alert('xss')</script>@test.com
+📊 [Crear Usuario Tests] Verificando sanitización de email: <script>alert('xss')</script>@test.com
+🔄 [Crear Usuario Tests] Valor en campo email después de intento: <script>alert('xss')</script>@test.com
+🔄 [LoginPage] Limpiando formulario
+✅ [LoginPage] Formulario limpiado
+🔄 [Crear Usuario Tests] Probando email malicioso: test'; DROP TABLE users--@test.com
+📊 [Crear Usuario Tests] Verificando sanitización de email: test'; DROP TABLE users--@test.com
+🔄 [Crear Usuario Tests] Valor en campo email después de intento: test'; drop table users--@test.com
+🔄 [LoginPage] Limpiando formulario
+✅ [LoginPage] Formulario limpiado
+🔄 [Crear Usuario Tests] Probando email malicioso: test@<script>.com
+📊 [Crear Usuario Tests] Verificando sanitización de email: test@<script>.com
+🔄 [Crear Usuario Tests] Valor en campo email después de intento: test@<script>.com
+🔄 [LoginPage] Limpiando formulario
+✅ [LoginPage] Formulario limpiado
+✅ [Crear Usuario Tests] Validación de inyección completada
+
+📋 2 console message(s) logged to stderr

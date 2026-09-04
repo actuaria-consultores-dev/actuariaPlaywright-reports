@@ -1,0 +1,11 @@
+🎭️ [Crear Usuario Tests] Empezando pre condición
+🔍 [Crear Usuario Tests] Navegando a formulario de creación de cuenta
+🔍 [LoginPage] Navegando a formulario de creación de cuenta
+✅ [LoginPage] Formulario de creación de cuenta abierto
+✅ [Crear Usuario Tests] Formulario de creación de cuenta abierto
+🎭️ [Crear Usuario Tests] TC17
+🔄 [Crear Usuario Tests] Realizando copia y pega de contraseña
+📊 [Crear Usuario Tests] Verificando coincidencia de contraseña copiada
+✅ [Crear Usuario Tests] Copia y pega verificada correctamente
+
+📋 2 console message(s) logged to stderr

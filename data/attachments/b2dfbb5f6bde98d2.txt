@@ -1,0 +1,39 @@
+🎭️ [Mi Cuenta Equipo Tests] Iniciando sesión con usuario de prueba
+🔐 [Mi Cuenta Equipo Tests] Ingresando credenciales
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Mi Cuenta Equipo Tests] Login exitoso
+🎭️ [Mi Cuenta Equipo Tests] ========================================
+🎭️ [Mi Cuenta Equipo Tests] INICIANDO TC00-CLEANUP - Limpieza de usuarios Mail.tm
+🎭️ [Mi Cuenta Equipo Tests] ========================================
+ℹ️  [Mi Cuenta Equipo Tests] Timeout configurado: 120s (2 minutos)
+ℹ️  [Mi Cuenta Equipo Tests] Buscando emails que terminen en "@web-library.net" para remover
+🔍 [Mi Cuenta Equipo Tests] Navegando a /dashboard/portal/mi-cuenta/equipo
+🔍 [EquipoPage] Navegando a Mi Cuenta / Equipo
+✅ [EquipoPage] Página de Equipo cargada
+✅ [Mi Cuenta Equipo Tests] Página de Equipo cargada
+🔄 [Mi Cuenta Equipo Tests] Invocando cleanupTestUsersWorkflow con dominio "@web-library.net"...
+🎭️ [EquipoWorkflows] Iniciando limpieza de usuarios cuyo email termina en: "@web-library.net"
+🔄 [EquipoPage] Buscando usuarios cuyo email termine en "@web-library.net"
+📊 [EquipoPage] Esperando que la tabla de equipo cargue completamente
+✅ [EquipoPage] Tabla de equipo cargada
+📊 [EquipoPage] Emails en tabla: 23
+✅ [EquipoPage] No se encontraron más emails terminados en "@web-library.net"
+✅ [EquipoPage] Total removidos por dominio "@web-library.net": 0
+✅ [EquipoWorkflows] Limpieza completada: 0 usuarios removidos
+✅ [EquipoWorkflows] No quedan usuarios con email "@web-library.net" - limpieza exitosa
+
+✅ ✅ ✅ [EquipoWorkflows] Limpieza de usuarios completada: 0 removidos
+
+✅ [Mi Cuenta Equipo Tests] Limpieza ejecutada: 0 usuarios removidos
+📊 [Mi Cuenta Equipo Tests] Esperando 2s para que la UI se actualice...
+📊 [Mi Cuenta Equipo Tests] Obteniendo lista actual de emails en la tabla...
+ℹ️  [Mi Cuenta Equipo Tests] Total emails en tabla después de limpieza: 23
+✅ [Mi Cuenta Equipo Tests] ✅ No quedan usuarios con email "@web-library.net" en la tabla - limpieza exitosa
+
+✅ ✅ ✅ [Mi Cuenta Equipo Tests] TC00-CLEANUP completado - 0 usuarios removidos exitosamente
+
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 4 console message(s) logged to stderr

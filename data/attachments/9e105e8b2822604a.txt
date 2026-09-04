@@ -1,0 +1,16 @@
+🎭️ [Crear Usuario Tests] Empezando pre condición
+🔍 [Crear Usuario Tests] Navegando a formulario de creación de cuenta
+🔍 [LoginPage] Navegando a formulario de creación de cuenta
+✅ [LoginPage] Formulario de creación de cuenta abierto
+✅ [Crear Usuario Tests] Formulario de creación de cuenta abierto
+🎭️ [Crear Usuario Tests] TC03
+🔄 [Crear Usuario Tests] Rellenando formulario
+🔄 [LoginPage] Rellenando formulario de creación de usuario
+✅ [LoginPage] Formulario rellenado correctamente
+🔄 [Crear Usuario Tests] Desmarcando términos y condiciones
+📊 [Crear Usuario Tests] Términos y condiciones desmarcados
+🔄 [Crear Usuario Tests] Intentando registrar sin aceptar términos
+📊 [Crear Usuario Tests] Verificando error de términos no aceptados
+✅ [Crear Usuario Tests] Validación de términos verificada
+
+📋 2 console message(s) logged to stderr
