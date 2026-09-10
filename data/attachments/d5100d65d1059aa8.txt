@@ -1,0 +1,48 @@
+🎭️ [Entidades Registradas Tests] Empezando pre condición
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Entidades Registradas Tests] Login exitoso
+✅ [Entidades Registradas Tests] Página principal verificada
+✅ [Entidades Registradas Tests] Navegación a Entidades Registradas completada
+🎭️ [Entidades-TC03] Verificar agregar una empresa por RUC
+📋 [Entidades-TC03] Configuración
+{
+  "ruc": "[OCULTO]"
+}
+
+======================================================================
+🎯 🏢 INICIANDO FLUJO: AGREGAR EMPRESA
+======================================================================
+   • ruc: [OCULTO]
+   • Debe existir: No
+======================================================================
+
+ℹ️  [EntidadesRegistradasWorkflows] ➕ Empresa no encontrada, procediendo a agregarla
+ℹ️  [EntidadesRegistradasWorkflows] 📝 Haciendo clic en agregar nueva empresa...
+ℹ️  [EntidadesRegistradasPage] Haciendo clic en "Agregar una entidad"
+✅ [EntidadesRegistradasPage] Botón "Agregar una entidad" clickeado
+✅ [EntidadesRegistradasWorkflows] ✅ Botón agregar empresa clickeado
+ℹ️  [EntidadesRegistradasWorkflows] 🔍 Buscando empresa con RUC [OCULTO]...
+ℹ️  [EntidadesRegistradasPage] Buscando empresa por RUC en el diálogo
+✅ [EntidadesRegistradasPage] Búsqueda por RUC ejecutada
+ℹ️  [EntidadesRegistradasWorkflows] ✅ Verificando mensaje de empresa registrada...
+📊 [EntidadesRegistradasPage] Verificando mensaje de empresa registrada
+✅ [EntidadesRegistradasPage] Mensaje de empresa registrada visible
+✅ [EntidadesRegistradasWorkflows] ✅ Mensaje de empresa registrada verificado
+ℹ️  [EntidadesRegistradasWorkflows] 
+👤 Paso 4: Asignando empresa al usuario...
+ℹ️  [EntidadesRegistradasPage] Haciendo clic en "Asignarme a esta empresa"
+✅ [EntidadesRegistradasPage] Botón "Asignarme a esta empresa" clickeado
+ℹ️  [EntidadesRegistradasWorkflows] ✅ Empresa asignada exitosamente
+✅ [EntidadesRegistradasWorkflows] ✅ Flujo de agregar empresa completado
+
+✅ ✅ ✅ [EntidadesRegistradasWorkflows] ✅ FLUJO AGREGAR EMPRESA FINALIZADO
+
+✅ [Entidades-TC03] Empresa agregada correctamente
+
+✅ ✅ ✅ [Entidades-TC03] TC03 finalizado exitosamente
+
+
+ℹ️  6 non-blocking error(s) ignored by filter.
+
+📋 4 console message(s) logged to stderr

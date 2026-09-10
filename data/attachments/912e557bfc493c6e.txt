@@ -1,0 +1,284 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: specs/Recursos/recursos.test.ts >> Verificar pestañas de Recursos >> Recursos | [HP] | TC01: Verificar pestaña de Política de calidad @daily
+- Location: tests/specs/Recursos/recursos.test.ts:63:2
+
+# Error details
+
+```
+Test timeout of 120000ms exceeded while running "beforeEach" hook.
+```
+
+```
+Error: locator.click: Test timeout of 120000ms exceeded.
+Call log:
+  - waiting for getByRole('link', { name: 'Documentos legales' })
+    - locator resolved to <a tabindex="0" data-discover="true" href="/dashboard/portal/recursos/legal" class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-1fo6mfn">…</a>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+  - element was detached from the DOM, retrying
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f1e2]:
+  - generic [ref=f1e3]:
+    - banner [ref=f1e4]:
+      - generic [ref=f1e6]:
+        - button "Notificaciones" [ref=f1e7] [cursor=pointer]:
+          - generic [ref=f1e8]: "2"
+        - button [ref=f1e12] [cursor=pointer]:
+          - img "image" [ref=f1e13]
+          - paragraph [ref=f1e14]: DEMOGRAFIX S.A.
+    - complementary [ref=f1e17]:
+      - generic [ref=f1e18]:
+        - link [ref=f1e19] [cursor=pointer]:
+          - /url: /dashboard
+          - img "Actuaria" [ref=f1e20]
+        - button "abrir/cerrar menú" [ref=f1e21] [cursor=pointer]
+      - generic [ref=f1e26]:
+        - textbox "Buscar..." [ref=f1e30]
+        - group
+      - list [ref=f1e32]:
+        - button "Inicio" [ref=f1e33] [cursor=pointer]
+        - list [ref=f1e39]:
+          - listitem [ref=f1e40]: Panel General
+          - button "Mi cuenta" [ref=f1e42] [cursor=pointer]
+          - button "Servicios" [ref=f1e52] [cursor=pointer]
+          - button "Recursos" [active] [ref=f1e61] [cursor=pointer]
+        - list [ref=f1e69]:
+          - listitem [ref=f1e70]: Pruebas
+          - link "Checkout demo" [ref=f1e72] [cursor=pointer]:
+            - /url: /dashboard/checkout-demo
+      - generic [ref=f1e80]:
+        - paragraph [ref=f1e81]: Actuaria+ Stage
+        - paragraph [ref=f1e82]: soporteplus@actuaria.com
+        - generic [ref=f1e83]: v 1.11.3
+    - generic [ref=f1e88]:
+      - generic [ref=f1e89]:
+        - heading "Hola, Rodrigo" [level=1] [ref=f1e90]
+        - paragraph [ref=f1e91]: "Sesión anterior: hoy, 19:20 · hace 1 minuto"
+      - generic [ref=f1e92]:
+        - button "Inicio" [ref=f1e93] [cursor=pointer]
+        - button "Estudio actuarial" [ref=f1e95] [cursor=pointer]
+        - button "Impuestos diferidos" [ref=f1e97] [cursor=pointer]
+        - button "Actas de jubilación" [ref=f1e99] [cursor=pointer]
+        - button "Control tributario" [ref=f1e101] [cursor=pointer]
+        - button "Simulador de beneficios" [ref=f1e103] [cursor=pointer]
+        - button "NavIA ᴮᵉᵗᵃ" [ref=f1e105] [cursor=pointer]
+      - separator [ref=f1e107]
+      - generic [ref=f1e108]:
+        - paragraph [ref=f1e109]: Datos correspondientes al 31 de diciembre del 2025
+        - generic [ref=f1e110]:
+          - generic [ref=f1e112]:
+            - paragraph [ref=f1e114]: Provisión acumulada
+            - paragraph [ref=f1e121]: $6.08M
+            - paragraph [ref=f1e122]: USD · Total acumulado
+            - generic [ref=f1e123]:
+              - generic [ref=f1e124]:
+                - paragraph [ref=f1e125]: Jubilación Patronal
+                - paragraph [ref=f1e126]: $4.69M
+              - generic [ref=f1e127]:
+                - paragraph [ref=f1e128]: Desahucio
+                - paragraph [ref=f1e129]: $1.40M
+          - generic [ref=f1e131]:
+            - paragraph [ref=f1e133]: Remuneración promedio
+            - paragraph [ref=f1e140]: $1.12K
+            - paragraph [ref=f1e141]: USD · Remuneración promedio
+            - generic [ref=f1e142]:
+              - generic [ref=f1e143]:
+                - paragraph [ref=f1e144]: Hombres
+                - paragraph [ref=f1e145]: $1.10K
+              - generic [ref=f1e146]:
+                - paragraph [ref=f1e147]: Mujeres
+                - paragraph [ref=f1e148]: $1.22K
+          - generic [ref=f1e150]:
+            - paragraph [ref=f1e152]: Distribución demográfica
+            - paragraph [ref=f1e157]: "558"
+            - paragraph [ref=f1e158]: Partícipes activos
+            - generic [ref=f1e159]:
+              - generic [ref=f1e160]:
+                - paragraph [ref=f1e161]: Hombres
+                - paragraph [ref=f1e162]: 483 · 87%
+              - generic [ref=f1e163]:
+                - paragraph [ref=f1e164]: Mujeres
+                - paragraph [ref=f1e165]: 75 · 13%
+          - generic [ref=f1e167]:
+            - paragraph [ref=f1e169]: Partícipes jubilados
+            - paragraph [ref=f1e174]: "21"
+            - paragraph [ref=f1e175]: Total jubilados
+            - generic [ref=f1e176]:
+              - generic [ref=f1e177]:
+                - paragraph [ref=f1e178]: Hombres
+                - paragraph [ref=f1e179]: 20 · 95%
+              - generic [ref=f1e180]:
+                - paragraph [ref=f1e181]: Mujeres
+                - paragraph [ref=f1e182]: 1 · 5%
+      - generic [ref=f1e183]:
+        - generic [ref=f1e184]:
+          - generic [ref=f1e185]:
+            - paragraph [ref=f1e186]: Quinquenio por tiempo de servicio
+            - generic [ref=f1e187]:
+              - paragraph [ref=f1e190] [cursor=pointer]: Jubilados
+              - paragraph [ref=f1e193] [cursor=pointer]: TS ≥ 25
+              - paragraph [ref=f1e196] [cursor=pointer]: 20 ≤ TS < 25
+              - paragraph [ref=f1e199] [cursor=pointer]: 15 ≤ TS < 20
+              - paragraph [ref=f1e202] [cursor=pointer]: 10 ≤ TS < 15
+              - paragraph [ref=f1e205] [cursor=pointer]: TS < 10
+          - generic [ref=f1e206]:
+            - paragraph [ref=f1e207]: Distribución provisión jubilación patronal por tiempo de servicio (en USD)
+            - generic [ref=f1e209] [cursor=pointer]
+          - paragraph [ref=f1e211]: Distribución número de partícipes por tiempo de servicio
+          - generic [ref=f1e214]:
+            - paragraph [ref=f1e215]: Distribución provisión bonificación por desahucio por tiempo de servicio (en USD)
+            - generic [ref=f1e217] [cursor=pointer]
+        - generic:
+          - paragraph
+          - paragraph
+      - separator [ref=f1e218]
+      - generic [ref=f1e219]:
+        - heading "Mis Servicios" [level=1] [ref=f1e220]
+        - generic [ref=f1e221]:
+          - generic [ref=f1e223]:
+            - generic [ref=f1e224]:
+              - button [ref=f1e227] [cursor=pointer]:
+                - paragraph [ref=f1e228]: Conocer más
+              - heading "Estudios actuariales" [level=6] [ref=f1e231]
+              - paragraph [ref=f1e232]: Genera tu cálculo actuarial de provisiones de beneficios post-empleo
+              - generic [ref=f1e233]: Disponible
+              - button "Ingresar" [ref=f1e235] [cursor=pointer]
+            - generic [ref=f1e236]:
+              - button [ref=f1e237] [cursor=pointer]
+              - paragraph [ref=f1e241]: Cumple con la normativa contable y toma decisiones con respaldo actuarial. Calculamos provisiones por jubilación y desahucio con resultados sólidos, normativos y listos para auditar.
+          - generic [ref=f1e243]:
+            - generic [ref=f1e244]:
+              - button [ref=f1e248] [cursor=pointer]:
+                - paragraph [ref=f1e249]: Conocer más
+              - heading "Informe de impuestos diferidos" [level=6] [ref=f1e252]
+              - paragraph [ref=f1e253]: Calcula el activo por impuesto diferido para obtener beneficios tributarios
+              - generic [ref=f1e254]: Disponible
+              - button "Ingresar" [ref=f1e256] [cursor=pointer]
+            - generic [ref=f1e257]:
+              - button [ref=f1e258] [cursor=pointer]
+              - paragraph [ref=f1e262]: Calculamos el impuesto diferido por provisiones de jubilación y desahucio bajo normativa contable, para reflejar correctamente la situación fiscal de tu empresa y facilitar la obtención de beneficio tributario.
+          - generic [ref=f1e264]:
+            - generic [ref=f1e265]:
+              - button [ref=f1e270] [cursor=pointer]:
+                - paragraph [ref=f1e271]: Conocer más
+              - heading "Actas de jubilación patronal" [level=6] [ref=f1e274]
+              - paragraph [ref=f1e275]: Documento técnico para la obtención de la pensión mensual y fondo global
+              - generic [ref=f1e276]: Disponible
+              - button "Ingresar" [ref=f1e278] [cursor=pointer]
+            - generic [ref=f1e279]:
+              - button [ref=f1e280] [cursor=pointer]
+              - paragraph [ref=f1e284]: Calculamos la jubilación patronal según normativa laboral, generando la pensión mensual y el fondo global acumulado, con criterios técnicos y proyecciones confiables para cumplir obligaciones patronales.
+          - generic [ref=f1e286]:
+            - generic [ref=f1e287]:
+              - button [ref=f1e292] [cursor=pointer]:
+                - paragraph [ref=f1e293]: Conocer más
+              - heading "Control tributario de provisiones" [level=6] [ref=f1e296]
+              - paragraph [ref=f1e297]: Composición histórica de provisiones, para el cumplimiento normativo
+              - generic [ref=f1e298]: Disponible
+              - button "Ingresar" [ref=f1e300] [cursor=pointer]
+            - generic [ref=f1e301]:
+              - button [ref=f1e302] [cursor=pointer]
+              - paragraph [ref=f1e306]: Controla provisiones de forma precisa, identifica salidas de personal, organiza tus reportes y asegura el cumplimiento fiscal, todo sin fricciones y en menos tiempo.
+          - generic [ref=f1e308]:
+            - generic [ref=f1e309]:
+              - button [ref=f1e315] [cursor=pointer]:
+                - paragraph [ref=f1e316]: Conocer más
+              - heading "Simulador de beneficios post empleo" [level=6] [ref=f1e319]
+              - paragraph [ref=f1e320]: Analiza tus provisiones, anticipando escenarios para la toma de decisiones
+              - generic [ref=f1e321]: Disponible
+              - button "Ingresar" [ref=f1e323] [cursor=pointer]
+            - generic [ref=f1e324]:
+              - button [ref=f1e325] [cursor=pointer]
+              - paragraph [ref=f1e329]: Anticipa el impacto futuro de tus provisiones con proyecciones claras y visuales. Mejora la planificación financiera, la toma de decisiones y la transparencia con un análisis demográfico ágil y estratégico.
+          - generic [ref=f1e331]:
+            - generic [ref=f1e332]:
+              - button [ref=f1e336] [cursor=pointer]:
+                - paragraph [ref=f1e337]: Conocer más
+              - heading "Consulta con NavIA ᴮᵉᵗᵃ" [level=6] [ref=f1e340]
+              - paragraph [ref=f1e341]: Responde todas tus dudas con nuestra inteligencia artificial actuarial
+              - generic [ref=f1e342]: Disponible
+              - button "Ingresar" [ref=f1e344] [cursor=pointer]
+            - generic [ref=f1e345]:
+              - button [ref=f1e346] [cursor=pointer]
+              - paragraph [ref=f1e350]: Agente de inteligencia artificial entrenado con toda la normativa laboral y modelos actuariales para responder cualquier duda sobre tu informe de jubilación patronal.
+  - link "Escríbenos a WhatsApp" [ref=f1e351] [cursor=pointer]:
+    - /url: https://wa.me/593979133351/?text=Hola+Actuaria,+tengo+novedades+sobre+el+Portal+de+Clientes
+```
+
+# Test source
+
+```ts
+  1  | import { type Page, type Locator, expect } from '@playwright/test';
+  2  | import { SuperPage } from './SuperPage';
+  3  | import { createLogger } from '@helpers/logger';
+  4  | 
+  5  | const logger = createLogger('RecursosPage');
+  6  | 
+  7  | export class RecursosPage extends SuperPage {
+  8  | 	RecursosMenuButton: Locator;
+  9  | 	PoliticaSelectionTab: Locator;
+  10 | 	PoliticaPrivacidadTab: Locator;
+  11 | 	TerminosTab: Locator;
+  12 | 	DocumentosLegalesButton: Locator;
+  13 | 
+  14 | 	constructor(page: Page) {
+  15 | 		super(page);
+  16 | 		this.RecursosMenuButton = page.getByRole('button', { name: 'Recursos' });
+  17 | 		this.DocumentosLegalesButton = page.getByRole('link', { name: 'Documentos legales' });
+  18 | 		this.PoliticaSelectionTab = page.getByRole('tab', { name: 'Política de calidad', selected: true });
+  19 | 		this.PoliticaPrivacidadTab = page.getByRole('tab', { name: 'Política de privacidad' });
+  20 | 		this.TerminosTab = page.getByRole('tab', { name: 'Términos y condiciones' });
+  21 | 	}
+  22 | 
+  23 | 	async clickRecursosMenu() {
+  24 | 		logger.navegacion('Abriendo menú "Recursos"');
+  25 | 		await expect(this.RecursosMenuButton).toBeVisible({ timeout: 15000 });
+  26 | 		await this.RecursosMenuButton.click();
+  27 | 		logger.exito('Menú "Recursos" abierto');
+  28 | 
+  29 | 		logger.info('Buscando enlace "Documentos legales"');
+  30 | 		await expect(this.DocumentosLegalesButton).toBeVisible({ timeout: 15000 });
+> 31 | 		await this.DocumentosLegalesButton.click();
+     |                                      ^ Error: locator.click: Test timeout of 120000ms exceeded.
+  32 | 		logger.exito('Enlace "Documentos legales" clickeado');
+  33 | 
+  34 | 		logger.info('Verificando que la pestaña "Política de calidad" sea visible');
+  35 | 		await expect(this.PoliticaSelectionTab).toBeVisible({ timeout: 15000 });
+  36 | 		logger.exito('Pestaña "Política de calidad" visible');
+  37 | 	}
+  38 | 
+  39 | 	async verifyPoliticaTabVisible() {
+  40 | 		logger.verificacion('Verificando pestaña "Política de calidad" visible y seleccionada');
+  41 | 		await expect(this.PoliticaSelectionTab).toBeVisible();
+  42 | 		logger.exito('Pestaña "Política de calidad" visible');
+  43 | 	}
+  44 | 
+  45 | 	async verifyPoliticaPrivacidadTabVisible() {
+  46 | 		logger.verificacion('Verificando pestaña "Política de privacidad"');
+  47 | 		await expect(this.PoliticaPrivacidadTab).toBeVisible();
+  48 | 		await this.PoliticaPrivacidadTab.click();
+  49 | 		await expect(this.PoliticaPrivacidadTab).toHaveAttribute('aria-selected', 'true');
+  50 | 		logger.exito('Pestaña "Política de privacidad" seleccionada');
+  51 | 	}
+  52 | 
+  53 | 	async verifyTerminosTabVisible() {
+  54 | 		logger.verificacion('Verificando pestaña "Términos y condiciones"');
+  55 | 		await expect(this.TerminosTab).toBeVisible();
+  56 | 		await this.TerminosTab.click();
+  57 | 		await expect(this.TerminosTab).toHaveAttribute('aria-selected', 'true');
+  58 | 		logger.exito('Pestaña "Términos y condiciones" seleccionada');
+  59 | 	}
+  60 | }
+```

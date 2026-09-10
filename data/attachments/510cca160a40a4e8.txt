@@ -1,0 +1,43 @@
+🎭️ [MisActas-Story] Preparando entorno de Mis Actas
+🔐 [MisActas-Story] Iniciando sesion con usuario demo (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [MisActas-Story] Login exitoso
+✅ [MisActas-Story] Navegación exitosa a dashboard
+🔍 [MisActas-Story] Navegación exitosa → /dashboard/actas/mis-actas
+🎭️ [MisActas-TC02] Empezando TC02: eliminar primera acta pendiente
+🎭️ [MisActas-TC02-Workflow] Iniciando flujo: Eliminar acta pendiente desde Mis Actas
+🔍 [MisActas-TC02-Workflow] Verificando que estamos en /dashboard/actas/mis-actas
+✅ [MisActas-TC02-Workflow] URL de Mis Actas verificada
+👆 [MisActas-TC02-Workflow] Click en pestaña Actas Pendientes: Tab Actas Pendientes
+👆 [MisActasPage] Click (name: Actas Pendientes): Tab Actas Pendientes
+✅ [MisActasPage] Pestaña Actas Pendientes seleccionada y tabla visible
+✅ [MisActas-TC02-Workflow] Pestaña de actas pendientes seleccionada
+ℹ️  [MisActasPage] Verificando si existen actas pendientes
+✅ [MisActasPage] Hay actas pendientes disponibles (58)
+ℹ️  [MisActasPage] Extrayendo conteo de actas pendientes
+✅ [MisActasPage] Conteo extraído: 58 actas pendientes
+✅ [MisActas-TC02-Workflow] Conteo inicial de actas pendientes: 58
+👆 [MisActas-TC02-Workflow] Click en primera fila: Botón Eliminar
+ℹ️  [MisActasPage] Eliminando primera acta pendiente
+ℹ️  [MisActasPage] 🔍 Intento 1 (span[aria-label="Eliminar"] button en celda de acción)...
+✅ [MisActasPage] ✅ Botón eliminar presionado (intento 1: span[aria-label="Eliminar"] button en celda de acción)
+✅ [MisActas-TC02-Workflow] Botón eliminar presionado
+👆 [MisActas-TC02-Workflow] Click en botón Aceptar: Diálogo de confirmación
+📊 [MisActasPage] Confirmando eliminación en diálogo
+✅ [MisActasPage] Diálogo de eliminación visible con mensaje de confirmación
+✅ [MisActasPage] Eliminación confirmada con botón "Aceptar"
+✅ [MisActas-TC02-Workflow] Eliminación confirmada
+⏳ [MisActasPage] Esperando conteo de actas pendientes = 57
+✅ [MisActasPage] Conteo de actas pendientes verificado: 57
+✅ [MisActas-TC02-Workflow] Conteo actualizado correctamente: 58 → 57
+
+✅ ✅ ✅ [MisActas-TC02-Workflow] Flujo de eliminación de acta pendiente completado
+
+
+✅ ✅ ✅ [MisActas-TC02] TC02 finalizado
+
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 9 console message(s) logged to stderr

@@ -1,0 +1,21 @@
+🎭️ [Proyección de Reservas Tests (Demo)] Empezando pre condición
+🔐 [Proyección de Reservas Tests (Demo)] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Proyección de Reservas Tests (Demo)] Login exitoso
+🔍 [Proyección de Reservas Tests (Demo)] Verificando navegación a página principal
+✅ [Proyección de Reservas Tests (Demo)] Navegación exitosa a dashboard
+🎭️ [Proyección de Reservas Tests (Demo)] TC_PR01 (DEMO)
+🔍 [Simulador Workflows] Navegando a Simulador de beneficios
+✅ [Simulador Workflows] En tab Simulador
+🔄 [Simulador Workflows] Seleccionando Proyección de reservas
+✅ [Simulador Workflows] Proyección de reservas seleccionada
+📊 [Simulador Workflows] Pestaña Proyección de Reservas seleccionada
+✅ [Simulador Workflows] Pestaña Proyección de Reservas verificada
+📊 [Simulador Workflows] Pestaña Proyección de Pagos no seleccionada
+✅ [Simulador Workflows] Pestaña Proyección de Pagos verificada
+📊 [Simulador Workflows] Verificando elementos clave en Proyección de Reservas
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 7 console message(s) logged to stderr

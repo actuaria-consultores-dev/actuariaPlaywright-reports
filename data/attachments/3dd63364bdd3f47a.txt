@@ -1,0 +1,46 @@
+🎭️ [MisActas-Story] Preparando entorno de Mis Actas
+🔐 [MisActas-Story] Iniciando sesion con usuario demo (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [MisActas-Story] Login exitoso
+✅ [MisActas-Story] Navegación exitosa a dashboard
+🔍 [MisActas-Story] Navegación exitosa → /dashboard/actas/mis-actas
+🎭️ [MisActas-TC01] Empezando TC01: continuar con primera acta pendiente
+🎭️ [MisActas-TC01-Workflow] Iniciando flujo: Continuar con acta pendiente desde Mis Actas
+🔍 [MisActas-TC01-Workflow] Verificando que estamos en /dashboard/actas/mis-actas
+✅ [MisActas-TC01-Workflow] URL de Mis Actas verificada
+👆 [MisActas-TC01-Workflow] Click en pestaña Actas Pendientes: Tab Actas Pendientes
+👆 [MisActasPage] Click (name: Actas Pendientes): Tab Actas Pendientes
+✅ [MisActasPage] Pestaña Actas Pendientes seleccionada y tabla visible
+✅ [MisActas-TC01-Workflow] Pestaña de actas pendientes seleccionada
+ℹ️  [MisActasPage] Verificando si existen actas pendientes
+✅ [MisActasPage] Hay actas pendientes disponibles (56)
+ℹ️  [MisActasPage] Extrayendo conteo de actas pendientes
+✅ [MisActasPage] Conteo extraído: 56 actas pendientes
+✅ [MisActas-TC01-Workflow] El conteo de actas pendientes es mayor a 0 (56)
+📊 [MisActasPage] Verificando encabezados de la tabla
+✅ [MisActasPage] Encabezados de tabla verificados correctamente
+ℹ️  [MisActasPage] Extrayendo datos de la tabla
+ℹ️  [MisActasPage] Se encontraron 5 filas en la tabla
+✅ [MisActasPage] Se encontraron 5 actas pendientes para probar
+✅ [MisActas-TC01-Workflow] Tabla cargada con 5 actas pendientes
+👆 [MisActas-TC01-Workflow] Click en primera fila: Botón Continuar con el acta
+ℹ️  [MisActasPage] 🔍 Intento 1 (a[href*="/nueva-acta/"] en celda de acción)...
+✅ [MisActasPage] ✅ "Continuar con el acta" navegó a: https://act-compass-stage-proj.firebaseapp.com/dashboard/actas/nueva-acta/GKaucS8sWC12ewGrNm2o
+✅ [MisActas-TC01-Workflow] Navegación iniciada hacia nueva acta
+📊 [MisActasPage] Verificando URL de nueva acta
+✅ [MisActasPage] URL de continuación verificada: https://act-compass-stage-proj.firebaseapp.com/dashboard/actas/nueva-acta/GKaucS8sWC12ewGrNm2o
+✅ [MisActas-TC01-Workflow] Redireccionado a: https://act-compass-stage-proj.firebaseapp.com/dashboard/actas/nueva-acta/GKaucS8sWC12ewGrNm2o
+📊 [MisActasPage] Verificando indicador de paso ("Paso X de Y")
+✅ [MisActasPage] Indicador de paso visible: "Paso 3 de 7"
+✅ [MisActas-TC01-Workflow] Indicador de paso verificado: "Paso 3 de 7"
+
+✅ ✅ ✅ [MisActas-TC01-Workflow] Flujo de continuar con acta pendiente completado
+
+
+✅ ✅ ✅ [MisActas-TC01] TC01 finalizado
+
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 8 console message(s) logged to stderr

@@ -1,0 +1,577 @@
+🎭️ [JubilacionPatronal-Story] Empezando pre condicion de Jubilacion Patronal
+🔐 [JubilacionPatronal-Story] Iniciando sesion con usuario demo (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [JubilacionPatronal-Story] Login exitoso
+🔍 [JubilacionPatronal-Story] Verificando navegacion a dashboard
+✅ [JubilacionPatronal-Story] Navegacion exitosa a dashboard
+🎭️ [JubilacionPatronal-TC01] Empezando TC01
+
+======================================================================
+
+🎯 INICIANDO FLUJO JUBILACIÓN PATRONAL
+
+======================================================================
+
+
+======================================================================
+🎯 CONFIGURACIÓN DEL FLUJO
+======================================================================
+   • Tipo de Cálculo: pension-fondo
+   • Tipo de Remuneración: upload-file
+   • Documentos PDF: 2 obligatorios
+   • Saldo Contable: No
+   • Información de Rebates: No
+   • Presenta Reingreso: No
+   • Periodos de Reingreso: 0
+   • Política de Pago: fondo-global
+   • Bonificación Voluntaria: No
+   • Plan: plan-acta
+======================================================================
+
+
+📋 INFORMACIÓN DEL EX TRABAJADOR
+
+📋 [JubilacionPatronalWorkflow] Datos del Empleado
+{
+  "Cédula": "1721489951",
+  "Nombre": "Christian",
+  "Apellido": "Martinez",
+  "Género": "masculino"
+}
+
+📅 FECHAS
+
+📋 [JubilacionPatronalWorkflow] Configuración de Fechas
+{
+  "Año de Nacimiento": "1978",
+  "Año de Primer Ingreso": "1998",
+  "Año de Última Salida": "2024",
+  "Años de Antigüedad": 26
+}
+
+💰 INFORMACIÓN DE REMUNERACIÓN
+
+📋 [JubilacionPatronalWorkflow] Configuración de Remuneración
+{
+  "Método de Entrada": "upload-file",
+  "Valor del Salario": "no-especificado",
+  "Meses a Completar": 61,
+  "Conoce Último Cargo": "No",
+  "Conoce Rebates": "No"
+}
+
+======================================================================
+
+ℹ️  [JubilacionPatronalWorkflow] ══════════ MOCK "Enviar pedido" ══════════
+ℹ️  [JubilacionPatronalWorkflow] Contexto           : Fondo global - inicio del flujo (paso final = "Confirmar pedido")
+ℹ️  [JubilacionPatronalWorkflow] Env                : CONFIRMAR_PEDIDO_MOCK = (no definida)
+ℹ️  [JubilacionPatronalWorkflow] Lectura del env    : variable NO definida → por defecto el mock queda ACTIVADO
+ℹ️  [JubilacionPatronalWorkflow] Config del TC      : confirmarPedidoMock = { enabled: true, debugNetwork: false }
+ℹ️  [JubilacionPatronalWorkflow] Modo efectivo      : 🟢 MOCK ACTIVADO — los endpoints del paso final serán interceptados (el backend real NO se toca)
+✅ [JubilacionPatronalWorkflow] INTERCEPTARÁ: sí
+ℹ️  [JubilacionPatronalWorkflow] ═══════════════════════════════════════════
+
+📍 Paso 1: Creando nuevo ex trabajador
+
+
+📍 Paso 1: Navegando y creando ex trabajador
+📊 [JubilacionPatronalWorkflow] Paso 1 visible
+✅ [JubilacionPatronalWorkflow] Ex trabajador creado
+📋 [JubilacionPatronalWorkflow] Empleado Registrado
+{
+  "Cédula": "1721489951",
+  "Nombre": "Christian",
+  "Apellido": "Martinez"
+}
+📁 [JubilacionPatronalWorkflow] Cargando archivo: ./tests/data/documents/cedula_template.pdf
+✅ [JubilacionPatronalWorkflow] Primer PDF cargado: ./tests/data/documents/cedula_template.pdf
+📁 [JubilacionPatronalWorkflow] Cargando archivo: ./tests/data/documents/sri_template.pdf
+✅ [JubilacionPatronalWorkflow] Segundo PDF cargado: ./tests/data/documents/sri_template.pdf
+
+📍 Paso 2: Configurando fechas del ex trabajador
+
+
+📍 Paso 2: Configurando fechas del colaborador
+⚠️ Step indicator "Paso 2 de" not found - form may have different layout
+📊 [JubilacionPatronal-Step2] Paso 2 visible
+📋 [JubilacionPatronal-Step2] Fecha base del sistema
+{
+  "currentDay": "10",
+  "currentMonth": "9"
+}
+👆 [JubilacionPatronal-Step2] Seleccion masculino: Genero
+   📅 Buscando grupo de fecha: "Fecha de nacimiento *"
+   📅 ✅ Encontrados campos DD/MM/YYYY con getByLabel
+   ✅ Fecha completada: 10/9/1978
+👆 [JubilacionPatronal-Step2] Ingreso anio 1978: Fecha de nacimiento
+   📅 Buscando grupo de fecha: "Fecha de primer ingreso *"
+   📅 ✅ Encontrados campos DD/MM/YYYY con getByLabel
+   ✅ Fecha completada: 10/9/1998
+👆 [JubilacionPatronal-Step2] Ingreso anio 1998: Fecha de primer ingreso
+📊 [JubilacionPatronal-Step2] Sin errores de edad
+👆 [JubilacionPatronal-Step2] Seleccion No: Radio Reingreso
+   📅 Buscando grupo de fecha: "Fecha de última salida"
+   📅 ✅ Encontrados campos DD/MM/YYYY con getByLabel
+   ✅ Fecha completada: 10/9/2024
+👆 [JubilacionPatronal-Step2] Ingreso anio 2024: Fecha de ultima salida
+👆 [JubilacionPatronal-Step2] Commit de cambios de fecha: Formulario Paso 2
+📋 [JubilacionPatronal-Step2] Calculo de antiguedad
+{
+  "entryYear": "1998",
+  "exitYear": "2024",
+  "yearsEmployed": 26
+}
+👆 [JubilacionPatronal-Step2] Click para avanzar desde Paso 2: Boton Continuar
+✅ [JubilacionPatronal-Step2] Paso 2 avanzado correctamente
+✅ [JubilacionPatronalWorkflow] Paso 2 completado
+
+📍 Paso 3: Configurando remuneraciones
+
+
+📍 Paso 3: Configurando remuneraciones
+📊 [JubilacionPatronal-Step3] Paso 3 visible
+👆 [JubilacionPatronal-Step3] Subir archivo: Metodo remuneracion
+ℹ️  [JubilacionPatronal-Step3] ✅ Sección de carga de remuneraciones cargada
+⚠️  [JubilacionPatronal-Step3] ⚠️ Timeout esperando red estable, continuando...
+ℹ️  [JubilacionPatronal-Step3] ⏳ Buffer de tiempo completado, intentando descargar...
+👆 [JubilacionPatronal-Step3] Iniciando descarga: Boton Descargar archivo
+✅ Botón "Descargar archivo" está visible
+🖱️ Haciendo clic en "Descargar archivo"...
+⏳ Esperando inicio de descarga...
+📄 Nombre del archivo descargado: plantilla.xlsx
+💾 Archivo guardado en: ./tests/data/download/plantilla.xlsx
+✅ [JubilacionPatronal-Step3] Archivo descargado exitosamente
+📊 [JubilacionPatronal-Step3] Validando contenido de Excel descargado
+📂 Archivo encontrado: ./tests/data/download/plantilla.xlsx
+🔍 Verificando contenido del archivo Excel...
+📊 Hojas encontradas: Aportaciones
+📝 Filas de datos encontradas: 12
+📋 Columnas encontradas: [
+  '2019',    '2020',
+  '2021',    '2022',
+  '2023',    '2024',
+  'MES/AÑO'
+]
+✅ Todas las columnas esperadas están presentes: MES/AÑO
+✅ Columna MES/AÑO encontrada
+📅 Contexto de validación: Mes actual 9/2026, Ventana de 60 meses desde 9/2021
+✅ Columnas de años encontradas: 2020, 2021, 2022, 2023, 2024
+✅ 12 meses encontrados en el archivo
+✅ Todos los 12 meses están presentes
+  ✅ ENERO/2020: VACÍO (fuera de ventana de datos)
+  ✅ ENERO/2021: VACÍO (fuera de ventana de datos)
+  ✅ ENERO/2022: VACÍO (dentro de ventana de 60 meses)
+  ✅ ENERO/2023: VACÍO (dentro de ventana de 60 meses)
+  ✅ ENERO/2024: VACÍO (dentro de ventana de 60 meses)
+  ✅ FEBRERO/2020: VACÍO (fuera de ventana de datos)
+  ✅ FEBRERO/2021: VACÍO (fuera de ventana de datos)
+  ✅ FEBRERO/2022: VACÍO (dentro de ventana de 60 meses)
+  ✅ FEBRERO/2023: VACÍO (dentro de ventana de 60 meses)
+  ✅ FEBRERO/2024: VACÍO (dentro de ventana de 60 meses)
+  ✅ MARZO/2020: VACÍO (fuera de ventana de datos)
+  ✅ MARZO/2021: VACÍO (fuera de ventana de datos)
+  ✅ MARZO/2022: VACÍO (dentro de ventana de 60 meses)
+  ✅ MARZO/2023: VACÍO (dentro de ventana de 60 meses)
+  ✅ MARZO/2024: VACÍO (dentro de ventana de 60 meses)
+  ✅ ABRIL/2020: VACÍO (fuera de ventana de datos)
+  ✅ ABRIL/2021: VACÍO (fuera de ventana de datos)
+  ✅ ABRIL/2022: VACÍO (dentro de ventana de 60 meses)
+  ✅ ABRIL/2023: VACÍO (dentro de ventana de 60 meses)
+  ✅ ABRIL/2024: VACÍO (dentro de ventana de 60 meses)
+  ✅ MAYO/2020: VACÍO (fuera de ventana de datos)
+  ✅ MAYO/2021: VACÍO (fuera de ventana de datos)
+  ✅ MAYO/2022: VACÍO (dentro de ventana de 60 meses)
+  ✅ MAYO/2023: VACÍO (dentro de ventana de 60 meses)
+  ✅ MAYO/2024: VACÍO (dentro de ventana de 60 meses)
+  ✅ JUNIO/2020: VACÍO (fuera de ventana de datos)
+  ✅ JUNIO/2021: VACÍO (fuera de ventana de datos)
+  ✅ JUNIO/2022: VACÍO (dentro de ventana de 60 meses)
+  ✅ JUNIO/2023: VACÍO (dentro de ventana de 60 meses)
+  ✅ JUNIO/2024: VACÍO (dentro de ventana de 60 meses)
+  ✅ JULIO/2020: VACÍO (fuera de ventana de datos)
+  ✅ JULIO/2021: VACÍO (fuera de ventana de datos)
+  ✅ JULIO/2022: VACÍO (dentro de ventana de 60 meses)
+  ✅ JULIO/2023: VACÍO (dentro de ventana de 60 meses)
+  ✅ JULIO/2024: VACÍO (dentro de ventana de 60 meses)
+  ✅ AGOSTO/2020: VACÍO (fuera de ventana de datos)
+  ✅ AGOSTO/2021: VACÍO (fuera de ventana de datos)
+  ✅ AGOSTO/2022: VACÍO (dentro de ventana de 60 meses)
+  ✅ AGOSTO/2023: VACÍO (dentro de ventana de 60 meses)
+  ✅ AGOSTO/2024: VACÍO (dentro de ventana de 60 meses)
+  ✅ SEPTIEMBRE/2020: VACÍO (fuera de ventana de datos)
+  ✅ SEPTIEMBRE/2021: VACÍO (dentro de ventana de 60 meses)
+  ✅ SEPTIEMBRE/2022: VACÍO (dentro de ventana de 60 meses)
+  ✅ SEPTIEMBRE/2023: VACÍO (dentro de ventana de 60 meses)
+  ✅ SEPTIEMBRE/2024: VACÍO (dentro de ventana de 60 meses)
+  ✅ OCTUBRE/2020: VACÍO (fuera de ventana de datos)
+  ✅ OCTUBRE/2021: VACÍO (dentro de ventana de 60 meses)
+  ✅ OCTUBRE/2022: VACÍO (dentro de ventana de 60 meses)
+  ✅ OCTUBRE/2023: VACÍO (dentro de ventana de 60 meses)
+  ⚠️ OCTUBRE/2024: type=string, value=N/A
+  ✅ OCTUBRE/2024: VACÍO (dentro de ventana de 60 meses)
+  ✅ NOVIEMBRE/2020: VACÍO (fuera de ventana de datos)
+  ✅ NOVIEMBRE/2021: VACÍO (dentro de ventana de 60 meses)
+  ✅ NOVIEMBRE/2022: VACÍO (dentro de ventana de 60 meses)
+  ✅ NOVIEMBRE/2023: VACÍO (dentro de ventana de 60 meses)
+  ⚠️ NOVIEMBRE/2024: type=string, value=N/A
+  ✅ NOVIEMBRE/2024: VACÍO (dentro de ventana de 60 meses)
+  ✅ DICIEMBRE/2020: VACÍO (fuera de ventana de datos)
+  ✅ DICIEMBRE/2021: VACÍO (dentro de ventana de 60 meses)
+  ✅ DICIEMBRE/2022: VACÍO (dentro de ventana de 60 meses)
+  ✅ DICIEMBRE/2023: VACÍO (dentro de ventana de 60 meses)
+  ⚠️ DICIEMBRE/2024: type=string, value=N/A
+  ✅ DICIEMBRE/2024: VACÍO (dentro de ventana de 60 meses)
+✅ Estructura completa del archivo validada (formato tabla pivote de aportaciones)
+✅ Contenido del archivo verificado correctamente
+✅ [JubilacionPatronal-Step3] Contenido de Excel validado correctamente
+✅ [JubilacionPatronal-Step3] 🗑️ Archivo de plantilla eliminado: ./tests/data/download/plantilla.xlsx
+📁 [JubilacionPatronal-Step3] Cargando archivo: ./tests/data/documents/jubilacionPatronal.xlsx
+👆 [JubilacionPatronal-Step3] Seleccionando respuesta para conoce ultimo cargo: Radio "No"
+✓ [JubilacionPatronal-Step3] Conoce ultimo cargo: esperado "No" → actual "No"
+👆 [JubilacionPatronal-Step3] Seleccionando respuesta para fondo de reserva del empleador: Radio "No"
+✓ [JubilacionPatronal-Step3] Fondo de reserva del empleador: esperado "No" → actual "No"
+📊 [JubilacionPatronal-Step3] Boton Continuar habilitado en Paso 3
+👆 [JubilacionPatronal-Step3] Click para avanzar desde Paso 3: Boton Continuar
+✅ [JubilacionPatronal-Step3] Paso 3 completado
+✅ [JubilacionPatronalWorkflow] Paso 3 completado
+
+📍 Paso 4: Seleccionando tipo de cálculo
+
+
+📍 Paso 4: Configurando tipo de calculo
+📊 [JubilacionPatronal-Step4] Paso 4 visible
+✓ [JubilacionPatronal-Step4] Tipo de calculo a seleccionar: esperado "Pensión mensual + Fondo global" → actual "Pensión mensual + Fondo global"
+👆 [JubilacionPatronal-Step4] Seleccionando tipo de calculo: Radio "Pensión mensual + Fondo global"
+📊 [Paso 4] Buscando opción de cálculo: "Pensión mensual + Fondo global"
+✅ Radio button seleccionado en intento 1
+✅ Opción "Pensión mensual + Fondo global" verificada como seleccionada
+⏳ Esperando que el servidor responda y el botón se habilite...
+✅ Botón Continuar está habilitado
+👆 Click en Continuar ejecutado
+👆 [JubilacionPatronal-Step4] Click para avanzar desde Paso 4: Boton Continuar
+✅ [JubilacionPatronal-Step4] Tipo de calculo aplicado: Pensión mensual + Fondo global
+✅ [JubilacionPatronalWorkflow] Tipo de cálculo seleccionado: Pensión mensual + Fondo global
+
+📍 Paso 5: Configurando política de pago
+
+
+📍 Paso 5: Configurando politica de pago
+📊 [JubilacionPatronal-Step5] Paso 5 visible
+✓ [JubilacionPatronal-Step5] Politica de pago a seleccionar: esperado "Fondo global" → actual "Fondo global"
+👆 [JubilacionPatronal-Step5] Seleccionando politica de pago: Radio "Fondo global"
+  ⚠️ [Paso 5 - Política de pago] No se encontró selector de política; el flujo aparentemente avanzó directo al resumen
+👆 [JubilacionPatronal-Step5] Click para avanzar desde Paso 5: Boton Continuar
+✅ [JubilacionPatronal-Step5] Politica de pago aplicada: Fondo global
+✅ [JubilacionPatronalWorkflow] Política de pago: Fondo global
+
+📍 Paso 6: Verificando solicitud de acta
+
+
+📍 Paso 6: Verificando solicitud de acta y declaracion
+📋 [JubilacionPatronal-Step6-SolicitudActa] Contexto base del paso
+{
+  "currentDay": "10",
+  "currentMonth": "09",
+  "politicaPagoConfigurada": "fondo-global",
+  "documentoPoliticaPago": "./tests/data/documents/sri_template.pdf",
+  "hasReentry": false,
+  "reentryPeriods": 0
+}
+
+======================================================================
+🎯 DATOS ESPERADOS EN SOLICITUD DE ACTA
+======================================================================
+   • Tipo de cálculo: Fondo global
+   • Cédula: 1721489951
+   • Nombres: Christian
+   • Apellidos: Martinez
+   • Fecha Nacimiento: 10/09/1978
+   • Fecha Primer Ingreso: 10/09/1998
+   • Presenta Reingreso: No
+   • Fecha Salida: 10/09/2024
+   • Periodos Reingreso: No Aplica
+   • Bonificacion Voluntaria: No
+   • Salario Ultimo Cargo: No disponible
+   • Fondo Reserva: No disponible
+   • Politica Pago Recuperada: Fondo global
+   • PDFs esperados: 2
+======================================================================
+
+📊 [JubilacionPatronal-Step6-SolicitudActa] Preparando validacion de resumen, adjuntos, declaracion y avance
+👆 [JubilacionPatronal-Step6-SolicitudActa] Ingreso a verificacion de campos mostrados: Pantalla Solicitud de acta
+
+═══════════════════════════════════════════════════
+  🔎 [Solicitud Acta] Iniciando verificación de Paso 6
+═══════════════════════════════════════════════════
+  ℹ️ [Solicitud Acta] Tipo de cálculo esperado: Fondo global
+  ℹ️ [Solicitud Acta] Colaborador esperado: Christian Martinez (1721489951)
+  ℹ️ [Solicitud Acta] Fechas esperadas => nacimiento: 10/09/1978, ingreso: 10/09/1998, salida: 10/09/2024
+  ℹ️ [Solicitud Acta] Reingreso esperado: No | periodos: No Aplica
+  ℹ️ [Solicitud Acta] Bonificación voluntaria esperada: No
+  ℹ️ [Solicitud Acta] Fondo de reserva esperado: No disponible
+  ℹ️ [Solicitud Acta] PDFs esperados: 2
+  ℹ️ [Solicitud Acta] Dato recuperado esperado: Fondo global
+  ℹ️ [Solicitud Acta] Archivo autorización política: ./tests/data/documents/sri_template.pdf
+  ⏳ [Solicitud Acta] Verificando encabezado del paso...
+  ✅ [Solicitud Acta] Encabezado del paso visible
+  ⏳ [Solicitud Acta] Esperando pantalla consolidada de resumen...
+  ✅ [Solicitud Acta] Pantalla de resumen de acta confirmada
+  ─── Verificando campos del resumen ───
+  ⏳ [Solicitud Acta] Validando Tipo de cálculo de acta...
+  ✅ [Solicitud Acta] Tipo de cálculo de acta: esperado="Fondo global" => PASÓ
+  ⏳ [Solicitud Acta] Validando Cédula de Identidad...
+  ✅ [Solicitud Acta] Cédula de Identidad: esperado="1721489951" => PASÓ
+  ⏳ [Solicitud Acta] Validando Nombres...
+  ✅ [Solicitud Acta] Nombres: esperado="Christian" => PASÓ
+  ⏳ [Solicitud Acta] Validando Apellidos...
+  ✅ [Solicitud Acta] Apellidos: esperado="Martinez" => PASÓ
+  ⏳ [Solicitud Acta] Validando Fecha de Nacimiento...
+  ✅ [Solicitud Acta] Fecha de Nacimiento: esperado="10/09/1978" => PASÓ
+  ⏳ [Solicitud Acta] Validando Fecha de primer ingreso...
+  ✅ [Solicitud Acta] Fecha de primer ingreso: esperado="10/09/1998" => PASÓ
+  ⏳ [Solicitud Acta] Validando Presenta reingreso...
+  ✅ [Solicitud Acta] Presenta reingreso: esperado="No" => PASÓ
+  ⏳ [Solicitud Acta] Validando Fecha de salida...
+  ✅ [Solicitud Acta] Fecha de salida: esperado="10/09/2024" => PASÓ
+  ⏳ [Solicitud Acta] Validando Periodos de reingreso...
+  ✅ [Solicitud Acta] Periodos de reingreso: esperado="No Aplica" => PASÓ
+  ⏳ [Solicitud Acta] Validando cálculo como bonificación voluntaria...
+  ✅ [Solicitud Acta] Cálculo como bonificación voluntaria: esperado="No" => PASÓ
+  ⚠️ [Solicitud Acta] Dato recuperado del cálculo anterior: campo no presente en la página (esperado="Fondo global")
+  ─── Verificando PDFs adjuntos ───
+  ✅ [Solicitud Acta] PDFs adjuntos: esperado=2, encontrado=2 => PASÓ
+  ✅ [Solicitud Acta] Conteo de PDFs adjuntos validado
+  ─── Declaración y continuación ───
+  ℹ️ [Solicitud Acta] Estado inicial de "Declaro" antes de continuar: desmarcado
+  ✅ [Solicitud Acta] Checkbox "Declaro" marcado
+  ℹ️ [Solicitud Acta] Estado inicial de "Certifico que los datos": desmarcado
+  ✅ [Solicitud Acta] Checkbox "Certifico que los datos" marcado
+  ℹ️ [Solicitud Acta] Estado inicial de "Confirmo que he leído el": desmarcado
+  ✅ [Solicitud Acta] Checkbox "Confirmo que he leído el" marcado
+  ✅ [Solicitud Acta] Botón Continuar habilitado
+  👆 [Solicitud Acta] Click en Continuar ejecutado
+  ✅ [Solicitud Acta] Click en Continuar — Paso 6 completado
+═══════════════════════════════════════════════════
+
+👆 [JubilacionPatronal-Step6-SolicitudActa] Marcado para habilitar Continuar: Checkbox Declaro que la informacion
+👆 [JubilacionPatronal-Step6-SolicitudActa] Click para avanzar desde Paso 6: Boton Continuar
+✅ [JubilacionPatronal-Step6-SolicitudActa] Todos los campos del resumen de acta verificados correctamente
+✅ [JubilacionPatronalWorkflow] Solicitud de acta verificada y paso continuado
+
+📍 Paso 7: Seleccionando plan de pago
+
+
+📍 Paso 7: Seleccionando plan y confirmando pago
+📋 [JubilacionPatronal-Step7-Pedido] Configuracion de plan recibida
+{
+  "planConfigurado": "plan-acta",
+  "planAplicado": "plan-acta",
+  "usaValorPorDefecto": false
+}
+
+======================================================================
+🎯 PLAN DE PEDIDO ESPERADO
+======================================================================
+   • Plan: Acta de jubilación patronal
+   • Descripcion: Contrata este servicio de forma rápida y segura
+   • Subtotal: $95.00 USD
+   • IVA: $14.25 USD
+   • Total: $109.25 USD
+======================================================================
+
+📊 [JubilacionPatronal-Step7-Pedido] Preparando verificacion del resumen del pedido y checkbox de pago
+📋 [JubilacionPatronal-Step7-Pedido] Mapeo paso pedido
+{
+  "calculationType": "pension-fondo",
+  "pasoEsperadoEnUI": "6"
+}
+
+═══════════════════════════════════════════════════
+  🧾 [Pedido] Iniciando verificación de Paso 6
+═══════════════════════════════════════════════════
+  ℹ️ [Pedido] Plan esperado: plan-acta
+  ℹ️ [Pedido] Título esperado: Acta de jubilación patronal
+  ℹ️ [Pedido] Descripción esperada: Contrata este servicio de forma rápida y segura
+  ℹ️ [Pedido] Montos esperados => subtotal: $95.00 USD, IVA: $14.25 USD, total: $109.25 USD
+  ⏳ [Pedido] Verificando indicador de paso 6...
+  ✅ [Pedido] Indicador Paso 6 visible
+  ⏳ [Pedido] Verificando encabezados principales del paso...
+  ✅ [Pedido] Encabezado visible
+  ✅ [Pedido] Tarjeta Resumen del Pedido visible
+  ⏳ [Pedido] Localizando opción de plan en UI (primer radio)...
+  ✅ [Pedido] Opción de plan localizada
+  ℹ️ [Pedido] Estado inicial del radio esperado: no seleccionado
+  👆 [Pedido] Seleccionando plan esperado...
+  ─── Verificando contenido del resumen del pedido ───
+  ⏳ [Pedido] Validando título del plan: Acta de jubilación patronal
+  ℹ️ [Pedido] Coincidencias encontradas para texto "Acta de jubilación patronal": 2
+  ✅ [Pedido] Título del plan visible: Acta de jubilación patronal
+  ⏳ [Pedido] Validando descripción comercial del plan...
+  ℹ️ [Pedido] Coincidencias encontradas para texto "Contrata este servicio de forma rápida y segura": 2
+  ✅ [Pedido] Descripción visible: Contrata este servicio de forma rápida y segura
+  ⏳ [Pedido] Validando etiquetas y subtotal...
+  ℹ️ [Pedido] Coincidencias encontradas para texto "Subtotal:": 1
+  ℹ️ [Pedido] Coincidencias encontradas para texto "$95.00 USD": 2
+  ✅ [Pedido] Subtotal validado: $95.00 USD
+  ⏳ [Pedido] Validando IVA...
+  ℹ️ [Pedido] Coincidencias encontradas para texto "IVA (15%):": 1
+  ℹ️ [Pedido] Coincidencias encontradas para texto "$14.25 USD": 1
+  ✅ [Pedido] IVA validado: $14.25 USD
+  ⏳ [Pedido] Validando total...
+  ℹ️ [Pedido] Coincidencias encontradas para texto "Total:": 2
+  ℹ️ [Pedido] Coincidencias encontradas para texto "$109.25 USD": 1
+  ✅ [Pedido] Total validado: $109.25 USD
+  ─── Confirmación de pago y avance ───
+  ⚠️ [Pedido] Checkbox "Confirmar pago" no encontrado
+  ✅ [Pedido] Plan seleccionado: Acta de jubilación patronal
+  ✅ [Pedido] Total verificado: $109.25 USD
+  ✅ [Pedido] Confirmación de pago realizada y avance ejecutado
+═══════════════════════════════════════════════════
+
+👆 [JubilacionPatronal-Step7-Pedido] Marcado para habilitar Continuar: Checkbox Confirmar pago
+👆 [JubilacionPatronal-Step7-Pedido] Click para avanzar desde Paso 6: Boton Continuar
+✅ [JubilacionPatronal-Step7-Pedido] Plan procesado correctamente: Acta de jubilación patronal
+✅ [JubilacionPatronalWorkflow] Plan seleccionado y pago confirmado
+
+📍 Paso 8: Confirmando pedido
+
+
+📍 Paso 8: Confirmando pedido
+
+📍 Paso 8: Confirmando pedido
+ℹ️  [JubilacionPatronal-Step8-ConfirmarPedido] MODO MOCK: armando interceptación antes de hacer clic en "Continuar"
+
+======================================================================
+🎯 ARMANDO INTERCEPTACIÓN DE ENDPOINTS (MOCKOON-STYLE)
+======================================================================
+   • ingresarPedido: /\/workflow\/ingresar-pedido(?:\?|$)/
+   • workflowEstado: /\/workflow\/(?!ingresar-pedido)/
+   • paso7: /\/firestore\/upsert\/paso7(?:\?|$)/
+   • paso8: /\/firestore\/upsert\/paso8(?:\?|$)/
+   • upsertDocumento: /\/firestore\/upsert\/(?!paso\d+\b)/
+   • ventaEfectiva: /\/api\/EffectiveSale\/search\//
+   • notificaciones: /\/firestore\/send-email(?:\?|$)/
+======================================================================
+
+✅ [JubilacionPatronalWorkflow] 🟢 MOCK ACTIVO: interceptando los endpoints del paso "Confirmar pedido"
+ℹ️  [JubilacionPatronalWorkflow]    1) POST workflow/ingresar-pedido
+ℹ️  [JubilacionPatronalWorkflow]    2) PUT  firestore/upsert/paso7
+ℹ️  [JubilacionPatronalWorkflow]    3) PUT  firestore/upsert/paso8
+ℹ️  [JubilacionPatronalWorkflow]    4) GET  workflow/status (catch-all → SUCCEEDED)
+ℹ️  [JubilacionPatronalWorkflow]    5) PUT  firestore/upsert/{docId}
+ℹ️  [JubilacionPatronalWorkflow]    6) GET  EffectiveSale/search/{idVentaEfectiva}
+ℹ️  [JubilacionPatronalWorkflow]    7) POST firestore/send-email
+✅ [JubilacionPatronalWorkflow] Rutas de interceptación registradas (el backend real no recibirá estas llamadas)
+  ─── Confirmación final de pedido ───
+  ⏳ [Final] Marcando "Confirmar pedido" y haciendo clic en Continuar...
+  👆 [Final] Checkbox "Confirmar pedido" encontrado - marcando
+  ✅ [Final] Checkbox "Confirmar pedido" marcado
+  👆 [Final] Click en botón Continuar
+ℹ️  [JubilacionPatronalWorkflow] 🟢 [MOCK] Respondido por el mock: PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso7
+ℹ️  [JubilacionPatronalWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso7 -> 200
+ℹ️  [JubilacionPatronalWorkflow] 🟢 [MOCK] Respondido por el mock: POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/ingresar-pedido
+ℹ️  [JubilacionPatronalWorkflow] 🟢 [MOCK] Respondido por el mock: PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/lFrLOWnG6cepDYG6M59j
+ℹ️  [JubilacionPatronalWorkflow] [NET] POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/ingresar-pedido -> 200
+ℹ️  [JubilacionPatronalWorkflow] Interceptado (workflow estado): GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/status?name=projects%2F72574958900%2Flocations%2Fus-central1%2Fworkflows%2Fwf_creacion_pedido_estandar_stage%2Fexecutions%2Fcabafdab-607f-4360-84c6-89e5c4ddf485
+ℹ️  [JubilacionPatronalWorkflow] 🟢 [MOCK] Respondido por el mock: GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/status?name=projects%2F72574958900%2Flocations%2Fus-central1%2Fworkflows%2Fwf_creacion_pedido_estandar_stage%2Fexecutions%2Fcabafdab-607f-4360-84c6-89e5c4ddf485
+ℹ️  [JubilacionPatronalWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/lFrLOWnG6cepDYG6M59j -> 200
+ℹ️  [JubilacionPatronalWorkflow] 🟢 [MOCK] Respondido por el mock: PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso8
+  ✅ [Final] Botón Continuar clickeado - endpoints del backend disparados
+ℹ️  [JubilacionPatronalWorkflow] [NET] GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/status?name=projects%2F72574958900%2Flocations%2Fus-central1%2Fworkflows%2Fwf_creacion_pedido_estandar_stage%2Fexecutions%2Fcabafdab-607f-4360-84c6-89e5c4ddf485 -> 200
+ℹ️  [JubilacionPatronalWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso8 -> 200
+ℹ️  [JubilacionPatronalWorkflow] [NET] GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/parametros?database=&collection=constantes -> 200
+ℹ️  [JubilacionPatronalWorkflow] [NET] POST https://apistorage-sql5tfrt5q-uc.a.run.app/storage/signed-url -> 200
+ℹ️  [JubilacionPatronalWorkflow] [NET] POST https://y.clarity.ms/collect -> 204
+ℹ️  [JubilacionPatronalWorkflow] [NET] POST https://apistorage-sql5tfrt5q-uc.a.run.app/storage/signed-url -> 200
+ℹ️  [JubilacionPatronalWorkflow] [NET] GET https://storage.googleapis.com/act-compass-stage-proj-firebase-bucket/actas-finiquito/documentos/2026/09/lFrLOWnG6cepDYG6M59j/cedula-1721489951?GoogleAccessId=72574958900-compute%40developer.gserviceaccount.com&Expires=1789069024&Signature=H8VrxvH07SyCU8P5QBeqTAyu4KuAlANd1A1OJkSTMDZXaaJoiBXtDwM7rd1EuiIMUKU%2BpzB7Ls3soPrPGIldinxpOcS7fPTHRhL5g8AxeITLpETulF7L%2BrGIVIfVzNyf%2Bgva88A6iEMcCZwJkQNtUrI8cZy255kbyJYLIbCZQBLNtjSbe1uHDaCGTjw4U4PT%2FTZZ02fOs7GAwn6M2IZ3sloVOzMphymJb%2BFtqQfcWlLRHBHlB2DvDqdR%2B%2BDtq4ZahPamDVOXLKmYB2GTTEKv%2F3IbWu038niA4l3PKHTeqwWD13Br35UeItfWQwlpytkRE3TmiXs851cpXoWrFHoY2Q%3D%3D -> 200
+ℹ️  [JubilacionPatronalWorkflow] [NET] GET https://storage.googleapis.com/act-compass-stage-proj-firebase-bucket/actas-finiquito/documentos/2026/09/lFrLOWnG6cepDYG6M59j/aviso-ingreso-iess-1721489951?GoogleAccessId=72574958900-compute%40developer.gserviceaccount.com&Expires=1789069024&Signature=iT2BhV7eVI3WidFRSSxLqrmePJkCBfrK0vkyUxS0CSrR8abaVfvdU6RxsAs6e4OUDUoGypUni6gcDaCLr91RT1%2BY4kmpHFfsxY3N5rDmlpnpeUOfiPgG6phlsFJLDNl8sqpD722TRIXqkmPwQHdgtM2y6HFQxWuzxsfwyB433YbfVjFhsEMZh7tm9BFXxDtMny9igEpobFR4DLAr3TmGHPQZcjMStlf6SydN86GzSN0NmovYaKrPWGTv%2FOlH9qI1m0y0oO29tgcmqapoofKY4CHWode%2Fzk6vE4d7wMFPxydKP2DAetFQU2JWljIwXtFVqhp8Nt99netobeqB9%2FDP5Q%3D%3D -> 200
+ℹ️  [JubilacionPatronalWorkflow] [NET] POST https://microservicio-salesforce-314253889901.us-east1.run.app/api/EffectiveSale/upload-document/a0FVD000008xq612AA?title=Cedula+de+identidad -> 200
+ℹ️  [JubilacionPatronalWorkflow] [NET] POST https://microservicio-salesforce-314253889901.us-east1.run.app/api/EffectiveSale/upload-document/a0FVD000008xq612AA?title=Aviso+de+entrada+al+IESS -> 200
+ℹ️  [JubilacionPatronalWorkflow] 🟢 [MOCK] Respondido por el mock: GET https://microservicio-salesforce-314253889901.us-east1.run.app/api/EffectiveSale/search/a0FVD000008xq612AA
+ℹ️  [JubilacionPatronalWorkflow] [NET] GET https://microservicio-salesforce-314253889901.us-east1.run.app/api/EffectiveSale/search/a0FVD000008xq612AA -> 200
+ℹ️  [JubilacionPatronalWorkflow] 🟢 [MOCK] Respondido por el mock: PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso8
+ℹ️  [JubilacionPatronalWorkflow] 🟢 [MOCK] Respondido por el mock: PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/lFrLOWnG6cepDYG6M59j
+ℹ️  [JubilacionPatronalWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso8 -> 200
+ℹ️  [JubilacionPatronalWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/lFrLOWnG6cepDYG6M59j -> 200
+
+======================================================================
+🎯 📡 ENDPOINTS INTERCEPTADOS (MOCKOON-STYLE)
+======================================================================
+   • total: 6
+======================================================================
+
+
+======================================================================
+🎯 ▶ PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso7
+======================================================================
+   • status: 200
+   • response: [object Object]
+======================================================================
+
+
+======================================================================
+🎯 ▶ POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/ingresar-pedido
+======================================================================
+   • status: 200
+   • response: [object Object]
+======================================================================
+
+
+======================================================================
+🎯 ▶ PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/lFrLOWnG6cepDYG6M59j
+======================================================================
+   • status: 200
+   • response: [object Object]
+======================================================================
+
+
+======================================================================
+🎯 ▶ GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/status?name=projects%2F72574958900%2Flocations%2Fus-central1%2Fworkflows%2Fwf_creacion_pedido_estandar_stage%2Fexecutions%2Fcabafdab-607f-4360-84c6-89e5c4ddf485
+======================================================================
+   • status: 200
+   • response: [object Object]
+======================================================================
+
+
+======================================================================
+🎯 ▶ PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso8
+======================================================================
+   • status: 200
+   • response: [object Object]
+======================================================================
+
+
+======================================================================
+🎯 ▶ GET https://microservicio-salesforce-314253889901.us-east1.run.app/api/EffectiveSale/search/a0FVD000008xq612AA
+======================================================================
+   • status: 200
+   • response: [object Object]
+======================================================================
+
+ℹ️  [JubilacionPatronal-Step8-ConfirmarPedido] Verificando pantalla final de confirmación
+  ⏳ [Final] Verificando pantalla final de confirmación del pedido (estado "Solicitado")...
+ℹ️  [JubilacionPatronalWorkflow] [NET] GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/parametros?database=&collection=constantes -> 200
+ℹ️  [JubilacionPatronalWorkflow] 🟢 [MOCK] Respondido por el mock: POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/send-email
+ℹ️  [JubilacionPatronalWorkflow] [NET] POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/send-email -> 200
+  ✅ [Final] Confirmación del pedido visible - estado "Solicitado"
+✅ [JubilacionPatronal-Step8-ConfirmarPedido] Confirmación del pedido verificada
+📊 [JubilacionPatronal-Step8-ConfirmarPedido] Endpoints interceptados: 7 de los esperados
+✅ [JubilacionPatronal-Step8-ConfirmarPedido] Pedido confirmado - endpoints interceptados correctamente
+✅ [JubilacionPatronalWorkflow] Pedido confirmado
+
+======================================================================
+
+
+✅ ✅ ✅ [JubilacionPatronalWorkflow] FLUJO COMPLETO FINALIZADO
+
+
+======================================================================
+
+
+✅ ✅ ✅ [JubilacionPatronal-TC01] TC01 finalizado
+
+
+ℹ️  4 non-blocking error(s) ignored by filter.
+
+📋 11 console message(s) logged to stderr

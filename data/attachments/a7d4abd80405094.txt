@@ -1,0 +1,218 @@
+🎭️ [ImpuestosDiferidos-CrearNuevo] Preparando entorno para Impuestos Diferidos
+🔐 [ImpuestosDiferidos-CrearNuevo] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [ImpuestosDiferidos-CrearNuevo] Sesión iniciada correctamente
+🔍 [ImpuestosDiferidos-CrearNuevo] Dashboard cargado correctamente
+🎭️ [TC02] Flujo completo Happy Path - solicitud de Impuestos Diferidos
+ℹ️  [TC02] Ejecutando flujo completo: navegación → datos → validación
+
+======================================================================
+🎯 INICIANDO FLUJO COMPLETO DE IMPUESTOS DIFERIDOS
+======================================================================
+   • Ano: 2024
+   • Opción saldos: Manual/Sin saldos
+======================================================================
+
+ℹ️  [ImpuestosDiferidosWorkflow] Listener de captura de ID de documento activado
+ℹ️  [ImpuestosDiferidosWorkflow] ConfirmarPedidoInterceptor activado - capturando ID de documento del flujo
+ℹ️  [ImpuestosDiferidosWorkflow] ══════════ MOCK "Enviar pedido" ══════════
+ℹ️  [ImpuestosDiferidosWorkflow] Contexto           : Manual/Sin saldos - inicio del flujo (paso 6 = "Confirmar pedido")
+ℹ️  [ImpuestosDiferidosWorkflow] Env                : CONFIRMAR_PEDIDO_MOCK = (no definida)
+ℹ️  [ImpuestosDiferidosWorkflow] Lectura del env    : variable NO definida → por defecto el mock queda ACTIVADO
+ℹ️  [ImpuestosDiferidosWorkflow] Config del TC      : confirmarPedidoMock = { enabled: true, debugNetwork: false }
+ℹ️  [ImpuestosDiferidosWorkflow] Modo efectivo      : 🟢 MOCK ACTIVADO — los endpoints del paso final serán interceptados (el backend real NO se toca)
+✅ [ImpuestosDiferidosWorkflow] INTERCEPTARÁ: sí
+ℹ️  [ImpuestosDiferidosWorkflow] ═══════════════════════════════════════════
+📋 Navegando a Impuestos Diferidos...
+✅ Navegación completada
+
+📍 Paso 1: Seleccionando año de evaluación
+📊 [ImpuestosDiferidosPage] Paso 1 de 6 verificado
+ℹ️  [ImpuestosDiferidosPage] Seleccionando año de evaluación: 2024
+✅ [ImpuestosDiferidosPage] Año 2024 seleccionado
+✅ [SelectEvaluationYearStep] Paso 1 completado
+
+📍 Paso 2: Seleccionando razón del estudio
+📊 [ImpuestosDiferidosPage] Paso 2 de 6 verificado
+ℹ️  [ImpuestosDiferidosPage] Seleccionando razón del estudio
+ℹ️  [ImpuestosDiferidosPage] Realizando scroll al fondo de la página
+✅ [ImpuestosDiferidosPage] Scroll al fondo completado - página completamente visible
+✅ [ImpuestosDiferidosPage] Estudio disponible seleccionado
+✅ [SelectReasonStep] Paso 2 completado
+
+📍 Paso 3: Configurando saldos contables
+ℹ️  [ConfigureSaldosContablesStep] Modo: Ingreso manual de saldos contables
+📋 [ImpuestosDiferidosWorkflow] ID de documento capturado del flujo
+{
+  "reportDocumentId": "16tUB8b065NQaRbzskt2"
+}
+📊 [ImpuestosDiferidosPage] Paso 3 de 6 verificado
+ℹ️  [ImpuestosDiferidosPage] Ingresando saldos contables manualmente
+✅ [ImpuestosDiferidosPage] Seleccionado: No (ingreso manual)
+✅ [ImpuestosDiferidosPage] Estimación autorizada (checkbox marcado)
+ℹ️  [ImpuestosDiferidosPage] AID Final Jubilación: $200
+ℹ️  [ImpuestosDiferidosPage] AID Final Desahucio: $100
+✅ [ImpuestosDiferidosPage] Saldos manuales ingresados
+📋 [ImpuestosDiferidosWorkflow] ID de documento capturado del flujo
+{
+  "reportDocumentId": "16tUB8b065NQaRbzskt2"
+}
+✅ [ConfigureSaldosContablesStep] Paso 3 completado
+
+📍 Paso 4: Configurando tasa impositiva
+📊 [ImpuestosDiferidosPage] Paso 4 de 6 verificado
+ℹ️  [ConfigureTaxRateStep] Usando tasa impositiva estándar
+📋 [ImpuestosDiferidosWorkflow] ID de documento capturado del flujo
+{
+  "reportDocumentId": "16tUB8b065NQaRbzskt2"
+}
+✅ [ConfigureTaxRateStep] Paso 4 completado
+
+📍 Paso 5: Verificando resumen de información
+📊 [ImpuestosDiferidosPage] Paso 5 de 6 verificado
+
+======================================================================
+🎯 VERIFICANDO RESUMEN PASO 5 - INFORMACIÓN GENERAL
+======================================================================
+   • empresa: DEMOGRAFIX S.A.
+   • anoValoracion: 2024
+   • empleadosActivos: 599
+   • empleadosJubilados: 17
+   • aidFinalJubilacion: 200.00
+   • aidFinalDesahucio: 100.00
+   • tipoImpuesto: estandar
+   • tasaImpuesto: 25%
+======================================================================
+
+✅ [ImpuestosDiferidosPage] Sección de resumen visible
+ℹ️  [ImpuestosDiferidosPage] Validando campos de la tabla
+✓ [ImpuestosDiferidosPage] Empresa: esperado "DEMOGRAFIX S.A." → actual "DEMOGRAFIX S.A."
+✓ [ImpuestosDiferidosPage] Año de valoración: esperado "2024" → actual "2024"
+✓ [ImpuestosDiferidosPage] Empleados activos: esperado "599" → actual "599"
+✓ [ImpuestosDiferidosPage] Empleados jubilados: esperado "17" → actual "17"
+✓ [ImpuestosDiferidosPage] AID final jubilación: esperado "200.00" → actual "200.00"
+✓ [ImpuestosDiferidosPage] AID final desahucio: esperado "100.00" → actual "100.00"
+✓ [ImpuestosDiferidosPage] Tipo de impuesto: esperado "estandar" → actual "estandar"
+✓ [ImpuestosDiferidosPage] Tasa de impuesto: esperado "25%" → actual "25%"
+✅ [ImpuestosDiferidosPage] TODOS LOS DATOS DEL RESUMEN VALIDADOS CORRECTAMENTE
+✅ [VerifyStep5Summary] Resumen de datos validado correctamente
+ℹ️  [ImpuestosDiferidosPage] Confirmando detalles de facturación
+✅ [ImpuestosDiferidosPage] Detalles de facturación confirmados
+✅ [VerifyStep5Summary] Paso 5 completado
+
+📍 Paso 6: Confirmando pedido
+ℹ️  [ConfirmarPedidoStep] MODO MOCK: armando interceptación antes de hacer clic en "Confirmar pedido"
+
+======================================================================
+🎯 ARMANDO INTERCEPTACIÓN DE ENDPOINTS (MOCKOON-STYLE)
+======================================================================
+   • ingresarPedido: [object Object]
+   • workflowEstado: [object Object]
+   • paso6: [object Object]
+   • upsertDocumento: [object Object]
+   • consultarVentaEfectiva: [object Object]
+======================================================================
+
+✅ [ImpuestosDiferidosWorkflow] 🟢 MOCK ACTIVO: interceptando los endpoints del paso "Confirmar pedido"
+ℹ️  [ImpuestosDiferidosWorkflow]    1) POST workflow/ingresar-pedido
+ℹ️  [ImpuestosDiferidosWorkflow]    2) PUT  firestore/upsert/paso6
+ℹ️  [ImpuestosDiferidosWorkflow]    3) GET  workflow/status (catch-all → SUCCEEDED)
+ℹ️  [ImpuestosDiferidosWorkflow]    4) PUT  firestore/upsert/{docId}
+ℹ️  [ImpuestosDiferidosWorkflow]    5) GET  salesforce/consultar_venta_efectiva/{procesoId}
+✅ [ImpuestosDiferidosWorkflow] Rutas de interceptación registradas
+ℹ️  [ImpuestosDiferidosPage] Buscando botón "Confirmar pedido" en Paso 6
+👆 [ImpuestosDiferidosPage] click: Confirmar pedido
+📋 [ImpuestosDiferidosWorkflow] ID de documento capturado del flujo
+{
+  "reportDocumentId": "16tUB8b065NQaRbzskt2"
+}
+ℹ️  [ImpuestosDiferidosWorkflow] 🟢 [MOCK] Respondido por el mock: PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/16tUB8b065NQaRbzskt2
+ℹ️  [ImpuestosDiferidosWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/16tUB8b065NQaRbzskt2 -> 200
+✅ [ImpuestosDiferidosPage] Botón "Confirmar pedido" clickeado
+ℹ️  [ImpuestosDiferidosWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso5 -> 200
+ℹ️  [ImpuestosDiferidosWorkflow] [NET] POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/query/custom -> 200
+ℹ️  [ImpuestosDiferidosWorkflow] [NET] POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/query/custom -> 200
+ℹ️  [ImpuestosDiferidosWorkflow] 🟢 [MOCK] Respondido por el mock: POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/ingresar-pedido
+ℹ️  [ImpuestosDiferidosWorkflow] [NET] POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/ingresar-pedido -> 200
+ℹ️  [ImpuestosDiferidosWorkflow] 🟢 [MOCK] Respondido por el mock: PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso6
+ℹ️  [ImpuestosDiferidosWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso6 -> 200
+ℹ️  [ImpuestosDiferidosWorkflow] Interceptado (workflow estado): GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/status?name=projects%2F72574958900%2Flocations%2Fus-central1%2Fworkflows%2Fwf_creacion_pedido_estandar_stage%2Fexecutions%2F993d5986-e449-44d8-90da-e316b0a1396b
+ℹ️  [ImpuestosDiferidosWorkflow] 🟢 [MOCK] Respondido por el mock: GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/status?name=projects%2F72574958900%2Flocations%2Fus-central1%2Fworkflows%2Fwf_creacion_pedido_estandar_stage%2Fexecutions%2F993d5986-e449-44d8-90da-e316b0a1396b
+ℹ️  [ImpuestosDiferidosWorkflow] [NET] GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/status?name=projects%2F72574958900%2Flocations%2Fus-central1%2Fworkflows%2Fwf_creacion_pedido_estandar_stage%2Fexecutions%2F993d5986-e449-44d8-90da-e316b0a1396b -> 200
+ℹ️  [ImpuestosDiferidosWorkflow] 🟢 [MOCK] Respondido por el mock: PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso6
+ℹ️  [ImpuestosDiferidosWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso6 -> 200
+📋 [ImpuestosDiferidosWorkflow] ID de documento capturado del flujo
+{
+  "reportDocumentId": "16tUB8b065NQaRbzskt2"
+}
+ℹ️  [ImpuestosDiferidosWorkflow] 🟢 [MOCK] Respondido por el mock: PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/16tUB8b065NQaRbzskt2
+
+======================================================================
+🎯 📡 ENDPOINTS INTERCEPTADOS (MOCKOON-STYLE)
+======================================================================
+   • total: 4
+======================================================================
+
+
+======================================================================
+🎯 ▶ POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/ingresar-pedido
+======================================================================
+   • status: 200
+   • response: [object Object]
+======================================================================
+
+
+======================================================================
+🎯 ▶ GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/status?name=projects%2F72574958900%2Flocations%2Fus-central1%2Fworkflows%2Fwf_creacion_pedido_estandar_stage%2Fexecutions%2F993d5986-e449-44d8-90da-e316b0a1396b
+======================================================================
+   • status: 200
+   • response: [object Object]
+======================================================================
+
+
+======================================================================
+🎯 ▶ PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso6
+======================================================================
+   • status: 200
+   • response: [object Object]
+======================================================================
+
+
+======================================================================
+🎯 ▶ PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/16tUB8b065NQaRbzskt2
+======================================================================
+   • status: 200
+   • response: [object Object]
+======================================================================
+
+ℹ️  [ConfirmarPedidoStep] Verificando pantalla final de confirmación
+ℹ️  [ImpuestosDiferidosPage] Verificando pantalla final de confirmación del pedido
+ℹ️  [ImpuestosDiferidosWorkflow] [NET] PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/16tUB8b065NQaRbzskt2 -> 200
+ℹ️  [ImpuestosDiferidosWorkflow] 🟢 [MOCK] Respondido por el mock: GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/salesforce/consultar_venta_efectiva/704785
+✅ [ImpuestosDiferidosPage] Confirmación del pedido visible - fecha de entrega / proceso / valoración
+✅ [ConfirmarPedidoStep] Confirmación del pedido verificada
+📊 [ConfirmarPedidoStep] Endpoints interceptados: 5 de los esperados
+✅ [ConfirmarPedidoStep] Pedido confirmado - endpoints interceptados correctamente
+
+✅ ✅ ✅ [ImpuestosDiferidosWorkflow] ✅ FLUJO COMPLETO DE IMPUESTOS DIFERIDOS FINALIZADO EXITOSAMENTE
+
+
+======================================================================
+🎯 RESUMEN DE EJECUCIÓN
+======================================================================
+   • pasos: 6 pasos completados (con confirmación de pedido)
+   • saldosContables: Manual/Sin saldos
+   • plantillaDescargada: No
+   • tasaImpositiva: Estándar
+======================================================================
+
+✅ [TC02] Solicitud de Impuestos Diferidos completada
+
+✅ ✅ ✅ [TC02] TC02 finalizado exitosamente
+
+
+ℹ️  4 non-blocking error(s) ignored by filter.
+
+📋 3 console message(s) logged to stderr
+ℹ️  [ImpuestosDiferidosWorkflow] [NET] GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/salesforce/consultar_venta_efectiva/704785 -> 200
