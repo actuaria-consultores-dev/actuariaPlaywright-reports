@@ -1,0 +1,284 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: specs/Simulador/proyeccionReservasDemo.test.ts >> Proyección de Reservas (DEMO) - Simulador de Beneficios >> Proyección de Reservas (DEMO) | [HP] | TC_PR01: Verificar vista por defecto de Proyección de Reservas @daily
+- Location: tests/specs/Simulador/proyeccionReservasDemo.test.ts:59:5
+
+# Error details
+
+```
+Error: [SimuladorPage] Heading "Evolución de reserva por" not found using any matching strategy. Tried: heading role, exact text, partial text, and broad word matching.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f1e2]:
+  - generic [ref=f1e3]:
+    - banner [ref=f1e4]:
+      - generic [ref=f1e6]:
+        - button "Notificaciones" [ref=f1e7] [cursor=pointer]:
+          - generic [ref=f1e8]: "0"
+        - button [ref=f1e11] [cursor=pointer]:
+          - img "image" [ref=f1e12]
+          - paragraph [ref=f1e13]: DEMOGRAFIX S.A.
+    - complementary [ref=f1e16]:
+      - generic [ref=f1e17]:
+        - link [ref=f1e18] [cursor=pointer]:
+          - /url: /dashboard
+          - img "Actuaria" [ref=f1e19]
+        - button "abrir/cerrar menú" [ref=f1e20] [cursor=pointer]
+      - generic [ref=f1e25]:
+        - textbox "Buscar..." [ref=f1e29]
+        - group
+      - list [ref=f1e31]:
+        - button "Inicio" [ref=f1e32] [cursor=pointer]
+        - list [ref=f1e38]:
+          - listitem [ref=f1e39]: Panel General
+          - generic [ref=f1e40]:
+            - button "Simulador de beneficios post empleo" [ref=f1e41] [cursor=pointer]
+            - link "Crear pasivo laboral" [ref=f1e55] [cursor=pointer]:
+              - /url: /dashboard/pasivo-laboral/simulador
+      - generic [ref=f1e62]:
+        - paragraph [ref=f1e63]: Actuaria+ Stage
+        - paragraph [ref=f1e64]: soporteplus@actuaria.com
+        - generic [ref=f1e65]: v 1.11.3
+    - generic [ref=f1e70]:
+      - generic [ref=f1e71]:
+        - heading "Hola, Rodrigo" [level=1] [ref=f1e72]
+        - paragraph [ref=f1e73]: "Sesión anterior: hoy, 11:05 · hace 57 segundos"
+      - generic [ref=f1e74]:
+        - button "Inicio" [ref=f1e75] [cursor=pointer]
+        - button "Estudio actuarial" [ref=f1e77] [cursor=pointer]
+        - button "Impuestos diferidos" [ref=f1e79] [cursor=pointer]
+        - button "Actas de jubilación" [ref=f1e81] [cursor=pointer]
+        - button "Control tributario" [ref=f1e83] [cursor=pointer]
+        - button "Simulador de beneficios" [ref=f1e85] [cursor=pointer]
+        - button "NavIA ᴮᵉᵗᵃ" [ref=f1e87] [cursor=pointer]
+      - separator [ref=f1e89]
+      - banner [ref=f1e90]:
+        - generic [ref=f1e93]:
+          - generic [ref=f1e94]:
+            - heading "Proyección de reservas por obligaciones patronales" [level=4] [ref=f1e95]
+            - paragraph [ref=f1e96]: Revisa la proyección de reservas por obligaciones patronales y filtra la información que necesites.
+          - 'heading "DATOS: 0 personas" [level=6] [ref=f1e98]'
+      - tablist "dashboard tabs" [ref=f1e102]:
+        - tab "Proyección de reservas" [active] [selected] [ref=f1e103] [cursor=pointer]
+        - tab "Proyección de pagos" [ref=f1e104] [cursor=pointer]
+      - iframe [ref=f1e111]:
+        
+  - link "Escríbenos a WhatsApp" [ref=f1e112] [cursor=pointer]:
+    - /url: https://wa.me/593979133351/?text=Hola+Actuaria,+tengo+novedades+sobre+el+Portal+de+Clientes
+```
+
+# Test source
+
+```ts
+  208 | 	 * row in the DOM) and waits for each option to be available before clicking.
+  209 | 	 */
+  210 | 	async applyFilters(filters: SimuladorFilters) {
+  211 | 		if (filters.año) {
+  212 | 			await this.selectFilterOption('Año', filters.año, false);
+  213 | 		}
+  214 | 
+  215 | 		if (filters.nombre) {
+  216 | 			await this.selectFilterOption('Nombre', filters.nombre, false);
+  217 | 		}
+  218 | 
+  219 | 		if (filters.tiempoServicio) {
+  220 | 			await this.selectFilterOption('Tiempo de servicio', filters.tiempoServicio, true);
+  221 | 		}
+  222 | 
+  223 | 		if (filters.beneficio) {
+  224 | 			await this.selectFilterOption('Beneficio', filters.beneficio, true);
+  225 | 		}
+  226 | 
+  227 | 		if (filters.rangoSalarial) {
+  228 | 			await this.selectFilterOption('Rango salarial', filters.rangoSalarial, true);
+  229 | 		}
+  230 | 
+  231 | 		await this.btnAplicarFiltros.first().click({ timeout: SLOW_ACTION_TIMEOUT_MS });
+  232 | 	}
+  233 | 
+  234 | 	/**
+  235 | 	 * Open the (visible) filter combobox, select the requested option and close
+  236 | 	 * the popup. Multi-select filters render options with a checkbox inside.
+  237 | 	 */
+  238 | 	private async selectFilterOption(comboLabel: string, value: string, checkbox: boolean) {
+  239 | 		// The filter row is mounted only after the projection finishes calculating.
+  240 | 		await this.waitForFiltersReady(comboLabel);
+  241 | 
+  242 | 		const combo = await this.visibleFilterCombobox(comboLabel);
+  243 | 		if (!combo) {
+  244 | 			throw new Error(`Filter combobox "${comboLabel}" not found on page`);
+  245 | 		}
+  246 | 		await combo.click({ timeout: ACTION_TIMEOUT_MS });
+  247 | 		await this.page.waitForTimeout(400);
+  248 | 
+  249 | 		const option = this.page.getByRole('option', { name: value }).first();
+  250 | 		const target = checkbox ? option.getByRole('checkbox') : option;
+  251 | 		await target.waitFor({ state: 'visible', timeout: 7000 }).catch(async () => {
+  252 | 			const available = await this.page.getByRole('option').allTextContents();
+  253 | 			throw new Error(`Filter ${comboLabel} "${value}" not found. Available options: ${available.join(', ')}`);
+  254 | 		});
+  255 | 		await target.click({ timeout: ACTION_TIMEOUT_MS });
+  256 | 		await this.page.keyboard.press('Escape');
+  257 | 		await this.page.waitForTimeout(400);
+  258 | 	}
+  259 | 
+  260 | 				/**
+  261 | 	 * Verify heading is visible (default timeout).
+  262 | 	 * First tries getByRole('heading'), then falls back to getByText
+  263 | 	 * for elements rendered as plain text instead of heading tags.
+  264 | 	 * Handles truncated text (e.g., "Total pagos vs tiempo de" instead of
+  265 | 	 * "Total pagos vs tiempo de servicio") by trying progressively shorter
+  266 | 	 * versions of the heading text.
+  267 | 	 */
+  268 | 	async verifyHeading(headingText: string, exact: boolean = false) {
+  269 | 		const headingLocator = this.page.getByRole('heading', { name: headingText, exact });
+  270 | 
+  271 | 		try {
+  272 | 			await expect(headingLocator.first()).toBeVisible({ timeout: 15000 });
+  273 | 			return;
+  274 | 		} catch {
+  275 | 			// Fallback 1: try getByText with exact match first (fast check)
+  276 | 			const textLocator = this.page.getByText(headingText, { exact });
+  277 | 			const count = await textLocator.count();
+  278 | 			if (count > 0) {
+  279 | 				await expect(textLocator.first()).toBeVisible({ timeout: 10000 });
+  280 | 				return;
+  281 | 			}
+  282 | 
+  283 | 			// Fallback 2: text may be truncated in the DOM (e.g., "servicio" clipped)
+  284 | 			// Try matching progressively shorter versions by removing last word
+  285 | 			const words = headingText.split(' ');
+  286 | 			for (let i = words.length - 1; i >= Math.max(2, words.length - 2); i--) {
+  287 | 				const partial = words.slice(0, i).join(' ');
+  288 | 				const partialLocator = this.page.getByText(partial, { exact: false });
+  289 | 				const partialCount = await partialLocator.count();
+  290 | 				if (partialCount > 0) {
+  291 | 					await expect(partialLocator.first()).toBeVisible({ timeout: 15000 });
+  292 | 					return;
+  293 | 				}
+  294 | 			}
+  295 | 
+  296 | 			// Fallback 3: broad match on first 3+ significant words
+  297 | 			const significantWords = words.filter(w => w.length > 2);
+  298 | 			if (significantWords.length >= 3) {
+  299 | 				const broadText = significantWords.slice(0, 3).join(' ');
+  300 | 				const broadLocator = this.page.getByText(broadText, { exact: false });
+  301 | 				const broadCount = await broadLocator.count();
+  302 | 				if (broadCount > 0) {
+  303 | 					await expect(broadLocator.first()).toBeVisible({ timeout: 20000 });
+  304 | 					return;
+  305 | 				}
+  306 | 			}
+  307 | 
+> 308 | 			throw new Error(
+      |          ^ Error: [SimuladorPage] Heading "Evolución de reserva por" not found using any matching strategy. Tried: heading role, exact text, partial text, and broad word matching.
+  309 | 				`[SimuladorPage] Heading "${headingText}" not found using any matching strategy. ` +
+  310 | 				`Tried: heading role, exact text, partial text, and broad word matching.`
+  311 | 			);
+  312 | 		}
+  313 | 	}
+  314 | 
+  315 | 	/**
+  316 | 	 * Verify text is visible within a scoped section (default timeout).
+  317 | 	 * Falls back to partial heading match if exact match finds no section.
+  318 | 	 * Also falls back to getByText if the heading is not rendered as a heading role.
+  319 | 	 * Prints diagnostics (available headings, section contents) on failure.
+  320 | 	 */
+  321 | 	async verifyTextInSection(sectionHeading: string, text: string, exact: boolean = false) {
+  322 | 		// --- 1. Locate the section div ---
+  323 | 		let sectionFilter = this.page
+  324 | 			.locator('div')
+  325 | 			.filter({ has: this.page.getByRole('heading', { name: sectionHeading, exact: true }) });
+  326 | 
+  327 | 		// If exact heading match finds nothing, fall back to partial / case-insensitive match
+  328 | 		if ((await sectionFilter.count()) === 0) {
+  329 | 			sectionFilter = this.page
+  330 | 				.locator('div')
+  331 | 				.filter({ has: this.page.getByRole('heading', { name: sectionHeading, exact: false }) });
+  332 | 		}
+  333 | 
+  334 | 		// If still nothing, fall back to getByText (elements rendered as plain text, not heading tags)
+  335 | 		if ((await sectionFilter.count()) === 0) {
+  336 | 			sectionFilter = this.page
+  337 | 				.locator('div')
+  338 | 				.filter({ has: this.page.getByText(sectionHeading) });
+  339 | 		}
+  340 | 
+  341 | 		// If still nothing, report all headings and text visible on the page
+  342 | 		if ((await sectionFilter.count()) === 0) {
+  343 | 			const allHeadings = await this.page.getByRole('heading').allTextContents();
+  344 | 			throw new Error(
+  345 | 				`[SimuladorPage] Section with heading "${sectionHeading}" not found on page.\n` +
+  346 | 				`Available headings: ${JSON.stringify(allHeadings)}`
+  347 | 			);
+  348 | 		}
+  349 | 
+  350 | 		// Use the most specific (innermost) match for the section — last() is typically the card itself
+  351 | 		const section = sectionFilter.last();
+  352 | 		
+  353 | 		// --- 2. Try generic text locator within the section with retry and auto-scroll ---
+  354 | 		const anyLocator = section.getByText(text, { exact });
+  355 | 		
+  356 | 		try {
+  357 | 			// Use expect which will retry automatically for up to 15 seconds
+  358 | 			// And Playwright automatically scrolls into view when element is actionable
+  359 | 			await expect(anyLocator.first()).toBeVisible({ timeout: 15000 });
+  360 | 			return;
+  361 | 		} catch (e) {
+  362 | 			// Text still not found after retrying
+  363 | 			// Try to get section content for diagnostics
+  364 | 			let sectionText = 'unknown';
+  365 | 			try {
+  366 | 				await section.scrollIntoViewIfNeeded();
+  367 | 				sectionText = await section.textContent() || '<empty>';
+  368 | 			} catch {
+  369 | 				sectionText = '<unable to read section>';
+  370 | 			}
+  371 | 			
+  372 | 			throw new Error(
+  373 | 				`[SimuladorPage] Text "${text}" not found inside section "${sectionHeading}".\n` +
+  374 | 				`Section content:\n${sectionText}`
+  375 | 			);
+  376 | 		}
+  377 | 	}
+  378 | 
+  379 | 	/**
+  380 | 	 * Parse a display value string into a plain number.
+  381 | 	 * Handles: "$134,2" → 134.2 | "17.6%" → 17.6 | "$21,7K" → 21700 | "$5,25M" → 5250000 | "$700,0K" → 700000 | "40.9" → 40.9
+  382 | 	 */
+  383 | 	private parseDisplayValue(text: string): number | null {
+  384 | 		// Strip currency symbol, percentage, spaces — but NOT commas (they are decimal separators)
+  385 | 		let cleaned = text.replace(/[$%\s]/g, '');
+  386 | 		// Determine multiplier from suffix before removing it
+  387 | 		const multiplier = /[Kk]$/.test(cleaned) ? 1_000 : /[Mm]$/.test(cleaned) ? 1_000_000 : 1;
+  388 | 		// Remove K/M suffix, then convert comma-as-decimal to dot
+  389 | 		cleaned = cleaned.replace(/[KkMm]$/, '').replace(/,/g, '.');
+  390 | 		const num = parseFloat(cleaned);
+  391 | 		return isNaN(num) ? null : num * multiplier;
+  392 | 	}
+  393 | 
+  394 | 	/**
+  395 | 	 * Verify a numeric value in a scoped section within a tolerance (default ±5%).
+  396 | 	 * Parses the expected display value, reads all lines from the section,
+  397 | 	 * and passes if any line represents a number within the tolerance band.
+  398 | 	 * Falls back to exact text search if the expected value is not numeric.
+  399 | 	 */
+  400 | 	async verifyNumericValueInSection(sectionHeading: string, expectedText: string, tolerancePercent: number = NUMERIC_TOLERANCE_PERCENT) {
+  401 | 		const expectedNum = this.parseDisplayValue(expectedText);
+  402 | 
+  403 | 		// Not a numeric value — delegate to the regular text check
+  404 | 		if (expectedNum === null) {
+  405 | 			await this.verifyTextInSection(sectionHeading, expectedText, false);
+  406 | 			return;
+  407 | 		}
+  408 | 
+```

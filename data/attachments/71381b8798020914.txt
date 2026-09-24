@@ -1,0 +1,292 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: specs/ImpuestosDiferidos/crearImpuestosDif.test.ts >> Verificar creacion de Impuestos Diferidos >> Impuestos Diferidos | [HP] | TC02: Usuario puede mandar solicitud de Impuestos Diferidos @daily
+- Location: tests/specs/ImpuestosDiferidos/crearImpuestosDif.test.ts:138:2
+
+# Error details
+
+```
+TimeoutError: locator.check: Timeout 15000ms exceeded.
+Call log:
+  - waiting for getByLabel('No', { exact: true })
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f1e2]:
+  - generic [ref=f1e3]:
+    - banner [ref=f1e4]:
+      - generic [ref=f1e6]:
+        - button "Notificaciones" [ref=f1e7] [cursor=pointer]:
+          - generic [ref=f1e8]: "0"
+        - button [ref=f1e11] [cursor=pointer]:
+          - img "image" [ref=f1e12]
+          - paragraph [ref=f1e13]: DEMOGRAFIX S.A.
+    - complementary [ref=f1e16]:
+      - generic [ref=f1e17]:
+        - link [ref=f1e18] [cursor=pointer]:
+          - /url: /dashboard
+          - img "Actuaria" [ref=f1e19]
+        - button "abrir/cerrar menú" [ref=f1e20] [cursor=pointer]
+      - generic [ref=f1e25]:
+        - textbox "Buscar..." [ref=f1e29]
+        - group
+      - list [ref=f1e31]:
+        - button "Inicio" [ref=f1e32] [cursor=pointer]
+        - list [ref=f1e38]:
+          - listitem [ref=f1e39]: Panel General
+          - generic [ref=f1e40]:
+            - button "Informe de impuestos diferidos" [ref=f1e41] [cursor=pointer]
+            - generic [ref=f1e52]:
+              - link "Listado de informes" [ref=f1e53] [cursor=pointer]:
+                - /url: /dashboard/impuestos-diferidos/mis-informes-nic12
+              - link "Nuevo informe" [ref=f1e59] [cursor=pointer]:
+                - /url: /dashboard/impuestos-diferidos/nueva-nic12
+      - generic [ref=f1e66]:
+        - paragraph [ref=f1e67]: Actuaria+ Stage
+        - paragraph [ref=f1e68]: soporteplus@actuaria.com
+        - generic [ref=f1e69]: v 1.11.3
+    - generic [ref=f1e74]:
+      - generic [ref=f1e75]:
+        - heading "Hola, Rodrigo" [level=1] [ref=f1e76]
+        - paragraph [ref=f1e77]: "Sesión anterior: hoy, 11:05 · hace 1 minuto"
+      - generic [ref=f1e78]:
+        - button "Inicio" [ref=f1e79] [cursor=pointer]
+        - button "Estudio actuarial" [ref=f1e81] [cursor=pointer]
+        - button "Impuestos diferidos" [ref=f1e83] [cursor=pointer]
+        - button "Actas de jubilación" [ref=f1e85] [cursor=pointer]
+        - button "Control tributario" [ref=f1e87] [cursor=pointer]
+        - button "Simulador de beneficios" [ref=f1e89] [cursor=pointer]
+        - button "NavIA ᴮᵉᵗᵃ" [ref=f1e91] [cursor=pointer]
+      - separator [ref=f1e93]
+      - generic [ref=f1e94]:
+        - generic [ref=f1e95]:
+          - generic [ref=f1e97]:
+            - heading "Solicitud de impuestos diferidos" [level=4] [ref=f1e98]
+            - paragraph [ref=f1e99]: Completa los pasos para solicitar tu informe de impuestos diferidos.
+          - paragraph [ref=f1e101]: Paso 3 de 6
+          - button [ref=f1e110] [cursor=pointer]
+        - generic [ref=f1e117]:
+          - progressbar [ref=f1e118]
+          - paragraph [ref=f1e121]: Cargando saldos contables...
+        - generic [ref=f1e122]:
+          - button "Regresar" [ref=f1e123] [cursor=pointer]
+          - button "Continuar" [disabled]
+  - link "Escríbenos a WhatsApp" [ref=f1e124] [cursor=pointer]:
+    - /url: https://wa.me/593979133351/?text=Hola+Actuaria,+tengo+novedades+sobre+el+Portal+de+Clientes
+```
+
+# Test source
+
+```ts
+  144 | 			// Dropdown might already be closed, continue
+  145 | 		}
+  146 | 		await this.page.waitForTimeout(300);
+  147 | 		await this.page.getByRole('option', { name: year }).click({ timeout: ACTION_TIMEOUT_MS });
+  148 | 		this.pageLogger.exito(`Año ${year} seleccionado`);
+  149 | 	}
+  150 | 
+  151 | 	/**
+  152 | 	 * Wait for form to be ready after an error (for error recovery scenarios)
+  153 | 	 * This helps with intermittent backend errors by ensuring the page state is stable
+  154 | 	 */
+  155 | 	async waitForFormReady(timeout: number = 10000) {
+  156 | 		this.pageLogger.info('Esperando a que el formulario esté listo para interacción');
+  157 | 		try {
+  158 | 			// Wait for the year dropdown to be visible
+  159 | 			await this.page.getByLabel('Open').waitFor({ state: 'visible', timeout });
+  160 | 			// Small additional wait for any animations or state updates
+  161 | 			await this.page.waitForTimeout(500);
+  162 | 			this.pageLogger.exito('Formulario listo para continuar');
+  163 | 		} catch (e) {
+  164 | 			this.pageLogger.advertencia('Timeout esperando formulario, continuando con precaución');
+  165 | 		}
+  166 | 	}
+  167 | 
+  168 | 	/**
+  169 | 	 * Recover from error state by ensuring page is ready
+  170 | 	 * Used when recovering from a failed year selection
+  171 | 	 * Includes page reload if necessary to clear bad state
+  172 | 	 */
+  173 | 	async recoverFromError(shouldReload: boolean = false) {
+  174 | 		this.pageLogger.info('Iniciando recuperación de error');
+  175 | 		// Wait a bit for any error modal/message to settle
+  176 | 		await this.page.waitForTimeout(800);
+  177 | 		
+  178 | 		// Check if there's an error close button and click it if exists
+  179 | 		const closeButtons = this.page.getByRole('button', { name: /close|cerrar|dismiss/i });
+  180 | 		const count = await closeButtons.count();
+  181 | 		if (count > 0) {
+  182 | 			try {
+  183 | 				await closeButtons.first().click({ timeout: 3000 });
+  184 | 				this.pageLogger.info('Botón de cerrar error clickeado');
+  185 | 			} catch (e) {
+  186 | 				this.pageLogger.advertencia('No se pudo cerrar el error');
+  187 | 			}
+  188 | 		}
+  189 | 		
+  190 | 		// If shouldReload is true, reload with domcontentloaded (faster than networkidle)
+  191 | 		if (shouldReload) {
+  192 | 			this.pageLogger.info('Recargando página para limpiar estado de error');
+  193 | 			try {
+  194 | 				// Use domcontentloaded instead of networkidle to avoid hanging on unstable backends
+  195 | 				await this.page.reload({ waitUntil: 'domcontentloaded' });
+  196 | 				await this.page.waitForTimeout(1000); // Additional wait for page to stabilize
+  197 | 				this.pageLogger.info('Página recargada');
+  198 | 				
+  199 | 				// Navigate back to Impuestos Diferidos
+  200 | 				await this.navigateToImpuestosDiferidos();
+  201 | 				this.pageLogger.exito('Página recargada y re-navegada');
+  202 | 			} catch (e) {
+  203 | 				this.pageLogger.advertencia(`Error durante recarga: ${e}. Continuando sin recarga.`);
+  204 | 				// Don't fail, just continue
+  205 | 			}
+  206 | 		} else {
+  207 | 			// Wait for form to be ready after error recovery
+  208 | 			await this.waitForFormReady();
+  209 | 		}
+  210 | 		
+  211 | 		this.pageLogger.exito('Recuperación completada');
+  212 | 	}
+  213 | 
+  214 | 	/**
+  215 | 	 * Click the Continue button
+  216 | 	 */
+  217 | 	async clickContinue() {
+  218 | 		await this.continueButton.click({ timeout: SLOW_ACTION_TIMEOUT_MS });
+  219 | 		await this.page.waitForTimeout(1000); // Small wait for navigation
+  220 | 	}
+  221 | 
+  222 | 	async noClickContinueActive() {
+  223 | 		await expect(this.continueButton).not.toBeEnabled();
+  224 | 	}
+  225 | 	/**
+  226 | 	 * Select the first available reason in Step 2
+  227 | 	 */
+  228 | 	async selectFirstReason(timeout: number = 10000) {
+  229 | 		this.pageLogger.info('Seleccionando razón del estudio');
+  230 | 		this.pageLogger.info('Realizando scroll al fondo de la página');
+  231 | 		await this.page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  232 | 		this.pageLogger.exito('Scroll al fondo completado - página completamente visible');
+  233 | 		await this.page.waitForTimeout(5000); // Small wait for page to stabilize after scroll
+  234 | 		await this.selectRation.click({ timeout });
+  235 | 		this.pageLogger.exito('Estudio disponible seleccionado');
+  236 | 	}
+  237 | 
+  238 | 	/**
+  239 | 	 * Configure accounting balances - Manual entry (No saldos)
+  240 | 	 */
+  241 | 	async enterManualBalances(jubilacion: string, desahucio: string, authorize: boolean = true) {
+  242 | 		this.pageLogger.info('Ingresando saldos contables manualmente');
+  243 | 		
+> 244 | 		await this.noSaldosRatio.check({ timeout: ACTION_TIMEOUT_MS });
+      |                            ^ TimeoutError: locator.check: Timeout 15000ms exceeded.
+  245 | 		this.pageLogger.exito('Seleccionado: No (ingreso manual)');
+  246 | 		
+  247 | 		// Wait for form fields to appear after selecting "No"
+  248 | 		await this.page.waitForTimeout(1000);
+  249 | 
+  250 | 		// Handle authorization checkbox
+  251 | 		if (authorize) {
+  252 | 			// Use force: true for Material-UI checkbox or check the current state first
+  253 | 			const isChecked = await this.authorizeCheckbox.isChecked();
+  254 | 			if (!isChecked) {
+  255 | 				await this.authorizeCheckbox.click({timeout:6000});
+  256 | 			}
+  257 | 			this.pageLogger.exito('Estimación autorizada (checkbox marcado)');
+  258 | 		} else {
+  259 | 			// Use force: true for Material-UI checkbox or check the current state first
+  260 | 			const isChecked = await this.authorizeCheckbox.isChecked();
+  261 | 			if (isChecked) {
+  262 | 				await this.authorizeCheckbox.click({timeout:6000});
+  263 | 			}
+  264 | 			this.pageLogger.advertencia('Estimación NO autorizada (checkbox desmarcado)');
+  265 | 		}
+  266 | 		
+  267 | 		await this.aidFinalJubilacion.click({ timeout: ACTION_TIMEOUT_MS });
+  268 | 		await this.aidFinalJubilacion.fill(jubilacion, { timeout: ACTION_TIMEOUT_MS });
+  269 | 		this.pageLogger.info(`AID Final Jubilación: ${jubilacion}`);
+  270 | 		
+  271 | 		await this.aidFinalDesahucio.click({ timeout: ACTION_TIMEOUT_MS });
+  272 | 		await this.aidFinalDesahucio.fill(desahucio, { timeout: ACTION_TIMEOUT_MS });
+  273 | 		this.pageLogger.info(`AID Final Desahucio: ${desahucio}`);
+  274 | 		
+  275 | 		
+  276 | 		// Wait for page to update continue button state
+  277 | 		await this.page.waitForTimeout(500);
+  278 | 		
+  279 | 		this.pageLogger.exito('Saldos manuales ingresados');
+  280 | 	}
+  281 | 
+  282 | 	/**
+  283 | 	 * Select "Si" option for accounting balances (used before file upload or plantilla download)
+  284 | 	 * Does NOT upload the file - just selects the "Si" radio button
+  285 | 	 * This action makes the download button and file upload controls visible
+  286 | 	 */
+  287 | 	async selectYesSaldos() {
+  288 | 		this.pageLogger.info('Seleccionando opción "Sí tengo saldos contables"...');
+  289 | 		this.pageLogger.info('Acción: Hace visible el botón "Descargar Plantilla" y controles de carga');
+  290 | 		await this.yesSaldosRatio.check({ timeout: 10000 });
+  291 | 		this.pageLogger.exito('✅ Opción "Sí" seleccionada - Botón de descarga y controles de carga están ahora disponibles');
+  292 | 	}
+  293 | 
+  294 | 	/**
+  295 | 	 * Enter manual balances with authorization but leave fields empty
+  296 | 	 * Used to test empty field validation (TC17)
+  297 | 	 */
+  298 | 	async enterEmptyBalancesWithAuthorization() {
+  299 | 		this.pageLogger.info('Configurando formulario con campos vacíos');
+  300 | 		
+  301 | 		await this.noSaldosRatio.check({ timeout: ACTION_TIMEOUT_MS });
+  302 | 		this.pageLogger.exito('Seleccionado: No (ingreso manual)');
+  303 | 		
+  304 | 		// Wait for form fields to appear after selecting "No"
+  305 | 		await this.page.waitForTimeout(1000);
+  306 | 
+  307 | 		// Check authorization checkbox
+  308 | 		const isChecked = await this.authorizeCheckbox.isChecked();
+  309 | 		if (!isChecked) {
+  310 | 			await this.authorizeCheckbox.click({timeout:6000});
+  311 | 		}
+  312 | 		this.pageLogger.exito('Estimación autorizada (checkbox marcado)');
+  313 | 		
+  314 | 		// Do NOT fill in the balance fields - leave them empty
+  315 | 		this.pageLogger.advertencia('Campos de saldo dejados VACÍOS (sin llenar)');
+  316 | 		this.pageLogger.info('AID Final Jubilación: [VACÍO]');
+  317 | 		this.pageLogger.info('AID Final Desahucio: [VACÍO]');
+  318 | 		
+  319 | 		// Wait for page to update continue button state
+  320 | 		await this.page.waitForTimeout(500);
+  321 | 		
+  322 | 		this.pageLogger.exito('Configuración completada - campos vacíos con autorización');
+  323 | 	}
+  324 | 
+  325 | 	/**
+  326 | 	 * Select "La entidad no registra saldos" option
+  327 | 	 */
+  328 | 	async selectNoSaldosRegistrados() {
+  329 | 		this.pageLogger.info('Seleccionando opción: "La entidad no registra saldos"');
+  330 | 		await this.noSaldosRegistradosRatio.check({ timeout: ACTION_TIMEOUT_MS });
+  331 | 		this.pageLogger.exito('Opción "La entidad no registra saldos" seleccionada');
+  332 | 		
+  333 | 		// Wait for page to process the selection
+  334 | 		await this.page.waitForTimeout(1000);
+  335 | 	}
+  336 | 
+  337 | 	/**
+  338 | 	 * Upload accounting balances file (Sí saldos)
+  339 | 	 * NOTE: Should be called AFTER selectYesSaldos() has been invoked
+  340 | 	 * This method uploads the Excel file containing the actual saldos data to the server
+  341 | 	 */
+  342 | 	async uploadSaldosFile(fileName: string, timeout: number = 150000) {
+  343 | 		const filePath = `./tests/data/documents/${fileName}`;
+  344 | 		this.pageLogger.info(`📤 Iniciando carga de archivo de saldos contables`);
+```
