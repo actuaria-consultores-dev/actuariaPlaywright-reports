@@ -1,0 +1,11 @@
+🎭️ [Mi Cuenta - Tabs Tests] TC02: Verificar navegación directa por URL a cada tab
+🔍 [MiCuentaTabsWorkflows] 🌐 Navegando por URL a: https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/contactos
+📊 [MiCuentaTabsPage] Verificando que tab "Contactos vinculados" esté activo (aria-selected=true)
+✅ [MiCuentaTabsWorkflows] ✅ Navegación directa a "Contactos vinculados" exitosa
+🔍 [MiCuentaTabsWorkflows] 🌐 Navegando por URL a: https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/empresas
+📊 [MiCuentaTabsPage] Verificando que tab "Entidades registradas" esté activo (aria-selected=true)
+✅ [MiCuentaTabsWorkflows] ✅ Navegación directa a "Entidades registradas" exitosa
+🔍 [MiCuentaTabsWorkflows] 🌐 Navegando por URL a: https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/datos
+📊 [MiCuentaTabsPage] Verificando que tab "Datos del usuario" esté activo (aria-selected=true)
+✅ [MiCuentaTabsWorkflows] ✅ Navegación directa a "Datos del usuario" exitosa
+✅ [Mi Cuenta - Tabs Tests] ✓ Navegación directa por URL funciona correctamente

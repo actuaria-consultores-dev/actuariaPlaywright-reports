@@ -1,0 +1,55 @@
+🎭️ [Mi Cuenta Contactos Vinculados Tests] Iniciando sesión con usuario de prueba ACTUARIA6
+🔐 [Mi Cuenta Contactos Vinculados Tests] Ingresando credenciales
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Mi Cuenta Contactos Vinculados Tests] Login exitoso
+🔍 [ContactosVinculadosPage] Navegando a Mi Cuenta / Contactos vinculados
+⚠️  [ContactosVinculadosPage] goto Mi Cuenta / Contactos vinculados interrumpido por el SPA (intento 1/3): page.goto: net::ERR_ABORTED at https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/contactos
+Call log:
+  - navigating to "https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/contactos", waiting until "domcontentloaded"
+
+✅ [ContactosVinculadosPage] Página de Contactos vinculados cargada
+📊 [ContactosVinculadosPage] Verificando pantalla Contactos vinculados
+✅ [ContactosVinculadosPage] Pantalla Contactos vinculados visible
+🎭️ [Mi Cuenta Contactos Vinculados Tests] ========================================
+🎭️ [Mi Cuenta Contactos Vinculados Tests] TC01 - Crear contacto y verificar tarjeta + 3 botones
+🎭️ [Mi Cuenta Contactos Vinculados Tests] ========================================
+
+⚙️  [Mi Cuenta Contactos Vinculados Tests] Datos del contacto a crear:
+   • nombre: QA Auto vndl
+   • apellido: Contacto 7743683vndl
+   • telefono: [OCULTO]
+   • correo: [OCULTO]
+   • cargo: Gerente Legal
+   • tipo: Pagos
+🎭️ [ContactosVinculadosPage] Creando contacto QA Auto vndl Contacto 7743683vndl
+🔄 [ContactosVinculadosPage] Clic en "Agregar contacto"
+🔄 [ContactosVinculadosPage] Llenando formulario de contacto (qa.contacto.7743683vndl@yopmail.com)
+🔄 [ContactosVinculadosPage] Seleccionando cargo "Gerente Legal"
+✅ [ContactosVinculadosPage] Cargo "Gerente Legal" seleccionado
+🔄 [ContactosVinculadosPage] Marcando tipo de contacto "Pagos"
+✅ [ContactosVinculadosPage] Tipo de contacto "Pagos" marcado
+✅ [ContactosVinculadosPage] Formulario de contacto llenado
+🔄 [ContactosVinculadosPage] Clic en "Guardar"
+✅ [ContactosVinculadosPage] Contacto guardado
+✅ [ContactosVinculadosPage] Contacto QA Auto vndl Contacto 7743683vndl creado y visible en la lista
+📊 [ContactosVinculadosPage] Verificando tarjeta de "QA Auto vndl Contacto 7743683vndl"
+✅ [ContactosVinculadosPage] Tarjeta de "QA Auto vndl Contacto 7743683vndl" verificada (3 botones)
+📊 [ContactosVinculadosPage] Verificando detalle de "QA Auto vndl Contacto 7743683vndl"
+✅ [ContactosVinculadosPage] Detalle de "QA Auto vndl Contacto 7743683vndl" verificado: qa.contacto.7743683vndl@yopmail.com | 0924326271 | Gerente Legal
+
+✅ ✅ ✅ [Mi Cuenta Contactos Vinculados Tests] TC01 completado - contacto creado y verificado
+
+🎭️ [ContactosVinculadosPage] Eliminando contacto "QA Auto vndl Contacto 7743683vndl"
+🔄 [ContactosVinculadosPage] Reasignando el tipo de "QA Auto vndl Contacto 7743683vndl" a "Técnico"
+🔄 [ContactosVinculadosPage] Clic en "Editar" para "QA Auto vndl Contacto 7743683vndl"
+🔄 [ContactosVinculadosPage] Clic en "Guardar cambios"
+✅ [ContactosVinculadosPage] Cambios guardados
+✅ [ContactosVinculadosPage] Tipo de "QA Auto vndl Contacto 7743683vndl" reasignado a "Técnico"
+🔄 [ContactosVinculadosPage] Clic en "Eliminar" para "QA Auto vndl Contacto 7743683vndl"
+🔄 [ContactosVinculadosPage] Confirmando eliminación
+✅ [ContactosVinculadosPage] Contacto eliminado
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 4 console message(s) logged to stderr

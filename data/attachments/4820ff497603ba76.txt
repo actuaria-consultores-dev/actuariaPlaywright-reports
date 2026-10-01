@@ -1,0 +1,38 @@
+[LOG] Using Firebase Production Services for environment: stage [3:11:14 PM]
+[LOG] trackEvent view_login {timestamp: 2026-10-01T15:11:16.369Z} [3:11:16 PM]
+❌ CONSOLE ERROR: FirebaseError: Firebase: Cloud function deadline exceeded. (auth/internal-error).
+    at _errorWithCustomMessage (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21450:20)
+    at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21933:23)
+    at async _performSignInRequest (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21951:28)
+    at async createUserWithEmailAnd[OCULTO]
+    at async establecerCuenta (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:57858:30)
+    at async https://act-compass-stage-proj.firebaseapp.com/assets/useAccionConFeedback-v_YBVqoM.js:33:27
+    at async onSubmit (https://act-compass-stage-proj.firebaseapp.com/assets/RegisterForm-Cxc2Vb3Z.js:136:7)
+❌ CONSOLE ERROR: FirebaseError: Firebase: Cloud function deadline exceeded. (auth/internal-error).
+    at _errorWithCustomMessage (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21450:20)
+    at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21933:23)
+    at async _performSignInRequest (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21951:28)
+    at async createUserWithEmailAndPassword (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:26302:22)
+    at async establecerCuenta (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:57858:30)
+    at async https://act-compass-stage-proj.firebaseapp.com/assets/useAccionConFeedback-v_YBVqoM.js:33:27
+    at async onSubmit (https://act-compass-stage-proj.firebaseapp.com/assets/RegisterForm-Cxc2Vb3Z.js:136:7)
+
+⚠️  1 error(s) detected during test execution:
+  1. FirebaseError: Firebase: Cloud function deadline exceeded. (auth/internal-error).
+    at _errorWithCustomMessage (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21450:20)
+    at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21933:23)
+    at async _performSignInRequest (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21951:28)
+    at async createUserWithEmailAndPassword (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:26302:22)
+    at async establecerCuenta (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:57858:30)
+    at async https://act-compass-stage-proj.firebaseapp.com/assets/useAccionConFeedback-v_YBVqoM.js:33:27
+    at async onSubmit (https://act-compass-stage-proj.firebaseapp.com/assets/RegisterForm-Cxc2Vb3Z.js:136:7)
+
+⚠️  1 error(s) detected during test execution:
+  1. FirebaseError: Firebase: Cloud function deadline exceeded. (auth/internal-error).
+    at _errorWithCustomMessage (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21450:20)
+    at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21933:23)
+    at async _performSignInRequest (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21951:28)
+    at async createUserWithEmailAndPassword (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:26302:22)
+    at async establecerCuenta (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:57858:30)
+    at async https://act-compass-stage-proj.firebaseapp.com/assets/useAccionConFeedback-v_YBVqoM.js:33:27
+    at async onSubmit (https://act-compass-stage-proj.firebaseapp.com/assets/RegisterForm-Cxc2Vb3Z.js:136:7)

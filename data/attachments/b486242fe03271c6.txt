@@ -1,0 +1,59 @@
+🎭️ [Simulador Tests (Demo)] Empezando pre condición
+🔐 [Simulador Tests (Demo)] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Simulador Tests (Demo)] Login exitoso
+🔍 [Simulador Tests (Demo)] Verificando navegación a página principal
+✅ [Simulador Tests (Demo)] Navegación exitosa a dashboard
+🎭️ [Simulador Tests (Demo)] TC08 (DEMO)
+🔍 [Simulador Workflows] Navegando a Simulador de beneficios
+✅ [Simulador Workflows] En tab Simulador
+🔄 [Simulador Workflows] Seleccionando Proyección de pagos
+✅ [Simulador Workflows] Proyección de pagos seleccionada
+📊 [Simulador Workflows] Verificando pestañas seleccionadas
+✅ [Simulador Workflows] Pestañas correctamente seleccionadas
+📊 [Simulador Workflows] Aplicando 1 filtro(s)
+✅ [Simulador Workflows] Filtros aplicados correctamente
+📊 [Simulador Workflows] Verificando sección: Valores promedio
+📊 [Simulador Workflows] Texto en sección: Edad
+📊 [Simulador Workflows] Texto en sección: Tiempo de Servicio
+📊 [Simulador Workflows] Texto en sección: Remuneración
+✅ [Simulador Workflows] Sección Valores promedio verificada
+📊 [Simulador Workflows] Verificando sección: Valores Promedio - TS ≥ 20 años
+📊 [Simulador Workflows] Texto en sección: Posible pensión
+📊 [Simulador Workflows] Texto en sección: Tasa de reemplazo
+📊 [Simulador Workflows] Texto en sección: Fondo global
+✅ [Simulador Workflows] Sección Valores Promedio - TS ≥ 20 años verificada
+📊 [Simulador Workflows] Encabezado: Evolución de pagos por beneficio
+📊 [Simulador Workflows] Encabezado: Total pagos vs tiempo de servicio
+📊 [Simulador Workflows] Encabezado: Pagos por persona
+✅ [Simulador Workflows] Todos los encabezados verificados
+📊 [Simulador Workflows] Verificando sección: Valores totales de beneficios
+📊 [Simulador Workflows] Texto en sección: Jubilación
+📊 [Simulador Workflows] Texto en sección: Desahucio
+📊 [Simulador Workflows] Texto en sección: Despido intempestivo
+📊 [Simulador Workflows] Texto en sección: Total pagos
+✅ [Simulador Workflows] Sección Valores totales de beneficios verificada
+📊 [Simulador Workflows] Edad: 62.0
+📊 [Simulador Workflows] Tiempo de Servicio: 37.5
+📊 [Simulador Workflows] Remuneración: $231,8
+✅ [Simulador Workflows] Datos de Valores promedio verificados
+📊 [Simulador Workflows] Posible pensión: $203,2
+📊 [Simulador Workflows] Tasa de reemplazo: 100.0%
+📊 [Simulador Workflows] Fondo global: $22,8K
+✅ [Simulador Workflows] Datos de Valores Promedio - TS ≥ 20 años verificados
+📊 [Simulador Workflows] Jubilación: $448,6K
+📊 [Simulador Workflows] Desahucio: $246
+📊 [Simulador Workflows] Despido intempestivo: $1,5K
+📊 [Simulador Workflows] Total pagos: $450,3K
+✅ [Simulador Workflows] Datos de Valores totales de beneficios verificados
+📊 [Simulador Workflows] Primer elemento canvas
+📊 [Simulador Workflows] Tercer elemento canvas
+✅ [Simulador Workflows] Elementos canvas verificados
+📊 [Simulador Workflows] Gráfico: Gráfica de beneficios vs tiempo de servicio
+✅ [Simulador Workflows] Todos los gráficos verificados
+✅ [Simulador Workflows] TC08-DEMO completado
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 11 console message(s) logged to stderr

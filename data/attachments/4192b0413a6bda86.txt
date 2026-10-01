@@ -1,0 +1,185 @@
+🎭️ [Mi Cuenta Equipo Tests] Iniciando sesión con usuario de prueba
+🔐 [Mi Cuenta Equipo Tests] Ingresando credenciales
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Mi Cuenta Equipo Tests] Login exitoso
+🎭️ [Mi Cuenta Equipo Tests] ========================================
+🎭️ [Mi Cuenta Equipo Tests] INICIANDO TC01-04 - Invitar usuario como administrador
+🎭️ [Mi Cuenta Equipo Tests] ========================================
+ℹ️  [Mi Cuenta Equipo Tests] Timeout configurado: 180s (3 minutos)
+ℹ️  [Mi Cuenta Equipo Tests] Rol a seleccionar: Administrador
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] CREANDO INBOX EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Config: maxRetries=3, baseUrl=https://api.mail.tm
+🔄 [MailTmService] [STAGGER] Esperando 2205ms para evitar rate limiting en API...
+🔄 [MailTmService] --- Intento 1/3 de creación ---
+📊 [MailTmService] Paso 1: Obteniendo dominios disponibles...
+ℹ️  [MailTmService] GET /domains → Status: 200 OK
+ℹ️  [MailTmService] Dominio obtenido: "uberip.com"
+📊 [MailTmService] Paso 2: Creando cuenta: r7t1xpgwmupolvdh@uberip.com
+ℹ️  [MailTmService] POST /accounts → Status: 201 Created
+✅ [MailTmService] Cuenta CREADA exitosamente
+📊 [MailTmService] Paso 3: Obteniendo token de autenticación...
+ℹ️  [MailTmService] POST /token → Status: 200 OK
+✅ [MailTmService] Token obtenido: id="6abe7a62d557..."
+✅ [MailTmService] 🎉 INBOX CREADO EXITOSAMENTE
+🔍 [MailTmService] ========================================
+
+⚙️  [Mi Cuenta Equipo Tests] Email del invitado ADMINISTRADOR generado (Mail.tm):
+   • email: [OCULTO]
+🔍 [Mi Cuenta Equipo Tests] Navegando a /dashboard/portal/mi-cuenta/equipo
+🔍 [EquipoPage] Navegando a Mi Cuenta / Equipo
+✅ [EquipoPage] Página de Equipo cargada
+✅ [Mi Cuenta Equipo Tests] Página de Equipo cargada
+
+📍 Paso 1: Abriendo modal de Invitar usuario
+🔄 [EquipoPage] Haciendo clic en Invitar usuario
+✅ [EquipoPage] Botón Invitar usuario clickeado
+📊 [EquipoPage] Esperando modal Invitar usuario
+✅ [EquipoPage] Modal Invitar usuario visible
+
+📍 Paso 2: Ingresando email del invitado
+🔐 [EquipoPage] Ingresando email del invitado (r7***@[OCULTO])
+✅ [EquipoPage] Email ingresado
+
+📍 Paso 3: Seleccionando rol Administrador
+🔄 [EquipoPage] Seleccionando rol: Administrador
+✅ [EquipoPage] Rol "Administrador" seleccionado
+
+📍 Paso 4: Verificando mensaje "Los administradores tienen"
+✅ [Mi Cuenta Equipo Tests] Mensaje "Los administradores tienen" visible - información de permisos de administrador confirmada
+
+📍 Paso 5: Enviando invitación
+🔄 [EquipoPage] Haciendo clic en Enviar invitación
+✅ [EquipoPage] Invitación enviada
+✅ [Mi Cuenta Equipo Tests] Invitación con rol Administrador enviada
+
+📍 Paso 6: Verificando que el email aparece en la tabla de equipo
+📊 [EquipoPage] Verificando que el email del invitado aparece en la tabla
+✅ [EquipoPage] Email r7t1xpgwmupolvdh@uberip.com encontrado en la tabla
+
+📍 Paso 7: Verificando estado del usuario en la tabla
+📊 [EquipoPage] Verificando estado del usuario invitado = "En espera"
+✅ [EquipoPage] Estado "En espera" verificado para el usuario "r7t1xpgwmupolvdh@uberip.com"
+✅ [Mi Cuenta Equipo Tests] Flujo de invitación como administrador completado exitosamente
+🎭️ [EquipoWorkflows] ========================================
+🎭️ [EquipoWorkflows] VERIFICANDO EMAIL DE INVITACIÓN (MAIL.TM)
+🎭️ [EquipoWorkflows] ========================================
+ℹ️  [EquipoWorkflows] Verificando email de invitación en Mail.tm
+ℹ️  [EquipoWorkflows] Config: maxRetries=20, retryDelay=5000ms
+ℹ️  [EquipoWorkflows] Tiempo máximo de espera: 100s
+📊 [EquipoWorkflows] Esperando email de invitación en Mail.tm
+🔄 [EquipoWorkflows] Invocando mailTm.waitForMessage()...
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] ESPERANDO MENSAJE EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Esperando mensaje en inbox temporal
+ℹ️  [MailTmService] Config: maxRetries=20, retryDelay=5000ms
+ℹ️  [MailTmService] Tiempo máximo de espera: 100s
+🔄 [MailTmService] --- Intento 1/20 (tiempo transcurrido: 0.0s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 1
+ℹ️  [MailTmService]   → Mensaje encontrado: "actuariatest6@yopmail.com te invitó a testing en Actuaria+"
+📊 [MailTmService] Filtrando por remitente → ✅ COINCIDE
+📊 [MailTmService] Obteniendo contenido completo del mensaje 6abe7a6b5962...
+📊 [MailTmService] GET /messages/6abe7a6b5962...
+ℹ️  [MailTmService] GET /messages/6abe7a6b5962... → Status: 200 OK
+✅ [MailTmService] Contenido obtenido: subject="actuariatest6@yopmail.com te invitó a testing en Actuaria+", html.length=6776
+✅ [MailTmService] 🎉 MENSAJE ENCONTRADO después de 1.0s!
+ℹ️  [MailTmService]   Asunto: "actuariatest6@yopmail.com te invitó a testing en Actuaria+"
+ℹ️  [MailTmService]   Creado: 2026-10-01T15:21:14+00:00
+🔍 [MailTmService] ========================================
+✅ [EquipoWorkflows] Email de invitación recibido en r7t1xpgwmupolvdh@uberip.com
+
+📍 Paso 1: Verificando saludo
+ℹ️  [MailTmService] Buscando texto "Hola," en HTML (6776 chars) → ✅ ENCONTRADO
+✅ [EquipoWorkflows] Saludo encontrado
+
+📍 Paso 2: Verificando datos de empresa
+ℹ️  [MailTmService] Buscando texto "Empresa:" en HTML (6776 chars) → ✅ ENCONTRADO
+✅ [EquipoWorkflows] Texto "Empresa:" encontrado
+
+📍 Paso 3: Verificando CTA de establecimiento de contraseña
+ℹ️  [MailTmService] Buscando texto "Establecer contraseña" en HTML (6776 chars) → ✅ ENCONTRADO
+✅ [EquipoWorkflows] Texto "Establecer contraseña" encontrado
+
+📍 Paso 4: Obteniendo enlace "Establecer contraseña"
+✅ [MailTmService] Enlace extraído exitosamente (texto: "Establecer contraseña")
+✅ [EquipoWorkflows] Enlace de invitación obtenido correctamente
+✅ [EquipoWorkflows] Email de invitación de equipo completamente verificado
+
+✅ ✅ ✅ [EquipoWorkflows] Verificación de email de invitación de equipo completada
+
+✅ [Mi Cuenta Equipo Tests] Email de invitación verificado y enlace extraído
+🎭️ [EquipoWorkflows] Iniciando flujo de acceso administrador (password + verificación de acceso completo)
+🎭️ [EquipoWorkflows] Iniciando configuración de contraseña del usuario invitado
+
+📍 Paso 1: Abriendo enlace de invitación en nueva pestaña (contexto aislado)
+✅ [EquipoWorkflows] Enlace de invitación abierto, esperando formulario de registro...
+
+📍 Paso 2: Esperando formulario de registro (Nombre)
+✅ [EquipoWorkflows] Formulario de registro visible
+
+📍 Paso 3: Rellenando formulario de registro
+✅ [EquipoWorkflows] Formulario de registro completado
+
+📍 Paso 4: Haciendo clic en CREAR CUENTA
+✅ [EquipoWorkflows] Registro enviado
+
+📍 Paso 5: Esperando redirección posterior al registro
+✅ [EquipoWorkflows] Redirección posterior al registro completada
+
+✅ ✅ ✅ [EquipoWorkflows] Configuración de contraseña completada
+
+
+📍 Paso 5: Esperando popup de tour de bienvenida del administrador
+✅ [EquipoWorkflows] Popup de tour visible - heading "Tu cuenta ahora puede" encontrado
+
+📍 Paso 6: Verificando texto "Como administrador de tu"
+✅ [EquipoWorkflows] Texto "Como administrador de tu" verificado
+
+📍 Paso 7: Verificando que el video del tour está presente
+✅ [EquipoWorkflows] Video del tour visible y reproduciéndose
+
+📍 Paso 8: Haciendo clic en "Entendido" para cerrar el popup
+✅ [EquipoWorkflows] Popup de tour cerrado - botón "Entendido" clickeado
+
+📍 Paso 9: Haciendo clic en tab Estudio actuarial
+🔄 [DelegatedAccessPage] Navegando a Estudio actuarial
+✅ [DelegatedAccessPage] Click en Estudio actuarial completado
+✅ [EquipoWorkflows] Navegación a Estudio actuarial completada
+
+📍 Paso 10: Verificando heading "Últimos estudios creados"
+📊 [DelegatedAccessPage] Verificando heading: Últimos estudios creados
+✅ [DelegatedAccessPage] Heading "Últimos estudios creados" visible
+✅ [EquipoWorkflows] Heading "Últimos estudios creados" visible
+
+📍 Paso 11: Verificando que botón "Crear nuevo estudio" está habilitado (acceso completo)
+✅ [EquipoWorkflows] Botón "Crear nuevo estudio" habilitado - administrador puede crear estudios
+
+📍 Paso 12: Haciendo clic en tab Actas de jubilación
+🔄 [DelegatedAccessPage] Navegando a Actas de jubilación
+✅ [DelegatedAccessPage] Click en Actas de jubilación completado
+✅ [EquipoWorkflows] Navegación a Actas de jubilación completada
+
+📍 Paso 13: Verificando heading "ACTAS FINALIZADAS"
+📊 [DelegatedAccessPage] Verificando heading: ACTAS FINALIZADAS
+✅ [DelegatedAccessPage] Heading "ACTAS FINALIZADAS" visible
+✅ [EquipoWorkflows] Heading "ACTAS FINALIZADAS" visible
+
+📍 Paso 14: Verificando que botón "Solicitar nueva acta" está habilitado (acceso completo)
+✅ [EquipoWorkflows] Botón "Solicitar nueva acta" habilitado - administrador puede solicitar actas
+✅ [EquipoWorkflows] Acceso completo como administrador verificado exitosamente
+
+✅ ✅ ✅ [EquipoWorkflows] Flujo de acceso administrador completado exitosamente
+
+✅ [Mi Cuenta Equipo Tests] Flujo de administrador completado: contraseña configurada, acceso completo verificado en todos los módulos
+
+✅ ✅ ✅ [Mi Cuenta Equipo Tests] TC01-04 completado - Usuario invitado como administrador, acceso completo verificado
+
+
+ℹ️  7 non-blocking error(s) ignored by filter.
+
+📋 5 console message(s) logged to stderr

@@ -1,0 +1,198 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: specs/CrearUsuario/crear_usuario_yopmail.test.ts >> Verificar Creación de Usuario con Mail.tm y Email de Bienvenida >> Crear Usuario con Mail.tm | [AP] | TC01-01: Registrar usuario y verificar email de bienvenida
+- Location: tests/specs/CrearUsuario/crear_usuario_yopmail.test.ts:38:2
+
+# Error details
+
+```
+Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://u29999903.ct.sendgrid.net/ls/click?upn=u001.MDjcH71av7TUniE2TH2i-2BUBt1Ps4Yj1LWQiKEjSI85ZwXk4oGVECpkMbD7WKHHw5pJyc_6x7NnWIgjQV9Vgu22XgePniRdWrVGduZnHKklYKXBUMYsVRXjwRoSYVHQhyK0Omj9Dzq-2Be0eI6-2FE2cqfmL9UNytGmGdcL6cWrVuwq-2BMTkPX8QMANdC3Aq-2F1r28bbMfLEoBnJr7IY0-2F9W8SLgEp3k085-2Fs0kIb96cScFSqeB6TMQqflB3gaVUd-2Bk8ajFebCt6dwFSHKY1R63oeaPzwKgdQw-3D-3D
+Call log:
+  - navigating to "https://u29999903.ct.sendgrid.net/ls/click?upn=u001.MDjcH71av7TUniE2TH2i-2BUBt1Ps4Yj1LWQiKEjSI85ZwXk4oGVECpkMbD7WKHHw5pJyc_6x7NnWIgjQV9Vgu22XgePniRdWrVGduZnHKklYKXBUMYsVRXjwRoSYVHQhyK0Omj9Dzq-2Be0eI6-2FE2cqfmL9UNytGmGdcL6cWrVuwq-2BMTkPX8QMANdC3Aq-2F1r28bbMfLEoBnJr7IY0-2F9W8SLgEp3k085-2Fs0kIb96cScFSqeB6TMQqflB3gaVUd-2Bk8ajFebCt6dwFSHKY1R63oeaPzwKgdQw-3D-3D", waiting until "domcontentloaded"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - img "Logo Actuaria - Navbar auth" [ref=e6] [cursor=pointer]
+  - generic [ref=e7]:
+    - complementary [ref=e8]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]: Novedad · Actuaria+
+          - paragraph [ref=e12]: Empecemos por tu empresa.
+          - paragraph [ref=e13]: Si tu organización ya está en Actuaria+, te ayudamos a solicitar acceso al administrador. Si no, configurarla toma menos de un minuto.
+        - generic [ref=e14]:
+          - generic [ref=e15]:
+            - generic [ref=e16]: "1"
+            - generic [ref=e19]:
+              - paragraph [ref=e20]: Empresa
+              - paragraph [ref=e21]: Identifica tu organización
+          - generic [ref=e22]:
+            - generic [ref=e23]: "2"
+            - generic [ref=e26]:
+              - paragraph [ref=e27]: Define tu rol
+              - paragraph [ref=e28]: Asume o delega la administración
+          - generic [ref=e29]:
+            - generic [ref=e30]: "3"
+            - generic [ref=e33]:
+              - paragraph [ref=e34]: Conoce la jerarquía
+              - paragraph [ref=e35]: Roles y niveles por módulo
+          - generic [ref=e36]:
+            - generic [ref=e37]: "4"
+            - generic [ref=e39]:
+              - paragraph [ref=e40]: Configura accesos
+              - paragraph [ref=e41]: Por usuario, módulo y nivel
+    - main [ref=e42]:
+      - generic [ref=e43]:
+        - paragraph [ref=e44]: Paso 1 de 4 · Empresa
+        - paragraph [ref=e45]: ¿Cuál es el RUC de tu empresa?
+        - paragraph [ref=e46]: Lo verificamos en tiempo real para identificar tu empresa en Actuaria+.
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e49]: RUC de tu empresa
+            - generic [ref=e50]:
+              - textbox "RUC de tu empresa" [active] [ref=e54]:
+                - /placeholder: "1791337778001"
+                - text: "0993237205001"
+              - group:
+                - generic: RUC de tu empresa
+          - generic [ref=e55]: No compartimos este dato con terceros.
+          - generic [ref=e62]:
+            - generic [ref=e63]: Ya está en Actuaria+
+            - generic [ref=e64]: 4PL INTELIGENCIA LOGÍSTICA S.A.
+            - generic [ref=e65]: Esta empresa todavía no tiene administrador. En el siguiente paso eliges tu rol.
+          - button "Continuar →" [ref=e66] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  446 | 		logger.navegacion('Esperando email de bienvenida vía Mail.tm API');
+  447 | 		
+  448 | 		const message = await mailTm.waitForMessage(
+  449 | 			EMAIL_CONFIG_TC01_01.senderEmail,
+  450 | 			EMAIL_CONFIG_TC01_01.maxRetries ?? 15,
+  451 | 			EMAIL_CONFIG_TC01_01.retryDelay ?? 4000
+  452 | 		);
+  453 | 		
+  454 | 		htmlContent = message.html[0] || message.text[0] || '';
+  455 | 		
+  456 | 		// Extract the invite link if present
+  457 | 		inviteLink = MailTmService.extractLinkByText(htmlContent, EXPECTED_EMAIL_CONTENT.ctaButtonText);
+  458 | 		
+  459 | 		logger.exito('Email de bienvenida recibido y contenido extraído');
+  460 | 	});
+  461 | 	
+  462 | 	logger.completado('Workflow de registro y verificación de email (Mail.tm) completado');
+  463 | 	
+  464 | 	return { htmlContent, inviteLink };
+  465 | }
+  466 | 
+  467 | /**
+  468 |  * [MAIL.TM] Verify welcome email content using Mail.tm HTML
+  469 |  * Replaces the Yopmail-based verifyWelcomeEmailContentWorkflow
+  470 |  *
+  471 |  * @param htmlContent - The HTML content of the email
+  472 |  */
+  473 | export async function verifyWelcomeEmailContentWorkflowMailTm(htmlContent: string): Promise<void> {
+  474 | 	logger.inicio('Verificando contenido del email (Mail.tm)');
+  475 | 	
+  476 | 	await test.step('Verificar mensajes de bienvenida', async () => {
+  477 | 		logger.verificacion('Verificando texto del email vía API');
+  478 | 		
+  479 | 		expect(MailTmService.containsText(htmlContent, EXPECTED_EMAIL_CONTENT.welcomeMessage)).toBe(true);
+  480 | 		logger.exito('Mensaje de bienvenida verificado');
+  481 | 		
+  482 | 		expect(MailTmService.containsText(htmlContent, EXPECTED_EMAIL_CONTENT.brandName)).toBe(true);
+  483 | 		logger.exito('Texto "Actuaria Plus" verificado');
+  484 | 	});
+  485 | 	
+  486 | 	logger.completado('Contenido del email verificado');
+  487 | }
+  488 | 
+  489 | /**
+  490 |  * [MAIL.TM] Verify email structure using Mail.tm HTML
+  491 |  * Replaces the Yopmail-based verifyWelcomeEmailStructureWorkflow
+  492 |  *
+  493 |  * @param htmlContent - The HTML content of the email
+  494 |  */
+  495 | export async function verifyWelcomeEmailStructureWorkflowMailTm(htmlContent: string): Promise<void> {
+  496 | 	logger.inicio('Verificando estructura del email (Mail.tm)');
+  497 | 	
+  498 | 	await test.step('Validar estructura completa del email', async () => {
+  499 | 		const hasSender = MailTmService.containsText(htmlContent, 'actuaria.com');
+  500 | 		const hasGreeting = MailTmService.containsText(htmlContent, /Estimado usuario/i);
+  501 | 		const hasWelcomeMessage = MailTmService.containsText(htmlContent, /Nos complace darte la bienvenida/i);
+  502 | 		const hasFeatures = MailTmService.containsText(htmlContent, /estudios actuariales/i);
+  503 | 		const ctaButtonHref = MailTmService.extractLinkByText(htmlContent, EXPECTED_EMAIL_CONTENT.ctaButtonText);
+  504 | 		
+  505 | 		expect(hasSender).toBe(true);
+  506 | 		logger.exito('Remitente verificado');
+  507 | 		
+  508 | 		expect(hasGreeting).toBe(true);
+  509 | 		logger.exito('Saludo verificado');
+  510 | 		
+  511 | 		expect(hasWelcomeMessage).toBe(true);
+  512 | 		logger.exito('Mensaje de bienvenida verificado');
+  513 | 		
+  514 | 		expect(hasFeatures).toBe(true);
+  515 | 		logger.exito('Características verificadas');
+  516 | 		
+  517 | 		expect(ctaButtonHref).toBeTruthy();
+  518 | 		expect(ctaButtonHref).toContain('http');
+  519 | 		logger.exito('Botón CTA verificado');
+  520 | 		
+  521 | 		logger.exito('Estructura del email completamente verificada');
+  522 | 	});
+  523 | 	
+  524 | 	logger.completado('Verificación de estructura completada');
+  525 | }
+  526 | 
+  527 | /**
+  528 |  * [MAIL.TM] Click email link and verify redirection
+  529 |  * Replaces the Yopmail-based verifyEmailLinkRedirectionWorkflow
+  530 |  *
+  531 |  * @param inviteLink - The extracted invite link from the email
+  532 |  * @param context - Browser context for navigation
+  533 |  */
+  534 | export async function verifyEmailLinkRedirectionWorkflowMailTm(
+  535 | 	inviteLink: string,
+  536 | 	context: BrowserContext
+  537 | ): Promise<void> {
+  538 | 	logger.inicio('Verificando redirección de enlace en email (Mail.tm)');
+  539 | 	
+  540 | 	await test.step('Navegar al enlace "Ver mis empresas"', async () => {
+  541 | 		logger.cambio('Navegando al enlace del email');
+  542 | 		
+  543 | 		// expect(inviteLink).toContain(EXPECTED_EMAIL_CONTENT.expectedDomain);
+  544 | 		
+  545 | 		const newPage = await context.newPage();
+> 546 | 		await newPage.goto(inviteLink, { waitUntil: 'domcontentloaded' });
+      |                 ^ Error: page.goto: net::ERR_NAME_NOT_RESOLVED at https://u29999903.ct.sendgrid.net/ls/click?upn=u001.MDjcH71av7TUniE2TH2i-2BUBt1Ps4Yj1LWQiKEjSI85ZwXk4oGVECpkMbD7WKHHw5pJyc_6x7NnWIgjQV9Vgu22XgePniRdWrVGduZnHKklYKXBUMYsVRXjwRoSYVHQhyK0Omj9Dzq-2Be0eI6-2FE2cqfmL9UNytGmGdcL6cWrVuwq-2BMTkPX8QMANdC3Aq-2F1r28bbMfLEoBnJr7IY0-2F9W8SLgEp3k085-2Fs0kIb96cScFSqeB6TMQqflB3gaVUd-2Bk8ajFebCt6dwFSHKY1R63oeaPzwKgdQw-3D-3D
+  547 | 		await newPage.waitForTimeout(REGISTRATION_CONFIG.pageLoadWaitMs);
+  548 | 		
+  549 | 		const finalUrl = newPage.url();
+  550 | 		// expect(finalUrl).toContain('act-compass-stage-proj');
+  551 | 		
+  552 | 		// Verify page doesn't have error messages
+  553 | 		// const hasErrors = await newPage.locator('text=/error|404|not found/i').count() > 0;
+  554 | 		// expect(hasErrors).toBe(false);
+  555 | 		
+  556 | 		logger.exito('Redirección exitosa a la aplicación');
+  557 | 		
+  558 | 	});
+  559 | 	
+  560 | 	logger.completado('Verificación de redirección completada');
+  561 | }
+  562 | 
+```

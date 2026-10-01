@@ -1,0 +1,103 @@
+🎭️ [Mi Cuenta Equipo Tests] Iniciando sesión con usuario de prueba
+🔐 [Mi Cuenta Equipo Tests] Ingresando credenciales
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Mi Cuenta Equipo Tests] Login exitoso
+🎭️ [Mi Cuenta Equipo Tests] ========================================
+🎭️ [Mi Cuenta Equipo Tests] INICIANDO TC00-CLEANUP - Limpieza de usuarios Mail.tm
+🎭️ [Mi Cuenta Equipo Tests] ========================================
+ℹ️  [Mi Cuenta Equipo Tests] Timeout configurado: 120s (2 minutos)
+ℹ️  [Mi Cuenta Equipo Tests] Buscando emails que terminen en "@web-library.net" o "@uberip.com" para remover
+🔍 [Mi Cuenta Equipo Tests] Navegando a /dashboard/portal/mi-cuenta/equipo
+🔍 [EquipoPage] Navegando a Mi Cuenta / Equipo
+⚠️  [EquipoPage] goto Mi Cuenta / Equipo interrumpido por el SPA (intento 1/3): page.goto: net::ERR_ABORTED at https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/equipo
+Call log:
+  - navigating to "https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/equipo", waiting until "domcontentloaded"
+
+✅ [EquipoPage] Página de Equipo cargada
+✅ [Mi Cuenta Equipo Tests] Página de Equipo cargada
+🔄 [Mi Cuenta Equipo Tests] Invocando cleanupTestUsersWorkflow con dominios "@web-library.net" y "@uberip.com"...
+🎭️ [EquipoWorkflows] Iniciando limpieza de usuarios cuyo email termina en: "@web-library.net" o "@uberip.com"
+🔄 [EquipoPage] Buscando usuarios cuyo email termine en "@web-library.net" o "@uberip.com"
+📊 [EquipoPage] Esperando que la tabla de equipo cargue completamente
+✅ [EquipoPage] Tabla de equipo cargada
+📊 [EquipoPage] Emails en tabla: 17
+🔄 [EquipoPage] Removiendo usuario con dominio coincidente: foquz4i7mupoc0m9@uberip.com
+🔄 [EquipoPage] Buscando botón Quitar dentro de la fila
+📊 [EquipoPage] Strategy 1 failed, trying Strategy 2...
+✅ [EquipoPage] Botón Quitar clickeado por title/aria-label
+✅ [EquipoPage] Botón Quitar clickeado
+📊 [EquipoPage] Esperando modal de confirmación
+📊 [EquipoPage] Modal de confirmación visible
+✅ [EquipoPage] Confirmación de quitar clickeada
+✅ [EquipoPage] Usuario removido (1)
+📊 [EquipoPage] Emails en tabla: 16
+🔄 [EquipoPage] Removiendo usuario con dominio coincidente: n281101emupokiw6@uberip.com
+🔄 [EquipoPage] Buscando botón Quitar dentro de la fila
+📊 [EquipoPage] Strategy 1 failed, trying Strategy 2...
+✅ [EquipoPage] Botón Quitar clickeado por title/aria-label
+✅ [EquipoPage] Botón Quitar clickeado
+📊 [EquipoPage] Esperando modal de confirmación
+📊 [EquipoPage] Modal de confirmación visible
+✅ [EquipoPage] Confirmación de quitar clickeada
+✅ [EquipoPage] Usuario removido (2)
+📊 [EquipoPage] Emails en tabla: 15
+🔄 [EquipoPage] Removiendo usuario con dominio coincidente: r7t1xpgwmupolvdh@uberip.com
+🔄 [EquipoPage] Buscando botón Quitar dentro de la fila
+📊 [EquipoPage] Strategy 1 failed, trying Strategy 2...
+✅ [EquipoPage] Botón Quitar clickeado por title/aria-label
+✅ [EquipoPage] Botón Quitar clickeado
+📊 [EquipoPage] Esperando modal de confirmación
+📊 [EquipoPage] Modal de confirmación visible
+✅ [EquipoPage] Confirmación de quitar clickeada
+✅ [EquipoPage] Usuario removido (3)
+📊 [EquipoPage] Emails en tabla: 14
+🔄 [EquipoPage] Removiendo usuario con dominio coincidente: rno8y4pzmupol6i0@uberip.com
+🔄 [EquipoPage] Buscando botón Quitar dentro de la fila
+📊 [EquipoPage] Strategy 1 failed, trying Strategy 2...
+✅ [EquipoPage] Botón Quitar clickeado por title/aria-label
+✅ [EquipoPage] Botón Quitar clickeado
+📊 [EquipoPage] Esperando modal de confirmación
+📊 [EquipoPage] Modal de confirmación visible
+✅ [EquipoPage] Confirmación de quitar clickeada
+✅ [EquipoPage] Usuario removido (4)
+📊 [EquipoPage] Emails en tabla: 13
+🔄 [EquipoPage] Removiendo usuario con dominio coincidente: sgk5ur75mupomq02@uberip.com
+🔄 [EquipoPage] Buscando botón Quitar dentro de la fila
+📊 [EquipoPage] Strategy 1 failed, trying Strategy 2...
+✅ [EquipoPage] Botón Quitar clickeado por title/aria-label
+✅ [EquipoPage] Botón Quitar clickeado
+📊 [EquipoPage] Esperando modal de confirmación
+📊 [EquipoPage] Modal de confirmación visible
+✅ [EquipoPage] Confirmación de quitar clickeada
+✅ [EquipoPage] Usuario removido (5)
+📊 [EquipoPage] Emails en tabla: 12
+🔄 [EquipoPage] Removiendo usuario con dominio coincidente: tsnbj4gomupojxb8@uberip.com
+🔄 [EquipoPage] Buscando botón Quitar dentro de la fila
+📊 [EquipoPage] Strategy 1 failed, trying Strategy 2...
+✅ [EquipoPage] Botón Quitar clickeado por title/aria-label
+✅ [EquipoPage] Botón Quitar clickeado
+📊 [EquipoPage] Esperando modal de confirmación
+📊 [EquipoPage] Modal de confirmación visible
+✅ [EquipoPage] Confirmación de quitar clickeada
+✅ [EquipoPage] Usuario removido (6)
+📊 [EquipoPage] Emails en tabla: 11
+✅ [EquipoPage] No se encontraron más emails terminados en "@web-library.net" o "@uberip.com"
+✅ [EquipoPage] Total removidos por dominio "@web-library.net" o "@uberip.com": 6
+✅ [EquipoWorkflows] Limpieza completada: 6 usuarios removidos
+✅ [EquipoWorkflows] No quedan usuarios con emails "@web-library.net" o "@uberip.com" - limpieza exitosa
+
+✅ ✅ ✅ [EquipoWorkflows] Limpieza de usuarios completada: 6 removidos
+
+✅ [Mi Cuenta Equipo Tests] Limpieza ejecutada: 6 usuarios removidos
+📊 [Mi Cuenta Equipo Tests] Esperando 2s para que la UI se actualice...
+📊 [Mi Cuenta Equipo Tests] Obteniendo lista actual de emails en la tabla...
+ℹ️  [Mi Cuenta Equipo Tests] Total emails en tabla después de limpieza: 11
+✅ [Mi Cuenta Equipo Tests] ✅ No quedan usuarios con email "@web-library.net" ni "@uberip.com" en la tabla - limpieza exitosa
+
+✅ ✅ ✅ [Mi Cuenta Equipo Tests] TC00-CLEANUP completado - 6 usuarios removidos exitosamente
+
+
+ℹ️  6 non-blocking error(s) ignored by filter.
+
+📋 4 console message(s) logged to stderr

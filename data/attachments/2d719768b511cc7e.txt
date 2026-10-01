@@ -1,0 +1,19 @@
+🎭️ [Simulador Tests (Demo)] Empezando pre condición
+🔐 [Simulador Tests (Demo)] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Simulador Tests (Demo)] Login exitoso
+🔍 [Simulador Tests (Demo)] Verificando navegación a página principal
+✅ [Simulador Tests (Demo)] Navegación exitosa a dashboard
+🎭️ [Simulador Tests (Demo)] TC02 (DEMO)
+🔍 [Simulador Workflows] Navegando a Simulador de beneficios
+✅ [Simulador Workflows] En tab Simulador
+🔄 [Simulador Workflows] Seleccionando Proyección de pagos
+✅ [Simulador Workflows] Proyección de pagos seleccionada
+📊 [Simulador Workflows] Verificando pestañas seleccionadas
+✅ [Simulador Workflows] Pestañas correctamente seleccionadas
+📊 [Simulador Workflows] Verificando sección: Valores promedio
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 7 console message(s) logged to stderr

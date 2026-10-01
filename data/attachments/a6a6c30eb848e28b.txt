@@ -1,0 +1,22 @@
+[LOG] Using Firebase Production Services for environment: stage [3:16:16 PM]
+[LOG] trackEvent view_login {timestamp: 2026-10-01T15:16:16.855Z} [3:16:16 PM]
+❌ CONSOLE ERROR: FirebaseError: Firebase: Error (auth/email-already-in-use).
+    at createErrorInternal (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21474:41)
+    at _createError (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21442:12)
+    at _makeTaggedError (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:22018:19)
+    at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21923:23)
+    at async _performSignInRequest (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21951:28)
+    at async createUserWithEmailAnd[OCULTO]
+    at async establecerCuenta (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:57858:30)
+    at async https://act-compass-stage-proj.firebaseapp.com/assets/useAccionConFeedback-v_YBVqoM.js:33:27
+    at async onSubmit (https://act-compass-stage-proj.firebaseapp.com/assets/RegisterForm-Cxc2Vb3Z.js:136:7)
+❌ CONSOLE ERROR: FirebaseError: Firebase: Error (auth/email-already-in-use).
+    at createErrorInternal (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21474:41)
+    at _createError (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21442:12)
+    at _makeTaggedError (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:22018:19)
+    at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21923:23)
+    at async _performSignInRequest (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21951:28)
+    at async createUserWithEmailAndPassword (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:26302:22)
+    at async establecerCuenta (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:57858:30)
+    at async https://act-compass-stage-proj.firebaseapp.com/assets/useAccionConFeedback-v_YBVqoM.js:33:27
+    at async onSubmit (https://act-compass-stage-proj.firebaseapp.com/assets/RegisterForm-Cxc2Vb3Z.js:136:7)

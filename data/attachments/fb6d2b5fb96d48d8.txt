@@ -1,0 +1,17 @@
+🎭️ [Mi Cuenta - Tabs Tests] TC04: Verificar estabilidad al hacer clic múltiple en el mismo tab
+🔍 [MiCuentaTabsWorkflows] 🔄 Haciendo 3 clics en tab: Datos del usuario
+📊 [MiCuentaTabsPage] Verificando que tab "Datos del usuario" esté activo (aria-selected=true)
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Clic 1: Tab sigue estable y seleccionado
+📊 [MiCuentaTabsPage] Verificando que tab "Datos del usuario" esté activo (aria-selected=true)
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Clic 2: Tab sigue estable y seleccionado
+📊 [MiCuentaTabsPage] Verificando que tab "Datos del usuario" esté activo (aria-selected=true)
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Clic 3: Tab sigue estable y seleccionado
+✅ [MiCuentaTabsWorkflows] ✅ Tab "Datos del usuario" es estable con clics múltiples
+🔄 [Mi Cuenta - Tabs Tests] Cambiando a tab Contactos vinculados y haciendo clic múltiple
+🔍 [MiCuentaTabsWorkflows] 🔄 Haciendo 2 clics en tab: Contactos vinculados
+📊 [MiCuentaTabsPage] Verificando que tab "Contactos vinculados" esté activo (aria-selected=true)
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Clic 1: Tab sigue estable y seleccionado
+📊 [MiCuentaTabsPage] Verificando que tab "Contactos vinculados" esté activo (aria-selected=true)
+ℹ️  [MiCuentaTabsWorkflows]   ✓ Clic 2: Tab sigue estable y seleccionado
+✅ [MiCuentaTabsWorkflows] ✅ Tab "Contactos vinculados" es estable con clics múltiples
+✅ [Mi Cuenta - Tabs Tests] ✓ Tabs son estables con clics múltiples

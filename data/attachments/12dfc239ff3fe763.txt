@@ -1,0 +1,51 @@
+🎭️ [Mi Cuenta Contactos Vinculados Tests] Iniciando sesión con usuario de prueba ACTUARIA6
+🔐 [Mi Cuenta Contactos Vinculados Tests] Ingresando credenciales
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Mi Cuenta Contactos Vinculados Tests] Login exitoso
+🔍 [ContactosVinculadosPage] Navegando a Mi Cuenta / Contactos vinculados
+✅ [ContactosVinculadosPage] Página de Contactos vinculados cargada
+📊 [ContactosVinculadosPage] Verificando pantalla Contactos vinculados
+✅ [ContactosVinculadosPage] Pantalla Contactos vinculados visible
+🎭️ [Mi Cuenta Contactos Vinculados Tests] ========================================
+🎭️ [Mi Cuenta Contactos Vinculados Tests] TC03 - Editar contacto (nombre + cargo)
+🎭️ [Mi Cuenta Contactos Vinculados Tests] ========================================
+
+⚙️  [Mi Cuenta Contactos Vinculados Tests] Cambios a aplicar:
+   • nombre: QA Editado 84692
+   • cargo: Gerente General
+🎭️ [ContactosVinculadosPage] Creando contacto QA Auto 1hxl Contacto 77846921hxl
+🔄 [ContactosVinculadosPage] Clic en "Agregar contacto"
+🔄 [ContactosVinculadosPage] Llenando formulario de contacto (qa.contacto.77846921hxl@yopmail.com)
+🔄 [ContactosVinculadosPage] Seleccionando cargo "Asistente Contable"
+✅ [ContactosVinculadosPage] Cargo "Asistente Contable" seleccionado
+🔄 [ContactosVinculadosPage] Marcando tipo de contacto "Técnico"
+✅ [ContactosVinculadosPage] Tipo de contacto "Técnico" marcado
+✅ [ContactosVinculadosPage] Formulario de contacto llenado
+🔄 [ContactosVinculadosPage] Clic en "Guardar"
+✅ [ContactosVinculadosPage] Contacto guardado
+✅ [ContactosVinculadosPage] Contacto QA Auto 1hxl Contacto 77846921hxl creado y visible en la lista
+📊 [ContactosVinculadosPage] Verificando tarjeta de "QA Auto 1hxl Contacto 77846921hxl"
+✅ [ContactosVinculadosPage] Tarjeta de "QA Auto 1hxl Contacto 77846921hxl" verificada (3 botones)
+🎭️ [ContactosVinculadosPage] Editando contacto "QA Auto 1hxl Contacto 77846921hxl"
+🔄 [ContactosVinculadosPage] Clic en "Editar" para "QA Auto 1hxl Contacto 77846921hxl"
+🔄 [ContactosVinculadosPage] Cambiando cargo a "Gerente General"
+✅ [ContactosVinculadosPage] Cargo cambiado a "Gerente General"
+🔄 [ContactosVinculadosPage] Clic en "Guardar cambios"
+✅ [ContactosVinculadosPage] Cambios guardados
+✅ [ContactosVinculadosPage] Cambios guardados en "QA Auto 1hxl Contacto 77846921hxl"
+📊 [ContactosVinculadosPage] Verificando detalle de "QA Editado 84692 Contacto 77846921hxl"
+✅ [ContactosVinculadosPage] Detalle de "QA Editado 84692 Contacto 77846921hxl" verificado: QA Editado 84692 | qa.contacto.77846921hxl@yopmail.com | Gerente General
+📊 [ContactosVinculadosPage] Verificando detalle de "QA Editado 84692 Contacto 77846921hxl"
+✅ [ContactosVinculadosPage] Detalle de "QA Editado 84692 Contacto 77846921hxl" verificado: Gerente General
+
+✅ ✅ ✅ [Mi Cuenta Contactos Vinculados Tests] TC03 completado - cambios de nombre y cargo persistidos
+
+🎭️ [ContactosVinculadosPage] Eliminando contacto "QA Editado 84692 Contacto 77846921hxl"
+🔄 [ContactosVinculadosPage] Clic en "Eliminar" para "QA Editado 84692 Contacto 77846921hxl"
+🔄 [ContactosVinculadosPage] Confirmando eliminación
+✅ [ContactosVinculadosPage] Contacto eliminado
+
+ℹ️  6 non-blocking error(s) ignored by filter.
+
+📋 4 console message(s) logged to stderr

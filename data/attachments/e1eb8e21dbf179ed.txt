@@ -1,0 +1,21 @@
+🎭️ [Inicio Tests] Empezando pre condición
+🔐 [Inicio Tests] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Inicio Tests] Login exitoso
+🔍 [Inicio Tests] Verificando navegación a página principal
+✅ [Inicio Tests] Navegación exitosa a dashboard
+🎭️ [Inicio Tests] TCxx: Verificar highlight de tabs
+📊 [Inicio Tests] Buscando tabs en el área de contenido principal (tabs con MuiChip).
+📊 [Inicio Tests] Verificando visibilidad de tab Inicio.
+📊 [Inicio Tests] Color de fondo - Inicio (SELECCIONADO): rgb(21, 31, 71)
+📊 [Inicio Tests] Color de fondo - Estudio actuarial (NO seleccionado): rgb(233, 234, 238)
+📊 [Inicio Tests] Color de fondo - Impuestos diferidos (NO seleccionado): rgb(233, 234, 238)
+✅ [Inicio Tests] ✅ Solo el tab Inicio está seleccionado (oscuro). Otros tabs no están seleccionados (claros).
+🔍 [Inicio Tests] Clickeando tab Estudio actuarial para verificar que se selecciona.
+🔍 [Inicio Tests] ✅ Navegación completada a la página de Estudio actuarial.
+✅ [Inicio Tests] ✅ Tab Estudio actuarial ahora está activo (navegación realizada exitosamente).
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 3 console message(s) logged to stderr

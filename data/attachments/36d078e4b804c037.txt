@@ -1,0 +1,123 @@
+🎭️ [Crear Usuario Onboarding Delegation Tests] Creando inbox Mail.tm y navegando a formulario de registro
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] CREANDO INBOX EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Config: maxRetries=3, baseUrl=https://api.mail.tm
+🔄 [MailTmService] [STAGGER] Esperando 2713ms para evitar rate limiting en API...
+🔄 [MailTmService] --- Intento 1/3 de creación ---
+📊 [MailTmService] Paso 1: Obteniendo dominios disponibles...
+ℹ️  [MailTmService] GET /domains → Status: 200 OK
+ℹ️  [MailTmService] Dominio obtenido: "uberip.com"
+📊 [MailTmService] Paso 2: Creando cuenta: hm6dyscpmupo947i@uberip.com
+ℹ️  [MailTmService] POST /accounts → Status: 201 Created
+✅ [MailTmService] Cuenta CREADA exitosamente
+📊 [MailTmService] Paso 3: Obteniendo token de autenticación...
+ℹ️  [MailTmService] POST /token → Status: 200 OK
+✅ [MailTmService] Token obtenido: id="6abe780f017b..."
+✅ [MailTmService] 🎉 INBOX CREADO EXITOSAMENTE
+🔍 [MailTmService] ========================================
+✅ [Crear Usuario Onboarding Delegation Tests] Inbox Mail.tm creado: hm6dyscpmupo947i@uberip.com
+🔍 [Crear Usuario Onboarding Delegation Tests] Navegando al formulario de creación de cuenta
+🔍 [LoginPage] Navegando a formulario de creación de cuenta
+✅ [LoginPage] Formulario de creación de cuenta abierto
+✅ [Crear Usuario Onboarding Delegation Tests] Formulario de creación de cuenta listo (URL: https://act-compass-stage-proj.firebaseapp.com/auth/registro)
+🎭️ [Crear Usuario Onboarding Delegation Tests] TC01-02 - Registro y onboarding con delegación (Mail.tm)
+🎭️ [CrearUsuarioWorkflows] Iniciando workflow completo de registro y verificación con Mail.tm
+🔄 [CrearUsuarioWorkflows] Rellenando formulario de creación de usuario
+🔄 [LoginPage] Rellenando formulario de creación de usuario
+✅ [LoginPage] Formulario rellenado correctamente
+✅ [CrearUsuarioWorkflows] Formulario rellenado
+🔄 [CrearUsuarioWorkflows] Enviando formulario de registro
+✅ [CrearUsuarioWorkflows] Botón registrar clickeado
+📊 [CrearUsuarioWorkflows] Verificando que el registro se completó
+🔄 [CrearUsuarioWorkflows] URL actual después del registro verificada
+🔄 [CrearUsuarioWorkflows] Aún en página de registro, verificando mensaje de éxito o error
+🔄 [CrearUsuarioWorkflows] No se encontraron mensajes de error - registro probablemente exitoso
+🔄 [CrearUsuarioWorkflows] Esperando 10000ms para que el email se envíe...
+✅ [CrearUsuarioWorkflows] Registro verificado exitosamente
+🔍 [CrearUsuarioWorkflows] Esperando email de bienvenida vía Mail.tm API
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] ESPERANDO MENSAJE EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Esperando mensaje en inbox temporal
+ℹ️  [MailTmService] Config: maxRetries=15, retryDelay=4000ms
+ℹ️  [MailTmService] Tiempo máximo de espera: 60s
+🔄 [MailTmService] --- Intento 1/15 (tiempo transcurrido: 0.0s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 4000ms...
+🔄 [MailTmService] --- Intento 2/15 (tiempo transcurrido: 4.4s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 4000ms...
+🔄 [MailTmService] --- Intento 3/15 (tiempo transcurrido: 8.8s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 4000ms...
+🔄 [MailTmService] --- Intento 4/15 (tiempo transcurrido: 13.3s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 1
+ℹ️  [MailTmService]   → Mensaje encontrado: "BIENVENIDO A Actuaria+"
+📊 [MailTmService] Filtrando por remitente → ✅ COINCIDE
+📊 [MailTmService] Obteniendo contenido completo del mensaje 6abe78317f6d...
+📊 [MailTmService] GET /messages/6abe78317f6d...
+ℹ️  [MailTmService] GET /messages/6abe78317f6d... → Status: 200 OK
+✅ [MailTmService] Contenido obtenido: subject="BIENVENIDO A Actuaria+", html.length=6315
+✅ [MailTmService] 🎉 MENSAJE ENCONTRADO después de 14.1s!
+ℹ️  [MailTmService]   Asunto: "BIENVENIDO A Actuaria+"
+ℹ️  [MailTmService]   Creado: 2026-10-01T15:11:44+00:00
+🔍 [MailTmService] ========================================
+✅ [MailTmService] Enlace extraído exitosamente (texto: "Ver mis empresas")
+✅ [CrearUsuarioWorkflows] Email de bienvenida recibido y contenido extraído
+
+✅ ✅ ✅ [CrearUsuarioWorkflows] Workflow de registro y verificación de email (Mail.tm) completado
+
+ℹ️  [Crear Usuario Onboarding Delegation Tests] Registro completado → email de bienvenida recibido, enlace extraído: SÍ
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] CREANDO INBOX EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Config: maxRetries=3, baseUrl=https://api.mail.tm
+🔄 [MailTmService] [STAGGER] Esperando 1134ms para evitar rate limiting en API...
+🔄 [MailTmService] --- Intento 1/3 de creación ---
+📊 [MailTmService] Paso 1: Obteniendo dominios disponibles...
+ℹ️  [MailTmService] GET /domains → Status: 200 OK
+ℹ️  [MailTmService] Dominio obtenido: "uberip.com"
+📊 [MailTmService] Paso 2: Creando cuenta: 514v2uk3mupo9xpd@uberip.com
+ℹ️  [MailTmService] POST /accounts → Status: 429 Too Many Requests
+⚠️  [MailTmService] ⚠️ RATE LIMITED (429) intento 1. Esperando 2000ms (Retry-After: N/A)
+🔄 [MailTmService] --- Intento 2/3 de creación ---
+📊 [MailTmService] Paso 1: Obteniendo dominios disponibles...
+ℹ️  [MailTmService] GET /domains → Status: 200 OK
+ℹ️  [MailTmService] Dominio obtenido: "uberip.com"
+📊 [MailTmService] Paso 2: Creando cuenta: izvpl8j2mupo9zor@uberip.com
+ℹ️  [MailTmService] POST /accounts → Status: 201 Created
+✅ [MailTmService] Cuenta CREADA exitosamente
+📊 [MailTmService] Paso 3: Obteniendo token de autenticación...
+ℹ️  [MailTmService] POST /token → Status: 200 OK
+✅ [MailTmService] Token obtenido: id="6abe7837ef6e..."
+✅ [MailTmService] 🎉 INBOX CREADO EXITOSAMENTE
+🔍 [MailTmService] ========================================
+✅ [Crear Usuario Onboarding Delegation Tests] Inbox admin para delegación: izvpl8j2mupo9zor@uberip.com
+ℹ️  [Crear Usuario Onboarding Delegation Tests] Este inbox recibirá la invitación de delegación (se verificará en el paso final)
+
+📍 Paso 3: Onboarding delegación: Nueva empresa → Rol (Delegar) → Acceso → Invitación → Revisión
+ℹ️  [Crear Usuario Onboarding Delegation Tests] Contexto → RUC generado: 5782196471001 | razón social: Test Company 57 | administrador delegado: izvpl8j2mupo9zor@uberip.com | URL inicio: https://act-compass-stage-proj.firebaseapp.com/auth/registro
+🎭️ [OnboardingWorkflows] Iniciando flujo de onboarding con NUEVA empresa + delegación (Mail.tm)
+
+📍 Paso 1: Esperando página de onboarding /jerarquia
+🔍 [OnboardingPage] Esperando página de onboarding /jerarquia
+
+===== POSIBLE CAUSA RAÍZ (console/red detectada en la página) =====
+  URL detectada: https://act-compass-stage-proj.firebaseapp.com/auth/registro
+  • CONSOLE ERROR → FirebaseError: Firebase: Cloud function deadline exceeded. (auth/internal-error). at _errorWithCustomMessage (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21450:20) at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21933:23) at async _performSignInRequest (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21951:28) at async createUserWithEmailAndPassword (https://act-compass-stage-proj.fireb…
+  • RED (4xx/5xx) → POST https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDFbr0PyJ4CSFTfXn8nkf4YZ3kzoKxL8Kk → 400
+  • CONSOLE → FirebaseError: Firebase: Cloud function deadline exceeded. (auth/internal-error). at _errorWithCustomMessage (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21450:20) at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21933:23) at async _performSignInRequest (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21951:28) at async createUserWithEmailAndPassword (https://act-compass-stage-proj.fireb…
+===================================================================
+
+ℹ️  1 non-blocking error(s) ignored by filter.
+
+📋 3 console message(s) logged to stderr

@@ -1,0 +1,16 @@
+[LOG] Using Firebase Production Services for environment: stage [3:16:42 PM]
+[LOG] trackEvent view_login {timestamp: 2026-10-01T15:16:42.668Z} [3:16:42 PM]
+[LOG] Using Firebase Production Services for environment: stage [3:16:44 PM]
+[LOG] Using Firebase Production Services for environment: stage [3:16:46 PM]
+❌ CONSOLE ERROR: Error en submit: {error: AxiosError: Request failed with status code 401
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo validar tu [OCULTO] Intenta nuevamente., content: Object}
+❌ CONSOLE ERROR: Error en submit: {error: AxiosError: Request failed with status code 401
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo validar tu contraseña actual. Intenta nuevamente., content: Object}
+
+⚠️  1 error(s) detected during test execution:
+  1. Error en submit: {error: AxiosError: Request failed with status code 401
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo validar tu contraseña actual. Intenta nuevamente., content: Object}
+
+⚠️  1 error(s) detected during test execution:
+  1. Error en submit: {error: AxiosError: Request failed with status code 401
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo validar tu contraseña actual. Intenta nuevamente., content: Object}

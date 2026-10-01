@@ -1,0 +1,4 @@
+[LOG] Using Firebase Production Services for environment: stage [3:23:34 PM]
+[LOG] trackEvent view_login {timestamp: 2026-10-01T15:23:36.077Z} [3:23:36 PM]
+[LOG] Using Firebase Production Services for environment: stage [3:23:38 PM]
+[LOG] trackEvent cargo_seleccionado {codigoCargo: CG-DIR-02} [3:23:43 PM]

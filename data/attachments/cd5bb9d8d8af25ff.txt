@@ -1,0 +1,32 @@
+🎭️ [Inicio Videos Tests] Empezando pre condición
+🔐 [Inicio Videos Tests] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Inicio Videos Tests] Login exitoso
+🔍 [Inicio Videos Tests] Verificando navegación a página principal
+✅ [Inicio Videos Tests] Navegación exitosa a dashboard
+🎭️ [Inicio Videos Tests] TC01 - Video Estudios
+📊 [Inicio Videos Tests] Haciendo clic en "Conocer más" del card de Estudios...
+✅ [Inicio Videos Tests] Clic realizado en botón "Conocer más" de Estudios
+📊 [Inicio Videos Tests] Verificando que el video de Estudios esté visible...
+📊 [Inicio Videos Tests] Verificando que el video de Estudios esté reproduciéndose...
+✅ [Inicio Videos Tests] Video de Estudios está reproduciéndose y progresa
+📊 [Inicio Videos Tests] Verificando progreso del video de Estudios...
+✅ [Inicio Videos Tests] Progreso del video de Estudios verificado
+📊 [Inicio Videos Tests] Verificando que el video de Informe NO esté visible/reproduciéndose...
+✅ [Inicio Videos Tests] Video de Informe no está visible (correcto)
+📊 [Inicio Videos Tests] Verificando que el video de Actas Jubilación NO esté visible/reproduciéndose...
+✅ [Inicio Videos Tests] Video de Actas Jubilación no está visible (correcto)
+📊 [Inicio Videos Tests] Verificando que el video de Control Tributario NO esté visible/reproduciéndose...
+✅ [Inicio Videos Tests] Video de Control Tributario no está visible (correcto)
+📊 [Inicio Videos Tests] Verificando que el video de Simulador NO esté visible/reproduciéndose...
+✅ [Inicio Videos Tests] Video de Simulador no está visible (correcto)
+📊 [Inicio Videos Tests] Verificando que el video de Consulta Navia NO esté visible/reproduciéndose...
+✅ [Inicio Videos Tests] Video de Consulta Navia no está visible (correcto)
+
+✅ ✅ ✅ [Inicio Videos Tests] TC01 completado exitosamente - Solo video de Estudios reproduciéndose
+
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 3 console message(s) logged to stderr

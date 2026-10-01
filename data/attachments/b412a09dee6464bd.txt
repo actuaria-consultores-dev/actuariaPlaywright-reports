@@ -1,0 +1,303 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: specs/CrearUsuario/crear_usuario_onboarding_new_company.test.ts >> Verificar Onboarding - Nueva Empresa RUC (primera vez) y flujo Administrador >> Crear Usuario y completar onboarding con nueva empresa (RUC primera vez) → Administrador | [AP] | TC01-03
+- Location: tests/specs/CrearUsuario/crear_usuario_onboarding_new_company.test.ts:52:2
+
+# Error details
+
+```
+TimeoutError: page.waitForURL: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "**/onboarding/jerarquia" until "load"
+============================================================
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - img "Logo Actuaria - Navbar auth" [ref=e6] [cursor=pointer]
+    - main [ref=e8]:
+      - generic [ref=e10]:
+        - img "Registro" [ref=e12]
+        - generic [ref=e14]:
+          - img "Logo de Actuaria" [ref=e15]
+          - generic [ref=e16]:
+            - heading "Registrarse" [level=2] [ref=e17]
+            - paragraph [ref=e18]: Regístrate dando clic en el proveedor de tu correo electrónico
+            - button [ref=e19] [cursor=pointer]:
+              - img "Gmail" [ref=e20]
+              - text: Gmail
+            - button [ref=e21] [cursor=pointer]:
+              - img "Yahoo" [ref=e22]
+              - text: Yahoo
+            - button [ref=e23] [cursor=pointer]:
+              - img "Outlook / Office 365" [ref=e24]
+              - text: Outlook / Office 365
+            - separator [ref=e25]:
+              - paragraph [ref=e27]: O bien digita los datos requeridos en las siguientes casillas
+            - generic [ref=e29]:
+              - generic [ref=e30]:
+                - generic [ref=e32]:
+                  - generic [ref=e33]: Correo electrónico
+                  - generic [ref=e34]:
+                    - textbox "Correo electrónico" [ref=e38]: slcokzwhmupo946q@uberip.com
+                    - group:
+                      - generic: Correo electrónico
+                - generic [ref=e40]:
+                  - generic [ref=e41]: Nombre
+                  - generic [ref=e42]:
+                    - textbox "Nombre" [ref=e47]: TestUser
+                    - group:
+                      - generic: Nombre
+                - generic [ref=e49]:
+                  - generic [ref=e50]: Apellido
+                  - generic [ref=e51]:
+                    - textbox "Apellido" [ref=e55]: Automation
+                    - group:
+                      - generic: Apellido
+                - generic [ref=e57]:
+                  - generic [ref=e58]: Contraseña
+                  - generic [ref=e59]:
+                    - textbox "Contraseña" [ref=e63]: TestPassword123!
+                    - button "Mostrar contraseña" [ref=e65] [cursor=pointer]
+                    - group:
+                      - generic: Contraseña
+                - generic [ref=e69]:
+                  - generic [ref=e70]: Repite la contraseña
+                  - generic [ref=e71]:
+                    - textbox "Repite la contraseña" [ref=e75]: TestPassword123!
+                    - button "Mostrar contraseña" [ref=e77] [cursor=pointer]
+                    - group:
+                      - generic: Repite la contraseña
+                - generic [ref=e80]:
+                  - checkbox [checked] [ref=e82] [cursor=pointer]
+                  - paragraph [ref=e85]:
+                    - text: He leído y acepto los
+                    - link "Términos y Condiciones" [ref=e86] [cursor=pointer]:
+                      - /url: /terminos-condiciones
+                    - text: y la
+                    - link "Política de Protección de Datos Personales" [ref=e87] [cursor=pointer]:
+                      - /url: /politica-privacidad
+              - paragraph [ref=e88]: Ocurrió un error inesperado. Intenta de nuevo.
+              - button "REGISTRAR" [ref=e89] [cursor=pointer]
+              - link "Ir a Iniciar sesión" [ref=e90] [cursor=pointer]:
+                - /url: /auth/login
+  - link "Escríbenos a WhatsApp" [ref=e91] [cursor=pointer]:
+    - /url: https://wa.me/593979133351/?text=Hola+Actuaria,+tengo+novedades+sobre+el+Portal+de+Clientes
+```
+
+# Test source
+
+```ts
+  20  |     // Existing Company Screen (Ya está en Actuaria+)
+  21  |     readonly yaEstaEnActuariaMessage: Locator;
+  22  |     readonly encontramosEmpresaMessage: Locator;
+  23  |     readonly solicitarAccesoButton: Locator;
+  24  |     readonly cerrarSesionButton: Locator;
+  25  | 
+  26  |     // Company Creation Screen (new company flow)
+  27  |     readonly firstTimeMessage: Locator;
+  28  |     readonly razonSocialInput: Locator;
+  29  |     readonly nombreComercialInput: Locator;
+  30  |     readonly provinciaCombobox: Locator;
+  31  |     readonly ciudadCombobox: Locator;
+  32  |     readonly direccionInput: Locator;
+  33  |     readonly telefonoInput: Locator;
+  34  |     readonly crearEmpresaButton: Locator;
+  35  |     readonly empresaCreadaMessage: Locator;
+  36  | 
+  37  |     // Role Selection Screen
+  38  |     readonly roleSoyEl: Locator;
+  39  |     readonly roleDelegarLa: Locator;
+  40  |     readonly continueAsAdministratorButton: Locator;
+  41  |     readonly delegarAdministracionButton: Locator;
+  42  | 
+  43  |     // Access Configuration Screen
+  44  |     readonly equipoYRolesBox: Locator;
+  45  |     readonly permisosModuloBox: Locator;
+  46  |     readonly invitacionLinkBox: Locator;
+  47  |     readonly configurarAccessButton: Locator;
+  48  |     readonly accesoPorAdministradorHeading: Locator;
+  49  | 
+  50  |         // Delegation Screen
+  51  |     readonly adminEmailInput: Locator;
+  52  |     readonly enviarButton: Locator;
+  53  |     readonly solicitudEnRevisionHeading: Locator;
+  54  | 
+  55  |     // Final Screen
+  56  |     readonly finalAdministratorHeading: Locator;
+  57  | 
+  58  |     constructor(page: Page) {
+  59  |         super(page);
+  60  | 
+  61  |         // RUC Selection
+  62  |         this.rucInput = page.getByRole('textbox', { name: 'RUC de tu empresa' });
+  63  |         this.continueRucButton = page.getByRole('button', { name: 'Continuar →' });
+  64  |         this.rucSuccessMessage = page.getByText('Esta empresa todavía no tiene administrador. En el siguiente paso eliges tu rol.');
+  65  |         // La respuesta del backend depende del estado de la empresa para ese RUC:
+  66  |         //  - sin administrador  → "...En el siguiente paso eliges tu rol."
+  67  |         //  - ya tiene admin     → "...En el siguiente paso te ayudamos a solicitar acceso..."
+  68  |         //  - primera vez        → "Es la primera vez que vemos..."
+  69  |         // Por eso el locator es TOLERANTE (no un único mensaje fijo).
+  70  |         this.rucSuccessMessageTwo = page.getByText(/En el siguiente paso|Es la primera vez que vemos/i).first();
+  71  | 
+  72  |         // Company Creation
+  73  |         this.firstTimeMessage = page.getByText('Es la primera vez que vemos');
+  74  |         this.razonSocialInput = page.getByRole('textbox', { name: 'Razon Social' });
+  75  |         this.nombreComercialInput = page.getByRole('textbox', { name: 'Nombre Comercial' });
+  76  |         this.provinciaCombobox = page.getByRole('combobox', { name: 'Provincia' });
+  77  |         this.ciudadCombobox = page.getByRole('combobox', { name: 'Ciudad' });
+  78  |         this.direccionInput = page.getByRole('textbox', { name: 'Direccion' });
+  79  |         this.telefonoInput = page.getByRole('textbox', { name: 'Telefono' });
+  80  |         this.crearEmpresaButton = page.getByRole('button', { name: 'Crear empresa y continuar →' });
+  81  |         this.empresaCreadaMessage = page.getByText('La empresa se creó');
+  82  | 
+  83  |         // Role Selection (the redesigned role screen renders each option as an h6 heading card)
+  84  |         this.roleSoyEl = page.getByRole('heading', { name: 'Soy el Administrador' });
+  85  |         this.roleDelegarLa = page.getByRole('heading', { name: 'Delegar la administración a otra persona' });
+  86  |         this.continueAsAdministratorButton = page.getByRole('button', { name: 'Continuar como Administrador →' });
+  87  |         this.delegarAdministracionButton = page.getByRole('button', { name: 'Delegar la administración →' });
+  88  | 
+  89  |         // Access Configuration
+  90  |         // Las tarjetas se localizan por su TÍTULO (anclado al texto completo del
+  91  |         // elemento), no por `div.filter(...).nth(5)`: el índice cambiaba cuando la
+  92  |         // app renombraba/insertaba tarjetas y el filtro por descripción fallaba.
+  93  |         // Regex tolerante: la app renombró "Equipo y roles" → "Usuarios y roles".
+  94  |         this.equipoYRolesBox = page.getByText(/^(Usuarios y roles|Equipo y roles)$/).first();
+  95  |         this.permisosModuloBox = page.getByText(/^Permisos por módulo$/).first();
+  96  |         this.invitacionLinkBox = page.getByText(/^Invitación por link$/).first();
+  97  |         this.configurarAccessButton = page.getByRole('button', { name: 'Configurar mi acceso →' });
+  98  |         this.accesoPorAdministradorHeading = page.getByRole('heading', { name: 'Tu acceso lo define tu' });
+  99  | 
+  100 |                 // Delegation Screen
+  101 |         this.adminEmailInput = page.getByRole('textbox', { name: 'Correo del administrador' });
+  102 |         this.enviarButton = page.getByRole('button', { name: 'Enviar invitación →' });
+  103 |         this.solicitudEnRevisionHeading = page.getByRole('heading', { name: 'Tu solicitud está en revisión' });
+  104 | 
+  105 |         // Existing Company Screen (Ya está en Actuaria+)
+  106 |         this.yaEstaEnActuariaMessage = page.getByText('Ya está en Actuaria+', { exact: true });
+  107 |         this.encontramosEmpresaMessage = page.getByText('Encontramos la empresa');
+  108 |         this.solicitarAccesoButton = page.getByRole('button', { name: 'Solicitar acceso →' });
+  109 |         this.cerrarSesionButton = page.getByRole('button', { name: 'Cerrar sesión' });
+  110 | 
+  111 |         // Final Screen
+  112 |         this.finalAdministratorHeading = page.getByRole('heading', { name: 'Listo, eres el administrador' });
+  113 |     }
+  114 | 
+  115 |     /**
+  116 |      * Navigate to onboarding jerarquia page
+  117 |      */
+  118 |     async waitForOnboardingPage(timeout: number = 20000): Promise<void> {
+  119 |         this.logger.navegacion('Esperando página de onboarding /jerarquia');
+> 120 |         await this.page.waitForURL('**/onboarding/jerarquia', { timeout });
+      |                         ^ TimeoutError: page.waitForURL: Timeout 30000ms exceeded.
+  121 |         this.logger.exito('Página de onboarding cargada');
+  122 |     }
+  123 | 
+  124 |         /**
+  125 |      * Ingresa el RUC de la empresa y espera a que el backend termine de verificarlo.
+  126 |      *
+  127 |      * La verificación del RUC es una llamada REAL al backend (reniec/SRI): el loader
+  128 |      * "Verificando empresa..." puede tardar más que el timeout del mensaje final
+  129 |      * (observado en stage: >10s y el botón "Continuar →" seguía deshabilitado).
+  130 |      * Por eso NO se usa un `waitForTimeout` fijo:
+  131 |      *  1) se espera a que el loader desaparezca (tolerante, con presupuesto `timeout`),
+  132 |      *  2) y solo después se espera el mensaje de respuesta del backend.
+  133 |      *
+  134 |      * @param ruc - RUC a verificar
+  135 |      * @param timeout - Presupuesto (ms) para CADA espera: fin del loader y mensaje de respuesta
+  136 |      */
+  137 |     async enterRUC(ruc: string, timeout: number = 25000): Promise<void> {
+  138 |         this.logger.cambio('Ingresando RUC de la empresa');
+  139 |         await this.rucInput.fill(ruc, { timeout: ACTION_TIMEOUT_MS });
+  140 | 
+  141 |         // 1) Esperar a que la verificación del backend termine.
+  142 |         //    Tolerante: el loader puede no llegar a verse (respuesta inmediata) o ya
+  143 |         //    haber desaparecido cuando empezamos a esperar.
+  144 |         this.logger.verificacion('Esperando fin de verificación de RUC (loader "Verificando empresa...")');
+  145 |         const loadingIndicator = this.page.getByText('Verificando empresa...').first();
+  146 |         await loadingIndicator.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {});
+  147 |         await loadingIndicator.waitFor({ state: 'hidden', timeout }).catch(() => {});
+  148 | 
+  149 |         // 2) Esperar la respuesta del backend (cualquiera de los estados conocidos).
+  150 |         this.logger.verificacion('Verificando disponibilidad de RUC');
+  151 |         await this.waitForVisible(
+  152 |             this.rucSuccessMessageTwo,
+  153 |             'respuesta de verificación de RUC ("En el siguiente paso" / "Es la primera vez que vemos")',
+  154 |             timeout
+  155 |         );
+  156 |         this.logger.exito('RUC verificado correctamente');
+  157 |     }
+  158 | 
+  159 |     /**
+  160 |      * Click continue button on RUC screen
+  161 |      */
+  162 |     async continueFromRUCScreen(): Promise<void> {
+  163 |         this.logger.cambio('Haciendo clic en Continuar →');
+  164 |         await expect(this.continueRucButton).toBeEnabled({ timeout: 5000 });
+  165 |         await this.continueRucButton.click({ timeout: ACTION_TIMEOUT_MS });
+  166 |         this.logger.exito('Continuar clickeado - avanzando a siguiente pantalla');
+  167 |     }
+  168 | 
+  169 |     /**
+  170 |      * Verify role selection options are visible
+  171 |      */
+  172 |     async verifyRoleOptions(timeout: number = 8000): Promise<void> {
+  173 |         this.logger.verificacion('Verificando opciones de rol');
+  174 |         await this.waitForVisible(this.roleSoyEl, 'tarjeta de rol "Soy el Administrador"', timeout);
+  175 |         await this.waitForVisible(this.roleDelegarLa, 'tarjeta de rol "Delegar la administración a otra persona"', timeout);
+  176 |         this.logger.exito('Opciones de rol visibles');
+  177 |     }
+  178 | 
+  179 |     /**
+  180 |      * Continue as administrator
+  181 |      */
+  182 |     async continueAsAdministrator(): Promise<void> {
+  183 |         this.logger.cambio('Haciendo clic en Continuar como Administrador →');
+  184 |         await this.continueAsAdministratorButton.click({ timeout: ACTION_TIMEOUT_MS });
+  185 |         this.logger.exito('Role seleccionado: Administrador');
+  186 |     }
+  187 | 
+  188 |     /**
+  189 |      * Verify access configuration boxes are visible
+  190 |      */
+  191 |     async verifyAccessConfigBoxes(timeout: number = 8000): Promise<void> {
+  192 |         this.logger.verificacion('Verificando pantallas de configuración de acceso');
+  193 |         await this.waitForVisible(this.equipoYRolesBox, 'caja de configuración "Usuarios y roles"', timeout);
+  194 |         await this.waitForVisible(this.permisosModuloBox, 'caja de configuración "Permisos por módulo"', timeout);
+  195 |         await this.waitForVisible(this.invitacionLinkBox, 'caja de configuración "Invitación por link"', timeout);
+  196 |         this.logger.exito('Todas las cajas de configuración visibles');
+  197 |     }
+  198 | 
+  199 |     /**
+  200 |      * Click configure access button
+  201 |      */
+  202 |     async configurarAcceso(): Promise<void> {
+  203 |         this.logger.cambio('Haciendo clic en Configurar mi acceso →');
+  204 |         await this.configurarAccessButton.click({ timeout: ACTION_TIMEOUT_MS });
+  205 |         this.logger.exito('Iniciando configuración de acceso');
+  206 |     }
+  207 | 
+  208 |     /**
+  209 |      * Verify final administrator heading
+  210 |      */
+  211 |     async verifyFinalAdministratorHeading(timeout: number = 10000): Promise<void> {
+  212 |         this.logger.verificacion('Verificando mensaje final');
+  213 |         await this.waitForVisible(this.finalAdministratorHeading, 'heading final "Listo, eres el administrador"', timeout);
+  214 |         this.logger.exito('Mensaje final de administrador verificado');
+  215 |     }
+  216 | 
+  217 |     /**
+  218 |      * Select delegation role instead of administrator
+  219 |      */
+  220 |     async selectDelegarLaAdministracion(): Promise<void> {
+```

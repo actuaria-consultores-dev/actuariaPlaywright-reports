@@ -1,0 +1,24 @@
+🎭️ [Recursos Tests] Empezando pre condición
+🔐 [Recursos Tests] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Recursos Tests] Login exitoso
+✅ [Recursos Tests] Página principal verificada
+🔍 [Recursos Tests] Navegando a Recursos
+🔍 [RecursosPage] Abriendo menú "Recursos"
+✅ [RecursosPage] Menú "Recursos" abierto
+ℹ️  [RecursosPage] Buscando enlace "Documentos legales"
+✅ [RecursosPage] Enlace "Documentos legales" clickeado
+ℹ️  [RecursosPage] Verificando que la pestaña "Política de calidad" sea visible
+✅ [RecursosPage] Pestaña "Política de calidad" visible
+✅ [Recursos Tests] Navegación a Recursos completada
+🎭️ [Recursos-TC03] Verificar pestaña de Términos y condiciones
+📊 [RecursosPage] Verificando pestaña "Términos y condiciones"
+✅ [RecursosPage] Pestaña "Términos y condiciones" seleccionada
+
+✅ ✅ ✅ [Recursos-TC03] TC03 finalizado exitosamente
+
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 3 console message(s) logged to stderr

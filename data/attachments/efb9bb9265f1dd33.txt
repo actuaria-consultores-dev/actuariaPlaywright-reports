@@ -1,0 +1,223 @@
+🎭️ [Crear Usuario Onboarding Delegation Tests] Creando inbox Mail.tm y navegando a formulario de registro
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] CREANDO INBOX EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Config: maxRetries=3, baseUrl=https://api.mail.tm
+🔄 [MailTmService] [STAGGER] Esperando 2830ms para evitar rate limiting en API...
+🔄 [MailTmService] --- Intento 1/3 de creación ---
+📊 [MailTmService] Paso 1: Obteniendo dominios disponibles...
+ℹ️  [MailTmService] GET /domains → Status: 200 OK
+ℹ️  [MailTmService] Dominio obtenido: "uberip.com"
+📊 [MailTmService] Paso 2: Creando cuenta: bm750ddvmupoajc1@uberip.com
+ℹ️  [MailTmService] POST /accounts → Status: 201 Created
+✅ [MailTmService] Cuenta CREADA exitosamente
+📊 [MailTmService] Paso 3: Obteniendo token de autenticación...
+ℹ️  [MailTmService] POST /token → Status: 200 OK
+✅ [MailTmService] Token obtenido: id="6abe78517224..."
+✅ [MailTmService] 🎉 INBOX CREADO EXITOSAMENTE
+🔍 [MailTmService] ========================================
+✅ [Crear Usuario Onboarding Delegation Tests] Inbox Mail.tm creado: bm750ddvmupoajc1@uberip.com
+🔍 [Crear Usuario Onboarding Delegation Tests] Navegando al formulario de creación de cuenta
+🔍 [LoginPage] Navegando a formulario de creación de cuenta
+✅ [LoginPage] Formulario de creación de cuenta abierto
+✅ [Crear Usuario Onboarding Delegation Tests] Formulario de creación de cuenta listo (URL: https://act-compass-stage-proj.firebaseapp.com/auth/registro)
+🎭️ [Crear Usuario Onboarding Delegation Tests] TC01-02 - Registro y onboarding con delegación (Mail.tm)
+🎭️ [CrearUsuarioWorkflows] Iniciando workflow completo de registro y verificación con Mail.tm
+🔄 [CrearUsuarioWorkflows] Rellenando formulario de creación de usuario
+🔄 [LoginPage] Rellenando formulario de creación de usuario
+✅ [LoginPage] Formulario rellenado correctamente
+✅ [CrearUsuarioWorkflows] Formulario rellenado
+🔄 [CrearUsuarioWorkflows] Enviando formulario de registro
+✅ [CrearUsuarioWorkflows] Botón registrar clickeado
+📊 [CrearUsuarioWorkflows] Verificando que el registro se completó
+🔄 [CrearUsuarioWorkflows] URL actual después del registro verificada
+✅ [CrearUsuarioWorkflows] Usuario redirigido correctamente
+🔄 [CrearUsuarioWorkflows] Esperando 10000ms para que el email se envíe...
+✅ [CrearUsuarioWorkflows] Registro verificado exitosamente
+🔍 [CrearUsuarioWorkflows] Esperando email de bienvenida vía Mail.tm API
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] ESPERANDO MENSAJE EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Esperando mensaje en inbox temporal
+ℹ️  [MailTmService] Config: maxRetries=15, retryDelay=4000ms
+ℹ️  [MailTmService] Tiempo máximo de espera: 60s
+🔄 [MailTmService] --- Intento 1/15 (tiempo transcurrido: 0.0s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 1
+ℹ️  [MailTmService]   → Mensaje encontrado: "BIENVENIDO A Actuaria+"
+📊 [MailTmService] Filtrando por remitente → ✅ COINCIDE
+📊 [MailTmService] Obteniendo contenido completo del mensaje 6abe785a0f8a...
+📊 [MailTmService] GET /messages/6abe785a0f8a...
+ℹ️  [MailTmService] GET /messages/6abe785a0f8a... → Status: 200 OK
+✅ [MailTmService] Contenido obtenido: subject="BIENVENIDO A Actuaria+", html.length=6473
+✅ [MailTmService] 🎉 MENSAJE ENCONTRADO después de 0.9s!
+ℹ️  [MailTmService]   Asunto: "BIENVENIDO A Actuaria+"
+ℹ️  [MailTmService]   Creado: 2026-10-01T15:12:25+00:00
+🔍 [MailTmService] ========================================
+✅ [MailTmService] Enlace extraído exitosamente (texto: "Ver mis empresas")
+✅ [CrearUsuarioWorkflows] Email de bienvenida recibido y contenido extraído
+
+✅ ✅ ✅ [CrearUsuarioWorkflows] Workflow de registro y verificación de email (Mail.tm) completado
+
+ℹ️  [Crear Usuario Onboarding Delegation Tests] Registro completado → email de bienvenida recibido, enlace extraído: SÍ
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] CREANDO INBOX EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Config: maxRetries=3, baseUrl=https://api.mail.tm
+🔄 [MailTmService] [STAGGER] Esperando 2245ms para evitar rate limiting en API...
+🔄 [MailTmService] --- Intento 1/3 de creación ---
+📊 [MailTmService] Paso 1: Obteniendo dominios disponibles...
+ℹ️  [MailTmService] GET /domains → Status: 200 OK
+ℹ️  [MailTmService] Dominio obtenido: "uberip.com"
+📊 [MailTmService] Paso 2: Creando cuenta: htkeg0jvmupob269@uberip.com
+ℹ️  [MailTmService] POST /accounts → Status: 201 Created
+✅ [MailTmService] Cuenta CREADA exitosamente
+📊 [MailTmService] Paso 3: Obteniendo token de autenticación...
+ℹ️  [MailTmService] POST /token → Status: 200 OK
+✅ [MailTmService] Token obtenido: id="6abe78699d13..."
+✅ [MailTmService] 🎉 INBOX CREADO EXITOSAMENTE
+🔍 [MailTmService] ========================================
+✅ [Crear Usuario Onboarding Delegation Tests] Inbox admin para delegación: htkeg0jvmupob269@uberip.com
+ℹ️  [Crear Usuario Onboarding Delegation Tests] Este inbox recibirá la invitación de delegación (se verificará en el paso final)
+
+📍 Paso 3: Onboarding delegación: Nueva empresa → Rol (Delegar) → Acceso → Invitación → Revisión
+ℹ️  [Crear Usuario Onboarding Delegation Tests] Contexto → RUC generado: 5784790959001 | razón social: Test Company 63 | administrador delegado: htkeg0jvmupob269@uberip.com | URL inicio: https://act-compass-stage-proj.firebaseapp.com/onboarding/jerarquia
+🎭️ [OnboardingWorkflows] Iniciando flujo de onboarding con NUEVA empresa + delegación (Mail.tm)
+
+📍 Paso 1: Esperando página de onboarding /jerarquia
+🔍 [OnboardingPage] Esperando página de onboarding /jerarquia
+✅ [OnboardingPage] Página de onboarding cargada
+✅ [OnboardingWorkflows] Página de onboarding cargada
+
+📍 Paso 2: Ingresando RUC generado: 5784790959001
+🔄 [OnboardingPage] Ingresando RUC para nueva empresa
+📊 [OnboardingPage] Verificando que es la primera vez que vemos este RUC
+✅ [OnboardingPage] Primera vez que se ve, se requiere crear empresa
+✅ [OnboardingWorkflows] RUC identificado como primera vez
+
+📍 Paso 3: Rellenando formulario de creación de empresa
+🔄 [OnboardingPage] Rellenando datos de la empresa
+✅ [OnboardingPage] Razón Social ingresada
+✅ [OnboardingPage] Nombre Comercial ingresado
+✅ [OnboardingPage] Provincia seleccionada
+✅ [OnboardingPage] Ciudad seleccionada
+✅ [OnboardingPage] Dirección ingresada
+✅ [OnboardingPage] Teléfono ingresado
+✅ [OnboardingPage] Datos de empresa rellenados correctamente
+✅ [OnboardingWorkflows] Datos de empresa rellenados
+
+📍 Paso 4: Haciendo clic en Crear empresa y continuar →
+🔄 [OnboardingPage] Haciendo clic en Crear empresa y continuar →
+✅ [OnboardingPage] Botón Crear empresa clickeado
+✅ [OnboardingWorkflows] Empresa creada
+
+📍 Paso 5: Verificando: La empresa se creó
+📊 [OnboardingPage] Verificando mensaje: La empresa se creó
+✅ [OnboardingPage] Empresa creada correctamente
+✅ [OnboardingWorkflows] Mensaje de creación verificado
+
+📍 Paso 6: Verificando opciones de rol disponibles
+📊 [OnboardingPage] Verificando opciones de rol
+✅ [OnboardingPage] Opciones de rol visibles
+✅ [OnboardingWorkflows] Opciones de rol visibles
+
+📍 Paso 7: Seleccionando: Delegar la administración a
+🔄 [OnboardingPage] Seleccionando opción: Delegar la administración a otra persona
+✅ [OnboardingPage] Opción de delegación seleccionada
+✅ [OnboardingWorkflows] Opción de delegación seleccionada
+
+📍 Paso 8: Haciendo clic en Delegar la administración →
+🔄 [OnboardingPage] Haciendo clic en Delegar la administración →
+✅ [OnboardingPage] Delegación iniciada
+✅ [OnboardingWorkflows] Delegación iniciada
+
+📍 Paso 9: Verificando: Tu acceso lo define tu administrador
+📊 [OnboardingPage] Verificando pantalla: Tu acceso lo define tu administrador
+✅ [OnboardingPage] Pantalla de acceso por administrador verificada
+✅ [OnboardingWorkflows] Pantalla de acceso verificada
+
+📍 Paso 10: Haciendo clic en Configurar mi acceso →
+🔄 [OnboardingPage] Haciendo clic en Configurar mi acceso →
+✅ [OnboardingPage] Iniciando configuración de acceso
+✅ [OnboardingWorkflows] Avanzando a pantalla de administrador
+
+📍 Paso 11: Ingresando email de administrador
+🔐 [OnboardingPage] Ingresando email del administrador (ht***@[OCULTO])
+✅ [OnboardingPage] Email del administrador ingresado
+✅ [OnboardingWorkflows] Email del administrador ingresado
+
+📍 Paso 12: Enviando invitación (puede tomar ~10 segundos)
+🔄 [OnboardingPage] Haciendo clic en Enviar →
+✅ [OnboardingPage] Invitación enviada al administrador
+✅ [OnboardingWorkflows] Invitación enviada
+
+📍 Paso 13: Verificando: Tu solicitud está en revisión
+📊 [OnboardingPage] Verificando: Tu solicitud está en revisión
+✅ [OnboardingPage] Solicitud en revisión verificada
+✅ [OnboardingWorkflows] Solicitud de delegación en revisión
+
+✅ ✅ ✅ [OnboardingWorkflows] Flujo de onboarding con nueva empresa + delegación finalizado
+
+📊 [Crear Usuario Onboarding Delegation Tests] Admin email para delegación: htkeg0jvmupob269@uberip.com
+
+======================================================================
+🎯 Checklist onboarding delegación
+======================================================================
+   • 1_empresa_creada: OK
+   • 2_rol_delegar_seleccionado: OK
+   • 3_acceso_definido_por_admin: OK
+   • 4_invitacion_enviada: OK
+   • 5_solicitud_en_revision: OK
+======================================================================
+
+✅ [Crear Usuario Onboarding Delegation Tests] Flujo de delegación completado exitosamente
+🎭️ [Crear Usuario Onboarding Delegation Tests] Paso 4 - Verificando email de invitación del administrador delegado
+🎭️ [OnboardingWorkflows] Verificando email de invitación de delegación (Mail.tm)
+📊 [OnboardingWorkflows] Esperando email de invitación en Mail.tm
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] ESPERANDO MENSAJE EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Esperando mensaje en inbox temporal
+ℹ️  [MailTmService] Config: maxRetries=12, retryDelay=3000ms
+ℹ️  [MailTmService] Tiempo máximo de espera: 36s
+🔄 [MailTmService] --- Intento 1/12 (tiempo transcurrido: 0.0s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 1
+ℹ️  [MailTmService]   → Mensaje encontrado: "TestUser Automation te invitó a Test Company 63 en Actuaria+"
+📊 [MailTmService] Filtrando por remitente → ✅ COINCIDE
+📊 [MailTmService] Obteniendo contenido completo del mensaje 6abe78776b23...
+📊 [MailTmService] GET /messages/6abe78776b23...
+ℹ️  [MailTmService] GET /messages/6abe78776b23... → Status: 200 OK
+✅ [MailTmService] Contenido obtenido: subject="TestUser Automation te invitó a Test Company 63 en Actuaria+", html.length=6750
+✅ [MailTmService] 🎉 MENSAJE ENCONTRADO después de 1.0s!
+ℹ️  [MailTmService]   Asunto: "TestUser Automation te invitó a Test Company 63 en Actuaria+"
+ℹ️  [MailTmService]   Creado: 2026-10-01T15:12:54+00:00
+🔍 [MailTmService] ========================================
+✅ [OnboardingWorkflows] Email de invitación recibido en htkeg0jvmupob269@uberip.com
+
+📍 Paso 1: Verificando contenido del email
+ℹ️  [MailTmService] Buscando texto "Hola," en HTML (6750 chars) → ✅ ENCONTRADO
+✅ [OnboardingWorkflows] Saludo encontrado
+ℹ️  [MailTmService] Buscando texto "bm750ddvmupoajc1@uberip.com" en HTML (6750 chars) → ✅ ENCONTRADO
+✅ [OnboardingWorkflows] Email de usuario encontrado
+ℹ️  [MailTmService] Buscando texto "Actuaria+" en HTML (6750 chars) → ✅ ENCONTRADO
+✅ [OnboardingWorkflows] Nombre de producto encontrado
+ℹ️  [MailTmService] Buscando texto "Establecer contraseña" en HTML (6750 chars) → ✅ ENCONTRADO
+✅ [OnboardingWorkflows] CTA text encontrado
+
+📍 Paso 2: Verificando enlace de invitación
+✅ [MailTmService] Enlace extraído exitosamente (texto: "Establecer contraseña")
+✅ [OnboardingWorkflows] Enlace de invitación válido
+✅ [OnboardingWorkflows] Email de invitación del administrador completamente verificado
+
+✅ ✅ ✅ [OnboardingWorkflows] Verificación de email de delegación (Mail.tm) completada
+
+
+✅ ✅ ✅ [Crear Usuario Onboarding Delegation Tests] TC01-02 completado - Usuario registrado y delegación completada (Mail.tm)
+
+
+ℹ️  1 non-blocking error(s) ignored by filter.
+
+📋 2 console message(s) logged to stderr

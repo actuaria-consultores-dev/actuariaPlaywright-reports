@@ -1,0 +1,52 @@
+🎭️ [Mi Cuenta Contactos Vinculados Tests] Iniciando sesión con usuario de prueba ACTUARIA6
+🔐 [Mi Cuenta Contactos Vinculados Tests] Ingresando credenciales
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Mi Cuenta Contactos Vinculados Tests] Login exitoso
+🔍 [ContactosVinculadosPage] Navegando a Mi Cuenta / Contactos vinculados
+⚠️  [ContactosVinculadosPage] goto Mi Cuenta / Contactos vinculados interrumpido por el SPA (intento 1/3): page.goto: net::ERR_ABORTED at https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/contactos
+Call log:
+  - navigating to "https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/contactos", waiting until "domcontentloaded"
+
+✅ [ContactosVinculadosPage] Página de Contactos vinculados cargada
+📊 [ContactosVinculadosPage] Verificando pantalla Contactos vinculados
+✅ [ContactosVinculadosPage] Pantalla Contactos vinculados visible
+🎭️ [Mi Cuenta Contactos Vinculados Tests] ========================================
+🎭️ [Mi Cuenta Contactos Vinculados Tests] TC02 - Invitar a A+ (Solo vista en Estudios actuariales)
+🎭️ [Mi Cuenta Contactos Vinculados Tests] ========================================
+
+⚙️  [Mi Cuenta Contactos Vinculados Tests] Contacto a invitar:
+   • nombre: QA Auto 1e26
+   • correo: [OCULTO]
+   • cargo: Jefe de Talento Humano
+🎭️ [ContactosVinculadosPage] Creando contacto QA Auto 1e26 Contacto 77648561e26
+🔄 [ContactosVinculadosPage] Clic en "Agregar contacto"
+🔄 [ContactosVinculadosPage] Llenando formulario de contacto (qa.contacto.77648561e26@yopmail.com)
+🔄 [ContactosVinculadosPage] Seleccionando cargo "Jefe de Talento Humano"
+✅ [ContactosVinculadosPage] Cargo "Jefe de Talento Humano" seleccionado
+🔄 [ContactosVinculadosPage] Marcando tipo de contacto "Técnico"
+✅ [ContactosVinculadosPage] Tipo de contacto "Técnico" marcado
+✅ [ContactosVinculadosPage] Formulario de contacto llenado
+🔄 [ContactosVinculadosPage] Clic en "Guardar"
+✅ [ContactosVinculadosPage] Contacto guardado
+✅ [ContactosVinculadosPage] Contacto QA Auto 1e26 Contacto 77648561e26 creado y visible en la lista
+📊 [ContactosVinculadosPage] Verificando tarjeta de "QA Auto 1e26 Contacto 77648561e26"
+✅ [ContactosVinculadosPage] Tarjeta de "QA Auto 1e26 Contacto 77648561e26" verificada (3 botones)
+🔄 [ContactosVinculadosPage] Clic en "Invitar a A+" para "QA Auto 1e26 Contacto 77648561e26"
+🔄 [ContactosVinculadosPage] Configurando permiso "estudiosActuariales" → "Solo vista" (radio #0)
+✅ [ContactosVinculadosPage] Permiso "estudiosActuariales" = "Solo vista"
+🔄 [ContactosVinculadosPage] Clic en "Enviar invitación"
+✅ [ContactosVinculadosPage] Invitación enviada
+📊 [ContactosVinculadosPage] Verificando tarjeta de "QA Auto 1e26 Contacto 77648561e26"
+✅ [ContactosVinculadosPage] Tarjeta de "QA Auto 1e26 Contacto 77648561e26" verificada (4 botones)
+
+✅ ✅ ✅ [Mi Cuenta Contactos Vinculados Tests] TC02 completado - invitación enviada con Solo vista en Estudios actuariales
+
+🎭️ [ContactosVinculadosPage] Eliminando contacto "QA Auto 1e26 Contacto 77648561e26"
+🔄 [ContactosVinculadosPage] Clic en "Eliminar" para "QA Auto 1e26 Contacto 77648561e26"
+🔄 [ContactosVinculadosPage] Confirmando eliminación
+✅ [ContactosVinculadosPage] Contacto eliminado
+
+ℹ️  6 non-blocking error(s) ignored by filter.
+
+📋 4 console message(s) logged to stderr

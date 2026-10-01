@@ -1,0 +1,7 @@
+
+===== POSIBLE CAUSA RAÍZ (console/red detectada en la página) =====
+  URL detectada: https://act-compass-stage-proj.firebaseapp.com/auth/registro
+  • CONSOLE ERROR → FirebaseError: Firebase: Cloud function deadline exceeded. (auth/internal-error). at _errorWithCustomMessage (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21450:20) at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21933:23) at async _performSignInRequest (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21951:28) at async createUserWithEmailAndPassword (https://act-compass-stage-proj.fireb…
+  • RED (4xx/5xx) → POST https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDFbr0PyJ4CSFTfXn8nkf4YZ3kzoKxL8Kk → 400
+  • CONSOLE → FirebaseError: Firebase: Cloud function deadline exceeded. (auth/internal-error). at _errorWithCustomMessage (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21450:20) at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21933:23) at async _performSignInRequest (https://act-compass-stage-proj.firebaseapp.com/assets/index-CP87J_kP.js:21951:28) at async createUserWithEmailAndPassword (https://act-compass-stage-proj.fireb…
+===================================================================
