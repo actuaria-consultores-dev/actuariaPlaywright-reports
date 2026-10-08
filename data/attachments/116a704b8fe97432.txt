@@ -1,0 +1,44 @@
+🎭️ [Proyección de Reservas Tests (Demo)] Empezando pre condición
+🔐 [Proyección de Reservas Tests (Demo)] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Proyección de Reservas Tests (Demo)] Login exitoso
+🔍 [Proyección de Reservas Tests (Demo)] Verificando navegación a página principal
+✅ [Proyección de Reservas Tests (Demo)] Navegación exitosa a dashboard
+🎭️ [Proyección de Reservas Tests (Demo)] TC_PR01 (DEMO)
+🔍 [Simulador Workflows] Navegando a Simulador de beneficios
+✅ [Simulador Workflows] En tab Simulador
+🔄 [Simulador Workflows] Seleccionando Proyección de reservas
+✅ [Simulador Workflows] Proyección de reservas seleccionada
+📊 [Simulador Workflows] Pestaña Proyección de Reservas seleccionada
+✅ [Simulador Workflows] Pestaña Proyección de Reservas verificada
+📊 [Simulador Workflows] Pestaña Proyección de Pagos no seleccionada
+✅ [Simulador Workflows] Pestaña Proyección de Pagos verificada
+📊 [Simulador Workflows] Verificando elementos clave en Proyección de Reservas
+📊 [Simulador Workflows] Verificando encabezado: Evolución de reserva por beneficio
+📊 [Simulador Workflows] Verificando encabezado: Reserva total por persona
+📊 [Simulador Workflows] Verificando encabezado: Reserva total por beneficio (JP+BD)
+📊 [Simulador Workflows] Verificando encabezado: Reserva total por beneficio y TS
+✅ [Simulador Workflows] Todos los encabezados verificados
+📊 [Simulador Workflows] Verificando texto: Monto Jubilación
+📊 [Simulador Workflows] Verificando texto: Monto Desahucio
+📊 [Simulador Workflows] Verificando texto: Monto Total
+📊 [Simulador Workflows] Verificando texto: Reserva Anual
+📊 [Simulador Workflows] Verificando texto: Variación Anual
+✅ [Simulador Workflows] Todos los textos verificados
+📊 [Simulador Workflows] Monto Jubilación: $5,17M (±20%)
+✅ [Simulador Workflows] Monto Jubilación verificado (encontrado: $5,17M)
+📊 [Simulador Workflows] Monto Desahucio: $1,53M (±20%)
+✅ [Simulador Workflows] Monto Desahucio verificado (encontrado: $1,54M)
+📊 [Simulador Workflows] Monto Total: $6,70M (±20%)
+✅ [Simulador Workflows] Monto Total verificado (encontrado: $6,71M)
+📊 [Simulador Workflows] Gráfico: Evolución de reserva por beneficio
+📊 [Simulador Workflows] Gráfico: Reserva total por persona
+📊 [Simulador Workflows] Gráfico: Reserva total por beneficio (JP+BD)
+📊 [Simulador Workflows] Gráfico: Reserva total por beneficio y TS
+✅ [Simulador Workflows] Todos los gráficos verificados
+✅ [Simulador Workflows] TC_PR01-DEMO completado
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 8 console message(s) logged to stderr

@@ -1,0 +1,52 @@
+🎭️ [Inicio Tests] Empezando pre condición
+🔐 [Inicio Tests] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Inicio Tests] Login exitoso
+🔍 [Inicio Tests] Verificando navegación a página principal
+✅ [Inicio Tests] Navegación exitosa a dashboard
+🎭️ [Inicio Tests] TC01: Verificar 6 servicios sean mostrados
+📊 [Inicio Tests] Se encontraron 6 tarjetas de servicio
+📊 [Inicio Tests] Tarjeta de servicio 1 es visible
+📊 [Inicio Tests] Tarjeta de servicio 2 es visible
+📊 [Inicio Tests] Tarjeta de servicio 3 es visible
+📊 [Inicio Tests] Tarjeta de servicio 4 es visible
+📊 [Inicio Tests] Tarjeta de servicio 5 es visible
+📊 [Inicio Tests] Tarjeta de servicio 6 es visible
+📊 [Inicio Tests] Nombres de servicios encontrados: ["Estudios actuarialesGenera tu cálculo actuarial de provisiones de beneficios post-empleoDisponibleIngresar","Informe de impuestos diferidosCalcula el activo por impuesto diferido para obtener beneficios tributariosContratarIngresar","Actas de jubilación patronalDocumento técnico para la obtención de la pensión mensual y fondo globalContratarIngresar","Control tributario de provisionesComposición histórica de provisiones, para el cumplimiento normativoDisponibleIngresar","Simulador de beneficios post empleoAnaliza tus provisiones, anticipando escenarios para la toma de decisionesContratarIngresar","Consulta con NavIA ᴮᵉᵗᵃResponde todas tus dudas con nuestra inteligencia artificial actuarialDisponibleIngresar"]
+📊 [Inicio Tests] Servicio 1: "Estudios actuarialesGenera tu cálculo actuarial de provisiones de beneficios post-empleoDisponibleIngresar" contiene "Estudios"
+📊 [Inicio Tests] Servicio 2: "Informe de impuestos diferidosCalcula el activo por impuesto diferido para obtener beneficios tributariosContratarIngresar" contiene "Informe de"
+📊 [Inicio Tests] Servicio 3: "Actas de jubilación patronalDocumento técnico para la obtención de la pensión mensual y fondo globalContratarIngresar" contiene "Actas de jubilación"
+📊 [Inicio Tests] Servicio 4: "Control tributario de provisionesComposición histórica de provisiones, para el cumplimiento normativoDisponibleIngresar" contiene "Control tributario"
+📊 [Inicio Tests] Servicio 5: "Simulador de beneficios post empleoAnaliza tus provisiones, anticipando escenarios para la toma de decisionesContratarIngresar" contiene "Simulador de"
+📊 [Inicio Tests] Servicio 6: "Consulta con NavIA ᴮᵉᵗᵃResponde todas tus dudas con nuestra inteligencia artificial actuarialDisponibleIngresar" contiene "Consulta con"
+✅ [Inicio Tests] Todos los nombres de servicios contienen los valores esperados
+📊 [Inicio Tests] Servicio 1: {"heading":"Estudios actuariales","firstParagraph":"Conocer más","secondParagraph":"Genera tu cálculo actuarial de provisiones de beneficios post-empleo","button":"Ingresar"}
+📊 [Inicio Tests] Servicio 2: {"heading":"Informe de impuestos diferidos","firstParagraph":"Conocer más","secondParagraph":"Calcula el activo por impuesto diferido para obtener beneficios tributarios","button":"Ingresar"}
+📊 [Inicio Tests] Servicio 3: {"heading":"Actas de jubilación patronal","firstParagraph":"Conocer más","secondParagraph":"Documento técnico para la obtención de la pensión mensual y fondo global","button":"Ingresar"}
+📊 [Inicio Tests] Servicio 4: {"heading":"Control tributario de provisiones","firstParagraph":"Conocer más","secondParagraph":"Composición histórica de provisiones, para el cumplimiento normativo","button":"Ingresar"}
+📊 [Inicio Tests] Servicio 5: {"heading":"Simulador de beneficios post empleo","firstParagraph":"Conocer más","secondParagraph":"Analiza tus provisiones, anticipando escenarios para la toma de decisiones","button":"Ingresar"}
+📊 [Inicio Tests] Servicio 6: {"heading":"Consulta con NavIA ᴮᵉᵗᵃ","firstParagraph":"Conocer más","secondParagraph":"Responde todas tus dudas con nuestra inteligencia artificial actuarial","button":"Ingresar"}
+✅ [Inicio Tests] Se extrajeron exitosamente los datos de los 6 servicios
+📊 [Inicio Tests] Comparando servicio 1 | Actual: {"heading":"Estudios actuariales","firstParagraph":"Conocer más","secondParagraph":"Genera tu cálculo actuarial de provisiones de beneficios post-empleo","button":"Ingresar"} | Esperado: {"heading":"Estudios actuariales","firstParagraph":"Conocer más","secondParagraph":"Genera tu cálculo actuarial de provisiones de beneficios post-empleo","button":"Ingresar"}
+✅ [Inicio Tests] Los datos del servicio 1 coinciden con lo esperado
+📊 [Inicio Tests] Comparando servicio 2 | Actual: {"heading":"Informe de impuestos diferidos","firstParagraph":"Conocer más","secondParagraph":"Calcula el activo por impuesto diferido para obtener beneficios tributarios","button":"Ingresar"} | Esperado: {"heading":"Informe de impuestos diferidos","firstParagraph":"Conocer más","secondParagraph":"Calcula el activo por impuesto diferido para obtener beneficios tributarios","button":"Ingresar"}
+✅ [Inicio Tests] Los datos del servicio 2 coinciden con lo esperado
+📊 [Inicio Tests] Comparando servicio 3 | Actual: {"heading":"Actas de jubilación patronal","firstParagraph":"Conocer más","secondParagraph":"Documento técnico para la obtención de la pensión mensual y fondo global","button":"Ingresar"} | Esperado: {"heading":"Actas de jubilación patronal","firstParagraph":"Conocer más","secondParagraph":"Documento técnico para la obtención de la pensión mensual y fondo global","button":"Ingresar"}
+✅ [Inicio Tests] Los datos del servicio 3 coinciden con lo esperado
+📊 [Inicio Tests] Comparando servicio 4 | Actual: {"heading":"Control tributario de provisiones","firstParagraph":"Conocer más","secondParagraph":"Composición histórica de provisiones, para el cumplimiento normativo","button":"Ingresar"} | Esperado: {"heading":"Control tributario de provisiones","firstParagraph":"Conocer más","secondParagraph":"Composición histórica de provisiones, para el cumplimiento normativo","button":"Ingresar"}
+✅ [Inicio Tests] Los datos del servicio 4 coinciden con lo esperado
+📊 [Inicio Tests] Comparando servicio 5 | Actual: {"heading":"Simulador de beneficios post empleo","firstParagraph":"Conocer más","secondParagraph":"Analiza tus provisiones, anticipando escenarios para la toma de decisiones","button":"Ingresar"} | Esperado: {"heading":"Simulador de beneficios post empleo","firstParagraph":"Conocer más","secondParagraph":"Analiza tus provisiones, anticipando escenarios para la toma de decisiones","button":"Ingresar"}
+✅ [Inicio Tests] Los datos del servicio 5 coinciden con lo esperado
+📊 [Inicio Tests] Comparando servicio 6 | Actual: {"heading":"Consulta con NavIA ᴮᵉᵗᵃ","firstParagraph":"Conocer más","secondParagraph":"Responde todas tus dudas con nuestra inteligencia artificial actuarial","button":"Ingresar"} | Esperado: {"heading":"Consulta con NavIA ᴮᵉᵗᵃ","firstParagraph":"Conocer más","secondParagraph":"Responde todas tus dudas con nuestra inteligencia artificial actuarial","button":"Ingresar"}
+✅ [Inicio Tests] Los datos del servicio 6 coinciden con lo esperado
+✅ [Inicio Tests] La estructura del servicio 1 es válida
+✅ [Inicio Tests] La estructura del servicio 2 es válida
+✅ [Inicio Tests] La estructura del servicio 3 es válida
+✅ [Inicio Tests] La estructura del servicio 4 es válida
+✅ [Inicio Tests] La estructura del servicio 5 es válida
+✅ [Inicio Tests] La estructura del servicio 6 es válida
+
+ℹ️  3 non-blocking error(s) ignored by filter.
+
+📋 3 console message(s) logged to stderr

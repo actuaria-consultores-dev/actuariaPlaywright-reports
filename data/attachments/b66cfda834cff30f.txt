@@ -1,0 +1,341 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: specs/MiCuenta/entidades_registradas.test.ts >> Verificar eliminacion y acceso a empresas >> Entidades Registradas | [HP] | TC02: Verificar usuario puede eliminar una entidad @daily
+- Location: tests/specs/MiCuenta/entidades_registradas.test.ts:73:2
+
+# Error details
+
+```
+Test timeout of 60000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 60000ms exceeded.
+Call log:
+  - waiting for getByRole('row').filter({ hasText: '1793064701001' }).getByRole('button').nth(1)
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f2e2]:
+  - generic [ref=f2e3]:
+    - banner [ref=f2e4]:
+      - generic [ref=f2e6]:
+        - button "Notificaciones" [ref=f2e7] [cursor=pointer]:
+          - generic [ref=f2e8]: "0"
+        - button [ref=f2e11] [cursor=pointer]:
+          - img "image" [ref=f2e12]
+          - paragraph [ref=f2e13]: DEMOGRAFIX S.A.
+    - complementary [ref=f2e16]:
+      - generic [ref=f2e17]:
+        - link [ref=f2e18] [cursor=pointer]:
+          - /url: /dashboard
+          - img "Actuaria" [ref=f2e19]
+        - button "abrir/cerrar menú" [ref=f2e20] [cursor=pointer]
+      - generic [ref=f2e25]:
+        - textbox "Buscar..." [ref=f2e29]
+        - group
+      - list [ref=f2e31]:
+        - button "Inicio" [ref=f2e32] [cursor=pointer]
+        - list [ref=f2e38]:
+          - listitem [ref=f2e39]: Panel General
+          - button "Mi cuenta" [ref=f2e41] [cursor=pointer]
+          - button "Pagos y cobros" [ref=f2e51] [cursor=pointer]
+          - button "Servicios" [ref=f2e61] [cursor=pointer]
+          - button "Recursos" [ref=f2e70] [cursor=pointer]
+      - generic [ref=f2e79]:
+        - paragraph [ref=f2e80]: Actuaria+ Stage
+        - paragraph [ref=f2e81]: soporteplus@actuaria.com
+        - generic [ref=f2e82]: v 1.11.3
+    - generic [ref=f2e87]:
+      - generic [ref=f2e88]:
+        - heading "Hola, Rodrigo" [level=1] [ref=f2e89]
+        - paragraph [ref=f2e90]: "Sesión anterior: ayer, 21:15"
+      - generic [ref=f2e91]:
+        - button "Inicio" [ref=f2e92] [cursor=pointer]
+        - button "Estudio actuarial" [ref=f2e94] [cursor=pointer]
+        - button "Impuestos diferidos" [ref=f2e96] [cursor=pointer]
+        - button "Actas de jubilación" [ref=f2e98] [cursor=pointer]
+        - button "Control tributario" [ref=f2e100] [cursor=pointer]
+        - button "Simulador de beneficios" [ref=f2e102] [cursor=pointer]
+        - button "NavIA ᴮᵉᵗᵃ" [ref=f2e104] [cursor=pointer]
+      - separator [ref=f2e106]
+      - tablist [ref=f2e110]:
+        - tab "Datos del usuario" [ref=f2e111] [cursor=pointer]
+        - tab "Entidades registradas" [selected] [ref=f2e112] [cursor=pointer]
+        - tab "Contactos vinculados" [ref=f2e113] [cursor=pointer]
+        - tab "Gestión de usuarios" [ref=f2e114] [cursor=pointer]
+      - generic [ref=f2e117]:
+        - generic [ref=f2e118]:
+          - generic [ref=f2e119]:
+            - heading "Entidades registradas" [level=4] [ref=f2e120]
+            - paragraph [ref=f2e121]: Administra las entidades asociadas a tu usuario y agrega las que te falten.
+          - button [ref=f2e123] [cursor=pointer]
+        - generic [ref=f2e129]:
+          - textbox "Busca por nombre o ruc..." [ref=f2e133]
+          - group
+        - generic [ref=f2e134]:
+          - alert [ref=f2e135]:
+            - generic [ref=f2e139]: A continuación podrás visualizar las entidades registradas a tu usuario, si no las visualizas por favor agrega una nueva entidad.
+          - generic [ref=f2e140]:
+            - grid [ref=f2e141]:
+              - row [ref=f2e142]:
+                - columnheader "LOGO" [ref=f2e143]
+                - columnheader "NOMBRE COMERCIAL" [ref=f2e146] [cursor=pointer]
+                - columnheader "RUC" [ref=f2e149] [cursor=pointer]
+                - columnheader "PROVINCIA" [ref=f2e152] [cursor=pointer]
+                - columnheader "CIUDAD" [ref=f2e155] [cursor=pointer]
+                - columnheader "TELÉFONO" [ref=f2e158] [cursor=pointer]
+                - columnheader "ACCIONES" [ref=f2e161]
+              - rowgroup [ref=f2e164]:
+                - row [ref=f2e165]:
+                  - gridcell [ref=f2e166]:
+                    - img "image" [ref=f2e168]
+                  - gridcell "DEMOGRAFIX S.A." [ref=f2e169]
+                  - gridcell "1006487552001" [ref=f2e170]
+                  - gridcell "PICHINCHA" [ref=f2e171]
+                  - gridcell "CAYAMBE" [ref=f2e172]
+                  - gridcell "(593) 0960174722" [ref=f2e173]
+                  - gridcell [ref=f2e174]:
+                    - menu [ref=f2e175]:
+                      - menuitem "Editar entidad" [ref=f2e176] [cursor=pointer]
+                      - menuitem "Eliminar entidad" [ref=f2e179] [cursor=pointer]
+                - row [ref=f2e182]:
+                  - gridcell [ref=f2e183]:
+                    - img "image" [ref=f2e185]
+                  - gridcell "AGROMAPS" [ref=f2e186]
+                  - gridcell "1793064701001" [ref=f2e187]
+                  - gridcell "PICHINCHA" [ref=f2e188]
+                  - gridcell "QUITO" [ref=f2e189]
+                  - gridcell "(593) 0960174722" [ref=f2e190]
+                  - gridcell [ref=f2e191]:
+                    - menu [ref=f2e192]:
+                      - menuitem "Editar entidad" [ref=f2e193] [cursor=pointer]
+                      - menuitem "Eliminar entidad" [ref=f2e196] [cursor=pointer]
+            - generic [ref=f2e201]:
+              - paragraph [ref=f2e202]: "Filas por página:"
+              - generic [ref=f2e203]:
+                - 'combobox "Filas por página: 5" [ref=f2e204] [cursor=pointer]': "5"
+                - textbox: "5"
+              - paragraph [ref=f2e205]: 1–2 de 2
+              - generic [ref=f2e206]:
+                - button "Ir a la página anterior" [disabled]
+                - button "Ir a la página siguiente" [disabled]
+  - link "Escríbenos a WhatsApp" [ref=f2e207] [cursor=pointer]:
+    - /url: https://wa.me/593979133351/?text=Hola+Actuaria,+tengo+novedades+sobre+el+Portal+de+Clientes
+```
+
+# Test source
+
+```ts
+  95  | 			// Verify no assignment error after phone correction
+  96  | 			if (await checkAssignmentError(page)) {
+  97  | 				throw new Error('No se pudo asignarte a la empresa después de corregir teléfono.');
+  98  | 			}
+  99  | 		}
+  100 | 	}
+  101 | 
+  102 | 	logger.info('✅ Empresa asignada exitosamente');
+  103 | 	await page.waitForTimeout(1000);
+  104 | }
+  105 | 
+  106 | /**
+  107 |  * Workflow: Add a new company by RUC
+  108 |  * Handles both new company registration and validation of existing companies
+  109 |  */
+  110 | export async function addCompanyWorkflow(page: Page, entidadesPage: EntidadesRegistradasPage, config: AddCompanyConfig): Promise<void> {
+  111 | 	logger.resumen('🏢 INICIANDO FLUJO: AGREGAR EMPRESA', {
+  112 | 		ruc: sanitizeData({ ruc: config.ruc }).ruc,
+  113 | 		'Debe existir': config.shouldAlreadyExist ? 'Sí' : 'No',
+  114 | 	});
+  115 | 
+  116 | 	// Check if company already exists (for TC03) - early exit if already present
+  117 | 	if (!config.shouldAlreadyExist) {
+  118 | 		const companyCard = page.getByText(config.ruc);
+  119 | 		const exists = await companyCard.isVisible({ timeout: 2000 }).catch(() => false);
+  120 | 
+  121 | 		if (exists) {
+  122 | 			logger.exito('✅ Empresa ya existe, objetivo del test cumplido');
+  123 | 			return;
+  124 | 		}
+  125 | 		logger.info('➕ Empresa no encontrada, procediendo a agregarla');
+  126 | 	}
+  127 | 
+  128 | 	await test.step('Paso 1: Abrir formulario "Agregar una entidad"', async () => {
+  129 | 		logger.info('📝 Haciendo clic en agregar nueva empresa...');
+  130 | 		await entidadesPage.clickAddCompany();
+  131 | 		logger.exito('✅ Botón agregar empresa clickeado');
+  132 | 	});
+  133 | 
+  134 | 	await test.step('Paso 2: Buscar empresa por RUC', async () => {
+  135 | 		logger.info(`🔍 Buscando empresa con RUC ${sanitizeData({ ruc: config.ruc }).ruc}...`);
+  136 | 		await entidadesPage.searchCompanyByRUC(config.ruc);
+  137 | 	});
+  138 | 
+  139 | 	if (config.shouldAlreadyExist) {
+  140 | 		await test.step('Paso 3: Verificar mensaje de empresa ya existente', async () => {
+  141 | 			logger.advertencia('⚠️ Verificando mensaje de empresa ya existente...');
+  142 | 			await entidadesPage.verifyCompanyAlreadyExistsMessage();
+  143 | 			logger.exito('✅ Mensaje de empresa existente verificado');
+  144 | 		});
+  145 | 	} else {
+  146 | 		await test.step('Paso 3: Verificar mensaje de empresa registrada', async () => {
+  147 | 			logger.info('✅ Verificando mensaje de empresa registrada...');
+  148 | 			await entidadesPage.verifyCompanyRegisteredMessage();
+  149 | 			logger.exito('✅ Mensaje de empresa registrada verificado');
+  150 | 		});
+  151 | 
+  152 | 		// Verify and handle company assignment using extracted helper
+  153 | 		await verifyCompanyAssignment(page, entidadesPage, config);
+  154 | 		logger.exito('✅ Flujo de agregar empresa completado');
+  155 | 	}
+  156 | 
+  157 | 	logger.completado('✅ FLUJO AGREGAR EMPRESA FINALIZADO');
+  158 | }
+  159 | 
+  160 | /**
+  161 |  * Workflow: Delete a company
+  162 |  * Handles deletion with optional skip if company not found
+  163 |  */
+  164 | export async function deleteCompanyWorkflow(page: Page, entidadesPage: EntidadesRegistradasPage, config: DeleteCompanyConfig): Promise<void> {
+  165 | 	logger.resumen('🗑️ INICIANDO FLUJO: ELIMINAR EMPRESA', {
+  166 | 		ruc: sanitizeData({ ruc: config.ruc }).ruc,
+  167 | 		'Saltar si no existe': config.skipIfNotFound ? 'Sí' : 'No',
+  168 | 	});
+  169 | 
+  170 | 	// Wait for grid to load
+  171 | 	await page.waitForTimeout(10000);
+  172 | 
+  173 | 	// Check if company exists
+  174 | 	logger.info(`🔍 Buscando empresa con RUC ${sanitizeData({ ruc: config.ruc }).ruc}...`);
+  175 | 	const isCompanyRegistered = await page
+  176 | 		.getByRole('gridcell', { name: config.ruc })
+  177 | 		.isVisible({ timeout: 15000 })
+  178 | 		.catch(() => false);
+  179 | 
+  180 | 	logger.info(`Empresa encontrada: ${isCompanyRegistered}`);
+  181 | 
+  182 | 	if (!isCompanyRegistered) {
+  183 | 		if (config.skipIfNotFound) {
+  184 | 			logger.exito('✅ Empresa no encontrada (ya eliminada o nunca agregada), test aprobado');
+  185 | 			return;
+  186 | 		} else {
+  187 | 			throw new Error(`Empresa con RUC ${sanitizeData({ ruc: config.ruc }).ruc} no encontrada`);
+  188 | 		}
+  189 | 	}
+  190 | 
+  191 | 	await test.step('Paso 1: Localizar empresa y abrir confirmación de eliminación', async () => {
+  192 | 		logger.info(`📍 Empresa con RUC ${sanitizeData({ ruc: config.ruc }).ruc} encontrada, procediendo a eliminar...`);
+  193 | 		const companyRow = page.getByRole('row').filter({ hasText: config.ruc });
+  194 | 		await expect(companyRow).toBeVisible();
+> 195 | 		await companyRow.getByRole('button').nth(1).click(); // Delete button is the 2nd button
+      |                                               ^ Error: locator.click: Test timeout of 60000ms exceeded.
+  196 | 		logger.exito('✅ Botón eliminar clickeado');
+  197 | 	});
+  198 | 
+  199 | 	await test.step('Paso 2: Confirmar eliminación', async () => {
+  200 | 		logger.advertencia('⚠️ Confirmando eliminación...');
+  201 | 		await entidadesPage.confirmDeleteCompany();
+  202 | 		logger.exito('✅ Eliminación confirmada');
+  203 | 	});
+  204 | 
+  205 | 	await test.step('Paso 3: Verificar que la empresa fue eliminada', async () => {
+  206 | 		logger.info('🔍 Verificando que la empresa fue eliminada...');
+  207 | 		await expect(page.getByRole('gridcell', { name: config.ruc })).not.toBeVisible({ timeout: 10000 });
+  208 | 		logger.exito('✅ Empresa eliminada exitosamente');
+  209 | 	});
+  210 | 
+  211 | 	logger.completado('✅ FLUJO ELIMINAR EMPRESA FINALIZADO');
+  212 | }
+  213 | 
+  214 | /**
+  215 |  * Workflow: Search for a company in the search box
+  216 |  * Verifies search results based on configuration
+  217 |  */
+  218 | export async function searchCompanyWorkflow(page: Page, entidadesPage: EntidadesRegistradasPage, config: CompanySearchConfig): Promise<void> {
+  219 | 	logger.resumen('🔍 INICIANDO FLUJO: BUSCAR EMPRESA', {
+  220 | 		'Término de búsqueda': sanitizeData({ searchTerm: config.searchTerm }).searchTerm,
+  221 | 		'Debe ser visible': config.expectedVisible ? 'Sí' : 'No',
+  222 | 	});
+  223 | 
+  224 | 	await test.step('Paso 1: Buscar entidad en el Search Box', async () => {
+  225 | 		logger.info(`🔍 Buscando: ${sanitizeData({ searchTerm: config.searchTerm }).searchTerm}...`);
+  226 | 		await entidadesPage.searchEntityInSearchBox(config.searchTerm);
+  227 | 		logger.exito('✅ Búsqueda ejecutada');
+  228 | 	});
+  229 | 
+  230 | 	if (config.expectedVisible) {
+  231 | 		await test.step('Paso 2: Verificar que el resultado sea visible', async () => {
+  232 | 			logger.info('✅ Verificando que el resultado sea visible...');
+  233 | 			// Try to find by text or title
+  234 | 			const resultLocator = page.getByText(config.searchTerm).or(page.getByTitle(config.searchTerm));
+  235 | 			await expect(resultLocator.first()).toBeVisible({ timeout: 10000 });
+  236 | 			logger.exito('✅ Resultado encontrado y visible');
+  237 | 		});
+  238 | 	}
+  239 | 
+  240 | 	logger.completado('✅ FLUJO BUSCAR EMPRESA FINALIZADO');
+  241 | }
+  242 | 
+  243 | /**
+  244 |  * Workflow: Edit company details
+  245 |  * Updates company information with provided configuration
+  246 |  */
+  247 | export async function editCompanyWorkflow(page: Page, entidadesPage: EntidadesRegistradasPage, config: EditCompanyConfig): Promise<void> {
+  248 | 	logger.resumen('✏️ INICIANDO FLUJO: EDITAR EMPRESA', {
+  249 | 		Empresa: sanitizeData({ searchTerm: config.searchTerm }).searchTerm,
+  250 | 		Teléfono: config.phone ? sanitizeData({ telefono: config.phone }).telefono : '—',
+  251 | 		Dirección: config.address ? sanitizeData({ address: config.address }).address : '—',
+  252 | 		Ciudad: config.city ? sanitizeData({ city: config.city }).city : '—',
+  253 | 		Provincia: config.provincia ? sanitizeData({ provincia: config.provincia }).provincia : '—',
+  254 | 		Nombre: config.companyName ? sanitizeData({ companyName: config.companyName }).companyName : '—',
+  255 | 	});
+  256 | 
+  257 | 	await test.step('Paso 1: Buscar empresa a editar', async () => {
+  258 | 		logger.info(`🔍 Buscando empresa ${sanitizeData({ searchTerm: config.searchTerm }).searchTerm}...`);
+  259 | 		await entidadesPage.searchEntityInSearchBox(config.searchTerm);
+  260 | 		await expect(page.getByRole('gridcell', { name: config.searchTerm })).toBeVisible({ timeout: 30000 });
+  261 | 		logger.exito('✅ Empresa encontrada');
+  262 | 	});
+  263 | 
+  264 | 	await test.step('Paso 2: Abrir formulario de edición', async () => {
+  265 | 		logger.info('📝 Haciendo clic en editar empresa...');
+  266 | 		const companyRow = page.getByRole('row').filter({ hasText: config.searchTerm });
+  267 | 		await expect(companyRow).toBeVisible({ timeout: 30000 });
+  268 | 		await companyRow.getByRole('button').first().click(); // Edit button is the first button
+  269 | 		logger.exito('✅ Botón editar clickeado');
+  270 | 	});
+  271 | 
+  272 | 	await test.step('Paso 3: Editar datos de la empresa', async () => {
+  273 | 		logger.info('✏️ Editando datos de la empresa...');
+  274 | 
+  275 | 		if (config.phone) {
+  276 | 			logger.info(`   • Actualizando teléfono: ${sanitizeData({ telefono: config.phone }).telefono}`);
+  277 | 			await entidadesPage.editPhoneInput.click();
+  278 | 			await entidadesPage.editPhoneInput.fill(config.phone);
+  279 | 		}
+  280 | 
+  281 | 		if (config.address) {
+  282 | 			logger.info(`   • Actualizando dirección: ${sanitizeData({ address: config.address }).address}`);
+  283 | 			await entidadesPage.editAddressInput.click();
+  284 | 			await entidadesPage.editAddressInput.fill(config.address);
+  285 | 		}
+  286 | 
+  287 | 		if (config.city) {
+  288 | 			logger.info(`   • Seleccionando ciudad: ${sanitizeData({ city: config.city }).city}`);
+  289 | 			await entidadesPage.editCityInput.click();
+  290 | 			await page.getByRole('option', { name: config.city }).click();
+  291 | 		}
+  292 | 
+  293 | 		if (config.provincia) {
+  294 | 			logger.info(`   • Seleccionando provincia: ${sanitizeData({ provincia: config.provincia }).provincia}`);
+  295 | 			await entidadesPage.editProvinciaInput.click();
+```

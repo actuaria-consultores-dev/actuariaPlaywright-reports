@@ -1,0 +1,36 @@
+🎭️ [Entidades Registradas Tests] Empezando pre condición
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Entidades Registradas Tests] Login exitoso
+✅ [Entidades Registradas Tests] Página principal verificada
+⚠️  [Entidades Registradas Tests] goto Entidades Registradas interrumpido por el SPA (intento 1/3): page.goto: net::ERR_ABORTED at https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/empresas
+Call log:
+  - navigating to "https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/empresas", waiting until "domcontentloaded"
+
+✅ [Entidades Registradas Tests] Navegación a Entidades Registradas completada
+🎭️ [Entidades-TC02] Verificar usuario puede eliminar una entidad
+📋 [Entidades-TC02] Configuración
+{
+  "ruc": "[OCULTO]",
+  "skipIfNotFound": true
+}
+
+======================================================================
+🎯 🗑️ INICIANDO FLUJO: ELIMINAR EMPRESA
+======================================================================
+   • ruc: [OCULTO]
+   • Saltar si no existe: Sí
+======================================================================
+
+ℹ️  [EntidadesRegistradasWorkflows] 🔍 Buscando empresa con RUC [OCULTO]...
+ℹ️  [EntidadesRegistradasWorkflows] Empresa encontrada: true
+ℹ️  [EntidadesRegistradasWorkflows] 📍 Empresa con RUC [OCULTO] encontrada, procediendo a eliminar...
+
+ℹ️  6 non-blocking error(s) ignored by filter.
+
+📋 4 console message(s) logged to stderr
+❌ [Entidades-TC02] TC02 falló
+   Detalle: locator.click: Test timeout of 60000ms exceeded.
+Call log:
+  - waiting for getByRole('row').filter({ hasText: '1793064701001' }).getByRole('button').nth(1)
+
