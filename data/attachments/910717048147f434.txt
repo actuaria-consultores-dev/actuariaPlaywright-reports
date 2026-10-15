@@ -1,0 +1,9 @@
+
+===== POSIBLE CAUSA RAÍZ (console/red detectada en la página) =====
+  URL detectada: https://act-compass-stage-proj.firebaseapp.com/dashboard/actas/nueva-acta/IgxoZbXPfnO8AgWnI1jS
+  • CONSOLE ERROR → {message: Error en la respuesta del servidor, status: 500, details: <!DOCTYPE html> <html lang="en"> <head> <meta char…<pre>Internal Server Error</pre> </body> </html> }
+  • RED (4xx/5xx) → POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/actuafast/consultar_empleados_by_cedula → 404
+  • RED (4xx/5xx) → POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/salesforce/EffectiveSale/upload-document/a0FVD000008xq612AA?title=Aviso+de+entrada+al+IESS → 500
+  • RED (4xx/5xx) → POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/salesforce/EffectiveSale/upload-document/a0FVD000008xq612AA?title=Cedula+de+identidad → 500
+  • CONSOLE → {message: Error en la respuesta del servidor, status: 500, details: <!DOCTYPE html> <html lang="en"> <head> <meta char…<pre>Internal Server Error</pre> </body> </html> }
+===================================================================

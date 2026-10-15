@@ -1,0 +1,416 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: specs/Simulador/proyeccionReservasDemo.test.ts >> Proyección de Reservas (DEMO) - Simulador de Beneficios >> Proyección de Reservas (DEMO) | [HP] | TC_PR01: Verificar vista por defecto de Proyección de Reservas @daily
+- Location: tests/specs/Simulador/proyeccionReservasDemo.test.ts:59:5
+
+# Error details
+
+```
+TimeoutError: locator.click: Timeout 18000ms exceeded.
+Call log:
+  - waiting for locator('div').filter({ has: getByRole('heading', { name: /Simulador de beneficios/i }).first() }).last().getByRole('button', { name: 'Ingresar' }).first()
+    - locator resolved to <button disabled tabindex="-1" type="button" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-fullWidth css-rtwa6w">Ingresar</button>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not enabled
+    - retrying click action
+      - waiting 100ms
+    34 × waiting for element to be visible, enabled and stable
+       - element is not enabled
+     - retrying click action
+       - waiting 500ms
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f1e2]:
+  - generic [ref=f1e3]:
+    - banner [ref=f1e4]:
+      - generic [ref=f1e6]:
+        - button "Notificaciones" [ref=f1e7] [cursor=pointer]:
+          - generic [ref=f1e8]: "0"
+        - button [ref=f1e11] [cursor=pointer]:
+          - img "DEMOGRAFIX S.A." [ref=f1e13]
+          - paragraph [ref=f1e14]: DEMOGRAFIX S.A.
+    - complementary [ref=f1e17]:
+      - generic [ref=f1e18]:
+        - link [ref=f1e19] [cursor=pointer]:
+          - /url: /dashboard
+          - img "Actuaria" [ref=f1e20]
+        - button "abrir/cerrar menú" [ref=f1e21] [cursor=pointer]
+      - generic [ref=f1e26]:
+        - textbox "Buscar..." [ref=f1e30]
+        - group
+      - list [ref=f1e32]:
+        - button "Inicio" [ref=f1e33] [cursor=pointer]
+        - list [ref=f1e39]:
+          - listitem [ref=f1e40]: Panel General
+          - button "Mi cuenta" [ref=f1e42] [cursor=pointer]
+          - button "Pagos y cobros" [ref=f1e52] [cursor=pointer]
+          - button "Servicios" [ref=f1e62] [cursor=pointer]
+          - button "Recursos" [ref=f1e71] [cursor=pointer]
+      - generic [ref=f1e80]:
+        - paragraph [ref=f1e81]: Actuaria+ Stage
+        - paragraph [ref=f1e82]: soporteplus@actuaria.com
+        - generic [ref=f1e83]: v 1.11.3
+    - generic [ref=f1e88]:
+      - generic [ref=f1e89]:
+        - heading "Hola, Rodrigo" [level=1] [ref=f1e90]
+        - paragraph [ref=f1e91]: "Sesión anterior: hoy, 11:09 · hace 1 minuto"
+      - generic [ref=f1e92]:
+        - button "Inicio" [ref=f1e93] [cursor=pointer]
+        - button "Estudio actuarial" [ref=f1e95] [cursor=pointer]
+        - button "Impuestos diferidos" [ref=f1e97] [cursor=pointer]
+        - button "Actas de jubilación" [ref=f1e99] [cursor=pointer]
+        - button "Control tributario" [ref=f1e101] [cursor=pointer]
+        - button "NavIA ᴮᵉᵗᵃ" [ref=f1e103] [cursor=pointer]
+      - separator [ref=f1e105]
+      - generic [ref=f1e106]:
+        - paragraph [ref=f1e107]: Datos correspondientes al 31 de diciembre del 2025
+        - generic [ref=f1e108]:
+          - generic [ref=f1e110]:
+            - paragraph [ref=f1e112]: Provisión acumulada
+            - paragraph [ref=f1e119]: $520
+            - paragraph [ref=f1e120]: USD · Total acumulado
+            - paragraph [ref=f1e122]: ↓ -100% vs 2024
+            - generic [ref=f1e123]:
+              - generic [ref=f1e124]:
+                - paragraph [ref=f1e125]: Jubilación Patronal
+                - paragraph [ref=f1e126]: $133
+              - generic [ref=f1e127]:
+                - paragraph [ref=f1e128]: Desahucio
+                - paragraph [ref=f1e129]: $387
+          - generic [ref=f1e131]:
+            - paragraph [ref=f1e133]: Remuneración promedio
+            - paragraph [ref=f1e140]: $495
+            - paragraph [ref=f1e141]: USD · Remuneración promedio
+            - paragraph [ref=f1e143]: ↓ -67% vs 2024
+            - generic [ref=f1e144]:
+              - generic [ref=f1e145]:
+                - paragraph [ref=f1e146]: Hombres
+                - paragraph [ref=f1e147]: $0
+              - generic [ref=f1e148]:
+                - paragraph [ref=f1e149]: Mujeres
+                - paragraph [ref=f1e150]: $495
+          - generic [ref=f1e152]:
+            - paragraph [ref=f1e154]: Distribución demográfica
+            - paragraph [ref=f1e159]: "3"
+            - paragraph [ref=f1e160]: Partícipes activos
+            - paragraph [ref=f1e162]: ↓ -596 vs 2024
+            - generic [ref=f1e163]:
+              - generic [ref=f1e164]:
+                - paragraph [ref=f1e165]: Hombres
+                - paragraph [ref=f1e166]: 0 · 0%
+              - generic [ref=f1e167]:
+                - paragraph [ref=f1e168]: Mujeres
+                - paragraph [ref=f1e169]: 3 · 100%
+          - generic [ref=f1e171]:
+            - paragraph [ref=f1e173]: Partícipes jubilados
+            - paragraph [ref=f1e178]: "0"
+            - paragraph [ref=f1e179]: Total jubilados
+            - paragraph [ref=f1e181]: ↓ -17 vs 2024
+            - generic [ref=f1e182]:
+              - generic [ref=f1e183]:
+                - paragraph [ref=f1e184]: Hombres
+                - paragraph [ref=f1e185]: "0"
+              - generic [ref=f1e186]:
+                - paragraph [ref=f1e187]: Mujeres
+                - paragraph [ref=f1e188]: "0"
+      - generic [ref=f1e189]:
+        - generic [ref=f1e190]:
+          - generic [ref=f1e191]:
+            - paragraph [ref=f1e192]: Quinquenio por tiempo de servicio
+            - paragraph [ref=f1e196] [cursor=pointer]: TS < 10
+          - generic [ref=f1e197]:
+            - paragraph [ref=f1e198]: Distribución provisión jubilación patronal por tiempo de servicio (en USD)
+            - generic [ref=f1e200] [cursor=pointer]
+          - paragraph [ref=f1e202]: Distribución número de partícipes por tiempo de servicio
+          - generic [ref=f1e205]:
+            - paragraph [ref=f1e206]: Distribución provisión bonificación por desahucio por tiempo de servicio (en USD)
+            - generic [ref=f1e208] [cursor=pointer]
+        - generic:
+          - paragraph
+          - paragraph
+      - separator [ref=f1e209]
+      - generic [ref=f1e210]:
+        - generic [ref=f1e212]:
+          - heading "Mis Servicios" [level=4] [ref=f1e213]
+          - paragraph [ref=f1e214]: Elige el servicio que necesitas y empieza tu pedido cuando quieras.
+        - generic [ref=f1e215]:
+          - generic [ref=f1e217]:
+            - generic [ref=f1e218]:
+              - button [ref=f1e221] [cursor=pointer]:
+                - paragraph [ref=f1e222]: Conocer más
+              - heading "Estudios actuariales" [level=6] [ref=f1e225]
+              - paragraph [ref=f1e226]: Genera tu cálculo actuarial de provisiones de beneficios post-empleo
+              - generic [ref=f1e227]: Disponible
+              - button "Ingresar" [ref=f1e229] [cursor=pointer]
+            - generic [ref=f1e230]:
+              - button [ref=f1e231] [cursor=pointer]
+              - paragraph [ref=f1e235]: Cumple con la normativa contable y toma decisiones con respaldo actuarial. Calculamos provisiones por jubilación y desahucio con resultados sólidos, normativos y listos para auditar.
+          - generic [ref=f1e237]:
+            - generic [ref=f1e238]:
+              - button [ref=f1e242] [cursor=pointer]:
+                - paragraph [ref=f1e243]: Conocer más
+              - heading "Informe de impuestos diferidos" [level=6] [ref=f1e246]
+              - paragraph [ref=f1e247]: Calcula el activo por impuesto diferido para obtener beneficios tributarios
+              - generic [ref=f1e248]: Disponible
+              - button "Ingresar" [ref=f1e250] [cursor=pointer]
+            - generic [ref=f1e251]:
+              - button [ref=f1e252] [cursor=pointer]
+              - paragraph [ref=f1e256]: Calculamos el impuesto diferido por provisiones de jubilación y desahucio bajo normativa contable, para reflejar correctamente la situación fiscal de tu empresa y facilitar la obtención de beneficio tributario.
+          - generic [ref=f1e258]:
+            - generic [ref=f1e259]:
+              - button [ref=f1e264] [cursor=pointer]:
+                - paragraph [ref=f1e265]: Conocer más
+              - heading "Actas de jubilación patronal" [level=6] [ref=f1e268]
+              - paragraph [ref=f1e269]: Documento técnico para la obtención de la pensión mensual y fondo global
+              - generic [ref=f1e270]: Disponible
+              - button "Ingresar" [ref=f1e272] [cursor=pointer]
+            - generic [ref=f1e273]:
+              - button [ref=f1e274] [cursor=pointer]
+              - paragraph [ref=f1e278]: Calculamos la jubilación patronal según normativa laboral, generando la pensión mensual y el fondo global acumulado, con criterios técnicos y proyecciones confiables para cumplir obligaciones patronales.
+          - generic [ref=f1e280]:
+            - generic [ref=f1e281]:
+              - button [ref=f1e286] [cursor=pointer]:
+                - paragraph [ref=f1e287]: Conocer más
+              - heading "Control tributario de provisiones" [level=6] [ref=f1e290]
+              - paragraph [ref=f1e291]: Composición histórica de provisiones, para el cumplimiento normativo
+              - generic [ref=f1e292]: Disponible
+              - button "Ingresar" [ref=f1e294] [cursor=pointer]
+            - generic [ref=f1e295]:
+              - button [ref=f1e296] [cursor=pointer]
+              - paragraph [ref=f1e300]: Controla provisiones de forma precisa, identifica salidas de personal, organiza tus reportes y asegura el cumplimiento fiscal, todo sin fricciones y en menos tiempo.
+          - generic [ref=f1e302]:
+            - generic [ref=f1e303]:
+              - button [ref=f1e309] [cursor=pointer]:
+                - paragraph [ref=f1e310]: Conocer más
+              - heading "Simulador de beneficios post empleo" [level=6] [ref=f1e313]
+              - paragraph [ref=f1e314]: Analiza tus provisiones, anticipando escenarios para la toma de decisiones
+              - generic [ref=f1e315]: Contratar
+              - button "Ingresar" [disabled]
+            - generic [ref=f1e317]:
+              - button [ref=f1e318] [cursor=pointer]
+              - paragraph [ref=f1e322]: Anticipa el impacto futuro de tus provisiones con proyecciones claras y visuales. Mejora la planificación financiera, la toma de decisiones y la transparencia con un análisis demográfico ágil y estratégico.
+          - generic [ref=f1e324]:
+            - generic [ref=f1e325]:
+              - button [ref=f1e329] [cursor=pointer]:
+                - paragraph [ref=f1e330]: Conocer más
+              - heading "Consulta con NavIA ᴮᵉᵗᵃ" [level=6] [ref=f1e333]
+              - paragraph [ref=f1e334]: Responde todas tus dudas con nuestra inteligencia artificial actuarial
+              - generic [ref=f1e335]: Disponible
+              - button "Ingresar" [ref=f1e337] [cursor=pointer]
+            - generic [ref=f1e338]:
+              - button [ref=f1e339] [cursor=pointer]
+              - paragraph [ref=f1e343]: Agente de inteligencia artificial entrenado con toda la normativa laboral y modelos actuariales para responder cualquier duda sobre tu informe de jubilación patronal.
+  - link "Escríbenos a WhatsApp" [ref=f1e344] [cursor=pointer]:
+    - /url: https://wa.me/593979133351/?text=Hola+Actuaria,+tengo+novedades+sobre+el+Portal+de+Clientes
+```
+
+# Test source
+
+```ts
+  1   | import type { Page, Locator } from '@playwright/test';
+  2   | import { expect } from '@playwright/test';
+  3   | import { SuperPage } from './SuperPage';
+  4   | import type { SimuladorFilters, ChartElement } from '../interfaces/simuladorTypes';
+  5   | import { NUMERIC_TOLERANCE_PERCENT } from '../data/simuladorTestData';
+  6   | import { ACTION_TIMEOUT_MS, SLOW_ACTION_TIMEOUT_MS } from '@helpers/timeouts';
+  7   | 
+  8   | /**
+  9   |  * The Simulador renders its whole body — filter row included — only AFTER the
+  10  |  * projection finishes calculating. While it is calculating the module shows
+  11  |  * "Calculando proyección." and "DATOS: 0 personas" and there is not a single
+  12  |  * filter combobox in the DOM. This budget covers that server-side calculation.
+  13  |  */
+  14  | const FILTER_READY_TIMEOUT_MS = 60_000;
+  15  | 
+  16  | /**
+  17  |  * Page Object for Simulador de Beneficios
+  18  |  * Encapsulates all interactions with the Simulador page
+  19  |  */
+  20  | export class SimuladorPage extends SuperPage {
+  21  | 
+  22  | 	// Tab locators
+  23  | 	readonly tabProyeccionReservas: Locator;
+  24  | 	readonly tabProyeccionPagos: Locator;
+  25  | 
+  26  | 	// Filter locators
+  27  | 	readonly filterAño: Locator;
+  28  | 	readonly filterNombre: Locator;
+  29  | 	readonly filterTiempoServicio: Locator;
+  30  | 	readonly filterBeneficio: Locator;
+  31  | 	readonly filterRangoSalarial: Locator;
+  32  | 	readonly btnAplicarFiltros: Locator;
+  33  | 
+  34  | 	constructor(page: Page) {
+  35  | 		super(page);
+  36  | 
+  37  | 		// Tabs
+  38  | 		this.tabProyeccionReservas = page.getByRole('tab', { name: 'Proyección de Reservas' });
+  39  | 		this.tabProyeccionPagos = page.getByRole('tab', { name: 'Proyección de Pagos' });
+  40  | 
+  41  | 		// Filters
+  42  | 		this.filterAño = page.getByRole('combobox', { name: 'Año' });
+  43  | 		this.filterNombre = page.getByRole('combobox', { name: 'Nombre' });
+  44  | 		this.filterTiempoServicio = page.getByRole('combobox', { name: 'Tiempo de servicio' });
+  45  | 		this.filterBeneficio = page.getByRole('combobox', { name: 'Beneficio' });
+  46  | 		this.filterRangoSalarial = page.getByRole('combobox', { name: 'Rango salarial' });
+  47  | 		this.btnAplicarFiltros = page.getByRole('button', { name: 'Aplicar filtros' });
+  48  | 	}
+  49  | 
+  50  | 	/**
+  51  | 	 * Navigate to Simulador de Beneficios.
+  52  | 	 * Resilient to UI changes:
+  53  | 	 *  1. Try the legacy module button (old home).
+  54  | 	 *  2. Otherwise ensure we are on the dashboard home and open the module via
+  55  | 	 *     its "Simulador de beneficios post empleo" card ("Ingresar") — the same
+  56  | 	 *     client-side route a real user takes (a hard page.goto to the module URL
+  57  | 	 *     loads a different default dataset, so we prefer the card).
+  58  | 	 *  3. Final fallback: direct route with retries.
+  59  | 	 */
+  60  | 	async navigateToSimulador() {
+  61  | 		const legacyButton = this.page.getByRole('button', { name: /Simulador de beneficios/i }).first();
+  62  | 		if (await legacyButton.count()) {
+  63  | 			try {
+  64  | 				await legacyButton.click({ timeout: 5000 });
+  65  | 				await this.page.waitForTimeout(3000);
+  66  | 				return;
+  67  | 			} catch {
+  68  | 				// ignore and fall through
+  69  | 			}
+  70  | 		}
+  71  | 
+  72  | 		// Make sure we are on the dashboard home where the module cards live.
+  73  | 		if (!this.page.url().includes('/dashboard/portal/home')) {
+  74  | 			await this.page.goto('/dashboard/portal/home', { waitUntil: 'domcontentloaded' }).catch(() => {});
+  75  | 			await this.page.waitForTimeout(3000);
+  76  | 		}
+  77  | 
+  78  | 		// Wait for the module card to render (home loads asynchronously after login).
+  79  | 		const simHeading = this.page.getByRole('heading', { name: /Simulador de beneficios/i });
+  80  | 		try {
+  81  | 			await simHeading.first().waitFor({ state: 'visible', timeout: 20000 });
+  82  | 		} catch {
+  83  | 			// fall through to direct-route fallback below
+  84  | 		}
+  85  | 
+  86  | 		if (await simHeading.count()) {
+  87  | 			const card = this.page.locator('div').filter({ has: simHeading.first() }).last();
+  88  | 			const ingresar = card.getByRole('button', { name: 'Ingresar' });
+  89  | 			if (await ingresar.count()) {
+> 90  | 				await ingresar.first().click({ timeout: ACTION_TIMEOUT_MS });
+      |                            ^ TimeoutError: locator.click: Timeout 18000ms exceeded.
+  91  | 				await this.page.waitForTimeout(3000);
+  92  | 				return;
+  93  | 			}
+  94  | 		}
+  95  | 
+  96  | 		await this.openSimuladorDirect();
+  97  | 	}
+  98  | 
+  99  | 	/**
+  100 | 	 * Open the Simulador module route directly, retrying when the SPA interrupts
+  101 | 	 * the navigation (common right after login / dashboard redirects).
+  102 | 	 */
+  103 | 	private async openSimuladorDirect() {
+  104 | 		let lastError: unknown;
+  105 | 		for (let attempt = 1; attempt <= 3; attempt++) {
+  106 | 			try {
+  107 | 				await this.page.goto('/dashboard/pasivo-laboral/simulador', {
+  108 | 					waitUntil: 'domcontentloaded',
+  109 | 					timeout: 30000
+  110 | 				});
+  111 | 				await this.page.waitForTimeout(4000);
+  112 | 				return;
+  113 | 			} catch (error) {
+  114 | 				lastError = error;
+  115 | 				await this.page.waitForTimeout(3000);
+  116 | 			}
+  117 | 		}
+  118 | 		throw lastError;
+  119 | 	}
+  120 | 
+  121 | 	/**
+  122 | 	 * Wait until the module has finished calculating and the filter row exists.
+  123 | 	 *
+  124 | 	 * The module paints "Calculando proyección." / "DATOS: 0 personas" first and
+  125 | 	 * only mounts the comboboxes once the projection is ready. `count()` does NOT
+  126 | 	 * auto-wait, so without this the previous code threw
+  127 | 	 * `Filter combobox "X" not found on page` *instantly* while the page was
+  128 | 	 * still loading (observed: TC08 demo, 36s, "DATOS: 0 personas").
+  129 | 	 */
+  130 | 	private async waitForFiltersReady(comboLabel: string) {
+  131 | 		const combos = this.page.getByRole('combobox', { name: comboLabel });
+  132 | 
+  133 | 		try {
+  134 | 			await expect
+  135 | 				.poll(
+  136 | 					async () => {
+  137 | 						const count = await combos.count();
+  138 | 						for (let i = 0; i < count; i++) {
+  139 | 							if (await combos.nth(i).isVisible().catch(() => false)) {
+  140 | 								return true;
+  141 | 							}
+  142 | 						}
+  143 | 						return false;
+  144 | 					},
+  145 | 					{
+  146 | 						timeout: FILTER_READY_TIMEOUT_MS,
+  147 | 						message: `Waiting for the "${comboLabel}" filter combobox to render (projection still calculating?)`
+  148 | 					}
+  149 | 				)
+  150 | 				.toBe(true);
+  151 | 		} catch {
+  152 | 			// Turn the opaque poll timeout into a diagnostic that names the real state.
+  153 | 			const stillLoading = await this.page
+  154 | 				.getByText(/Calculando proyección/i)
+  155 | 				.isVisible()
+  156 | 				.catch(() => false);
+  157 | 			const datos = await this.page
+  158 | 				.getByRole('heading', { name: /DATOS:/i })
+  159 | 				.first()
+  160 | 				.textContent()
+  161 | 				.catch(() => null);
+  162 | 
+  163 | 			throw new Error(
+  164 | 				`Filter combobox "${comboLabel}" did not render within ${FILTER_READY_TIMEOUT_MS}ms. ` +
+  165 | 					(stillLoading
+  166 | 						? `The module is STILL calculating the projection ("${datos?.trim() ?? 'DATOS: ?'}"), so the filter row is not in the DOM yet.`
+  167 | 						: `The module is not showing the loading indicator either (${datos?.trim() ?? 'DATOS heading not found'}).`)
+  168 | 			);
+  169 | 		}
+  170 | 	}
+  171 | 
+  172 | 	/**
+  173 | 	 * Return the first VISIBLE filter combobox matching the given accessible name.
+  174 | 	 * Both tab panels keep their own filter rows in the DOM (one hidden), so the
+  175 | 	 * visible one must be selected to avoid acting on the inactive tab.
+  176 | 	 */
+  177 | 	private async visibleFilterCombobox(name: string): Promise<Locator | null> {
+  178 | 		const combos = this.page.getByRole('combobox', { name });
+  179 | 		const count = await combos.count();
+  180 | 		for (let i = 0; i < count; i++) {
+  181 | 			const candidate = combos.nth(i);
+  182 | 			if (await candidate.isVisible().catch(() => false)) {
+  183 | 				return candidate;
+  184 | 			}
+  185 | 		}
+  186 | 		return count ? combos.first() : null;
+  187 | 	}
+  188 | 
+  189 | 	/**
+  190 | 	 * Switch to specified tab (with long timeout for chart rendering)
+```

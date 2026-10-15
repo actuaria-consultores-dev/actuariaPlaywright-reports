@@ -1,0 +1,318 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: specs/JubilacionPatronal/jubilacionPatronal.test.ts >> Verificar historias de Usuario para Jubilacion Patronal >> Jubilacion Patronal| ACTAF 2412 | [HP] | TC07 : Happy path, usuario ingresa 60 ultimas remuneraciones manualmente @daily
+- Location: tests/specs/JubilacionPatronal/jubilacionPatronal.test.ts:144:2
+
+# Error details
+
+```
+Error: No se interceptaron todos los endpoints de "Confirmar pedido". Faltan: consultarVentaEfectiva (timeout 60000ms).
+Requests observados durante el paso final (14):
+  - PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso7 -> 200
+  - POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/ingresar-pedido -> 200
+  - PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/IgxoZbXPfnO8AgWnI1jS -> 200
+  - GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/workflow/status?name=projects%2F72574958900%2Flocations%2Fus-central1%2Fworkflows%2Fwf_creacion_pedido_estandar_stage%2Fexecutions%2Fa79694e3-8c1f-4634-9827-d940ad661f42 -> 200
+  - PUT https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/upsert/paso8 -> 200
+  - GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/parametros?database=&collection=constantes -> 200
+  - POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/storage/signed-url -> 200
+  - GET https://storage.googleapis.com/act-compass-stage-proj-firebase-bucket/actas-finiquito/documentos/2026/10/IgxoZbXPfnO8AgWnI1jS/aviso-ingreso-iess-1721489951?GoogleAccessId=sa-fn-api-storage%40act-compass-stage-proj.iam.gserviceaccount.com&Expires=1792063267&Signature=VOv0sKMkjUR1n%2B%2B2htOeEwDvnmxG22ICA1jQEIrpuRzKMNPEibPtV5jWyKoBx3a%2FWoCpEb3z4ZsKIr%2BKS6Ls68KJolhZ276C%2BX1WKA6VJ0wiQA0WiWSqV%2FzGogkwdr2%2B4rOGXrwsjnGD0NYMsGlSxsudtQZAxjDG8SiLMOvTQxFTrCQZRktcJEnVueWSubuWdWPdryJMq9AEclJual1P6u1KDjlxCI8aalQqaOkK66b6amMecjsz4Npw0MXOP77tS7Z3kcx7QvmQLZKpnfJdK%2Buk9OvijLlVz0QbwxuK10E%2F9yfjWHXdYCQDbKdPAIgHkN1d5JJfOKI%2FOT34p6Fn0A%3D%3D -> 200
+  - GET https://storage.googleapis.com/act-compass-stage-proj-firebase-bucket/actas-finiquito/documentos/2026/10/IgxoZbXPfnO8AgWnI1jS/cedula-1721489951?GoogleAccessId=sa-fn-api-storage%40act-compass-stage-proj.iam.gserviceaccount.com&Expires=1792063267&Signature=ngx3ry1kMjCG76Qo2d7kap3xJSMWbqHFEUVaKDMPGqyM%2BQCkSLPdytzHK0AAn3Xcev7V8jQl4hQ%2B0xSc8Do0tRx7%2B6ASefJy28mC53ZQDLPwd9L4oXMikctF%2Be4Jmd2GuLiPk7boetSnW5CgI4s542%2Fark4JkOOOsxcEVfJ03gw86Y%2FGnCMKIM59eRkDJOsZDCRnk15bYyMZWNZLXisQwxaa00cTtI8Mltxgj4Uc%2F5MPUUIBxlya20iKjNs52OsWuRk7%2B4WXzvEj9mQjtdx4%2F0ZEF2ivwvZ%2FrPmcyf5klwvJIpzwKPP3a4YOArd64vhqyfrwfxxW%2Bkxj%2F0FMyRkc4A%3D%3D -> 200
+  - POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/salesforce/EffectiveSale/upload-document/a0FVD000008xq612AA?title=Aviso+de+entrada+al+IESS -> 500
+  - POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/salesforce/EffectiveSale/upload-document/a0FVD000008xq612AA?title=Cedula+de+identidad -> 500
+  - GET https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/salesforce/EffectiveSale/search/a0FVD000008xq612AA -> 200
+  - POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/firestore/send-email -> 200
+  - POST https://f.clarity.ms/collect -> 204
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f1e2]:
+  - generic [ref=f1e3]:
+    - banner [ref=f1e4]:
+      - generic [ref=f1e6]:
+        - button "Notificaciones" [ref=f1e7] [cursor=pointer]:
+          - generic [ref=f1e8]: "0"
+        - button [ref=f1e11] [cursor=pointer]:
+          - img "DEMOGRAFIX S.A." [ref=f1e13]
+          - paragraph [ref=f1e14]: DEMOGRAFIX S.A.
+    - complementary [ref=f1e17]:
+      - generic [ref=f1e18]:
+        - link [ref=f1e19] [cursor=pointer]:
+          - /url: /dashboard
+          - img "Actuaria" [ref=f1e20]
+        - button "abrir/cerrar menú" [ref=f1e21] [cursor=pointer]
+      - generic [ref=f1e26]:
+        - textbox "Buscar..." [ref=f1e30]
+        - group
+      - list [ref=f1e32]:
+        - button "Inicio" [ref=f1e33] [cursor=pointer]
+        - list [ref=f1e39]:
+          - listitem [ref=f1e40]: Panel General
+          - generic [ref=f1e41]:
+            - button "Actas de jubilación patronal" [ref=f1e42] [cursor=pointer]
+            - generic [ref=f1e54]:
+              - link "Listado de actas" [ref=f1e55] [cursor=pointer]:
+                - /url: /dashboard/actas/mis-actas
+              - link "Crear acta" [ref=f1e61] [cursor=pointer]:
+                - /url: /dashboard/actas/nueva-acta
+      - generic [ref=f1e68]:
+        - paragraph [ref=f1e69]: Actuaria+ Stage
+        - paragraph [ref=f1e70]: soporteplus@actuaria.com
+        - generic [ref=f1e71]: v 1.11.3
+    - generic [ref=f1e76]:
+      - generic [ref=f1e77]:
+        - heading "Hola, Rodrigo" [level=1] [ref=f1e78]
+        - paragraph [ref=f1e79]: "Sesión anterior: hoy, 11:04 · hace 2 minutos"
+      - generic [ref=f1e80]:
+        - button "Inicio" [ref=f1e81] [cursor=pointer]
+        - button "Estudio actuarial" [ref=f1e83] [cursor=pointer]
+        - button "Impuestos diferidos" [ref=f1e85] [cursor=pointer]
+        - button "Actas de jubilación" [ref=f1e87] [cursor=pointer]
+        - button "Control tributario" [ref=f1e89] [cursor=pointer]
+        - button "NavIA ᴮᵉᵗᵃ" [ref=f1e91] [cursor=pointer]
+      - separator [ref=f1e93]
+      - generic [ref=f1e94]:
+        - generic [ref=f1e95]:
+          - generic [ref=f1e97]:
+            - heading "Solicitud de acta de jubilación patronal" [level=4] [ref=f1e98]
+            - paragraph [ref=f1e99]: Completa los pasos para solicitar el acta de finiquito de tu colaborador.
+          - paragraph [ref=f1e101]: Paso 7 de 7
+          - generic [ref=f1e110]:
+            - button "Volver" [disabled]
+        - generic [ref=f1e113]:
+          - generic [ref=f1e115]:
+            - heading "01" [level=6] [ref=f1e116]
+            - paragraph [ref=f1e118]: Solicitado
+            - paragraph [ref=f1e119]: ¡Zarpamos! Tu pedido ha sido solicitado y pronto será asignado a un consultor para iniciar la travesía.
+          - generic [ref=f1e121]:
+            - generic:
+              - heading "02" [level=6]
+              - paragraph: En Proceso
+              - paragraph: ¡Estamos en marcha! Tu pedido va en curso y nuestro equipo lo está trabajando con precisión.
+          - generic [ref=f1e123]:
+            - generic:
+              - heading "03" [level=6]
+              - paragraph: Ejecutado
+              - paragraph: Estamos cerca del puerto. Tu pedido ha sido ejecutado y está en revisión final antes de entregártelo.
+          - generic [ref=f1e125]:
+            - generic:
+              - heading "04" [level=6]
+              - paragraph: Finalizado
+              - paragraph: ¡Hemos llegado! Tu estudio está listo para ser descargado. Gracias por navegar con nosotros.
+  - link "Escríbenos a WhatsApp" [ref=f1e126] [cursor=pointer]:
+    - /url: https://wa.me/593979133351/?text=Hola+Actuaria,+tengo+novedades+sobre+el+Portal+de+Clientes
+```
+
+# Test source
+
+```ts
+  121 | 			paso8: String(JUBILACION_PEDIDO_ENDPOINTS.UPSERT_PASO8),
+  122 | 			upsertDocumento: String(JUBILACION_PEDIDO_ENDPOINTS.UPSERT_DOCUMENTO),
+  123 | 			ventaEfectiva: String(JUBILACION_PEDIDO_ENDPOINTS.CONSULTAR_VENTA_EFECTIVA),
+  124 | 			notificaciones: String(JUBILACION_PEDIDO_ENDPOINTS.SEND_EMAIL),
+  125 | 		});
+  126 | 
+  127 | 		// Marcador inequívoco en el log: a partir de este punto el paso final
+  128 | 		// responde con mocks (el backend real NO recibe estas llamadas).
+  129 | 		this.logger.exito('🟢 MOCK ACTIVO: interceptando los endpoints del paso "Confirmar pedido"');
+  130 | 		this.logger.info('   1) POST workflow/ingresar-pedido');
+  131 | 		this.logger.info('   2) PUT  firestore/upsert/paso7');
+  132 | 		this.logger.info('   3) PUT  firestore/upsert/paso8');
+  133 | 		this.logger.info('   4) GET  workflow/status (catch-all → SUCCEEDED)');
+  134 | 		this.logger.info('   5) PUT  firestore/upsert/{docId}');
+  135 | 		this.logger.info('   6) GET  EffectiveSale/search/{idVentaEfectiva}');
+  136 | 		this.logger.info('   7) POST firestore/send-email');
+  137 | 
+  138 | 		// Diagnostic network logger: logs EVERY backend response (all hosts, not
+  139 | 		// only *.run.app) during the final-step window so a missing/mis-mocked
+  140 | 		// endpoint is visible in the console output.
+  141 | 		this.attachNetworkLogger(false);
+  142 | 
+  143 | 		// Order matters: register the more specific routes BEFORE the generic /
+  144 | 		// wildcard ones so the first matching handler wins.
+  145 | 		// 1) ingresar-pedido (specific POST)
+  146 | 		await this.page.route(JUBILACION_PEDIDO_ENDPOINTS.INGRESAR_PEDIDO, async route => {
+  147 | 			await this.fulfill(route, 'ingresarPedido', this.buildIngresarPedidoResponse());
+  148 | 		});
+  149 | 
+  150 | 		// 2) paso7 (specific firestore upsert)
+  151 | 		await this.page.route(JUBILACION_PEDIDO_ENDPOINTS.UPSERT_PASO7, async route => {
+  152 | 			await this.fulfill(route, 'paso7', this.buildUpsertPasoResponse('paso7'));
+  153 | 		});
+  154 | 
+  155 | 		// 3) paso8 (specific firestore upsert)
+  156 | 		await this.page.route(JUBILACION_PEDIDO_ENDPOINTS.UPSERT_PASO8, async route => {
+  157 | 			await this.fulfill(route, 'paso8', this.buildUpsertPasoResponse('paso8'));
+  158 | 		});
+  159 | 
+  160 | 		// 4) Catch-all on the workflow host (EXCLUDES ingresar-pedido via regex):
+  161 | 		//    the app polls the workflow execution status here after
+  162 | 		//    "ingresar-pedido" until it SUCCEEDED. Only then it proceeds to the
+  163 | 		//    final upserts and the confirmation screen.
+  164 | 		await this.page.route(JUBILACION_PEDIDO_ENDPOINTS.WORKFLOW_ESTADO, async route => {
+  165 | 			const method = route.request().method();
+  166 | 			const url = route.request().url();
+  167 | 			this.logger.info(`Interceptado (workflow estado): ${method} ${url}`);
+  168 | 			await this.fulfill(route, 'workflowEstado', this.buildWorkflowStatusResponse());
+  169 | 		});
+  170 | 
+  171 | 		// 5) Generic firestore upsert (any document id EXCEPT paso1..pasoN - the
+  172 | 		//    regex pattern above excludes them, so this never touches paso7/8).
+  173 | 		await this.page.route(JUBILACION_PEDIDO_ENDPOINTS.UPSERT_DOCUMENTO, async route => {
+  174 | 			const documentId = this.resolveDocumentId(route);
+  175 | 			const numeroProceso = this.config.numeroProceso ?? this.randomNumeroProceso();
+  176 | 			await this.fulfill(route, 'upsertDocumento', this.buildUpsertResponse(documentId, {
+  177 | 				estado: 'solicitado',
+  178 | 				idVentaEfectiva: 'a0FVD000008xq612AA',
+  179 | 				numeroProceso,
+  180 | 			}));
+  181 | 		});
+  182 | 
+  183 | 		// 6) "Venta efectiva" lookup for the final confirmation screen. Without
+  184 | 		//    this the app hits the real backend and the final screen shows the
+  185 | 		//    delivery/process fields as undefined.
+  186 | 		await this.page.route(JUBILACION_PEDIDO_ENDPOINTS.CONSULTAR_VENTA_EFECTIVA, async route => {
+  187 | 			const url = route.request().url();
+  188 | 			const idMatch = url.match(/\/api\/EffectiveSale\/search\/([^/?]+)/);
+  189 | 			const ventaEfectivaId = idMatch?.[1] ?? 'a0FVD000008xq612AA';
+  190 | 			await this.fulfill(route, 'consultarVentaEfectiva', this.buildConsultarVentaEfectivaResponse(ventaEfectivaId));
+  191 | 		});
+  192 | 
+  193 | 		// 7) Success emails - avoid hitting the real email queue.
+  194 | 		await this.page.route(JUBILACION_PEDIDO_ENDPOINTS.SEND_EMAIL, async route => {
+  195 | 			await this.fulfill(route, 'sendEmail', this.buildSendEmailResponse());
+  196 | 		});
+  197 | 
+  198 | 		this.logger.exito('Rutas de interceptación registradas (el backend real no recibirá estas llamadas)');
+  199 | 	}
+  200 | 
+  201 | 	/**
+  202 | 	 * Wait until at least one endpoint has been intercepted (or all expected
+  203 | 	 * ones if provided). Throws listing the missing endpoints if none fire
+  204 | 	 * within timeoutMs.
+  205 | 	 */
+  206 | 	async waitForAllRequests(timeoutMs: number, expectedKeys: string[] = []): Promise<JubilacionPedidoInterceptionResult> {
+  207 | 		const start = Date.now();
+  208 | 		const required = expectedKeys.length > 0
+  209 | 			? expectedKeys
+  210 | 			: Object.keys(this.intercepted);
+  211 | 
+  212 | 		while (Date.now() - start < timeoutMs) {
+  213 | 			const missing = required.filter(key => !this.intercepted[key]);
+  214 | 			if (missing.length === 0) {
+  215 | 				return this.intercepted;
+  216 | 			}
+  217 | 			await new Promise(resolve => setTimeout(resolve, 250));
+  218 | 		}
+  219 | 
+  220 | 		const missing = required.filter(key => !this.intercepted[key]);
+> 221 | 		throw new Error(
+      |         ^ Error: No se interceptaron todos los endpoints de "Confirmar pedido". Faltan: consultarVentaEfectiva (timeout 60000ms).
+  222 | 			`No se interceptaron todos los endpoints de "Confirmar pedido". Faltan: ${missing.join(', ')} (timeout ${timeoutMs}ms).` +
+  223 | 				`\nRequests observados durante el paso final (${this.observed.length}):` +
+  224 | 				(this.observed.length > 0 ? `\n  - ${this.observed.join('\n  - ')}` : ' ninguno')
+  225 | 		);
+  226 | 	}
+  227 | 
+  228 | 	/** Log a Mockoon-style summary of every intercepted request */
+  229 | 	logSummary(): void {
+  230 | 		const entries = Object.values(this.intercepted).filter((entry): entry is InterceptedRequestInfo => entry !== null);
+  231 | 
+  232 | 		this.logger.resumen('📡 ENDPOINTS INTERCEPTADOS (MOCKOON-STYLE)', { total: entries.length });
+  233 | 
+  234 | 		entries.forEach(entry => {
+  235 | 			this.logger.resumen(`▶ ${entry.method} ${entry.url}`, {
+  236 | 				status: entry.status,
+  237 | 				response: entry.responseBody,
+  238 | 			});
+  239 | 		});
+  240 | 	}
+  241 | 
+  242 | 	// ─── Response builders (exact shapes captured via TC01-DEBUG) ───────────
+  243 | 
+  244 | 	/**
+  245 | 	 * POST /workflow/ingresar-pedido → 200
+  246 | 	 * { ok: true, data: { statusExecution: "CREATED", executionName, ... } }
+  247 | 	 */
+  248 | 	private buildIngresarPedidoResponse(): Record<string, unknown> {
+  249 | 		const executionName = this.config.executionName ?? this.randomExecutionName();
+  250 | 		return {
+  251 | 			ok: true,
+  252 | 			data: {
+  253 | 				detalleWorkflow: 'projects/act-compass-stage-proj/locations/us-central1/workflows/wf_creacion_pedido_estandar_stage',
+  254 | 				executionName,
+  255 | 				mensaje: 'OK',
+  256 | 				statusExecution: 'CREATED',
+  257 | 				respuesta: executionName,
+  258 | 			},
+  259 | 			message: 'Operación exitosa',
+  260 | 			status: 200,
+  261 | 		};
+  262 | 	}
+  263 | 
+  264 | 	/**
+  265 | 	 * Catch-all for the workflow host (status polling) → 200
+  266 | 	 * Returns a SUCCEEDED execution (with the respuesta: idVentaEfectiva /
+  267 | 	 * numeroProceso / idOpportunity) so the app stops polling and proceeds to
+  268 | 	 * the final upserts + confirmation screen.
+  269 | 	 */
+  270 | 	private buildWorkflowStatusResponse(): Record<string, unknown> {
+  271 | 		const executionName = this.config.executionName ?? this.randomExecutionName();
+  272 | 		return {
+  273 | 			ok: true,
+  274 | 			data: {
+  275 | 				detalleWorkflow: executionName,
+  276 | 				executionName,
+  277 | 				mensaje: 'OK',
+  278 | 				statusExecution: 'SUCCEEDED',
+  279 | 				respuesta: {
+  280 | 					ejecucion_automatica: {},
+  281 | 					idAccount: '001VD00000RsHadYAF',
+  282 | 					idOpportunity: '006VD00000aY6uHYAS',
+  283 | 					idVentaEfectiva: 'a0FVD000008xq612AA',
+  284 | 					numeroProceso: this.config.numeroProceso ?? this.randomNumeroProceso(),
+  285 | 					pedidoSecundario: {},
+  286 | 				},
+  287 | 			},
+  288 | 			message: 'Operación exitosa',
+  289 | 			status: 200,
+  290 | 		};
+  291 | 	}
+  292 | 
+  293 | 	/**
+  294 | 	 * Shared firestore upsert `data` object (same shape captured from the real
+  295 | 	 * backend). extra (e.g. idVentaEfectiva/numeroProceso after the workflow
+  296 | 	 * succeeds) is merged in.
+  297 | 	 */
+  298 | 	private buildUpsertData(documentId: string, extra: Record<string, unknown> = {}): Record<string, unknown> {
+  299 | 		return {
+  300 | 			user: {
+  301 | 				id: 'wJkVXcKIDTXaIkCJyIpA1jAPgtn2',
+  302 | 				correo: 'demo@actuaria.com',
+  303 | 				nombreCompleto: 'Rodrigo Ibarra',
+  304 | 				uid: 'wJkVXcKIDTXaIkCJyIpA1jAPgtn2',
+  305 | 				email: 'demo@actuaria.com',
+  306 | 				apellido: 'Ibarra',
+  307 | 				nombre: 'Rodrigo',
+  308 | 				rolesVersion: 1,
+  309 | 				idsEmpresas: ['DQyU0kRSjcsBl6kiqfK3', 'pGTE0wOQbEcy1eEduP4C'],
+  310 | 			},
+  311 | 			empresa: {
+  312 | 				id: 'DQyU0kRSjcsBl6kiqfK3',
+  313 | 				ruc: '1006487552001',
+  314 | 				razonSocial: 'DEMOGRAFIX S.A.',
+  315 | 				nombreComercial: 'DEMOGRAFIX S.A.',
+  316 | 				accountId: '001VD00000RsHadYAF',
+  317 | 			},
+  318 | 			estado: 'pendiente',
+  319 | 			id: documentId,
+  320 | 			createdAt: this.firestoreTimestamp(),
+  321 | 			searchIndex: [],
+```
