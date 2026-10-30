@@ -1,0 +1,32 @@
+[LOG] Using Firebase Production Services for environment: stage [3:44:51 PM]
+[LOG] trackEvent view_login {timestamp: 2026-10-30T15:44:53.772Z} [3:44:53 PM]
+[LOG] Using Firebase Production Services for environment: stage [3:44:55 PM]
+[LOG] Using Firebase Production Services for environment: stage [3:44:57 PM]
+❌ CONSOLE ERROR: Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+❌ CONSOLE ERROR: Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+❌ CONSOLE ERROR: Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+❌ CONSOLE ERROR: Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+❌ CONSOLE ERROR: Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+❌ CONSOLE ERROR: Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+❌ CONSOLE ERROR: {error: AxiosError: Request failed with status code 404
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo obtener el análisis de datos de la empresa, content: Object}
+❌ CONSOLE ERROR: {error: AxiosError: Request failed with status code 404
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo obtener el análisis de datos de la empresa, content: Object}
+❌ CONSOLE ERROR: Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+❌ CONSOLE ERROR: Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+
+⚠️  5 error(s) detected during test execution:
+  1. Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+  2. Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+  3. Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+  4. {error: AxiosError: Request failed with status code 404
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo obtener el análisis de datos de la empresa, content: Object}
+  5. Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+
+⚠️  5 error(s) detected during test execution:
+  1. Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+  2. Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+  3. Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+  4. {error: AxiosError: Request failed with status code 404
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo obtener el análisis de datos de la empresa, content: Object}
+  5. Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)

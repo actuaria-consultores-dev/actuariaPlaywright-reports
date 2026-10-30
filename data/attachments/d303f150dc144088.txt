@@ -1,0 +1,58 @@
+🎭️ [Crear Usuario Mail.tm Tests] Empezando pre condición - Crear inbox Mail.tm y navegar a formulario de registro
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] CREANDO INBOX EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Config: maxRetries=3, baseUrl=https://api.mail.tm
+🔄 [MailTmService] [STAGGER] Esperando 2635ms para evitar rate limiting en API...
+🔄 [MailTmService] --- Intento 1/3 de creación ---
+📊 [MailTmService] Paso 1: Obteniendo dominios disponibles...
+ℹ️  [MailTmService] GET /domains → Status: 200 OK
+ℹ️  [MailTmService] Dominio obtenido: "maxxspace.com"
+📊 [MailTmService] Paso 2: Creando cuenta: f7o0owwgmvv51a0q@maxxspace.com
+ℹ️  [MailTmService] POST /accounts → Status: 201 Created
+✅ [MailTmService] Cuenta CREADA exitosamente
+📊 [MailTmService] Paso 3: Obteniendo token de autenticación...
+ℹ️  [MailTmService] POST /token → Status: 200 OK
+✅ [MailTmService] Token obtenido: id="6ae4ba34c22e..."
+✅ [MailTmService] 🎉 INBOX CREADO EXITOSAMENTE
+🔍 [MailTmService] ========================================
+✅ [Crear Usuario Mail.tm Tests] Inbox Mail.tm creado: f7o0owwgmvv51a0q@maxxspace.com
+🔍 [Crear Usuario Mail.tm Tests] Navegando a formulario de creación de cuenta
+🔍 [LoginPage] Navegando a formulario de creación de cuenta
+✅ [LoginPage] Formulario de creación de cuenta abierto
+✅ [Crear Usuario Mail.tm Tests] Formulario de creación de cuenta abierto (URL: https://act-compass-stage-proj.firebaseapp.com/auth/registro)
+🎭️ [Crear Usuario Mail.tm Tests] TC02-01 - Verificar validación de registro fallido
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] CREANDO INBOX EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Config: maxRetries=3, baseUrl=https://api.mail.tm
+🔄 [MailTmService] [STAGGER] Esperando 1722ms para evitar rate limiting en API...
+🔄 [MailTmService] --- Intento 1/3 de creación ---
+📊 [MailTmService] Paso 1: Obteniendo dominios disponibles...
+ℹ️  [MailTmService] GET /domains → Status: 200 OK
+ℹ️  [MailTmService] Dominio obtenido: "maxxspace.com"
+📊 [MailTmService] Paso 2: Creando cuenta: 22as96h3mvv51i2o@maxxspace.com
+ℹ️  [MailTmService] POST /accounts → Status: 201 Created
+✅ [MailTmService] Cuenta CREADA exitosamente
+📊 [MailTmService] Paso 3: Obteniendo token de autenticación...
+ℹ️  [MailTmService] POST /token → Status: 200 OK
+✅ [MailTmService] Token obtenido: id="6ae4ba3e2013..."
+✅ [MailTmService] 🎉 INBOX CREADO EXITOSAMENTE
+🔍 [MailTmService] ========================================
+ℹ️  [Crear Usuario Mail.tm Tests] Probando registro inválido → contraseña corta + email de inbox temporal
+🎭️ [CrearUsuarioWorkflows] Verificando registro con datos inválidos
+🔄 [CrearUsuarioWorkflows] Rellenando formulario con contraseña inválida
+🔄 [LoginPage] Rellenando formulario con contraseña
+✅ [LoginPage] Formulario rellenado
+🔄 [CrearUsuarioWorkflows] Enviando formulario
+📊 [CrearUsuarioWorkflows] Verificando error de validación de contraseña
+✅ [CrearUsuarioWorkflows] Error de validación verificado correctamente
+✅ [CrearUsuarioWorkflows] Usuario permanece en página de registro como se esperaba
+
+✅ ✅ ✅ [CrearUsuarioWorkflows] Verificación de registro inválido completada
+
+
+✅ ✅ ✅ [Crear Usuario Mail.tm Tests] TC02-01 finalizado exitosamente
+
+
+📋 2 console message(s) logged to stderr

@@ -1,0 +1,12 @@
+🎭️ [Mi Cuenta - Tabs Tests] TC08: Verificar accesibilidad y roles ARIA en tabs
+📊 [MiCuentaTabsWorkflows] ♿ Verificando estructura ARIA del tablist
+ℹ️  [MiCuentaTabsPage] Cantidad de role="tab" en el DOM: 4
+✅ [MiCuentaTabsWorkflows] ✅ Estructura ARIA verificada
+🔍 [MiCuentaTabsWorkflows] 🔄 Verificando cambios dinámicos de aria-selected
+📊 [MiCuentaTabsPage] Verificando que tab "Datos del usuario" esté activo (aria-selected=true)
+ℹ️  [MiCuentaTabsPage] Verificando que tab "Datos del usuario" NO esté activo (aria-selected=false)
+📊 [MiCuentaTabsPage] Verificando que tab "Contactos vinculados" esté activo (aria-selected=true)
+✅ [MiCuentaTabsWorkflows] ✅ Cambios de aria-selected verificados
+ℹ️  [MiCuentaTabsWorkflows] 🖱️ Verificando que los tabs son clickeables
+✅ [MiCuentaTabsWorkflows] ✅ Todos los tabs son clickeables
+✅ [Mi Cuenta - Tabs Tests] ✓ Atributos de accesibilidad verificados correctamente

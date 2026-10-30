@@ -1,0 +1,138 @@
+🎭️ [Mi Cuenta Equipo Tests] Iniciando sesión con usuario de prueba
+🔐 [Mi Cuenta Equipo Tests] Ingresando credenciales
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Mi Cuenta Equipo Tests] Login exitoso
+🎭️ [Mi Cuenta Equipo Tests] ========================================
+🎭️ [Mi Cuenta Equipo Tests] INICIANDO TC00-CLEANUP - Limpieza del equipo
+🎭️ [Mi Cuenta Equipo Tests] ========================================
+ℹ️  [Mi Cuenta Equipo Tests] Timeout configurado: 900s (15 minutos)
+ℹ️  [Mi Cuenta Equipo Tests] Emails protegidos (no se remueven): christianjosue321@gmail.com, actuariamicuentatest@yopmail.com, actuariatest6@yopmail.com
+🔍 [Mi Cuenta Equipo Tests] Navegando a /dashboard/portal/mi-cuenta/equipo
+🔍 [EquipoPage] Navegando a Mi Cuenta / Equipo
+⚠️  [EquipoPage] goto Mi Cuenta / Equipo interrumpido por el SPA (intento 1/3): page.goto: net::ERR_ABORTED at https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/equipo
+Call log:
+  - navigating to "https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/equipo", waiting until "domcontentloaded"
+
+🔄 [EquipoPage] Modal "Tienes una propuesta pendiente" detectado - cerrando con "Ver después"
+✅ [EquipoPage] Modal de propuesta de plan cerrado
+✅ [EquipoPage] Página de Equipo cargada
+✅ [Mi Cuenta Equipo Tests] Página de Equipo cargada
+🔄 [Mi Cuenta Equipo Tests] Invocando cleanupTeamMembersExceptWorkflow con 3 emails protegidos...
+🎭️ [EquipoWorkflows] Iniciando limpieza del equipo: se remueve todo excepto christianjosue321@gmail.com, actuariamicuentatest@yopmail.com, actuariatest6@yopmail.com
+🔄 [EquipoPage] Removiendo todos los usuarios del equipo excepto: christianjosue321@gmail.com, actuariamicuentatest@yopmail.com, actuariatest6@yopmail.com
+📊 [EquipoPage] Esperando que la tabla de equipo cargue completamente
+✅ [EquipoPage] Tabla de equipo cargada
+📊 [EquipoPage] Emails en tabla: 13
+🔄 [EquipoPage] Removiendo usuario: 0u1vut5vmvv5bc7z@maxxspace.com
+🔄 [EquipoPage] Buscando botón Quitar dentro de la fila
+✅ [EquipoPage] Botón de remover usuario clickeado
+📊 [EquipoPage] Esperando modal de confirmación
+📊 [EquipoPage] Modal de confirmación visible
+✅ [EquipoPage] Confirmación de remover clickeada
+📊 [EquipoPage] DELETE de remoción respondió HTTP 200
+✅ [EquipoPage] Usuario removido (1)
+📊 [EquipoPage] Emails en tabla: 12
+🔄 [EquipoPage] Removiendo usuario: 253pzi4pmvv59rry@maxxspace.com
+🔄 [EquipoPage] Buscando botón Quitar dentro de la fila
+✅ [EquipoPage] Botón de remover usuario clickeado
+📊 [EquipoPage] Esperando modal de confirmación
+📊 [EquipoPage] Modal de confirmación visible
+✅ [EquipoPage] Confirmación de remover clickeada
+📊 [EquipoPage] DELETE de remoción respondió HTTP 200
+✅ [EquipoPage] Usuario removido (2)
+📊 [EquipoPage] Emails en tabla: 11
+🔄 [EquipoPage] Removiendo usuario: 54vnfcr8mvv5di18@maxxspace.com
+🔄 [EquipoPage] Buscando botón Quitar dentro de la fila
+✅ [EquipoPage] Botón de remover usuario clickeado
+📊 [EquipoPage] Esperando modal de confirmación
+📊 [EquipoPage] Modal de confirmación visible
+✅ [EquipoPage] Confirmación de remover clickeada
+📊 [EquipoPage] DELETE de remoción respondió HTTP 200
+✅ [EquipoPage] Usuario removido (3)
+📊 [EquipoPage] Emails en tabla: 10
+🔄 [EquipoPage] Removiendo usuario: equipo116486m31@yopmail.com
+🔄 [EquipoPage] Buscando botón Quitar dentro de la fila
+✅ [EquipoPage] Botón de remover usuario clickeado
+📊 [EquipoPage] Esperando modal de confirmación
+📊 [EquipoPage] Modal de confirmación visible
+✅ [EquipoPage] Confirmación de remover clickeada
+📊 [EquipoPage] DELETE de remoción respondió HTTP 400
+⚠️  [EquipoPage] El backend rechazó la eliminación de equipo116486m31@yopmail.com (HTTP 400) - registro huérfano que la UI no puede borrar
+📊 [EquipoPage] Emails en tabla: 10
+🔄 [EquipoPage] Removiendo usuario: hdpg07o6mvv5ain7@maxxspace.com
+🔄 [EquipoPage] Buscando botón Quitar dentro de la fila
+✅ [EquipoPage] Botón de remover usuario clickeado
+📊 [EquipoPage] Esperando modal de confirmación
+📊 [EquipoPage] Modal de confirmación visible
+✅ [EquipoPage] Confirmación de remover clickeada
+📊 [EquipoPage] DELETE de remoción respondió HTTP 200
+✅ [EquipoPage] Usuario removido (4)
+📊 [EquipoPage] Emails en tabla: 9
+🔄 [EquipoPage] Removiendo usuario: lsx8t1uemvv5gdtf@maxxspace.com
+🔄 [EquipoPage] Buscando botón Quitar dentro de la fila
+✅ [EquipoPage] Botón de remover usuario clickeado
+📊 [EquipoPage] Esperando modal de confirmación
+📊 [EquipoPage] Modal de confirmación visible
+✅ [EquipoPage] Confirmación de remover clickeada
+📊 [EquipoPage] DELETE de remoción respondió HTTP 200
+✅ [EquipoPage] Usuario removido (5)
+📊 [EquipoPage] Emails en tabla: 8
+🔄 [EquipoPage] Removiendo usuario: qa.contacto.4939044t9bw@yopmail.com
+🔄 [EquipoPage] Buscando botón Quitar dentro de la fila
+✅ [EquipoPage] Botón de remover usuario clickeado
+📊 [EquipoPage] Esperando modal de confirmación
+📊 [EquipoPage] Modal de confirmación visible
+✅ [EquipoPage] Confirmación de remover clickeada
+📊 [EquipoPage] DELETE de remoción respondió HTTP 200
+✅ [EquipoPage] Usuario removido (6)
+📊 [EquipoPage] Emails en tabla: 7
+🔄 [EquipoPage] Removiendo usuario: uw9c3i96mvv50g3k@maxxspace.com
+🔄 [EquipoPage] Buscando botón Quitar dentro de la fila
+✅ [EquipoPage] Botón de remover usuario clickeado
+📊 [EquipoPage] Esperando modal de confirmación
+📊 [EquipoPage] Modal de confirmación visible
+✅ [EquipoPage] Confirmación de remover clickeada
+📊 [EquipoPage] DELETE de remoción respondió HTTP 200
+✅ [EquipoPage] Usuario removido (7)
+📊 [EquipoPage] Emails en tabla: 6
+🔄 [EquipoPage] Removiendo usuario: xfuueaqwmvv5h6r7@maxxspace.com
+🔄 [EquipoPage] Buscando botón Quitar dentro de la fila
+✅ [EquipoPage] Botón de remover usuario clickeado
+📊 [EquipoPage] Esperando modal de confirmación
+📊 [EquipoPage] Modal de confirmación visible
+✅ [EquipoPage] Confirmación de remover clickeada
+📊 [EquipoPage] DELETE de remoción respondió HTTP 200
+✅ [EquipoPage] Usuario removido (8)
+📊 [EquipoPage] Emails en tabla: 5
+🔄 [EquipoPage] Removiendo usuario: y64f06npmvv402b5@maxxspace.com
+🔄 [EquipoPage] Buscando botón Quitar dentro de la fila
+✅ [EquipoPage] Botón de remover usuario clickeado
+📊 [EquipoPage] Esperando modal de confirmación
+📊 [EquipoPage] Modal de confirmación visible
+✅ [EquipoPage] Confirmación de remover clickeada
+📊 [EquipoPage] DELETE de remoción respondió HTTP 200
+✅ [EquipoPage] Usuario removido (9)
+📊 [EquipoPage] Emails en tabla: 4
+📊 [EquipoPage] Recargando la página para verificar el estado real del equipo
+🔍 [EquipoPage] Navegando a Mi Cuenta / Equipo
+✅ [EquipoPage] Página de Equipo cargada
+📊 [EquipoPage] Esperando que la tabla de equipo cargue completamente
+✅ [EquipoPage] Tabla de equipo cargada
+⚠️  [EquipoPage] Quedaron 1 registros sin remover: equipo116486m31@yopmail.com
+✅ [EquipoPage] Total removidos: 9
+✅ [EquipoWorkflows] Limpieza ejecutada: 9 usuarios removidos
+ℹ️  [EquipoWorkflows] Total emails en tabla después de limpieza: 4
+⚠️  [EquipoWorkflows] 1 invitaciones pendientes no se pudieron remover (registros huérfanos que el backend rechaza eliminar; requieren limpieza manual de datos)
+⚠️  [EquipoWorkflows]   → equipo116486m31@yopmail.com (HTTP 400)
+
+✅ ✅ ✅ [EquipoWorkflows] Limpieza de usuarios completada: 9 removidos
+
+✅ [Mi Cuenta Equipo Tests] Limpieza ejecutada: 9 usuarios removidos
+
+✅ ✅ ✅ [Mi Cuenta Equipo Tests] TC00-CLEANUP completado - 9 usuarios removidos exitosamente
+
+
+ℹ️  2 non-blocking error(s) ignored by filter.
+
+📋 6 console message(s) logged to stderr

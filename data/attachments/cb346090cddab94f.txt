@@ -1,0 +1,57 @@
+[LOG] Using Firebase Production Services for environment: stage [3:44:39 PM]
+[LOG] trackEvent view_login {timestamp: 2026-10-30T15:44:42.059Z} [3:44:42 PM]
+[LOG] Using Firebase Production Services for environment: stage [3:44:44 PM]
+[LOG] Using Firebase Production Services for environment: stage [3:44:45 PM]
+❌ CONSOLE ERROR: [OCULTO] FirebaseError: Firebase: Error (auth/user-[OCULTO]
+    at createErrorInternal (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:4487:41)
+    at _fail (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:4452:11)
+    at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:4949:17)
+    at async requestSts[OCULTO]
+    at async Sts[OCULTO] (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:5573:58)
+    at async Sts[OCULTO] (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:5564:13)
+    at async _logoutIfInvalidated (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:5244:16)
+    at async UserImpl.getId[OCULTO]
+    at async check[OCULTO] (https://act-compass-stage-proj.firebaseapp.com/assets/index-iSNwey77.js:27856:11)
+❌ CONSOLE ERROR: Token expirado: FirebaseError: Firebase: Error (auth/user-token-expired).
+    at createErrorInternal (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:4487:41)
+    at _fail (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:4452:11)
+    at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:4949:17)
+    at async requestStsToken (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:5481:22)
+    at async StsTokenManager.refresh (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:5573:58)
+    at async StsTokenManager.getToken (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:5564:13)
+    at async _logoutIfInvalidated (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:5244:16)
+    at async UserImpl.getIdToken (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:5665:29)
+    at async checkTokenValidity (https://act-compass-stage-proj.firebaseapp.com/assets/index-iSNwey77.js:27856:11)
+❌ CONSOLE ERROR: {error: AxiosError: Request failed with status code 401
+    at settle (https://act-compass-stage-proj.fireb…, message: Jwt is missing, content: Object}
+❌ CONSOLE ERROR: {error: AxiosError: Request failed with status code 401
+    at settle (https://act-compass-stage-proj.fireb…, message: Jwt is missing, content: Object}
+[LOG] trackEvent view_login {timestamp: 2026-10-30T15:45:47.241Z} [3:45:47 PM]
+
+⚠️  2 error(s) detected during test execution:
+  1. Token expirado: FirebaseError: Firebase: Error (auth/user-token-expired).
+    at createErrorInternal (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:4487:41)
+    at _fail (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:4452:11)
+    at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:4949:17)
+    at async requestStsToken (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:5481:22)
+    at async StsTokenManager.refresh (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:5573:58)
+    at async StsTokenManager.getToken (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:5564:13)
+    at async _logoutIfInvalidated (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:5244:16)
+    at async UserImpl.getIdToken (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:5665:29)
+    at async checkTokenValidity (https://act-compass-stage-proj.firebaseapp.com/assets/index-iSNwey77.js:27856:11)
+  2. {error: AxiosError: Request failed with status code 401
+    at settle (https://act-compass-stage-proj.fireb…, message: Jwt is missing, content: Object}
+
+⚠️  2 error(s) detected during test execution:
+  1. Token expirado: FirebaseError: Firebase: Error (auth/user-token-expired).
+    at createErrorInternal (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:4487:41)
+    at _fail (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:4452:11)
+    at _performFetchWithErrorHandling (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:4949:17)
+    at async requestStsToken (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:5481:22)
+    at async StsTokenManager.refresh (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:5573:58)
+    at async StsTokenManager.getToken (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:5564:13)
+    at async _logoutIfInvalidated (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:5244:16)
+    at async UserImpl.getIdToken (https://act-compass-stage-proj.firebaseapp.com/assets/pagos-CNLdZXS4.js:5665:29)
+    at async checkTokenValidity (https://act-compass-stage-proj.firebaseapp.com/assets/index-iSNwey77.js:27856:11)
+  2. {error: AxiosError: Request failed with status code 401
+    at settle (https://act-compass-stage-proj.fireb…, message: Jwt is missing, content: Object}

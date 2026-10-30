@@ -1,0 +1,190 @@
+🎭️ [Mi Cuenta Equipo Tests] Iniciando sesión con usuario de prueba
+🔐 [Mi Cuenta Equipo Tests] Ingresando credenciales
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Mi Cuenta Equipo Tests] Login exitoso
+🎭️ [Mi Cuenta Equipo Tests] ========================================
+🎭️ [Mi Cuenta Equipo Tests] INICIANDO TC01-04 - Invitar usuario como administrador
+🎭️ [Mi Cuenta Equipo Tests] ========================================
+ℹ️  [Mi Cuenta Equipo Tests] Timeout configurado: 180s (3 minutos)
+ℹ️  [Mi Cuenta Equipo Tests] Rol a seleccionar: Administrador
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] CREANDO INBOX EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Config: maxRetries=3, baseUrl=https://api.mail.tm
+🔄 [MailTmService] [STAGGER] Esperando 2592ms para evitar rate limiting en API...
+🔄 [MailTmService] --- Intento 1/3 de creación ---
+📊 [MailTmService] Paso 1: Obteniendo dominios disponibles...
+ℹ️  [MailTmService] GET /domains → Status: 200 OK
+ℹ️  [MailTmService] Dominio obtenido: "maxxspace.com"
+📊 [MailTmService] Paso 2: Creando cuenta: 54vnfcr8mvv5di18@maxxspace.com
+ℹ️  [MailTmService] POST /accounts → Status: 201 Created
+✅ [MailTmService] Cuenta CREADA exitosamente
+📊 [MailTmService] Paso 3: Obteniendo token de autenticación...
+ℹ️  [MailTmService] POST /token → Status: 200 OK
+✅ [MailTmService] Token obtenido: id="6ae4bc6ef90c..."
+✅ [MailTmService] 🎉 INBOX CREADO EXITOSAMENTE
+🔍 [MailTmService] ========================================
+
+⚙️  [Mi Cuenta Equipo Tests] Email del invitado ADMINISTRADOR generado (Mail.tm):
+   • email: [OCULTO]
+🔍 [Mi Cuenta Equipo Tests] Navegando a /dashboard/portal/mi-cuenta/equipo
+🔍 [EquipoPage] Navegando a Mi Cuenta / Equipo
+🔄 [EquipoPage] Modal "Tienes una propuesta pendiente" detectado - cerrando con "Ver después"
+✅ [EquipoPage] Modal de propuesta de plan cerrado
+✅ [EquipoPage] Página de Equipo cargada
+✅ [Mi Cuenta Equipo Tests] Página de Equipo cargada
+
+📍 Paso 1: Abriendo modal de Invitar usuario
+🔄 [EquipoPage] Haciendo clic en Invitar usuario
+✅ [EquipoPage] Botón Invitar usuario clickeado
+📊 [EquipoPage] Esperando modal Invitar usuario
+✅ [EquipoPage] Modal Invitar usuario visible
+
+📍 Paso 2: Ingresando email del invitado
+🔐 [EquipoPage] Ingresando email del invitado (54***@[OCULTO])
+✅ [EquipoPage] Email ingresado
+
+📍 Paso 3: Seleccionando rol Administrador
+🔄 [EquipoPage] Seleccionando rol: Administrador
+✅ [EquipoPage] Rol "Administrador" seleccionado
+
+📍 Paso 4: Verificando mensaje "Los administradores tienen"
+✅ [Mi Cuenta Equipo Tests] Mensaje "Los administradores tienen" visible - información de permisos de administrador confirmada
+
+📍 Paso 5: Enviando invitación
+🔄 [EquipoPage] Haciendo clic en Enviar invitación
+✅ [EquipoPage] Invitación enviada
+✅ [Mi Cuenta Equipo Tests] Invitación con rol Administrador enviada
+
+📍 Paso 6: Verificando que el email aparece en la tabla de equipo
+📊 [EquipoPage] Verificando que el email del invitado aparece en la tabla
+✅ [EquipoPage] Email 54vnfcr8mvv5di18@maxxspace.com encontrado en la tabla
+
+📍 Paso 7: Verificando estado del usuario en la tabla
+📊 [EquipoPage] Verificando estado del usuario invitado = "En espera · Administrador"
+✅ [EquipoPage] Estado "En espera · Administrador" verificado para el usuario "54vnfcr8mvv5di18@maxxspace.com"
+✅ [Mi Cuenta Equipo Tests] Flujo de invitación como administrador completado exitosamente
+🎭️ [EquipoWorkflows] ========================================
+🎭️ [EquipoWorkflows] VERIFICANDO EMAIL DE INVITACIÓN (MAIL.TM)
+🎭️ [EquipoWorkflows] ========================================
+ℹ️  [EquipoWorkflows] Verificando email de invitación en Mail.tm
+ℹ️  [EquipoWorkflows] Config: maxRetries=20, retryDelay=5000ms
+ℹ️  [EquipoWorkflows] Tiempo máximo de espera: 100s
+📊 [EquipoWorkflows] Esperando email de invitación en Mail.tm
+🔄 [EquipoWorkflows] Invocando mailTm.waitForMessage()...
+🔍 [MailTmService] ========================================
+🔍 [MailTmService] ESPERANDO MENSAJE EN MAIL.TM
+🔍 [MailTmService] ========================================
+ℹ️  [MailTmService] Esperando mensaje en inbox temporal
+ℹ️  [MailTmService] Config: maxRetries=20, retryDelay=5000ms
+ℹ️  [MailTmService] Tiempo máximo de espera: 100s
+🔄 [MailTmService] --- Intento 1/20 (tiempo transcurrido: 0.0s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+🔄 [MailTmService] --- Intento 2/20 (tiempo transcurrido: 5.5s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+🔄 [MailTmService] --- Intento 3/20 (tiempo transcurrido: 11.0s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+🔄 [MailTmService] --- Intento 4/20 (tiempo transcurrido: 16.5s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+🔄 [MailTmService] --- Intento 5/20 (tiempo transcurrido: 22.0s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+🔄 [MailTmService] --- Intento 6/20 (tiempo transcurrido: 27.5s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+🔄 [MailTmService] --- Intento 7/20 (tiempo transcurrido: 33.0s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+🔄 [MailTmService] --- Intento 8/20 (tiempo transcurrido: 38.5s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+🔄 [MailTmService] --- Intento 9/20 (tiempo transcurrido: 44.0s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+🔄 [MailTmService] --- Intento 10/20 (tiempo transcurrido: 49.5s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+🔄 [MailTmService] --- Intento 11/20 (tiempo transcurrido: 55.0s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+🔄 [MailTmService] --- Intento 12/20 (tiempo transcurrido: 60.5s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+🔄 [MailTmService] --- Intento 13/20 (tiempo transcurrido: 66.0s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+🔄 [MailTmService] --- Intento 14/20 (tiempo transcurrido: 71.5s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+🔄 [MailTmService] --- Intento 15/20 (tiempo transcurrido: 77.0s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+🔄 [MailTmService] --- Intento 16/20 (tiempo transcurrido: 82.5s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+🔄 [MailTmService] --- Intento 17/20 (tiempo transcurrido: 88.0s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+🔄 [MailTmService] --- Intento 18/20 (tiempo transcurrido: 93.5s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+🔄 [MailTmService] --- Intento 19/20 (tiempo transcurrido: 99.1s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+🔄 [MailTmService] --- Intento 20/20 (tiempo transcurrido: 104.5s) ---
+📊 [MailTmService] Consultando GET /messages...
+ℹ️  [MailTmService] GET /messages → Status: 200 OK
+ℹ️  [MailTmService] 📬 Mensajes en inbox: 0
+ℹ️  [MailTmService] No hay mensajes aún. Esperando 5000ms...
+❌ [MailTmService] ❌ MENSAJE NO ENCONTRADO después de 20 intentos (110.0s)
+❌ [MailTmService] Inbox temporal - mensaje no encontrado
+🔍 [MailTmService] ========================================
+📊 [MailTmService] Haciendo intento final para listar mensajes...
+ℹ️  [MailTmService] Total mensajes en inbox al fallar: 0
+
+ℹ️  1 non-blocking error(s) ignored by filter.
+
+📋 5 console message(s) logged to stderr

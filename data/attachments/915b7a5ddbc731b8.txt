@@ -1,0 +1,46 @@
+🎭️ [Entidades Registradas Tests] Empezando pre condición
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Entidades Registradas Tests] Login exitoso
+✅ [Entidades Registradas Tests] Página principal verificada
+⚠️  [Entidades Registradas Tests] goto Entidades Registradas interrumpido por el SPA (intento 1/3): page.goto: net::ERR_ABORTED at https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/empresas
+Call log:
+  - navigating to "https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/empresas", waiting until "domcontentloaded"
+
+✅ [Entidades Registradas Tests] Navegación a Entidades Registradas completada
+🎭️ [Entidades-TC01] Verificar usuario no puede agregar empresa ya existente
+📋 [Entidades-TC01] Configuración
+{
+  "ruc": "[OCULTO]",
+  "shouldAlreadyExist": true
+}
+
+======================================================================
+🎯 🏢 INICIANDO FLUJO: AGREGAR EMPRESA
+======================================================================
+   • ruc: [OCULTO]
+   • Debe existir: Sí
+======================================================================
+
+ℹ️  [EntidadesRegistradasWorkflows] 📝 Haciendo clic en agregar nueva empresa...
+ℹ️  [EntidadesRegistradasPage] Haciendo clic en el botón "Agregar ..." (entidad/empresa)
+✅ [EntidadesRegistradasPage] Botón "Agregar ..." clickeado
+✅ [EntidadesRegistradasWorkflows] ✅ Botón agregar empresa clickeado
+ℹ️  [EntidadesRegistradasWorkflows] 🔍 Buscando empresa con RUC [OCULTO]...
+ℹ️  [EntidadesRegistradasPage] Buscando empresa por RUC en el diálogo
+✅ [EntidadesRegistradasPage] Búsqueda por RUC ejecutada
+⚠️  [EntidadesRegistradasWorkflows] ⚠️ Verificando mensaje de empresa ya existente...
+📊 [EntidadesRegistradasPage] Verificando mensaje de empresa ya existente
+✅ [EntidadesRegistradasPage] Mensaje de empresa ya existente visible
+✅ [EntidadesRegistradasWorkflows] ✅ Mensaje de empresa existente verificado
+
+✅ ✅ ✅ [EntidadesRegistradasWorkflows] ✅ FLUJO AGREGAR EMPRESA FINALIZADO
+
+✅ [Entidades-TC01] Validación de empresa existente completada
+
+✅ ✅ ✅ [Entidades-TC01] TC01 finalizado exitosamente
+
+
+ℹ️  1 non-blocking error(s) ignored by filter.
+
+📋 5 console message(s) logged to stderr

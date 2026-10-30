@@ -1,0 +1,61 @@
+🎭️ [Entidades Registradas Tests] Empezando pre condición
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Entidades Registradas Tests] Login exitoso
+✅ [Entidades Registradas Tests] Página principal verificada
+⚠️  [Entidades Registradas Tests] goto Entidades Registradas interrumpido por el SPA (intento 1/3): page.goto: net::ERR_ABORTED at https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/empresas
+Call log:
+  - navigating to "https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/empresas", waiting until "domcontentloaded"
+
+✅ [Entidades Registradas Tests] Navegación a Entidades Registradas completada
+🎭️ [Entidades-TC06] Verificar usuario puede acceder a empresas registradas
+📋 [Entidades-TC06] Configuración
+{
+  "targetCompanyName": "AGROMAPS",
+  "verifyDashboard": true
+}
+
+======================================================================
+🎯 👤 INICIANDO FLUJO: ACCEDER A PERFIL DE EMPRESA
+======================================================================
+   • Empresa objetivo: AGROMAPS
+   • Verificar dashboard: Sí
+   • Empresa a restaurar: CALCULLIS S.A.
+======================================================================
+
+ℹ️  [EntidadesRegistradasWorkflows] 📍 Accediendo al menú de perfil de usuario...
+ℹ️  [EntidadesRegistradasPage] Accediendo al menú de perfil de usuario
+✅ [EntidadesRegistradasPage] Menú de perfil abierto
+✅ [EntidadesRegistradasWorkflows] ✅ Menú de perfil abierto
+ℹ️  [EntidadesRegistradasWorkflows] 🔄 Cambiando a empresa AGROMAPS...
+🔄 [EntidadesRegistradasPage] Cambiando a la empresa AGROMAPS
+🔄 [EntidadesRegistradasPage] Modal "Tienes una propuesta pendiente" detectado - cerrando con "Ver después"
+✅ [EntidadesRegistradasPage] Modal de propuesta de plan cerrado
+📊 [EntidadesRegistradasPage] Verificando empresa activa en el header: AGROMAPS
+✅ [EntidadesRegistradasPage] Empresa activa verificada en el header
+✅ [EntidadesRegistradasPage] Empresa activa: AGROMAPS
+✅ [EntidadesRegistradasWorkflows] ✅ Mensaje de éxito: "Se cambio a la empresa"
+ℹ️  [EntidadesRegistradasWorkflows] 🏠 Verificando datos del dashboard...
+🔍 [EntidadesRegistradasPage] Navegando a Inicio
+✅ [EntidadesRegistradasPage] Página de Inicio cargada
+📊 [EntidadesRegistradasPage] Verificando empresa activa en el header: AGROMAPS
+✅ [EntidadesRegistradasPage] Empresa activa verificada en el header
+✅ [EntidadesRegistradasWorkflows] ✅ Dashboard verificado correctamente
+🔄 [EntidadesRegistradasPage] Cambiando a la empresa CALCULLIS S.A.
+ℹ️  [EntidadesRegistradasPage] Accediendo al menú de perfil de usuario
+✅ [EntidadesRegistradasPage] Menú de perfil abierto
+📊 [EntidadesRegistradasPage] Verificando empresa activa en el header: CALCULLIS S.A.
+✅ [EntidadesRegistradasPage] Empresa activa verificada en el header
+✅ [EntidadesRegistradasPage] Empresa activa: CALCULLIS S.A.
+✅ [EntidadesRegistradasWorkflows] ✅ Sesión restaurada a CALCULLIS S.A.
+
+✅ ✅ ✅ [EntidadesRegistradasWorkflows] ✅ FLUJO ACCEDER A PERFIL DE EMPRESA FINALIZADO
+
+✅ [Entidades-TC06] Acceso a empresa verificado
+
+✅ ✅ ✅ [Entidades-TC06] TC06 finalizado exitosamente
+
+
+ℹ️  5 non-blocking error(s) ignored by filter.
+
+📋 9 console message(s) logged to stderr

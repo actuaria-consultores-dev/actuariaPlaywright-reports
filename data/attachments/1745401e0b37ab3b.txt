@@ -1,0 +1,16 @@
+[LOG] Using Firebase Production Services for environment: stage [3:45:21 PM]
+[LOG] trackEvent view_login {timestamp: 2026-10-30T15:45:22.852Z} [3:45:22 PM]
+[LOG] Using Firebase Production Services for environment: stage [3:45:24 PM]
+[LOG] Using Firebase Production Services for environment: stage [3:45:26 PM]
+❌ CONSOLE ERROR: Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+❌ CONSOLE ERROR: Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+❌ CONSOLE ERROR: Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+❌ CONSOLE ERROR: Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+
+⚠️  2 error(s) detected during test execution:
+  1. Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+  2. Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+
+⚠️  2 error(s) detected during test execution:
+  1. Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)
+  2. Error al obtener URL de Storage: FirebaseError: Firebase Storage: Object 'companies_logos/UA6nfxdRUdXbuuaXBa4B.png' does not exist. (storage/object-not-found)

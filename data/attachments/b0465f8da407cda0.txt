@@ -1,0 +1,28 @@
+🎭️ [MiCuenta User Info] Empezando pre condición
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+🔍 [LoginPage] Sin popup de tour ("Entendido") que cerrar
+🎭️ [MiCuenta User Info] TC02: Verificar usuario puede editar el nombre, tel, cargo (restablecer)
+📊 [LoginPage] Leyendo los datos actuales del usuario
+🔄 [LoginPage] Seleccionando cargo 'Socio / Accionista' desde el dropdown
+✅ [LoginPage] Cargo 'Socio / Accionista' seleccionado correctamente
+✅ [LoginPage] Datos del usuario rellenados
+✅ [LoginPage] Datos del usuario actualizados
+✅ [LoginPage] Popup de tour cerrado
+🔄 [MiCuenta User Info] Cerrando sesión para verificar la persistencia de los datos...
+🔍 [LoginPage] Cerrando sesión
+✅ [LoginPage] Sesión cerrada
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+📊 [MiCuenta User Info] Verificando que los datos guardados sigan presentes...
+✅ [MiCuenta User Info] Todos los campos fueron verificados después del login
+🔄 [MiCuenta User Info] Restaurando los datos originales del usuario...
+🔄 [LoginPage] Seleccionando cargo 'Socio / Accionista' desde el dropdown
+✅ [LoginPage] Cargo 'Socio / Accionista' seleccionado correctamente
+✅ [LoginPage] Datos del usuario rellenados
+✅ [LoginPage] Datos del usuario actualizados
+✅ [MiCuenta User Info] Datos originales restaurados
+
+ℹ️  2 non-blocking error(s) ignored by filter.
+
+📋 10 console message(s) logged to stderr

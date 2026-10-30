@@ -1,0 +1,17 @@
+[LOG] Using Firebase Production Services for environment: stage [3:52:19 PM]
+[LOG] trackEvent view_login {timestamp: 2026-10-30T15:52:21.717Z} [3:52:21 PM]
+[LOG] Using Firebase Production Services for environment: stage [3:52:23 PM]
+[LOG] Using Firebase Production Services for environment: stage [3:52:25 PM]
+❌ CONSOLE ERROR: {error: AxiosError: Request failed with status code 400
+    at settle (https://act-compass-stage-proj.fireb…, message: Usuario no encontrado, content: Object}
+❌ CONSOLE ERROR: {error: AxiosError: Request failed with status code 400
+    at settle (https://act-compass-stage-proj.fireb…, message: Usuario no encontrado, content: Object}
+[LOG] Using Firebase Production Services for environment: stage [3:52:46 PM]
+
+⚠️  1 error(s) detected during test execution:
+  1. {error: AxiosError: Request failed with status code 400
+    at settle (https://act-compass-stage-proj.fireb…, message: Usuario no encontrado, content: Object}
+
+⚠️  1 error(s) detected during test execution:
+  1. {error: AxiosError: Request failed with status code 400
+    at settle (https://act-compass-stage-proj.fireb…, message: Usuario no encontrado, content: Object}

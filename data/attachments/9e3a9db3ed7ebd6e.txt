@@ -1,0 +1,55 @@
+🎭️ [Mi Cuenta Contactos Vinculados Tests] Iniciando sesión con usuario de prueba ACTUARIA6
+🔐 [Mi Cuenta Contactos Vinculados Tests] Ingresando credenciales
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Mi Cuenta Contactos Vinculados Tests] Login exitoso
+🔍 [ContactosVinculadosPage] Navegando a Mi Cuenta / Contactos vinculados
+⚠️  [ContactosVinculadosPage] goto Mi Cuenta / Contactos vinculados interrumpido por el SPA (intento 1/3): page.goto: net::ERR_ABORTED at https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/contactos
+Call log:
+  - navigating to "https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/contactos", waiting until "domcontentloaded"
+
+🔄 [ContactosVinculadosPage] Modal "Tienes una propuesta pendiente" detectado - cerrando con "Ver después"
+✅ [ContactosVinculadosPage] Modal de propuesta de plan cerrado
+✅ [ContactosVinculadosPage] Página de Contactos vinculados cargada
+📊 [ContactosVinculadosPage] Verificando pantalla Contactos vinculados
+✅ [ContactosVinculadosPage] Pantalla Contactos vinculados visible
+🎭️ [Mi Cuenta Contactos Vinculados Tests] ========================================
+🎭️ [Mi Cuenta Contactos Vinculados Tests] TC03 - Editar contacto (nombre + cargo)
+🎭️ [Mi Cuenta Contactos Vinculados Tests] ========================================
+
+⚙️  [Mi Cuenta Contactos Vinculados Tests] Cambios a aplicar:
+   • nombre: QA Editado 61876
+   • cargo: Gerente General
+🎭️ [ContactosVinculadosPage] Creando contacto QA Auto x4jp Contacto 4961876x4jp
+🔄 [ContactosVinculadosPage] Clic en "Agregar contacto"
+🔄 [ContactosVinculadosPage] Llenando formulario de contacto (qa.contacto.4961876x4jp@yopmail.com)
+🔄 [ContactosVinculadosPage] Seleccionando cargo "Director General"
+✅ [ContactosVinculadosPage] Cargo "Director General" seleccionado
+🔄 [ContactosVinculadosPage] Marcando tipo de contacto "Técnico"
+✅ [ContactosVinculadosPage] Tipo de contacto "Técnico" marcado
+✅ [ContactosVinculadosPage] Formulario de contacto llenado
+🔄 [ContactosVinculadosPage] Clic en "Guardar"
+✅ [ContactosVinculadosPage] Contacto guardado
+✅ [ContactosVinculadosPage] Contacto QA Auto x4jp Contacto 4961876x4jp creado y visible en la lista
+📊 [ContactosVinculadosPage] Verificando tarjeta de "QA Auto x4jp Contacto 4961876x4jp"
+✅ [ContactosVinculadosPage] Tarjeta de "QA Auto x4jp Contacto 4961876x4jp" verificada (3 botones)
+🎭️ [ContactosVinculadosPage] Editando contacto "QA Auto x4jp Contacto 4961876x4jp"
+🔄 [ContactosVinculadosPage] Clic en "Editar" para "QA Auto x4jp Contacto 4961876x4jp"
+🔄 [ContactosVinculadosPage] Cambiando cargo a "Gerente General"
+✅ [ContactosVinculadosPage] Cargo cambiado a "Gerente General"
+🔄 [ContactosVinculadosPage] Clic en "Guardar cambios"
+✅ [ContactosVinculadosPage] Cambios guardados
+✅ [ContactosVinculadosPage] Cambios guardados en "QA Auto x4jp Contacto 4961876x4jp"
+📊 [ContactosVinculadosPage] Verificando detalle de "QA Editado 61876 Contacto 4961876x4jp"
+✅ [ContactosVinculadosPage] Detalle de "QA Editado 61876 Contacto 4961876x4jp" verificado: QA Editado 61876 | qa.contacto.4961876x4jp@yopmail.com | Gerente General
+📊 [ContactosVinculadosPage] Verificando detalle de "QA Editado 61876 Contacto 4961876x4jp"
+✅ [ContactosVinculadosPage] Detalle de "QA Editado 61876 Contacto 4961876x4jp" verificado: Gerente General
+
+✅ ✅ ✅ [Mi Cuenta Contactos Vinculados Tests] TC03 completado - cambios de nombre y cargo persistidos
+
+🎭️ [ContactosVinculadosPage] Eliminando contacto "QA Editado 61876 Contacto 4961876x4jp"
+🔄 [ContactosVinculadosPage] Clic en "Eliminar" para "QA Editado 61876 Contacto 4961876x4jp"
+🔄 [ContactosVinculadosPage] Confirmando eliminación
+✅ [ContactosVinculadosPage] Contacto eliminado
+
+📋 5 console message(s) logged to stderr
