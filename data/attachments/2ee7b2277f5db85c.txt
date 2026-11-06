@@ -1,0 +1,28 @@
+[LOG] Using Firebase Production Services for environment: stage [2:09:49 PM]
+[LOG] trackEvent view_login {timestamp: 2026-11-06T14:09:51.649Z} [2:09:51 PM]
+[LOG] Using Firebase Production Services for environment: stage [2:09:53 PM]
+❌ CONSOLE ERROR: {error: AxiosError: Request failed with status code 404
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo obtener el análisis de datos de la empresa, content: Object}
+❌ CONSOLE ERROR: {error: AxiosError: Request failed with status code 404
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo obtener el análisis de datos de la empresa, content: Object}
+[LOG] Using Firebase Production Services for environment: stage [2:09:55 PM]
+[LOG] trackEvent cargo_seleccionado {codigoCargo: CG-DIR-05} [2:09:59 PM]
+❌ CONSOLE ERROR: {error: AxiosError: Request failed with status code 401
+    at settle (https://act-compass-stage-proj.fireb…, message: Jwt is missing, content: Object}
+❌ CONSOLE ERROR: {error: AxiosError: Request failed with status code 401
+    at settle (https://act-compass-stage-proj.fireb…, message: Jwt is missing, content: Object}
+[LOG] trackEvent view_login {timestamp: 2026-11-06T14:10:01.067Z} [2:10:01 PM]
+[LOG] Using Firebase Production Services for environment: stage [2:10:02 PM]
+[LOG] trackEvent cargo_seleccionado {codigoCargo: CG-DIR-02} [2:10:05 PM]
+
+⚠️  2 error(s) detected during test execution:
+  1. {error: AxiosError: Request failed with status code 404
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo obtener el análisis de datos de la empresa, content: Object}
+  2. {error: AxiosError: Request failed with status code 401
+    at settle (https://act-compass-stage-proj.fireb…, message: Jwt is missing, content: Object}
+
+⚠️  2 error(s) detected during test execution:
+  1. {error: AxiosError: Request failed with status code 404
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo obtener el análisis de datos de la empresa, content: Object}
+  2. {error: AxiosError: Request failed with status code 401
+    at settle (https://act-compass-stage-proj.fireb…, message: Jwt is missing, content: Object}

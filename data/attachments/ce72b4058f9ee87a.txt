@@ -1,0 +1,7 @@
+[LOG] Using Firebase Production Services for environment: stage [2:01:15 PM]
+[LOG] trackEvent view_login {timestamp: 2026-11-06T14:01:18.477Z} [2:01:18 PM]
+[LOG] Using Firebase Production Services for environment: stage [2:01:26 PM]
+❌ CONSOLE ERROR: {error: AxiosError: Request failed with status code 404
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo obtener el análisis de datos de la empresa, content: Object}
+❌ CONSOLE ERROR: {error: AxiosError: Request failed with status code 404
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo obtener el análisis de datos de la empresa, content: Object}

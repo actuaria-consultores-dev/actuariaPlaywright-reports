@@ -1,0 +1,17 @@
+[LOG] Using Firebase Production Services for environment: stage [2:02:15 PM]
+[LOG] trackEvent view_login {timestamp: 2026-11-06T14:02:18.252Z} [2:02:18 PM]
+[LOG] Using Firebase Production Services for environment: stage [2:02:20 PM]
+[LOG] Using Firebase Production Services for environment: stage [2:02:21 PM]
+❌ CONSOLE ERROR: Error al verificar duplicado de grupo empresarial: {error: AxiosError: Request failed with status code 400
+    at settle (https://act-compass-stage-proj.fireb…, message: El teléfono es obligatorio, content: Object}
+❌ CONSOLE ERROR: Error al verificar duplicado de grupo empresarial: {error: AxiosError: Request failed with status code 400
+    at settle (https://act-compass-stage-proj.fireb…, message: El teléfono es obligatorio, content: Object}
+[LOG] Using Firebase Production Services for environment: stage [2:02:31 PM]
+
+⚠️  1 error(s) detected during test execution:
+  1. Error al verificar duplicado de grupo empresarial: {error: AxiosError: Request failed with status code 400
+    at settle (https://act-compass-stage-proj.fireb…, message: El teléfono es obligatorio, content: Object}
+
+⚠️  1 error(s) detected during test execution:
+  1. Error al verificar duplicado de grupo empresarial: {error: AxiosError: Request failed with status code 400
+    at settle (https://act-compass-stage-proj.fireb…, message: El teléfono es obligatorio, content: Object}

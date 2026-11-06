@@ -1,0 +1,57 @@
+🎭️ [Mi Cuenta Contactos Vinculados Tests] Iniciando sesión con usuario de prueba ACTUARIA6
+🔐 [Mi Cuenta Contactos Vinculados Tests] Ingresando credenciales
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Mi Cuenta Contactos Vinculados Tests] Login exitoso
+🔍 [ContactosVinculadosPage] Navegando a Mi Cuenta / Contactos vinculados
+⚠️  [ContactosVinculadosPage] goto Mi Cuenta / Contactos vinculados interrumpido por el SPA (intento 1/3): page.goto: net::ERR_ABORTED at https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/contactos
+Call log:
+  - navigating to "https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/contactos", waiting until "domcontentloaded"
+
+🔄 [ContactosVinculadosPage] Modal "Tienes una propuesta pendiente" detectado - cerrando con "Ver después"
+✅ [ContactosVinculadosPage] Modal de propuesta de plan cerrado
+✅ [ContactosVinculadosPage] Página de Contactos vinculados cargada
+📊 [ContactosVinculadosPage] Verificando pantalla Contactos vinculados
+✅ [ContactosVinculadosPage] Pantalla Contactos vinculados visible
+🎭️ [Mi Cuenta Contactos Vinculados Tests] ========================================
+🎭️ [Mi Cuenta Contactos Vinculados Tests] TC03 - Editar contacto (nombre + cargo)
+🎭️ [Mi Cuenta Contactos Vinculados Tests] ========================================
+
+⚙️  [Mi Cuenta Contactos Vinculados Tests] Cambios a aplicar:
+   • nombre: QA Editado 44341
+   • cargo: Gerente General
+🎭️ [ContactosVinculadosPage] Creando contacto QA Auto nyjp Contacto 3744341nyjp
+🔄 [ContactosVinculadosPage] Clic en "Agregar contacto"
+🔄 [ContactosVinculadosPage] Llenando formulario de contacto (qa.contacto.3744341nyjp@yopmail.com)
+🔄 [ContactosVinculadosPage] Seleccionando cargo "Oficial de Seguridad de la Información"
+✅ [ContactosVinculadosPage] Cargo "Oficial de Seguridad de la Información" seleccionado
+🔄 [ContactosVinculadosPage] Marcando tipo de contacto "Técnico"
+✅ [ContactosVinculadosPage] Tipo de contacto "Técnico" marcado
+✅ [ContactosVinculadosPage] Formulario de contacto llenado
+🔄 [ContactosVinculadosPage] Clic en "Guardar"
+✅ [ContactosVinculadosPage] Contacto guardado
+✅ [ContactosVinculadosPage] Contacto QA Auto nyjp Contacto 3744341nyjp creado y visible en la lista
+📊 [ContactosVinculadosPage] Verificando tarjeta de "QA Auto nyjp Contacto 3744341nyjp"
+✅ [ContactosVinculadosPage] Tarjeta de "QA Auto nyjp Contacto 3744341nyjp" verificada (3 botones)
+🎭️ [ContactosVinculadosPage] Editando contacto "QA Auto nyjp Contacto 3744341nyjp"
+🔄 [ContactosVinculadosPage] Clic en "Editar" para "QA Auto nyjp Contacto 3744341nyjp"
+🔄 [ContactosVinculadosPage] Cambiando cargo a "Gerente General"
+✅ [ContactosVinculadosPage] Cargo cambiado a "Gerente General"
+🔄 [ContactosVinculadosPage] Clic en "Guardar cambios"
+✅ [ContactosVinculadosPage] Cambios guardados
+✅ [ContactosVinculadosPage] Cambios guardados en "QA Auto nyjp Contacto 3744341nyjp"
+📊 [ContactosVinculadosPage] Verificando detalle de "QA Editado 44341 Contacto 3744341nyjp"
+✅ [ContactosVinculadosPage] Detalle de "QA Editado 44341 Contacto 3744341nyjp" verificado: QA Editado 44341 | qa.contacto.3744341nyjp@yopmail.com | Gerente General
+📊 [ContactosVinculadosPage] Verificando detalle de "QA Editado 44341 Contacto 3744341nyjp"
+✅ [ContactosVinculadosPage] Detalle de "QA Editado 44341 Contacto 3744341nyjp" verificado: Gerente General
+
+✅ ✅ ✅ [Mi Cuenta Contactos Vinculados Tests] TC03 completado - cambios de nombre y cargo persistidos
+
+🎭️ [ContactosVinculadosPage] Eliminando contacto "QA Editado 44341 Contacto 3744341nyjp"
+🔄 [ContactosVinculadosPage] Clic en "Eliminar" para "QA Editado 44341 Contacto 3744341nyjp"
+🔄 [ContactosVinculadosPage] Confirmando eliminación
+✅ [ContactosVinculadosPage] Contacto eliminado
+
+ℹ️  1 non-blocking error(s) ignored by filter.
+
+📋 6 console message(s) logged to stderr

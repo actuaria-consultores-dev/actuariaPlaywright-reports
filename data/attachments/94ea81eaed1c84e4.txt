@@ -1,0 +1,24 @@
+[LOG] Using Firebase Production Services for environment: stage [2:02:02 PM]
+[LOG] trackEvent view_login {timestamp: 2026-11-06T14:02:04.437Z} [2:02:04 PM]
+[LOG] Using Firebase Production Services for environment: stage [2:02:05 PM]
+❌ CONSOLE ERROR: {error: AxiosError: Request failed with status code 404
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo obtener el análisis de datos de la empresa, content: Object}
+❌ CONSOLE ERROR: {error: AxiosError: Request failed with status code 404
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo obtener el análisis de datos de la empresa, content: Object}
+[LOG] Using Firebase Production Services for environment: stage [2:02:08 PM]
+❌ CONSOLE ERROR: Error en submit: {error: AxiosError: Request failed with status code 401
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo validar tu [OCULTO] Intenta nuevamente., content: Object}
+❌ CONSOLE ERROR: Error en submit: {error: AxiosError: Request failed with status code 401
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo validar tu contraseña actual. Intenta nuevamente., content: Object}
+
+⚠️  2 error(s) detected during test execution:
+  1. {error: AxiosError: Request failed with status code 404
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo obtener el análisis de datos de la empresa, content: Object}
+  2. Error en submit: {error: AxiosError: Request failed with status code 401
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo validar tu contraseña actual. Intenta nuevamente., content: Object}
+
+⚠️  2 error(s) detected during test execution:
+  1. {error: AxiosError: Request failed with status code 404
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo obtener el análisis de datos de la empresa, content: Object}
+  2. Error en submit: {error: AxiosError: Request failed with status code 401
+    at settle (https://act-compass-stage-proj.fireb…, message: No se pudo validar tu contraseña actual. Intenta nuevamente., content: Object}

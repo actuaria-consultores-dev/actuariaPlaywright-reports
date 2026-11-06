@@ -1,0 +1,4 @@
+[LOG] Using Firebase Production Services for environment: stage [2:00:37 PM]
+[LOG] trackEvent view_login {timestamp: 2026-11-06T14:00:39.752Z} [2:00:39 PM]
+[LOG] Using Firebase Production Services for environment: stage [2:01:10 PM]
+[LOG] Using Firebase Production Services for environment: stage [2:01:13 PM]

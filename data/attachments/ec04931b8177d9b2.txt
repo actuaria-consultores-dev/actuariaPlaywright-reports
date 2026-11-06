@@ -1,0 +1,94 @@
+🎭️ [Entidades Registradas Tests] Empezando pre condición
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Entidades Registradas Tests] Login exitoso
+✅ [Entidades Registradas Tests] Página principal verificada
+⚠️  [Entidades Registradas Tests] goto Entidades Registradas interrumpido por el SPA (intento 1/3): page.goto: net::ERR_ABORTED at https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/empresas
+Call log:
+  - navigating to "https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/empresas", waiting until "domcontentloaded"
+
+✅ [Entidades Registradas Tests] Navegación a Entidades Registradas completada
+🎭️ [Entidades-TC02] Verificar usuario puede agregar una entidad (eliminándola antes si ya existe)
+📋 [Entidades-TC02] Configuración
+{
+  "ruc": "[OCULTO]",
+  "skipIfNotFound": true,
+  "confirmDeletion": true
+}
+
+======================================================================
+🎯 🗑️ INICIANDO FLUJO: ELIMINAR EMPRESA
+======================================================================
+   • ruc: [OCULTO]
+   • Saltar si no existe: Sí
+   • Confirmar eliminación: Sí
+======================================================================
+
+ℹ️  [EntidadesRegistradasWorkflows] 🔍 Buscando empresa con RUC [OCULTO]...
+ℹ️  [EntidadesRegistradasWorkflows] Empresa encontrada: true
+ℹ️  [EntidadesRegistradasWorkflows] 📍 Empresa con RUC [OCULTO] encontrada, procediendo a eliminar...
+✅ [EntidadesRegistradasWorkflows] ✅ Botón eliminar clickeado
+⚠️  [EntidadesRegistradasWorkflows] ⚠️ Confirmando eliminación...
+📊 [EntidadesRegistradasPage] Confirmando eliminación de la empresa
+✅ [EntidadesRegistradasPage] Eliminación confirmada
+✅ [EntidadesRegistradasWorkflows] ✅ Eliminación confirmada
+ℹ️  [EntidadesRegistradasWorkflows] 🔍 Verificando que la empresa fue eliminada...
+✅ [EntidadesRegistradasWorkflows] ✅ Empresa eliminada exitosamente
+
+✅ ✅ ✅ [EntidadesRegistradasWorkflows] ✅ FLUJO ELIMINAR EMPRESA FINALIZADO
+
+
+======================================================================
+🎯 🏢 INICIANDO FLUJO: AGREGAR EMPRESA
+======================================================================
+   • ruc: [OCULTO]
+   • Debe existir: No
+======================================================================
+
+ℹ️  [EntidadesRegistradasWorkflows] ➕ Empresa no encontrada, procediendo a agregarla
+ℹ️  [EntidadesRegistradasWorkflows] 📝 Haciendo clic en agregar nueva empresa...
+ℹ️  [EntidadesRegistradasPage] Haciendo clic en el botón "Agregar ..." (entidad/empresa)
+✅ [EntidadesRegistradasPage] Botón "Agregar ..." clickeado
+✅ [EntidadesRegistradasWorkflows] ✅ Botón agregar empresa clickeado
+ℹ️  [EntidadesRegistradasWorkflows] 🔍 Buscando empresa con RUC [OCULTO]...
+ℹ️  [EntidadesRegistradasPage] Buscando empresa por RUC en el diálogo
+✅ [EntidadesRegistradasPage] Búsqueda por RUC ejecutada
+ℹ️  [EntidadesRegistradasWorkflows] ✅ Verificando mensaje de empresa registrada...
+📊 [EntidadesRegistradasPage] Verificando mensaje de empresa registrada
+✅ [EntidadesRegistradasPage] Mensaje de empresa registrada visible (estado: assignable)
+✅ [EntidadesRegistradasWorkflows] ✅ Mensaje de empresa registrada verificado
+ℹ️  [EntidadesRegistradasWorkflows] 
+👤 Paso 4: Asignando empresa al usuario...
+ℹ️  [EntidadesRegistradasPage] Haciendo clic en "Asignarme a esta empresa"
+✅ [EntidadesRegistradasPage] Botón "Asignarme a esta empresa" clickeado
+ℹ️  [EntidadesRegistradasWorkflows] ✅ Empresa asignada exitosamente
+✅ [EntidadesRegistradasWorkflows] ✅ Flujo de agregar empresa completado
+
+✅ ✅ ✅ [EntidadesRegistradasWorkflows] ✅ FLUJO AGREGAR EMPRESA FINALIZADO
+
+
+======================================================================
+🎯 🔍 INICIANDO FLUJO: BUSCAR EMPRESA
+======================================================================
+   • Término de búsqueda: 1793064701001
+   • Debe ser visible: Sí
+======================================================================
+
+ℹ️  [EntidadesRegistradasWorkflows] 🔍 Buscando: 1793064701001...
+ℹ️  [EntidadesRegistradasPage] Buscando en el Search Box: 1793064701001
+✅ [EntidadesRegistradasPage] Búsqueda en Search Box ejecutada
+✅ [EntidadesRegistradasWorkflows] ✅ Búsqueda ejecutada
+ℹ️  [EntidadesRegistradasWorkflows] ✅ Verificando que el resultado sea visible...
+✅ [EntidadesRegistradasWorkflows] ✅ Resultado encontrado y visible
+
+✅ ✅ ✅ [EntidadesRegistradasWorkflows] ✅ FLUJO BUSCAR EMPRESA FINALIZADO
+
+✅ [Entidades-TC02] Entidad 1793064701001 registrada y visible en la lista
+✅ [Entidades-TC02] Flujo eliminar (si aplica) + agregar completado
+
+✅ ✅ ✅ [Entidades-TC02] TC02 finalizado exitosamente
+
+
+ℹ️  5 non-blocking error(s) ignored by filter.
+
+📋 9 console message(s) logged to stderr

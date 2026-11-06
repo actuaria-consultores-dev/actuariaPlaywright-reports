@@ -1,0 +1,161 @@
+🎭️ [Recuperar Passwords] Empezando configuración inicial
+✅ [Recuperar Passwords] Archivo de contraseña temporal limpiado
+🎭️ [Recuperar Passwords] Empezando pre condición individual
+✅ [Recuperar Passwords] Navegación a página inicial completada
+🎭️ [Recuperar Passwords] ========================================
+🎭️ [Recuperar Passwords] TC01: RECUPERAR CONTRASEÑA CON EMAIL
+🎭️ [Recuperar Passwords] ========================================
+📊 [Recuperar Passwords] Timeout del test configurado: 180 segundos
+🎭️ [PasswordRecoveryWorkflows] ========================================
+🎭️ [PasswordRecoveryWorkflows] WORKFLOW: RECUPERACIÓN DE CONTRASEÑA COMPLETA
+🎭️ [PasswordRecoveryWorkflows] ========================================
+🎭️ [GmailService] Inicializando Gmail Service
+✅ [GmailService] Gmail Service inicializado correctamente
+🔍 [PasswordRecoveryWorkflows] 🗑️ Eliminando emails antiguos para evitar datos obsoletos...
+🔍 [GmailService] 🗑️ Eliminando emails antiguos de: no-reply-qa@portal.actuaria.com
+🔍 [GmailService] ⚠️ No se pudieron eliminar emails antiguos: Insufficient Permission
+📊 [PasswordRecoveryWorkflows] ⏰ Timestamp de solicitud: 2:00:39 PM (1793973639815)
+🔍 [PasswordRecoveryWorkflows] Haciendo clic en "¿Olvidaste tu contraseña?"...
+🔍 [PasswordRecoveryWorkflows] Ingresando email...
+🔍 [PasswordRecoveryWorkflows] Haciendo clic en "Enviar"...
+✅ [PasswordRecoveryWorkflows] ✅ Solicitud de recuperación enviada exitosamente
+🎭️ [GmailService] === INICIANDO BÚSQUEDA DE EMAIL DE RECUPERACIÓN ===
+📊 [GmailService] Buscando emails de: no-reply-qa@portal.actuaria.com
+📊 [GmailService] Timestamp de referencia: 2:00:39 PM (1793973639815)
+📊 [GmailService] Timeout de polling: 90s | Espera inicial: 20s
+⏳ [GmailService] ⏳ Esperando 20s para que llegue el email...
+⏳ [GmailService] 🔄 Iniciando polling de Gmail...
+🔍 [GmailService] 📧 Emails encontrados en búsqueda: 10
+🔍 [GmailService] 📨 Procesando email ID: 1a1b107326bf00db
+📊 [GmailService] 📅 Email recibido: 1:23:19 PM (1793971399000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -2240.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 2240.815s ANTES de la solicitud)
+🔍 [GmailService] 📨 Procesando email ID: 1a1b102ed0de1595
+📊 [GmailService] 📅 Email recibido: 1:18:38 PM (1793971118000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -2521.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 2521.815s ANTES de la solicitud)
+🔍 [GmailService] 📨 Procesando email ID: 1a1adca390ac7deb
+📊 [GmailService] 📅 Email recibido: 10:17:51 PM (1793917071000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -56568.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 56568.815s ANTES de la solicitud)
+🔍 [GmailService] 📨 Procesando email ID: 1a1adc5a2fb79db8
+📊 [GmailService] 📅 Email recibido: 10:12:52 PM (1793916772000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -56867.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 56867.815s ANTES de la solicitud)
+🔍 [GmailService] 📨 Procesando email ID: 1a1adbb431be1f7c
+📊 [GmailService] 📅 Email recibido: 10:01:32 PM (1793916092000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -57547.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 57547.815s ANTES de la solicitud)
+🔍 [GmailService] 📨 Procesando email ID: 1a1adb69b92b348d
+📊 [GmailService] 📅 Email recibido: 9:56:25 PM (1793915785000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -57854.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 57854.815s ANTES de la solicitud)
+🔍 [GmailService] 📨 Procesando email ID: 1a1ad849a82c7867
+📊 [GmailService] 📅 Email recibido: 9:01:49 PM (1793912509000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -61130.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 61130.815s ANTES de la solicitud)
+🔍 [GmailService] 📨 Procesando email ID: 1a1ad7f81e7c40b3
+📊 [GmailService] 📅 Email recibido: 8:56:14 PM (1793912174000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -61465.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 61465.815s ANTES de la solicitud)
+🔍 [GmailService] 📨 Procesando email ID: 1a1ad63705c9240c
+📊 [GmailService] 📅 Email recibido: 8:25:36 PM (1793910336000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -63303.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 63303.815s ANTES de la solicitud)
+🔍 [GmailService] 📨 Procesando email ID: 1a1ad5edf2e792fb
+📊 [GmailService] 📅 Email recibido: 8:20:36 PM (1793910036000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -63603.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 63603.815s ANTES de la solicitud)
+⏳ [GmailService] 🔄 No hay email nuevo aún... (1s/90s) Reintentando en 3s...
+🔍 [GmailService] 📧 Emails encontrados en búsqueda: 10
+🔍 [GmailService] 📨 Procesando email ID: 1a1b107326bf00db
+📊 [GmailService] 📅 Email recibido: 1:23:19 PM (1793971399000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -2240.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 2240.815s ANTES de la solicitud)
+🔍 [GmailService] 📨 Procesando email ID: 1a1b102ed0de1595
+📊 [GmailService] 📅 Email recibido: 1:18:38 PM (1793971118000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -2521.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 2521.815s ANTES de la solicitud)
+🔍 [GmailService] 📨 Procesando email ID: 1a1adca390ac7deb
+📊 [GmailService] 📅 Email recibido: 10:17:51 PM (1793917071000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -56568.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 56568.815s ANTES de la solicitud)
+🔍 [GmailService] 📨 Procesando email ID: 1a1adc5a2fb79db8
+📊 [GmailService] 📅 Email recibido: 10:12:52 PM (1793916772000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -56867.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 56867.815s ANTES de la solicitud)
+🔍 [GmailService] 📨 Procesando email ID: 1a1adbb431be1f7c
+📊 [GmailService] 📅 Email recibido: 10:01:32 PM (1793916092000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -57547.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 57547.815s ANTES de la solicitud)
+🔍 [GmailService] 📨 Procesando email ID: 1a1adb69b92b348d
+📊 [GmailService] 📅 Email recibido: 9:56:25 PM (1793915785000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -57854.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 57854.815s ANTES de la solicitud)
+🔍 [GmailService] 📨 Procesando email ID: 1a1ad849a82c7867
+📊 [GmailService] 📅 Email recibido: 9:01:49 PM (1793912509000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -61130.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 61130.815s ANTES de la solicitud)
+🔍 [GmailService] 📨 Procesando email ID: 1a1ad7f81e7c40b3
+📊 [GmailService] 📅 Email recibido: 8:56:14 PM (1793912174000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -61465.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 61465.815s ANTES de la solicitud)
+🔍 [GmailService] 📨 Procesando email ID: 1a1ad63705c9240c
+📊 [GmailService] 📅 Email recibido: 8:25:36 PM (1793910336000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -63303.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 63303.815s ANTES de la solicitud)
+🔍 [GmailService] 📨 Procesando email ID: 1a1ad5edf2e792fb
+📊 [GmailService] 📅 Email recibido: 8:20:36 PM (1793910036000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: -63603.815s
+🔍 [GmailService] ⏭️ SALTANDO: Email antiguo (recibido 63603.815s ANTES de la solicitud)
+⏳ [GmailService] 🔄 No hay email nuevo aún... (6s/90s) Reintentando en 3s...
+🔍 [GmailService] 📧 Emails encontrados en búsqueda: 10
+🔍 [GmailService] 📨 Procesando email ID: 1a1b1299f0cbaafc
+📊 [GmailService] 📅 Email recibido: 2:00:55 PM (1793973655000)
+📊 [GmailService] 📅 Solicitud hecha: 2:00:39 PM (1793973639815)
+📊 [GmailService] ⏱️ Diferencia: 15.185s
+✅ [GmailService] ✅ Email VÁLIDO: Recibido 15.185s DESPUÉS de la solicitud
+📊 [GmailService] 📄 Cuerpo del email extraído, longitud: 7078 caracteres
+✅ [GmailService] 🔗 ¡LINK ENCONTRADO!
+✅ [GmailService] 📧 Email recibido a las: 2:00:55 PM
+✅ [GmailService] 🔗 Link de restablecimiento extraído correctamente
+📊 [PasswordRecoveryWorkflows] 🔗 Link de recuperación extraído correctamente
+🔍 [PasswordRecoveryWorkflows] Navegando a la página de reset...
+✅ [PasswordRecoveryWorkflows] Página de reset cargada correctamente
+📊 [PasswordHelper] 🔐 Nueva contraseña generada
+📊 [PasswordHelper]    - Longitud total: 18 caracteres
+✅ [PasswordHelper] 💾 Contraseña guardada en archivo temporal
+🔍 [PasswordRecoveryWorkflows] Ingresando nueva contraseña...
+🔍 [PasswordRecoveryWorkflows] Haciendo clic en "Guardar"...
+⏳ [PasswordRecoveryWorkflows] Esperando confirmación de cambio de contraseña...
+✅ [PasswordRecoveryWorkflows] ✅ Redirección a dashboard exitosa
+✅ [PasswordRecoveryWorkflows] ========================================
+✅ [PasswordRecoveryWorkflows] ✅ WORKFLOW DE RECUPERACIÓN COMPLETADO
+✅ [PasswordRecoveryWorkflows] ========================================
+✅ [Recuperar Passwords] ========================================
+✅ [Recuperar Passwords] ✅ TC01 COMPLETADO EXITOSAMENTE
+✅ [Recuperar Passwords]    - Contraseña cambiada
+✅ [Recuperar Passwords]    - Contraseña guardada para TC02
+✅ [Recuperar Passwords] ========================================
+
+📋 4 console message(s) logged to stderr

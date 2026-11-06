@@ -1,0 +1,57 @@
+🎭️ [Mi Cuenta Contactos Vinculados Tests] Iniciando sesión con usuario de prueba ACTUARIA6
+🔐 [Mi Cuenta Contactos Vinculados Tests] Ingresando credenciales
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Mi Cuenta Contactos Vinculados Tests] Login exitoso
+🔍 [ContactosVinculadosPage] Navegando a Mi Cuenta / Contactos vinculados
+⚠️  [ContactosVinculadosPage] goto Mi Cuenta / Contactos vinculados interrumpido por el SPA (intento 1/3): page.goto: net::ERR_ABORTED at https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/contactos
+Call log:
+  - navigating to "https://act-compass-stage-proj.firebaseapp.com/dashboard/portal/mi-cuenta/contactos", waiting until "domcontentloaded"
+
+🔄 [ContactosVinculadosPage] Modal "Tienes una propuesta pendiente" detectado - cerrando con "Ver después"
+✅ [ContactosVinculadosPage] Modal de propuesta de plan cerrado
+✅ [ContactosVinculadosPage] Página de Contactos vinculados cargada
+📊 [ContactosVinculadosPage] Verificando pantalla Contactos vinculados
+✅ [ContactosVinculadosPage] Pantalla Contactos vinculados visible
+🎭️ [Mi Cuenta Contactos Vinculados Tests] ========================================
+🎭️ [Mi Cuenta Contactos Vinculados Tests] TC01 - Crear contacto y verificar tarjeta + 3 botones
+🎭️ [Mi Cuenta Contactos Vinculados Tests] ========================================
+
+⚙️  [Mi Cuenta Contactos Vinculados Tests] Datos del contacto a crear:
+   • nombre: QA Auto aybb
+   • apellido: Contacto 3698782aybb
+   • telefono: [OCULTO]
+   • correo: [OCULTO]
+   • cargo: Contador General
+   • tipo: Pagos
+🎭️ [ContactosVinculadosPage] Creando contacto QA Auto aybb Contacto 3698782aybb
+🔄 [ContactosVinculadosPage] Clic en "Agregar contacto"
+🔄 [ContactosVinculadosPage] Llenando formulario de contacto (qa.contacto.3698782aybb@yopmail.com)
+🔄 [ContactosVinculadosPage] Seleccionando cargo "Contador General"
+✅ [ContactosVinculadosPage] Cargo "Contador General" seleccionado
+🔄 [ContactosVinculadosPage] Marcando tipo de contacto "Pagos"
+✅ [ContactosVinculadosPage] Tipo de contacto "Pagos" marcado
+✅ [ContactosVinculadosPage] Formulario de contacto llenado
+🔄 [ContactosVinculadosPage] Clic en "Guardar"
+✅ [ContactosVinculadosPage] Contacto guardado
+✅ [ContactosVinculadosPage] Contacto QA Auto aybb Contacto 3698782aybb creado y visible en la lista
+📊 [ContactosVinculadosPage] Verificando tarjeta de "QA Auto aybb Contacto 3698782aybb"
+✅ [ContactosVinculadosPage] Tarjeta de "QA Auto aybb Contacto 3698782aybb" verificada (3 botones)
+📊 [ContactosVinculadosPage] Verificando detalle de "QA Auto aybb Contacto 3698782aybb"
+✅ [ContactosVinculadosPage] Detalle de "QA Auto aybb Contacto 3698782aybb" verificado: qa.contacto.3698782aybb@yopmail.com | 0910629697 | Contador General
+
+✅ ✅ ✅ [Mi Cuenta Contactos Vinculados Tests] TC01 completado - contacto creado y verificado
+
+🎭️ [ContactosVinculadosPage] Eliminando contacto "QA Auto aybb Contacto 3698782aybb"
+🔄 [ContactosVinculadosPage] Reasignando el tipo de "QA Auto aybb Contacto 3698782aybb" a "Técnico"
+🔄 [ContactosVinculadosPage] Clic en "Editar" para "QA Auto aybb Contacto 3698782aybb"
+🔄 [ContactosVinculadosPage] Clic en "Guardar cambios"
+✅ [ContactosVinculadosPage] Cambios guardados
+✅ [ContactosVinculadosPage] Tipo de "QA Auto aybb Contacto 3698782aybb" reasignado a "Técnico"
+🔄 [ContactosVinculadosPage] Clic en "Eliminar" para "QA Auto aybb Contacto 3698782aybb"
+🔄 [ContactosVinculadosPage] Confirmando eliminación
+✅ [ContactosVinculadosPage] Contacto eliminado
+
+ℹ️  1 non-blocking error(s) ignored by filter.
+
+📋 5 console message(s) logged to stderr
