@@ -1,0 +1,13 @@
+🎭️ [Proyección de Reservas Tests] Empezando pre condición
+🔐 [Proyección de Reservas Tests] Iniciando sesión (de***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (de***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [Proyección de Reservas Tests] Login exitoso
+🔍 [Proyección de Reservas Tests] Verificando navegación a página principal
+✅ [Proyección de Reservas Tests] Navegación exitosa a dashboard
+🎭️ [Proyección de Reservas Tests] TC_PR01
+🔍 [Simulador Workflows] Navegando a Simulador de beneficios
+✅ [Simulador Workflows] En tab Simulador
+🔄 [Simulador Workflows] Seleccionando Proyección de reservas
+
+📋 7 console message(s) logged to stderr

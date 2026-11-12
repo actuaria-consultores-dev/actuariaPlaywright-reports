@@ -1,0 +1,47 @@
+🎭️ [EstudioActuarial-Pendientes] Preparando entorno → /dashboard/estudios/mis-estudios
+🔐 [EstudioActuarial-Pendientes] Iniciando sesión (ac***@[OCULTO])
+🔐 [LoginPage] Iniciando sesión (ac***@[OCULTO])
+✅ [LoginPage] Login completado
+✅ [EstudioActuarial-Pendientes] Sesión iniciada correctamente
+🔍 [EstudioActuarial-Pendientes] Dashboard cargado correctamente
+⚠️  [EstudioActuarial-Pendientes] goto /dashboard/estudios/mis-estudios interrumpido por el SPA (intento 1/3): page.goto: net::ERR_ABORTED at https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/mis-estudios
+Call log:
+  - navigating to "https://act-compass-stage-proj.firebaseapp.com/dashboard/estudios/mis-estudios", waiting until "domcontentloaded"
+
+🔍 [EstudioActuarial-Pendientes] Navegación exitosa → /dashboard/estudios/mis-estudios
+🎭️ [TC03-01] Eliminación de estudio pendiente desde Mis Estudios
+ℹ️  [TC03-01] Localizando un estudio pendiente en el listado unificado (pagina a pagina si es necesario)
+ℹ️  🔍 Iniciando flujo de verificación de eliminación de estudio pendiente...
+ℹ️  [EstudioActuarialPage] Esperando el listado unificado de Mis Estudios
+✅ [EstudioActuarialPage] Listado de Mis Estudios cargado
+ℹ️  [EstudioActuarialPage] Total de estudios (paginación "1-5 de 888"): 888
+ℹ️  📊 Total de estudios antes de eliminar: 888
+ℹ️  [EstudioActuarialPage] Buscando estudios "Pendiente" en el listado (máx. 10 página(s))
+ℹ️  [EstudioActuarialPage] Revisando página 1 del listado (5 fila(s))
+ℹ️  [EstudioActuarialPage] Revisando página 2 del listado (5 fila(s))
+ℹ️  [EstudioActuarialPage] Revisando página 3 del listado (5 fila(s))
+✅ [EstudioActuarialPage] Estudio "Pendiente" encontrado (página 3, fila 4): id=4L3MiNeVVPE354zPtV0B, paso=7
+ℹ️  [EstudioActuarialPage] Datos de la fila: 09/11/2026 | 2024 |  | — | Pendiente | 7/8 | Continuar
+ℹ️  🎯 Estudio pendiente seleccionado: id=4L3MiNeVVPE354zPtV0B (página 3, fila 4, paso 7)
+ℹ️  [EstudioActuarialPage] Eliminando el estudio pendiente 4L3MiNeVVPE354zPtV0B (página 3, fila 4)
+ℹ️  [EstudioActuarialPage] Datos de la fila: 09/11/2026 | 2024 |  | — | Pendiente | 7/8 | Continuar
+ℹ️  [EstudioActuarialPage] Intento de eliminación 1 (button[aria-label="Eliminar"])...
+✅ [EstudioActuarialPage] Botón "Eliminar" presionado (button[aria-label="Eliminar"])
+✅ [EstudioActuarialPage] Eliminación confirmada con "Aceptar"
+ℹ️  [EstudioActuarialPage] Validando eliminación del estudio 4L3MiNeVVPE354zPtV0B (total antes: 888)
+✅ [EstudioActuarialPage] El estudio 4L3MiNeVVPE354zPtV0B ya no aparece en el listado
+ℹ️  [EstudioActuarialPage] Total de estudios (paginación "1-5 de 887"): 887
+
+✅ ✅ ✅ [EstudioActuarialPage] Total de estudios actualizado: 888 → 887
+
+
+✅ ✅ ✅ Flujo de verificación de eliminación de estudio pendiente completado exitosamente
+
+✅ [TC03-01] Eliminación verificada - el estudio desapareció del listado y el total bajó en 1
+
+✅ ✅ ✅ [TC03-01] TC03-01 finalizado exitosamente
+
+
+ℹ️  1 non-blocking error(s) ignored by filter.
+
+📋 5 console message(s) logged to stderr

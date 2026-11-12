@@ -1,0 +1,7 @@
+[LOG] Using Firebase Production Services for environment: stage [11:05:25 AM]
+[LOG] trackEvent view_login {timestamp: 2026-11-12T11:05:27.176Z} [11:05:27 AM]
+[LOG] Using Firebase Production Services for environment: stage [11:05:29 AM]
+[LOG] Sistema Name:  actas-finiquito version:  1.4.5 [11:05:32 AM]
+[LOG] Sistema Name:  actas-finiquito version:  1.4.5 [11:05:35 AM]
+[LOG] Acta data {user: Object, empresa: Object, estado: pendiente, id: 1aLXEyEJ3TVfinN6exon, createdAt: Object} [11:05:36 AM]
+[LOG] Sistema Name:  actas-finiquito version:  1.4.5 [11:05:36 AM]

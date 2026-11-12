@@ -1,0 +1,16 @@
+[LOG] Using Firebase Production Services for environment: stage [11:04:30 AM]
+[LOG] trackEvent view_login {timestamp: 2026-11-12T11:04:33.595Z} [11:04:33 AM]
+[LOG] Using Firebase Production Services for environment: stage [11:04:35 AM]
+[LOG] Sistema Name:  actas-finiquito version:  1.4.5 [11:04:40 AM]
+[LOG] Sistema Name:  actas-finiquito version:  1.4.5 [11:04:41 AM]
+[LOG] Sistema Name:  actas-finiquito version:  1.4.5 [11:04:57 AM]
+[LOG] Sistema Name:  actas-finiquito version:  1.4.5 [11:05:28 AM]
+❌ CONSOLE ERROR: {message: Error en la respuesta del servidor, status: 403, details: Object}
+❌ CONSOLE ERROR: {message: Error en la respuesta del servidor, status: 403, details: Object}
+
+⚠️  1 error(s) detected during test execution:
+  1. {message: Error en la respuesta del servidor, status: 403, details: Object}
+
+⚠️  1 error(s) detected during test execution:
+  1. {message: Error en la respuesta del servidor, status: 403, details: Object}
+[LOG] 📧 Enviando email de éxito al admin de ankla a: {actuariaContribuyenteEspecial: true, mailAlertas: [OCULTO];[OCULTO];[OCULTO], mailCobranzas: [OCULTO], mailDetalle: [OCULTO], mailSoporte: [OCULTO];[OCULTO]} [11:05:29 AM]

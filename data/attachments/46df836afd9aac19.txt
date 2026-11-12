@@ -1,0 +1,5 @@
+
+===== POSIBLE CAUSA RAÍZ (console/red detectada en la página) =====
+  URL detectada: https://act-compass-stage-proj.firebaseapp.com/dashboard/impuestos-diferidos/nueva-nic12
+  • RED (4xx/5xx) → POST https://actuaria-plus-gateway-stage-xc998ok.uc.gateway.dev/actuafast/estudios_actuariales → 500
+===================================================================

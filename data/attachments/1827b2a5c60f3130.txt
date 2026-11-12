@@ -1,0 +1,323 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: specs/ImpuestosDiferidos/crearImpuestosDif.test.ts >> Verificar creacion de Impuestos Diferidos >> Impuestos Diferidos | [HP] | TC02: Usuario puede mandar solicitud de Impuestos Diferidos @daily
+- Location: tests/specs/ImpuestosDiferidos/crearImpuestosDif.test.ts:138:2
+
+# Error details
+
+```
+Test timeout of 120000ms exceeded.
+```
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: locator('text=Paso 2 de 6')
+Expected: visible
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 120000ms
+  - waiting for locator('text=Paso 2 de 6')
+  - Test timeout of 120000ms exceeded.
+
+```
+
+```yaml
+- banner:
+  - button "Notificaciones":
+    - img
+    - text: "25"
+  - button "YUPANA ANALYTICS S.A. YUPANA ANALYTICS S.A. Plan Enterprise":
+    - img "YUPANA ANALYTICS S.A."
+    - paragraph: YUPANA ANALYTICS S.A.
+    - paragraph: Plan Enterprise
+- complementary:
+  - link "Actuaria":
+    - /url: /dashboard
+    - img "Actuaria"
+  - button "abrir/cerrar menú"
+  - textbox "Buscar..."
+  - list:
+    - button "Inicio":
+      - img
+      - text: Inicio
+    - list:
+      - listitem: Panel General
+      - button "Informe de impuestos diferidos"
+      - link "Listado de informes":
+        - /url: /dashboard/impuestos-diferidos/mis-informes-nic12
+        - img
+        - text: Listado de informes
+      - link "Nuevo informe":
+        - /url: /dashboard/impuestos-diferidos/nueva-nic12
+        - img
+        - text: Nuevo informe
+  - paragraph: Actuaria+ Stage
+  - paragraph: soporteplus@actuaria.com
+  - text: v 2.0.3
+- heading "Hola, Rodrigo" [level=1]
+- paragraph: "Sesión anterior: hoy, 06:05 · hace 3 minutos"
+- button "Inicio"
+- button "Estudio actuarial"
+- button "Impuestos diferidos"
+- button "Actas de jubilación"
+- button "Control tributario"
+- button "Simulador de beneficios"
+- button "NavIA ᴮᵉᵗᵃ"
+- separator
+- heading "Solicitud de impuestos diferidos" [level=4]
+- paragraph: Completa los pasos para solicitar tu informe de impuestos diferidos.
+- paragraph: Paso 1 de 6
+- button "Volver" [disabled]
+- heading "Informe de impuestos diferidos" [level=5]
+- text: Año de valoración
+- combobox "Año de valoración": "2024"
+- button "Open"
+- table:
+  - rowgroup:
+    - row "RUC 1722215926001":
+      - cell "RUC"
+      - cell "1722215926001"
+    - row "Razón Social YUPANA ANALYTICS S.A.":
+      - cell "Razón Social"
+      - cell "YUPANA ANALYTICS S.A."
+    - row "Nombre Comercial YUPANA ANALYTICS S.A.":
+      - cell "Nombre Comercial"
+      - cell "YUPANA ANALYTICS S.A."
+    - row "País Ecuador":
+      - cell "País"
+      - cell "Ecuador"
+- table:
+  - rowgroup:
+    - row "Provincia PICHINCHA":
+      - cell "Provincia"
+      - cell "PICHINCHA"
+    - row "Ciudad QUITO":
+      - cell "Ciudad"
+      - cell "QUITO"
+    - row "Dirección Avenida Orellana y 6 de Diciembre Edificio Alisal de Orellana":
+      - cell "Dirección"
+      - cell "Avenida Orellana y 6 de Diciembre Edificio Alisal de Orellana"
+    - row "Teléfono (593) 960174722":
+      - cell "Teléfono"
+      - cell "(593) 960174722"
+- alert: No se encontraron estudios actuariales en Actuafast para el año 2024
+- button "Regresar" [disabled]
+- button "Continuar"
+- link "Escríbenos a WhatsApp":
+  - /url: https://wa.me/593979133351/?text=Hola+Actuaria,+tengo+novedades+sobre+el+Portal+de+Clientes
+```
+
+# Test source
+
+```ts
+  31  | import { ExcelValidator } from '@helpers/excelValidator';
+  32  | import { type Step5SummaryData } from '../interfaces/impuestosDiferidosTypes';
+  33  | import { ACTION_TIMEOUT_MS, SLOW_ACTION_TIMEOUT_MS } from '@helpers/timeouts';
+  34  | import fs from 'fs'; 
+  35  | 
+  36  | export class ImpuestosDiferidosPage extends SuperPage {
+  37  | 	
+  38  | 	private pageLogger = createLogger('ImpuestosDiferidosPage');
+  39  | 
+  40  | 	impuestosDiferidosTabButton: Locator;
+  41  | 	crearNuevoInformeButton: Locator;
+  42  | 	yearEvaluationDropdown: Locator;
+  43  | 	selectRation: Locator;
+  44  | 	yesSaldosRatio: Locator;
+  45  | 	noSaldosRatio: Locator;
+  46  | 	noSaldosRegistradosRatio: Locator;
+  47  | 	fileUploadInput: Locator;
+  48  | 	aidFinalJubilacion: Locator;
+  49  | 	aidFinalDesahucio: Locator;
+  50  | 	continueButton: Locator;
+  51  | 	authorizeCheckbox: Locator;
+  52  | 	
+  53  | 	// Paso 4 - Tax Rate
+  54  | 	standardTaxRateRadio: Locator;
+  55  | 	specificTaxRateRadio: Locator;
+  56  | 	taxRateInput: Locator;
+  57  | 
+  58  | 	// Paso 6 - Confirmar pedido
+  59  | 	confirmarPedidoButton: Locator;
+  60  | 
+  61  | 	//------------
+  62  | 	// Mis Informes NIC12 (reports table)
+  63  | 	reportsTable: Locator;
+  64  | 	paginationDisplayedRows: Locator;
+  65  | 	tableHeaders: Locator;
+  66  | 	
+  67  | 	
+  68  | 	constructor(page: Page) {
+  69  | 		super(page);
+  70  | 
+  71  | 		//------------
+  72  | 		// Navigation
+  73  | 		this.impuestosDiferidosTabButton = page.getByRole('button', {
+  74  | 			name: 'Impuestos diferidos',
+  75  | 			exact: true
+  76  | 		});
+  77  | 		this.crearNuevoInformeButton = page.getByRole('button', { name: 'Crear nuevo informe' })
+  78  | 		this.continueButton = page.getByRole('button', { name: 'Continuar' });
+  79  | 
+  80  | 		//------------
+  81  | 		// Paso 6 - Confirmar pedido
+  82  | 		this.confirmarPedidoButton = page.getByRole('button', { name: 'Confirmar pedido' });
+  83  | 
+  84  | 		//------------
+  85  | 		// Paso 1
+  86  | 		this.yearEvaluationDropdown = page.getByRole('option', { name: '2024' });
+  87  | 
+  88  | 		//------------
+  89  | 		// Paso 2
+  90  |  		this.selectRation = page.locator('.MuiBox-root.css-rfercm')
+  91  | 		
+  92  | 		//------------
+  93  | 		// Paso 3
+  94  | 		this.yesSaldosRatio = page.getByLabel('Si', { exact: true });
+  95  | 		this.noSaldosRatio = page.getByLabel('No', { exact: true });
+  96  | 		this.noSaldosRegistradosRatio = page.getByRole('radio', { name: 'La empresa no registra saldos' });
+  97  | 		this.fileUploadInput = page.locator('input[type="file"]');
+  98  | 		this.aidFinalJubilacion = page.locator('input[name="pasos\\.paso3\\.saldosContables\\.aidFinalJubilacion"]');
+  99  | 		this.aidFinalDesahucio = page.locator('input[name="pasos\\.paso3\\.saldosContables\\.aidFinalDesahucio"]');
+  100 | 		// Use getByRole with accessible name from the page snapshot
+  101 | 		this.authorizeCheckbox = page.getByRole('checkbox', { name: 'Autorizo la estimación y verificación de los saldos reportados.' });
+  102 | 		
+  103 | 		//------------
+  104 | 		// Paso 4 - Tax Rate
+  105 | 		this.standardTaxRateRadio = page.getByLabel('Estándar');
+  106 | 		this.specificTaxRateRadio = page.getByLabel('Específico');
+  107 | 		this.taxRateInput = page.locator('input[name="pasos.paso4.tasaImpuesto"]');
+  108 | 
+  109 | 		//------------
+  110 | 		// Mis Informes NIC12 (reports table)
+  111 | 		this.reportsTable = page.locator('table.MuiTable-root');
+  112 | 		this.paginationDisplayedRows = page.locator('.MuiTablePagination-displayedRows').first();
+  113 | 		this.tableHeaders = page.locator('table thead th');
+  114 | 	}
+  115 | 
+  116 | 	/**
+  117 | 	 * Navigate to Impuestos Diferidos section and start new report
+  118 | 	 */
+  119 | 	async navigateToImpuestosDiferidos() {
+  120 | 		console.log('📋 Navegando a Impuestos Diferidos...');
+  121 | 		await this.impuestosDiferidosTabButton.click({ timeout: SLOW_ACTION_TIMEOUT_MS });
+  122 | 		await this.crearNuevoInformeButton.click({ timeout: ACTION_TIMEOUT_MS });
+  123 | 		console.log('✅ Navegación completada');
+  124 | 	}
+  125 | 
+  126 | 	/**
+  127 | 	 * Verify current step in the wizard
+  128 | 	 */
+  129 | 	async verifyStep(stepNumber: string, timeout: number = 15000) {
+  130 | 		const stepText = `Paso ${stepNumber} de 6`; // Small wait before checking
+> 131 | 		await expect(this.page.locator(`text=${stepText}`)).toBeVisible({ timeout });
+      |                                                       ^ Error: expect(locator).toBeVisible() failed
+  132 | 		this.pageLogger.verificacion(`Paso ${stepNumber} de 6 verificado`);
+  133 | 	}
+  134 | 
+  135 | 	/**
+  136 | 	 * Select evaluation year in Step 1
+  137 | 	 */
+  138 | 	async selectEvaluationYear(year: string) {
+  139 | 		this.pageLogger.info(`Seleccionando año de evaluación: ${year}`);
+  140 | 		// Wait briefly to ensure form is ready
+  141 | 		await this.page.waitForTimeout(500);
+  142 | 		// Close dropdown if it's already open
+  143 | 		try {
+  144 | 			const openButton = this.page.getByLabel('Open');
+  145 | 			await openButton.click({ timeout: 10000 });
+  146 | 		} catch (e) {
+  147 | 			// Dropdown might already be closed, continue
+  148 | 		}
+  149 | 		await this.page.waitForTimeout(300);
+  150 | 		await this.page.getByRole('option', { name: year }).click({ timeout: ACTION_TIMEOUT_MS });
+  151 | 		this.pageLogger.exito(`Año ${year} seleccionado`);
+  152 | 	}
+  153 | 
+  154 | 	/**
+  155 | 	 * Wait for form to be ready after an error (for error recovery scenarios)
+  156 | 	 * This helps with intermittent backend errors by ensuring the page state is stable
+  157 | 	 */
+  158 | 	async waitForFormReady(timeout: number = 10000) {
+  159 | 		this.pageLogger.info('Esperando a que el formulario esté listo para interacción');
+  160 | 		try {
+  161 | 			// Wait for the year dropdown to be visible
+  162 | 			await this.page.getByLabel('Open').waitFor({ state: 'visible', timeout });
+  163 | 			// Small additional wait for any animations or state updates
+  164 | 			await this.page.waitForTimeout(500);
+  165 | 			this.pageLogger.exito('Formulario listo para continuar');
+  166 | 		} catch (e) {
+  167 | 			this.pageLogger.advertencia('Timeout esperando formulario, continuando con precaución');
+  168 | 		}
+  169 | 	}
+  170 | 
+  171 | 	/**
+  172 | 	 * Recover from error state by ensuring page is ready
+  173 | 	 * Used when recovering from a failed year selection
+  174 | 	 * Includes page reload if necessary to clear bad state
+  175 | 	 */
+  176 | 	async recoverFromError(shouldReload: boolean = false) {
+  177 | 		this.pageLogger.info('Iniciando recuperación de error');
+  178 | 		// Wait a bit for any error modal/message to settle
+  179 | 		await this.page.waitForTimeout(800);
+  180 | 		
+  181 | 		// Check if there's an error close button and click it if exists
+  182 | 		const closeButtons = this.page.getByRole('button', { name: /close|cerrar|dismiss/i });
+  183 | 		const count = await closeButtons.count();
+  184 | 		if (count > 0) {
+  185 | 			try {
+  186 | 				await closeButtons.first().click({ timeout: 3000 });
+  187 | 				this.pageLogger.info('Botón de cerrar error clickeado');
+  188 | 			} catch (e) {
+  189 | 				this.pageLogger.advertencia('No se pudo cerrar el error');
+  190 | 			}
+  191 | 		}
+  192 | 		
+  193 | 		// If shouldReload is true, reload with domcontentloaded (faster than networkidle)
+  194 | 		if (shouldReload) {
+  195 | 			this.pageLogger.info('Recargando página para limpiar estado de error');
+  196 | 			// Use domcontentloaded instead of networkidle to avoid hanging on unstable backends.
+  197 | 			await this.page.reload({ waitUntil: 'domcontentloaded' });
+  198 | 			await this.page.waitForTimeout(1000);
+  199 | 			this.pageLogger.info('Página recargada');
+  200 | 
+  201 | 			await this.navigateToImpuestosDiferidos();
+  202 | 			this.pageLogger.exito('Página recargada y re-navegada');
+  203 | 		} else {
+  204 | 			// Wait for form to be ready after error recovery
+  205 | 			await this.waitForFormReady();
+  206 | 		}
+  207 | 		
+  208 | 		this.pageLogger.exito('Recuperación completada');
+  209 | 	}
+  210 | 
+  211 | 	/**
+  212 | 	 * Click the Continue button
+  213 | 	 */
+  214 | 	async clickContinue() {
+  215 | 		await this.continueButton.click({ timeout: SLOW_ACTION_TIMEOUT_MS });
+  216 | 		await this.page.waitForTimeout(1000); // Small wait for navigation
+  217 | 	}
+  218 | 
+  219 | 	async noClickContinueActive() {
+  220 | 		await expect(this.continueButton).not.toBeEnabled();
+  221 | 	}
+  222 | 	/**
+  223 | 	 * Select the first available reason in Step 2
+  224 | 	 */
+  225 | 	async selectFirstReason(timeout: number = 10000) {
+  226 | 		this.pageLogger.info('Seleccionando razón del estudio');
+  227 | 		this.pageLogger.info('Realizando scroll al fondo de la página');
+  228 | 		await this.page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  229 | 		this.pageLogger.exito('Scroll al fondo completado - página completamente visible');
+  230 | 		await this.page.waitForTimeout(5000); // Small wait for page to stabilize after scroll
+  231 | 		await this.selectRation.click({ timeout });
+```
